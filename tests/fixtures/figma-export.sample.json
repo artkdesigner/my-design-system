@@ -1,0 +1,118 @@
+{
+  "exportedAt": "2026-07-23T12:00:00.000Z",
+  "fileName": "Design system",
+  "collections": [
+    {
+      "id": "C:1",
+      "name": "ColorsPalette",
+      "defaultModeId": "m1",
+      "modes": [{ "modeId": "m1", "name": "Default" }],
+      "variables": [
+        {
+          "id": "V:1",
+          "name": "Blue/palette_blue_default",
+          "resolvedType": "COLOR",
+          "valuesByMode": { "m1": { "type": "COLOR", "value": "#2936cc" } }
+        },
+        {
+          "id": "V:2",
+          "name": "Blue/palette_blue_600",
+          "resolvedType": "COLOR",
+          "valuesByMode": { "m1": { "type": "COLOR", "value": "#1f2999" } }
+        }
+      ]
+    },
+    {
+      "id": "C:2",
+      "name": "ColorsTheme",
+      "defaultModeId": "m2",
+      "modes": [{ "modeId": "m2", "name": "Light" }],
+      "variables": [
+        {
+          "id": "V:3",
+          "name": "Accent/theme_accent_default",
+          "resolvedType": "COLOR",
+          "valuesByMode": { "m2": { "type": "ALIAS", "id": "V:1" } }
+        },
+        {
+          "id": "V:4",
+          "name": "Accent/theme_accent_600",
+          "resolvedType": "COLOR",
+          "valuesByMode": { "m2": { "type": "ALIAS", "id": "V:2" } }
+        }
+      ]
+    },
+    {
+      "id": "C:3",
+      "name": "ColorsState",
+      "defaultModeId": "m3",
+      "modes": [
+        { "modeId": "m3", "name": "Default" },
+        { "modeId": "m4", "name": "Hover" }
+      ],
+      "variables": [
+        {
+          "id": "V:5",
+          "name": "BG/state_bg_accent",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "m3": { "type": "ALIAS", "id": "V:3" },
+            "m4": { "type": "ALIAS", "id": "V:4" }
+          }
+        }
+      ]
+    },
+    {
+      "id": "C:4",
+      "name": "ComponentSize",
+      "defaultModeId": "m5",
+      "modes": [
+        { "modeId": "m5", "name": "L" },
+        { "modeId": "m6", "name": "S" }
+      ],
+      "variables": [
+        {
+          "id": "V:6",
+          "name": "Button/Button/Button_height",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "m5": { "type": "VALUE", "value": 56 },
+            "m6": { "type": "VALUE", "value": 32 }
+          }
+        }
+      ]
+    },
+    {
+      "id": "C:5",
+      "name": "Typography",
+      "defaultModeId": "m7",
+      "modes": [{ "modeId": "m7", "name": "Default" }],
+      "variables": [
+        {
+          "id": "V:7",
+          "name": "Font size/Body/body_m",
+          "resolvedType": "FLOAT",
+          "valuesByMode": { "m7": { "type": "VALUE", "value": 16 } }
+        }
+      ]
+    }
+  ],
+  "textStyles": [
+    {
+      "id": "S:1",
+      "name": "Body M/Regular",
+      "fontName": { "family": "Inter Tight", "style": "Regular" },
+      "fontSize": 16,
+      "lineHeight": { "unit": "PERCENT", "value": 140 },
+      "letterSpacing": { "unit": "PERCENT", "value": 0 },
+      "boundVariables": {
+        "fontSize": { "type": "VARIABLE_ALIAS", "id": "V:7" }
+      }
+    }
+  ],
+  "stats": {
+    "variables": 7,
+    "aliases": 4,
+    "danglingAliasIds": []
+  }
+}
