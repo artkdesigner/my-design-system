@@ -1,0 +1,31 @@
+<style>
+  body { font: 13px/1.4 sans-serif; padding: 16px; }
+  button { width: 100%; padding: 10px; font-size: 13px; cursor: pointer; }
+  #status { margin-top: 12px; color: #666; }
+</style>
+
+<button id="run">Выгрузить переменные</button>
+<div id="status"></div>
+
+<script>
+  const status = document.getElementById('status');
+
+  document.getElementById('run').onclick = () => {
+    status.textContent = 'Собираю…';
+    parent.postMessage({ pluginMessage: { type: 'export' } }, '*');
+  };
+
+  onmessage = (event) => {
+    const msg = event.data.pluginMessage;
+    if (msg.type === 'error') {
+      status.textContent = 'Ошибка: ' + msg.message;
+      return;
+    }
+    const blob = new Blob([msg.json], { type: 'application/json' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'figma-export.json';
+    link.click();
+    status.textContent = 'Готово, файл сохранён.';
+  };
+</script>
