@@ -26,4 +26,13 @@ describe('toCssVarName', () => {
   it('сохраняет дефисы внутри слова', () => {
     expect(toCssVarName('Text/state_text_on-accent')).toBe('--state-text-on-accent');
   });
+
+  it('отбрасывает группу во множественном числе', () => {
+    expect(toCssVarName('Icons/state_icon_on-accent-secondary')).toBe('--state-icon-on-accent-secondary');
+  });
+
+  it('падает на имени, непригодном для CSS', () => {
+    expect(() => toCssVarName('Colors (old)/palette_blue_default')).toThrow(/так в CSS нельзя/);
+    expect(() => toCssVarName('')).toThrow();
+  });
 });
