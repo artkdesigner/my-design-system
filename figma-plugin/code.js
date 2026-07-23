@@ -1,4 +1,4 @@
-figma.showUI(__html__, { width: 320, height: 200 });
+figma.showUI(__html__, { width: 320, height: 200, themeColors: true });
 
 function rgbaToHex({ r, g, b, a }) {
   const to = (n) => Math.round(n * 255).toString(16).padStart(2, '0');
@@ -18,6 +18,15 @@ function normalizeValue(raw) {
 
 async function collectVariables() {
   const collections = await figma.variables.getLocalVariableCollectionsAsync();
+  const allVariables = await figma.variables.getLocalVariablesAsync();
+
+  const variablesByCollection = new Map();
+  for (const variable of allVariables) {
+    const list = variablesByCollection.get(variable.variableCollectionId) || [];
+    list.push(variable);
+    variablesByCollection.set(variable.variableCollectionId, list);
+  }
+
   const result = {
     exportedAt: new Date().toISOString(),
     fileName: figma.root.name,
@@ -26,11 +35,9 @@ async function collectVariables() {
 
   for (const collection of collections) {
     const variables = [];
+    const collectionVariables = variablesByCollection.get(collection.id) || [];
 
-    for (const id of collection.variableIds) {
-      const variable = await figma.variables.getVariableByIdAsync(id);
-      if (!variable) continue;
-
+    for (const variable of collectionVariables) {
       const valuesByMode = {};
       for (const modeId of Object.keys(variable.valuesByMode)) {
         valuesByMode[modeId] = normalizeValue(variable.valuesByMode[modeId]);
@@ -53,6 +60,33 @@ async function collectVariables() {
     });
   }
 
+  const textStyles = await figma.getLocalTextStylesAsync();
+  result.textStyles = textStyles.map((style) => ({
+    id: style.id,
+    name: style.name,
+    fontName: style.fontName,
+    fontSize: style.fontSize,
+    lineHeight: style.lineHeight,
+    letterSpacing: style.letterSpacing,
+    boundVariables: style.boundVariables ?? {}
+  }));
+
+  const knownIds = new Set(
+    result.collections.flatMap((c) => c.variables.map((v) => v.id))
+  );
+  const aliasEntries = result.collections
+    .flatMap((c) => c.variables)
+    .flatMap((v) => Object.values(v.valuesByMode))
+    .filter((entry) => entry.type === 'ALIAS');
+
+  result.stats = {
+    variables: knownIds.size,
+    aliases: aliasEntries.length,
+    danglingAliasIds: [
+      ...new Set(aliasEntries.filter((e) => !knownIds.has(e.id)).map((e) => e.id))
+    ]
+  };
+
   return result;
 }
 
@@ -60,8 +94,9 @@ figma.ui.onmessage = async (msg) => {
   if (msg.type !== 'export') return;
   try {
     const data = await collectVariables();
-    figma.ui.postMessage({ type: 'result', json: JSON.stringify(data, null, 2) });
+    figma.ui.postMessage({ type: 'result', json: JSON.stringify(data, null, 2), stats: data.stats });
   } catch (error) {
+    console.error(error);
     figma.ui.postMessage({ type: 'error', message: String(error) });
   }
 };

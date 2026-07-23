@@ -1,7 +1,7 @@
 <style>
   body { font: 13px/1.4 sans-serif; padding: 16px; }
   button { width: 100%; padding: 10px; font-size: 13px; cursor: pointer; }
-  #status { margin-top: 12px; color: #666; }
+  #status { margin-top: 12px; color: #666; overflow-wrap: anywhere; }
 </style>
 
 <button id="run">Выгрузить переменные</button>
@@ -11,21 +11,35 @@
   const status = document.getElementById('status');
 
   document.getElementById('run').onclick = () => {
+    status.style.color = '#666';
     status.textContent = 'Собираю…';
     parent.postMessage({ pluginMessage: { type: 'export' } }, '*');
   };
 
   onmessage = (event) => {
-    const msg = event.data.pluginMessage;
+    const msg = event.data && event.data.pluginMessage;
+    if (!msg) return;
+
     if (msg.type === 'error') {
+      status.style.color = '#c0392b';
       status.textContent = 'Ошибка: ' + msg.message;
       return;
     }
+    if (msg.type !== 'result') return;
+
     const blob = new Blob([msg.json], { type: 'application/json' });
     const link = document.createElement('a');
     link.href = URL.createObjectURL(blob);
     link.download = 'figma-export.json';
+    document.body.appendChild(link);
     link.click();
-    status.textContent = 'Готово, файл сохранён.';
+    link.remove();
+    URL.revokeObjectURL(link.href);
+
+    const stats = msg.stats || {};
+    const dangling = stats.danglingAliasIds ? stats.danglingAliasIds.length : 0;
+    status.textContent =
+      `Готово: переменных ${stats.variables ?? '?'}, ссылок ${stats.aliases ?? '?'}, висячих ссылок ${dangling}.`;
+    status.style.color = dangling > 0 ? '#c0392b' : '#2e7d32';
   };
 </script>
