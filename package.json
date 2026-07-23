@@ -1,0 +1,16 @@
+{
+  "name": "design-system-workspace",
+  "private": true,
+  "type": "module",
+  "workspaces": ["ds"],
+  "scripts": {
+    "test": "vitest run",
+    "sync-tokens": "node scripts/sync-tokens.mjs",
+    "check-tokens": "node scripts/check-tokens.mjs",
+    "storybook": "npm run storybook -w ds",
+    "build-storybook": "npm run build-storybook -w ds"
+  },
+  "devDependencies": {
+    "vitest": "^3.2.4"
+  }
+}
