@@ -1,7 +1,7 @@
 <style>
-  body { font: 13px/1.4 sans-serif; padding: 16px; }
+  body { font: 13px/1.4 sans-serif; padding: 16px; background: var(--figma-color-bg); color: var(--figma-color-text); }
   button { width: 100%; padding: 10px; font-size: 13px; cursor: pointer; }
-  #status { margin-top: 12px; color: #666; overflow-wrap: anywhere; }
+  #status { margin-top: 12px; color: var(--figma-color-text-secondary); overflow-wrap: anywhere; }
 </style>
 
 <button id="run">Выгрузить переменные</button>
@@ -11,7 +11,7 @@
   const status = document.getElementById('status');
 
   document.getElementById('run').onclick = () => {
-    status.style.color = '#666';
+    status.style.color = 'var(--figma-color-text-secondary)';
     status.textContent = 'Собираю…';
     parent.postMessage({ pluginMessage: { type: 'export' } }, '*');
   };
@@ -21,25 +21,40 @@
     if (!msg) return;
 
     if (msg.type === 'error') {
-      status.style.color = '#c0392b';
+      status.style.color = 'var(--figma-color-text-danger)';
       status.textContent = 'Ошибка: ' + msg.message;
       return;
     }
     if (msg.type !== 'result') return;
 
     const blob = new Blob([msg.json], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
+    link.href = url;
     link.download = 'figma-export.json';
     document.body.appendChild(link);
     link.click();
     link.remove();
-    URL.revokeObjectURL(link.href);
+    // Отзывать objectURL синхронно с click() нельзя — в части браузеров это
+    // обрывает уже начавшуюся загрузку. Даём загрузке стартовать, отзываем позже.
+    setTimeout(() => URL.revokeObjectURL(url), 10000);
 
     const stats = msg.stats || {};
-    const dangling = stats.danglingAliasIds ? stats.danglingAliasIds.length : 0;
-    status.textContent =
-      `Готово: переменных ${stats.variables ?? '?'}, ссылок ${stats.aliases ?? '?'}, висячих ссылок ${dangling}.`;
-    status.style.color = dangling > 0 ? '#c0392b' : '#2e7d32';
+    const danglingVars = stats.danglingAliasIds ? stats.danglingAliasIds.length : 0;
+    const danglingTextStyles = stats.danglingTextStyleAliasIds ? stats.danglingTextStyleAliasIds.length : 0;
+    const orphanVariables = stats.orphanVariables ?? 0;
+
+    let text = `Готово: переменных ${stats.variables ?? '?'}, ссылок ${stats.aliases ?? '?'}, ` +
+      `стилей ${stats.textStyles ?? '?'}, висячих ссылок ${danglingVars}.`;
+    if (danglingTextStyles > 0) {
+      text += ` Висячих ссылок в стилях: ${danglingTextStyles}.`;
+    }
+    if (orphanVariables > 0) {
+      text += ` Пропущенных переменных: ${orphanVariables}.`;
+    }
+    status.textContent = text;
+
+    const hasIssues = danglingVars > 0 || danglingTextStyles > 0 || orphanVariables > 0;
+    status.style.color = hasIssues ? 'var(--figma-color-text-danger)' : 'var(--figma-color-text-success)';
   };
 </script>
