@@ -1,0 +1,23 @@
+# зависимости и сборка
+node_modules/
+dist/
+build/
+storybook-static/
+
+# логи и кэш
+*.log
+npm-debug.log*
+.cache/
+.vite/
+
+# секреты — токены Figma и прочие ключи в репозиторий не попадают
+.env
+.env.*
+!.env.example
+
+# локальные настройки Claude Code (могут содержать пути и ключи)
+.claude/settings.local.json
+
+# мусор macOS
+.DS_Store
+.AppleDouble
