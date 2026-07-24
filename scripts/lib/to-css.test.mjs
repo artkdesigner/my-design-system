@@ -207,9 +207,12 @@ describe('переизлучение производных слоёв там, �
     const files = toCss(model, config);
     const declaration = '--on-accent-surface: var(--state-bg-accent);';
     const occurrences = files['state.css'].split(declaration).length - 1;
-    // Три вхождения одного и того же текста: основной :root, основной
-    // [data-on-accent] и переизлучённый блок под hover.
-    expect(occurrences).toBe(3);
+    // Четыре вхождения одного и того же текста: основной :root, основной
+    // [data-on-accent], переизлучённый блок под hover и составной
+    // .ds-interactive:hover[data-on-accent]. В фикстуре у режима onAccent
+    // то же значение, что у умолчательного, поэтому текст совпадает во всех
+    // четырёх — на настоящих данных значения режимов различаются.
+    expect(occurrences).toBe(4);
   });
 
   it('добавляет поясняющий комментарий перед переизлучёнными блоками', () => {
@@ -244,6 +247,36 @@ describe('переизлучение производных слоёв там, �
 
     expect(reemitCommentIndex).toBeGreaterThan(-1);
     expect(ownOnAccentBlockIndex).toBeGreaterThan(reemitCommentIndex);
+  });
+
+  it('переизлучает и собственные неосновные режимы, составным селектором', () => {
+    // Одного порядка блоков мало. Селекторы состояний в дизайн-системе несут
+    // класс (.ds-interactive:hover — специфичность (0,2,0)), а контейнерные
+    // переключатели — только атрибут ((0,1,0)). На элементе, который и
+    // интерактивен, и несёт переключатель, переизлучение с умолчательными
+    // значениями побеждает по специфичности, и порядок тут не спасает.
+    // Поэтому под каждым триггером режим объявляется ещё раз, составным
+    // селектором: он специфичнее и самого триггера, и переключателя.
+    const model2 = structuredClone(model);
+    const onAccent = model2.collections.find((c) => c.name === 'ColorsOnAccent');
+    onAccent.modes.find((m) => m.name === 'onAccent').tokens[0].ref = '--theme-accent-600';
+
+    const files = toCss(model2, config);
+
+    expect(files['state.css']).toContain(
+      '.ds-interactive:hover[data-on-accent],\n[data-state="hover"][data-on-accent] {\n' +
+        '  --on-accent-surface: var(--theme-accent-600);\n' +
+        '}'
+    );
+  });
+
+  it('коллекция с единственным режимом составных блоков не получает', () => {
+    const files = toCss(model, config);
+    // ColorsElement — один режим Value на :root, переизлучать внутрь триггеров
+    // нечего, кроме умолчательного блока: составных селекторов быть не должно.
+    expect(files['state.css']).not.toMatch(
+      /\.ds-interactive:hover\[[^\]]+\][^{]*\{\n {2}--element-bg-accent/
+    );
   });
 
   it('коллекция без зависимостей не получает переизлучённых блоков', () => {

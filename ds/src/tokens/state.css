@@ -289,6 +289,702 @@
   --state-border-on-accent-primary-4: var(--theme-neutral-absolute-primary);
 }
 
+[data-accent="purple"].ds-interactive:active,
+[data-accent="purple"][data-state="pressed"] {
+  --state-text-accent: var(--theme-accent-default);
+  --state-text-primary: var(--theme-neutral-900);
+  --state-icon-accent: var(--theme-accent-default);
+  --state-icon-primary: var(--theme-neutral-900);
+  --state-bg-accent: var(--theme-accent-default);
+  --state-bg-primary: var(--theme-neutral-900);
+  --state-border-accent: var(--theme-accent-default);
+  --state-border-secondary: var(--theme-neutral-300);
+  --state-text-on-accent: var(--theme-neutral-absolute-primary);
+  --state-text-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-text-secondary: var(--theme-neutral-default);
+  --state-icon-secondary: var(--theme-neutral-default);
+  --state-icon-on-accent: var(--theme-neutral-absolute-primary);
+  --state-icon-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-border-primary: var(--theme-neutral-600);
+  --state-bg-secondary: var(--theme-neutral-default);
+  --state-border-on-accent-primary: var(--theme-neutral-absolute-primary);
+  --state-border-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-text-info: var(--theme-info-default);
+  --state-text-success: var(--theme-success-default);
+  --state-text-warning: var(--theme-warning-default);
+  --state-text-error: var(--theme-error-default);
+  --state-icon-info: var(--theme-info-default);
+  --state-icon-success: var(--theme-success-default);
+  --state-icon-warning: var(--theme-warning-default);
+  --state-icon-error: var(--theme-error-default);
+  --state-border-info-secondary: var(--theme-info-400);
+  --state-border-success-secondary: var(--theme-success-400);
+  --state-border-warning-secondary: var(--theme-warning-400);
+  --state-border-error-secondary: var(--theme-error-400);
+  --state-bg-info-secondary: var(--theme-info-200);
+  --state-bg-success-secondary: var(--theme-success-300);
+  --state-bg-warning-secondary: var(--theme-warning-200);
+  --state-bg-error-secondary: var(--theme-error-200);
+  --state-text-custom: var(--theme-custom-default);
+  --state-icon-custom: var(--theme-custom-default);
+  --state-border-custom-secondary: var(--theme-custom-400);
+  --state-bg-custom-primary: var(--theme-custom-default);
+  --state-bg-custom-secondary: var(--theme-custom-200);
+  --state-bg-error-primary: var(--theme-error-default);
+  --state-bg-warning-primary: var(--theme-warning-default);
+  --state-bg-success-primary: var(--theme-success-default);
+  --state-bg-info-primary: var(--theme-info-default);
+  --state-border-info-primary: var(--theme-info-default);
+  --state-border-success-primary: var(--theme-success-default);
+  --state-border-warning-primary: var(--theme-warning-default);
+  --state-border-error-primary: var(--theme-error-default);
+  --state-border-custom-primary: var(--theme-custom-default);
+  --state-bg-tetriary: var(--theme-neutral-300);
+  --state-border-tetriary: var(--theme-neutral-100);
+  --state-border-on-accent-tetriary: var(--theme-neutral-absolute-tetriary);
+  --state-border-on-accent-primary-2: var(--theme-neutral-absolute-primary);
+  --state-border-on-accent-primary-3: var(--theme-neutral-absolute-primary);
+  --state-border-on-accent-primary-4: var(--theme-neutral-absolute-primary);
+}
+
+[data-accent="purple"].ds-interactive:disabled,
+[data-accent="purple"][data-state="disabled"] {
+  --state-text-accent: var(--theme-neutral-400);
+  --state-text-primary: var(--theme-neutral-400);
+  --state-icon-accent: var(--theme-neutral-400);
+  --state-icon-primary: var(--theme-neutral-400);
+  --state-bg-accent: var(--theme-neutral-400);
+  --state-bg-primary: var(--theme-neutral-400);
+  --state-border-accent: var(--theme-neutral-400);
+  --state-border-secondary: var(--theme-neutral-200);
+  --state-text-on-accent: var(--theme-neutral-absolute-secondary);
+  --state-text-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-text-secondary: var(--theme-neutral-300);
+  --state-icon-secondary: var(--theme-neutral-300);
+  --state-icon-on-accent: var(--theme-neutral-absolute-secondary);
+  --state-icon-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-border-primary: var(--theme-neutral-400);
+  --state-bg-secondary: var(--theme-neutral-300);
+  --state-border-on-accent-primary: var(--theme-neutral-absolute-secondary);
+  --state-border-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-text-info: var(--theme-neutral-400);
+  --state-text-success: var(--theme-neutral-400);
+  --state-text-warning: var(--theme-neutral-400);
+  --state-text-error: var(--theme-neutral-400);
+  --state-icon-info: var(--theme-neutral-400);
+  --state-icon-success: var(--theme-neutral-400);
+  --state-icon-warning: var(--theme-neutral-400);
+  --state-icon-error: var(--theme-neutral-400);
+  --state-border-info-secondary: var(--theme-neutral-300);
+  --state-border-success-secondary: var(--theme-neutral-300);
+  --state-border-warning-secondary: var(--theme-neutral-300);
+  --state-border-error-secondary: var(--theme-neutral-300);
+  --state-bg-info-secondary: var(--theme-neutral-200);
+  --state-bg-success-secondary: var(--theme-neutral-200);
+  --state-bg-warning-secondary: var(--theme-neutral-200);
+  --state-bg-error-secondary: var(--theme-neutral-200);
+  --state-text-custom: var(--theme-neutral-400);
+  --state-icon-custom: var(--theme-neutral-400);
+  --state-border-custom-secondary: var(--theme-neutral-300);
+  --state-bg-custom-primary: var(--theme-neutral-400);
+  --state-bg-custom-secondary: var(--theme-neutral-200);
+  --state-bg-error-primary: var(--theme-neutral-400);
+  --state-bg-warning-primary: var(--theme-neutral-400);
+  --state-bg-success-primary: var(--theme-neutral-400);
+  --state-bg-info-primary: var(--theme-neutral-400);
+  --state-border-info-primary: var(--theme-neutral-400);
+  --state-border-success-primary: var(--theme-neutral-400);
+  --state-border-warning-primary: var(--theme-neutral-400);
+  --state-border-error-primary: var(--theme-neutral-400);
+  --state-border-custom-primary: var(--theme-neutral-400);
+  --state-bg-tetriary: var(--theme-neutral-100);
+  --state-border-tetriary: var(--theme-neutral-100);
+  --state-border-on-accent-tetriary: var(--theme-neutral-absolute-tetriary);
+  --state-border-on-accent-primary-2: var(--theme-neutral-absolute-secondary);
+  --state-border-on-accent-primary-3: var(--theme-neutral-absolute-secondary);
+  --state-border-on-accent-primary-4: var(--theme-neutral-absolute-secondary);
+}
+
+[data-accent="purple"].ds-interactive:hover,
+[data-accent="purple"][data-state="hover"] {
+  --state-text-accent: var(--theme-accent-600);
+  --state-text-primary: var(--theme-neutral-800);
+  --state-icon-accent: var(--theme-accent-600);
+  --state-icon-primary: var(--theme-neutral-800);
+  --state-bg-accent: var(--theme-accent-600);
+  --state-bg-primary: var(--theme-neutral-900);
+  --state-border-accent: var(--theme-accent-600);
+  --state-border-secondary: var(--theme-neutral-400);
+  --state-text-on-accent: var(--theme-neutral-absolute-primary);
+  --state-text-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-text-secondary: var(--theme-neutral-600);
+  --state-icon-secondary: var(--theme-neutral-600);
+  --state-icon-on-accent: var(--theme-neutral-absolute-primary);
+  --state-icon-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-border-primary: var(--theme-neutral-default);
+  --state-bg-secondary: var(--theme-neutral-600);
+  --state-border-on-accent-primary: var(--theme-neutral-absolute-primary);
+  --state-border-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-text-info: var(--theme-info-600);
+  --state-text-success: var(--theme-success-600);
+  --state-text-warning: var(--theme-warning-600);
+  --state-text-error: var(--theme-error-600);
+  --state-icon-info: var(--theme-info-600);
+  --state-icon-success: var(--theme-success-600);
+  --state-icon-warning: var(--theme-warning-600);
+  --state-icon-error: var(--theme-error-600);
+  --state-border-info-secondary: var(--theme-info-default);
+  --state-border-success-secondary: var(--theme-success-default);
+  --state-border-warning-secondary: var(--theme-warning-default);
+  --state-border-error-secondary: var(--theme-error-default);
+  --state-bg-info-secondary: var(--theme-info-300);
+  --state-bg-success-secondary: var(--theme-success-300);
+  --state-bg-warning-secondary: var(--theme-warning-300);
+  --state-bg-error-secondary: var(--theme-error-300);
+  --state-text-custom: var(--theme-custom-600);
+  --state-icon-custom: var(--theme-custom-600);
+  --state-border-custom-secondary: var(--theme-custom-default);
+  --state-bg-custom-primary: var(--theme-custom-600);
+  --state-bg-custom-secondary: var(--theme-custom-300);
+  --state-bg-error-primary: var(--theme-error-600);
+  --state-bg-warning-primary: var(--theme-warning-600);
+  --state-bg-success-primary: var(--theme-success-600);
+  --state-bg-info-primary: var(--theme-info-600);
+  --state-border-info-primary: var(--theme-info-600);
+  --state-border-success-primary: var(--theme-success-600);
+  --state-border-warning-primary: var(--theme-warning-600);
+  --state-border-error-primary: var(--theme-error-600);
+  --state-border-custom-primary: var(--theme-custom-600);
+  --state-bg-tetriary: var(--theme-neutral-400);
+  --state-border-tetriary: var(--theme-neutral-200);
+  --state-border-on-accent-tetriary: var(--theme-neutral-absolute-tetriary);
+  --state-border-on-accent-primary-2: var(--theme-neutral-absolute-primary);
+  --state-border-on-accent-primary-3: var(--theme-neutral-absolute-primary);
+  --state-border-on-accent-primary-4: var(--theme-neutral-absolute-primary);
+}
+
+[data-accent="red"].ds-interactive:active,
+[data-accent="red"][data-state="pressed"] {
+  --state-text-accent: var(--theme-accent-default);
+  --state-text-primary: var(--theme-neutral-900);
+  --state-icon-accent: var(--theme-accent-default);
+  --state-icon-primary: var(--theme-neutral-900);
+  --state-bg-accent: var(--theme-accent-default);
+  --state-bg-primary: var(--theme-neutral-900);
+  --state-border-accent: var(--theme-accent-default);
+  --state-border-secondary: var(--theme-neutral-300);
+  --state-text-on-accent: var(--theme-neutral-absolute-primary);
+  --state-text-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-text-secondary: var(--theme-neutral-default);
+  --state-icon-secondary: var(--theme-neutral-default);
+  --state-icon-on-accent: var(--theme-neutral-absolute-primary);
+  --state-icon-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-border-primary: var(--theme-neutral-600);
+  --state-bg-secondary: var(--theme-neutral-default);
+  --state-border-on-accent-primary: var(--theme-neutral-absolute-primary);
+  --state-border-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-text-info: var(--theme-info-default);
+  --state-text-success: var(--theme-success-default);
+  --state-text-warning: var(--theme-warning-default);
+  --state-text-error: var(--theme-error-default);
+  --state-icon-info: var(--theme-info-default);
+  --state-icon-success: var(--theme-success-default);
+  --state-icon-warning: var(--theme-warning-default);
+  --state-icon-error: var(--theme-error-default);
+  --state-border-info-secondary: var(--theme-info-400);
+  --state-border-success-secondary: var(--theme-success-400);
+  --state-border-warning-secondary: var(--theme-warning-400);
+  --state-border-error-secondary: var(--theme-error-400);
+  --state-bg-info-secondary: var(--theme-info-200);
+  --state-bg-success-secondary: var(--theme-success-300);
+  --state-bg-warning-secondary: var(--theme-warning-200);
+  --state-bg-error-secondary: var(--theme-error-200);
+  --state-text-custom: var(--theme-custom-default);
+  --state-icon-custom: var(--theme-custom-default);
+  --state-border-custom-secondary: var(--theme-custom-400);
+  --state-bg-custom-primary: var(--theme-custom-default);
+  --state-bg-custom-secondary: var(--theme-custom-200);
+  --state-bg-error-primary: var(--theme-error-default);
+  --state-bg-warning-primary: var(--theme-warning-default);
+  --state-bg-success-primary: var(--theme-success-default);
+  --state-bg-info-primary: var(--theme-info-default);
+  --state-border-info-primary: var(--theme-info-default);
+  --state-border-success-primary: var(--theme-success-default);
+  --state-border-warning-primary: var(--theme-warning-default);
+  --state-border-error-primary: var(--theme-error-default);
+  --state-border-custom-primary: var(--theme-custom-default);
+  --state-bg-tetriary: var(--theme-neutral-300);
+  --state-border-tetriary: var(--theme-neutral-100);
+  --state-border-on-accent-tetriary: var(--theme-neutral-absolute-tetriary);
+  --state-border-on-accent-primary-2: var(--theme-neutral-absolute-primary);
+  --state-border-on-accent-primary-3: var(--theme-neutral-absolute-primary);
+  --state-border-on-accent-primary-4: var(--theme-neutral-absolute-primary);
+}
+
+[data-accent="red"].ds-interactive:disabled,
+[data-accent="red"][data-state="disabled"] {
+  --state-text-accent: var(--theme-neutral-400);
+  --state-text-primary: var(--theme-neutral-400);
+  --state-icon-accent: var(--theme-neutral-400);
+  --state-icon-primary: var(--theme-neutral-400);
+  --state-bg-accent: var(--theme-neutral-400);
+  --state-bg-primary: var(--theme-neutral-400);
+  --state-border-accent: var(--theme-neutral-400);
+  --state-border-secondary: var(--theme-neutral-200);
+  --state-text-on-accent: var(--theme-neutral-absolute-secondary);
+  --state-text-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-text-secondary: var(--theme-neutral-300);
+  --state-icon-secondary: var(--theme-neutral-300);
+  --state-icon-on-accent: var(--theme-neutral-absolute-secondary);
+  --state-icon-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-border-primary: var(--theme-neutral-400);
+  --state-bg-secondary: var(--theme-neutral-300);
+  --state-border-on-accent-primary: var(--theme-neutral-absolute-secondary);
+  --state-border-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-text-info: var(--theme-neutral-400);
+  --state-text-success: var(--theme-neutral-400);
+  --state-text-warning: var(--theme-neutral-400);
+  --state-text-error: var(--theme-neutral-400);
+  --state-icon-info: var(--theme-neutral-400);
+  --state-icon-success: var(--theme-neutral-400);
+  --state-icon-warning: var(--theme-neutral-400);
+  --state-icon-error: var(--theme-neutral-400);
+  --state-border-info-secondary: var(--theme-neutral-300);
+  --state-border-success-secondary: var(--theme-neutral-300);
+  --state-border-warning-secondary: var(--theme-neutral-300);
+  --state-border-error-secondary: var(--theme-neutral-300);
+  --state-bg-info-secondary: var(--theme-neutral-200);
+  --state-bg-success-secondary: var(--theme-neutral-200);
+  --state-bg-warning-secondary: var(--theme-neutral-200);
+  --state-bg-error-secondary: var(--theme-neutral-200);
+  --state-text-custom: var(--theme-neutral-400);
+  --state-icon-custom: var(--theme-neutral-400);
+  --state-border-custom-secondary: var(--theme-neutral-300);
+  --state-bg-custom-primary: var(--theme-neutral-400);
+  --state-bg-custom-secondary: var(--theme-neutral-200);
+  --state-bg-error-primary: var(--theme-neutral-400);
+  --state-bg-warning-primary: var(--theme-neutral-400);
+  --state-bg-success-primary: var(--theme-neutral-400);
+  --state-bg-info-primary: var(--theme-neutral-400);
+  --state-border-info-primary: var(--theme-neutral-400);
+  --state-border-success-primary: var(--theme-neutral-400);
+  --state-border-warning-primary: var(--theme-neutral-400);
+  --state-border-error-primary: var(--theme-neutral-400);
+  --state-border-custom-primary: var(--theme-neutral-400);
+  --state-bg-tetriary: var(--theme-neutral-100);
+  --state-border-tetriary: var(--theme-neutral-100);
+  --state-border-on-accent-tetriary: var(--theme-neutral-absolute-tetriary);
+  --state-border-on-accent-primary-2: var(--theme-neutral-absolute-secondary);
+  --state-border-on-accent-primary-3: var(--theme-neutral-absolute-secondary);
+  --state-border-on-accent-primary-4: var(--theme-neutral-absolute-secondary);
+}
+
+[data-accent="red"].ds-interactive:hover,
+[data-accent="red"][data-state="hover"] {
+  --state-text-accent: var(--theme-accent-600);
+  --state-text-primary: var(--theme-neutral-800);
+  --state-icon-accent: var(--theme-accent-600);
+  --state-icon-primary: var(--theme-neutral-800);
+  --state-bg-accent: var(--theme-accent-600);
+  --state-bg-primary: var(--theme-neutral-900);
+  --state-border-accent: var(--theme-accent-600);
+  --state-border-secondary: var(--theme-neutral-400);
+  --state-text-on-accent: var(--theme-neutral-absolute-primary);
+  --state-text-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-text-secondary: var(--theme-neutral-600);
+  --state-icon-secondary: var(--theme-neutral-600);
+  --state-icon-on-accent: var(--theme-neutral-absolute-primary);
+  --state-icon-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-border-primary: var(--theme-neutral-default);
+  --state-bg-secondary: var(--theme-neutral-600);
+  --state-border-on-accent-primary: var(--theme-neutral-absolute-primary);
+  --state-border-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-text-info: var(--theme-info-600);
+  --state-text-success: var(--theme-success-600);
+  --state-text-warning: var(--theme-warning-600);
+  --state-text-error: var(--theme-error-600);
+  --state-icon-info: var(--theme-info-600);
+  --state-icon-success: var(--theme-success-600);
+  --state-icon-warning: var(--theme-warning-600);
+  --state-icon-error: var(--theme-error-600);
+  --state-border-info-secondary: var(--theme-info-default);
+  --state-border-success-secondary: var(--theme-success-default);
+  --state-border-warning-secondary: var(--theme-warning-default);
+  --state-border-error-secondary: var(--theme-error-default);
+  --state-bg-info-secondary: var(--theme-info-300);
+  --state-bg-success-secondary: var(--theme-success-300);
+  --state-bg-warning-secondary: var(--theme-warning-300);
+  --state-bg-error-secondary: var(--theme-error-300);
+  --state-text-custom: var(--theme-custom-600);
+  --state-icon-custom: var(--theme-custom-600);
+  --state-border-custom-secondary: var(--theme-custom-default);
+  --state-bg-custom-primary: var(--theme-custom-600);
+  --state-bg-custom-secondary: var(--theme-custom-300);
+  --state-bg-error-primary: var(--theme-error-600);
+  --state-bg-warning-primary: var(--theme-warning-600);
+  --state-bg-success-primary: var(--theme-success-600);
+  --state-bg-info-primary: var(--theme-info-600);
+  --state-border-info-primary: var(--theme-info-600);
+  --state-border-success-primary: var(--theme-success-600);
+  --state-border-warning-primary: var(--theme-warning-600);
+  --state-border-error-primary: var(--theme-error-600);
+  --state-border-custom-primary: var(--theme-custom-600);
+  --state-bg-tetriary: var(--theme-neutral-400);
+  --state-border-tetriary: var(--theme-neutral-200);
+  --state-border-on-accent-tetriary: var(--theme-neutral-absolute-tetriary);
+  --state-border-on-accent-primary-2: var(--theme-neutral-absolute-primary);
+  --state-border-on-accent-primary-3: var(--theme-neutral-absolute-primary);
+  --state-border-on-accent-primary-4: var(--theme-neutral-absolute-primary);
+}
+
+[data-accent="sky"].ds-interactive:active,
+[data-accent="sky"][data-state="pressed"] {
+  --state-text-accent: var(--theme-accent-default);
+  --state-text-primary: var(--theme-neutral-900);
+  --state-icon-accent: var(--theme-accent-default);
+  --state-icon-primary: var(--theme-neutral-900);
+  --state-bg-accent: var(--theme-accent-default);
+  --state-bg-primary: var(--theme-neutral-900);
+  --state-border-accent: var(--theme-accent-default);
+  --state-border-secondary: var(--theme-neutral-300);
+  --state-text-on-accent: var(--theme-neutral-absolute-primary);
+  --state-text-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-text-secondary: var(--theme-neutral-default);
+  --state-icon-secondary: var(--theme-neutral-default);
+  --state-icon-on-accent: var(--theme-neutral-absolute-primary);
+  --state-icon-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-border-primary: var(--theme-neutral-600);
+  --state-bg-secondary: var(--theme-neutral-default);
+  --state-border-on-accent-primary: var(--theme-neutral-absolute-primary);
+  --state-border-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-text-info: var(--theme-info-default);
+  --state-text-success: var(--theme-success-default);
+  --state-text-warning: var(--theme-warning-default);
+  --state-text-error: var(--theme-error-default);
+  --state-icon-info: var(--theme-info-default);
+  --state-icon-success: var(--theme-success-default);
+  --state-icon-warning: var(--theme-warning-default);
+  --state-icon-error: var(--theme-error-default);
+  --state-border-info-secondary: var(--theme-info-400);
+  --state-border-success-secondary: var(--theme-success-400);
+  --state-border-warning-secondary: var(--theme-warning-400);
+  --state-border-error-secondary: var(--theme-error-400);
+  --state-bg-info-secondary: var(--theme-info-200);
+  --state-bg-success-secondary: var(--theme-success-300);
+  --state-bg-warning-secondary: var(--theme-warning-200);
+  --state-bg-error-secondary: var(--theme-error-200);
+  --state-text-custom: var(--theme-custom-default);
+  --state-icon-custom: var(--theme-custom-default);
+  --state-border-custom-secondary: var(--theme-custom-400);
+  --state-bg-custom-primary: var(--theme-custom-default);
+  --state-bg-custom-secondary: var(--theme-custom-200);
+  --state-bg-error-primary: var(--theme-error-default);
+  --state-bg-warning-primary: var(--theme-warning-default);
+  --state-bg-success-primary: var(--theme-success-default);
+  --state-bg-info-primary: var(--theme-info-default);
+  --state-border-info-primary: var(--theme-info-default);
+  --state-border-success-primary: var(--theme-success-default);
+  --state-border-warning-primary: var(--theme-warning-default);
+  --state-border-error-primary: var(--theme-error-default);
+  --state-border-custom-primary: var(--theme-custom-default);
+  --state-bg-tetriary: var(--theme-neutral-300);
+  --state-border-tetriary: var(--theme-neutral-100);
+  --state-border-on-accent-tetriary: var(--theme-neutral-absolute-tetriary);
+  --state-border-on-accent-primary-2: var(--theme-neutral-absolute-primary);
+  --state-border-on-accent-primary-3: var(--theme-neutral-absolute-primary);
+  --state-border-on-accent-primary-4: var(--theme-neutral-absolute-primary);
+}
+
+[data-accent="sky"].ds-interactive:disabled,
+[data-accent="sky"][data-state="disabled"] {
+  --state-text-accent: var(--theme-neutral-400);
+  --state-text-primary: var(--theme-neutral-400);
+  --state-icon-accent: var(--theme-neutral-400);
+  --state-icon-primary: var(--theme-neutral-400);
+  --state-bg-accent: var(--theme-neutral-400);
+  --state-bg-primary: var(--theme-neutral-400);
+  --state-border-accent: var(--theme-neutral-400);
+  --state-border-secondary: var(--theme-neutral-200);
+  --state-text-on-accent: var(--theme-neutral-absolute-secondary);
+  --state-text-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-text-secondary: var(--theme-neutral-300);
+  --state-icon-secondary: var(--theme-neutral-300);
+  --state-icon-on-accent: var(--theme-neutral-absolute-secondary);
+  --state-icon-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-border-primary: var(--theme-neutral-400);
+  --state-bg-secondary: var(--theme-neutral-300);
+  --state-border-on-accent-primary: var(--theme-neutral-absolute-secondary);
+  --state-border-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-text-info: var(--theme-neutral-400);
+  --state-text-success: var(--theme-neutral-400);
+  --state-text-warning: var(--theme-neutral-400);
+  --state-text-error: var(--theme-neutral-400);
+  --state-icon-info: var(--theme-neutral-400);
+  --state-icon-success: var(--theme-neutral-400);
+  --state-icon-warning: var(--theme-neutral-400);
+  --state-icon-error: var(--theme-neutral-400);
+  --state-border-info-secondary: var(--theme-neutral-300);
+  --state-border-success-secondary: var(--theme-neutral-300);
+  --state-border-warning-secondary: var(--theme-neutral-300);
+  --state-border-error-secondary: var(--theme-neutral-300);
+  --state-bg-info-secondary: var(--theme-neutral-200);
+  --state-bg-success-secondary: var(--theme-neutral-200);
+  --state-bg-warning-secondary: var(--theme-neutral-200);
+  --state-bg-error-secondary: var(--theme-neutral-200);
+  --state-text-custom: var(--theme-neutral-400);
+  --state-icon-custom: var(--theme-neutral-400);
+  --state-border-custom-secondary: var(--theme-neutral-300);
+  --state-bg-custom-primary: var(--theme-neutral-400);
+  --state-bg-custom-secondary: var(--theme-neutral-200);
+  --state-bg-error-primary: var(--theme-neutral-400);
+  --state-bg-warning-primary: var(--theme-neutral-400);
+  --state-bg-success-primary: var(--theme-neutral-400);
+  --state-bg-info-primary: var(--theme-neutral-400);
+  --state-border-info-primary: var(--theme-neutral-400);
+  --state-border-success-primary: var(--theme-neutral-400);
+  --state-border-warning-primary: var(--theme-neutral-400);
+  --state-border-error-primary: var(--theme-neutral-400);
+  --state-border-custom-primary: var(--theme-neutral-400);
+  --state-bg-tetriary: var(--theme-neutral-100);
+  --state-border-tetriary: var(--theme-neutral-100);
+  --state-border-on-accent-tetriary: var(--theme-neutral-absolute-tetriary);
+  --state-border-on-accent-primary-2: var(--theme-neutral-absolute-secondary);
+  --state-border-on-accent-primary-3: var(--theme-neutral-absolute-secondary);
+  --state-border-on-accent-primary-4: var(--theme-neutral-absolute-secondary);
+}
+
+[data-accent="sky"].ds-interactive:hover,
+[data-accent="sky"][data-state="hover"] {
+  --state-text-accent: var(--theme-accent-600);
+  --state-text-primary: var(--theme-neutral-800);
+  --state-icon-accent: var(--theme-accent-600);
+  --state-icon-primary: var(--theme-neutral-800);
+  --state-bg-accent: var(--theme-accent-600);
+  --state-bg-primary: var(--theme-neutral-900);
+  --state-border-accent: var(--theme-accent-600);
+  --state-border-secondary: var(--theme-neutral-400);
+  --state-text-on-accent: var(--theme-neutral-absolute-primary);
+  --state-text-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-text-secondary: var(--theme-neutral-600);
+  --state-icon-secondary: var(--theme-neutral-600);
+  --state-icon-on-accent: var(--theme-neutral-absolute-primary);
+  --state-icon-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-border-primary: var(--theme-neutral-default);
+  --state-bg-secondary: var(--theme-neutral-600);
+  --state-border-on-accent-primary: var(--theme-neutral-absolute-primary);
+  --state-border-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-text-info: var(--theme-info-600);
+  --state-text-success: var(--theme-success-600);
+  --state-text-warning: var(--theme-warning-600);
+  --state-text-error: var(--theme-error-600);
+  --state-icon-info: var(--theme-info-600);
+  --state-icon-success: var(--theme-success-600);
+  --state-icon-warning: var(--theme-warning-600);
+  --state-icon-error: var(--theme-error-600);
+  --state-border-info-secondary: var(--theme-info-default);
+  --state-border-success-secondary: var(--theme-success-default);
+  --state-border-warning-secondary: var(--theme-warning-default);
+  --state-border-error-secondary: var(--theme-error-default);
+  --state-bg-info-secondary: var(--theme-info-300);
+  --state-bg-success-secondary: var(--theme-success-300);
+  --state-bg-warning-secondary: var(--theme-warning-300);
+  --state-bg-error-secondary: var(--theme-error-300);
+  --state-text-custom: var(--theme-custom-600);
+  --state-icon-custom: var(--theme-custom-600);
+  --state-border-custom-secondary: var(--theme-custom-default);
+  --state-bg-custom-primary: var(--theme-custom-600);
+  --state-bg-custom-secondary: var(--theme-custom-300);
+  --state-bg-error-primary: var(--theme-error-600);
+  --state-bg-warning-primary: var(--theme-warning-600);
+  --state-bg-success-primary: var(--theme-success-600);
+  --state-bg-info-primary: var(--theme-info-600);
+  --state-border-info-primary: var(--theme-info-600);
+  --state-border-success-primary: var(--theme-success-600);
+  --state-border-warning-primary: var(--theme-warning-600);
+  --state-border-error-primary: var(--theme-error-600);
+  --state-border-custom-primary: var(--theme-custom-600);
+  --state-bg-tetriary: var(--theme-neutral-400);
+  --state-border-tetriary: var(--theme-neutral-200);
+  --state-border-on-accent-tetriary: var(--theme-neutral-absolute-tetriary);
+  --state-border-on-accent-primary-2: var(--theme-neutral-absolute-primary);
+  --state-border-on-accent-primary-3: var(--theme-neutral-absolute-primary);
+  --state-border-on-accent-primary-4: var(--theme-neutral-absolute-primary);
+}
+
+[data-theme="dark"].ds-interactive:active,
+[data-theme="dark"][data-state="pressed"] {
+  --state-text-accent: var(--theme-accent-default);
+  --state-text-primary: var(--theme-neutral-900);
+  --state-icon-accent: var(--theme-accent-default);
+  --state-icon-primary: var(--theme-neutral-900);
+  --state-bg-accent: var(--theme-accent-default);
+  --state-bg-primary: var(--theme-neutral-900);
+  --state-border-accent: var(--theme-accent-default);
+  --state-border-secondary: var(--theme-neutral-300);
+  --state-text-on-accent: var(--theme-neutral-absolute-primary);
+  --state-text-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-text-secondary: var(--theme-neutral-default);
+  --state-icon-secondary: var(--theme-neutral-default);
+  --state-icon-on-accent: var(--theme-neutral-absolute-primary);
+  --state-icon-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-border-primary: var(--theme-neutral-600);
+  --state-bg-secondary: var(--theme-neutral-default);
+  --state-border-on-accent-primary: var(--theme-neutral-absolute-primary);
+  --state-border-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-text-info: var(--theme-info-default);
+  --state-text-success: var(--theme-success-default);
+  --state-text-warning: var(--theme-warning-default);
+  --state-text-error: var(--theme-error-default);
+  --state-icon-info: var(--theme-info-default);
+  --state-icon-success: var(--theme-success-default);
+  --state-icon-warning: var(--theme-warning-default);
+  --state-icon-error: var(--theme-error-default);
+  --state-border-info-secondary: var(--theme-info-400);
+  --state-border-success-secondary: var(--theme-success-400);
+  --state-border-warning-secondary: var(--theme-warning-400);
+  --state-border-error-secondary: var(--theme-error-400);
+  --state-bg-info-secondary: var(--theme-info-200);
+  --state-bg-success-secondary: var(--theme-success-300);
+  --state-bg-warning-secondary: var(--theme-warning-200);
+  --state-bg-error-secondary: var(--theme-error-200);
+  --state-text-custom: var(--theme-custom-default);
+  --state-icon-custom: var(--theme-custom-default);
+  --state-border-custom-secondary: var(--theme-custom-400);
+  --state-bg-custom-primary: var(--theme-custom-default);
+  --state-bg-custom-secondary: var(--theme-custom-200);
+  --state-bg-error-primary: var(--theme-error-default);
+  --state-bg-warning-primary: var(--theme-warning-default);
+  --state-bg-success-primary: var(--theme-success-default);
+  --state-bg-info-primary: var(--theme-info-default);
+  --state-border-info-primary: var(--theme-info-default);
+  --state-border-success-primary: var(--theme-success-default);
+  --state-border-warning-primary: var(--theme-warning-default);
+  --state-border-error-primary: var(--theme-error-default);
+  --state-border-custom-primary: var(--theme-custom-default);
+  --state-bg-tetriary: var(--theme-neutral-300);
+  --state-border-tetriary: var(--theme-neutral-100);
+  --state-border-on-accent-tetriary: var(--theme-neutral-absolute-tetriary);
+  --state-border-on-accent-primary-2: var(--theme-neutral-absolute-primary);
+  --state-border-on-accent-primary-3: var(--theme-neutral-absolute-primary);
+  --state-border-on-accent-primary-4: var(--theme-neutral-absolute-primary);
+}
+
+[data-theme="dark"].ds-interactive:disabled,
+[data-theme="dark"][data-state="disabled"] {
+  --state-text-accent: var(--theme-neutral-400);
+  --state-text-primary: var(--theme-neutral-400);
+  --state-icon-accent: var(--theme-neutral-400);
+  --state-icon-primary: var(--theme-neutral-400);
+  --state-bg-accent: var(--theme-neutral-400);
+  --state-bg-primary: var(--theme-neutral-400);
+  --state-border-accent: var(--theme-neutral-400);
+  --state-border-secondary: var(--theme-neutral-200);
+  --state-text-on-accent: var(--theme-neutral-absolute-secondary);
+  --state-text-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-text-secondary: var(--theme-neutral-300);
+  --state-icon-secondary: var(--theme-neutral-300);
+  --state-icon-on-accent: var(--theme-neutral-absolute-secondary);
+  --state-icon-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-border-primary: var(--theme-neutral-400);
+  --state-bg-secondary: var(--theme-neutral-300);
+  --state-border-on-accent-primary: var(--theme-neutral-absolute-secondary);
+  --state-border-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-text-info: var(--theme-neutral-400);
+  --state-text-success: var(--theme-neutral-400);
+  --state-text-warning: var(--theme-neutral-400);
+  --state-text-error: var(--theme-neutral-400);
+  --state-icon-info: var(--theme-neutral-400);
+  --state-icon-success: var(--theme-neutral-400);
+  --state-icon-warning: var(--theme-neutral-400);
+  --state-icon-error: var(--theme-neutral-400);
+  --state-border-info-secondary: var(--theme-neutral-300);
+  --state-border-success-secondary: var(--theme-neutral-300);
+  --state-border-warning-secondary: var(--theme-neutral-300);
+  --state-border-error-secondary: var(--theme-neutral-300);
+  --state-bg-info-secondary: var(--theme-neutral-200);
+  --state-bg-success-secondary: var(--theme-neutral-200);
+  --state-bg-warning-secondary: var(--theme-neutral-200);
+  --state-bg-error-secondary: var(--theme-neutral-200);
+  --state-text-custom: var(--theme-neutral-400);
+  --state-icon-custom: var(--theme-neutral-400);
+  --state-border-custom-secondary: var(--theme-neutral-300);
+  --state-bg-custom-primary: var(--theme-neutral-400);
+  --state-bg-custom-secondary: var(--theme-neutral-200);
+  --state-bg-error-primary: var(--theme-neutral-400);
+  --state-bg-warning-primary: var(--theme-neutral-400);
+  --state-bg-success-primary: var(--theme-neutral-400);
+  --state-bg-info-primary: var(--theme-neutral-400);
+  --state-border-info-primary: var(--theme-neutral-400);
+  --state-border-success-primary: var(--theme-neutral-400);
+  --state-border-warning-primary: var(--theme-neutral-400);
+  --state-border-error-primary: var(--theme-neutral-400);
+  --state-border-custom-primary: var(--theme-neutral-400);
+  --state-bg-tetriary: var(--theme-neutral-100);
+  --state-border-tetriary: var(--theme-neutral-100);
+  --state-border-on-accent-tetriary: var(--theme-neutral-absolute-tetriary);
+  --state-border-on-accent-primary-2: var(--theme-neutral-absolute-secondary);
+  --state-border-on-accent-primary-3: var(--theme-neutral-absolute-secondary);
+  --state-border-on-accent-primary-4: var(--theme-neutral-absolute-secondary);
+}
+
+[data-theme="dark"].ds-interactive:hover,
+[data-theme="dark"][data-state="hover"] {
+  --state-text-accent: var(--theme-accent-600);
+  --state-text-primary: var(--theme-neutral-800);
+  --state-icon-accent: var(--theme-accent-600);
+  --state-icon-primary: var(--theme-neutral-800);
+  --state-bg-accent: var(--theme-accent-600);
+  --state-bg-primary: var(--theme-neutral-900);
+  --state-border-accent: var(--theme-accent-600);
+  --state-border-secondary: var(--theme-neutral-400);
+  --state-text-on-accent: var(--theme-neutral-absolute-primary);
+  --state-text-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-text-secondary: var(--theme-neutral-600);
+  --state-icon-secondary: var(--theme-neutral-600);
+  --state-icon-on-accent: var(--theme-neutral-absolute-primary);
+  --state-icon-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-border-primary: var(--theme-neutral-default);
+  --state-bg-secondary: var(--theme-neutral-600);
+  --state-border-on-accent-primary: var(--theme-neutral-absolute-primary);
+  --state-border-on-accent-secondary: var(--theme-neutral-absolute-secondary);
+  --state-text-info: var(--theme-info-600);
+  --state-text-success: var(--theme-success-600);
+  --state-text-warning: var(--theme-warning-600);
+  --state-text-error: var(--theme-error-600);
+  --state-icon-info: var(--theme-info-600);
+  --state-icon-success: var(--theme-success-600);
+  --state-icon-warning: var(--theme-warning-600);
+  --state-icon-error: var(--theme-error-600);
+  --state-border-info-secondary: var(--theme-info-default);
+  --state-border-success-secondary: var(--theme-success-default);
+  --state-border-warning-secondary: var(--theme-warning-default);
+  --state-border-error-secondary: var(--theme-error-default);
+  --state-bg-info-secondary: var(--theme-info-300);
+  --state-bg-success-secondary: var(--theme-success-300);
+  --state-bg-warning-secondary: var(--theme-warning-300);
+  --state-bg-error-secondary: var(--theme-error-300);
+  --state-text-custom: var(--theme-custom-600);
+  --state-icon-custom: var(--theme-custom-600);
+  --state-border-custom-secondary: var(--theme-custom-default);
+  --state-bg-custom-primary: var(--theme-custom-600);
+  --state-bg-custom-secondary: var(--theme-custom-300);
+  --state-bg-error-primary: var(--theme-error-600);
+  --state-bg-warning-primary: var(--theme-warning-600);
+  --state-bg-success-primary: var(--theme-success-600);
+  --state-bg-info-primary: var(--theme-info-600);
+  --state-border-info-primary: var(--theme-info-600);
+  --state-border-success-primary: var(--theme-success-600);
+  --state-border-warning-primary: var(--theme-warning-600);
+  --state-border-error-primary: var(--theme-error-600);
+  --state-border-custom-primary: var(--theme-custom-600);
+  --state-bg-tetriary: var(--theme-neutral-400);
+  --state-border-tetriary: var(--theme-neutral-200);
+  --state-border-on-accent-tetriary: var(--theme-neutral-absolute-tetriary);
+  --state-border-on-accent-primary-2: var(--theme-neutral-absolute-primary);
+  --state-border-on-accent-primary-3: var(--theme-neutral-absolute-primary);
+  --state-border-on-accent-primary-4: var(--theme-neutral-absolute-primary);
+}
+
 .ds-interactive:hover,
 [data-state="hover"] {
   --state-text-accent: var(--theme-accent-600);
@@ -542,6 +1238,204 @@
   --message-border-primary: var(--state-border-info-primary);
 }
 
+.ds-interactive:active[data-message="error"],
+[data-state="pressed"][data-message="error"] {
+  --message-text: var(--state-text-error);
+  --message-icon: var(--state-icon-error);
+  --message-bg-secondary: var(--state-bg-error-secondary);
+  --message-border-secondary: var(--state-border-error-secondary);
+  --message-bg-primary: var(--state-bg-error-primary);
+  --message-border-primary: var(--state-border-error-primary);
+}
+
+.ds-interactive:active[data-message="success"],
+[data-state="pressed"][data-message="success"] {
+  --message-text: var(--state-text-success);
+  --message-icon: var(--state-icon-success);
+  --message-bg-secondary: var(--state-bg-success-secondary);
+  --message-border-secondary: var(--state-border-success-secondary);
+  --message-bg-primary: var(--state-bg-success-primary);
+  --message-border-primary: var(--state-border-success-primary);
+}
+
+.ds-interactive:active[data-message="warning"],
+[data-state="pressed"][data-message="warning"] {
+  --message-text: var(--state-text-warning);
+  --message-icon: var(--state-icon-warning);
+  --message-bg-secondary: var(--state-bg-warning-secondary);
+  --message-border-secondary: var(--state-border-warning-secondary);
+  --message-bg-primary: var(--state-bg-warning-primary);
+  --message-border-primary: var(--state-border-warning-primary);
+}
+
+.ds-interactive:disabled[data-message="error"],
+[data-state="disabled"][data-message="error"] {
+  --message-text: var(--state-text-error);
+  --message-icon: var(--state-icon-error);
+  --message-bg-secondary: var(--state-bg-error-secondary);
+  --message-border-secondary: var(--state-border-error-secondary);
+  --message-bg-primary: var(--state-bg-error-primary);
+  --message-border-primary: var(--state-border-error-primary);
+}
+
+.ds-interactive:disabled[data-message="success"],
+[data-state="disabled"][data-message="success"] {
+  --message-text: var(--state-text-success);
+  --message-icon: var(--state-icon-success);
+  --message-bg-secondary: var(--state-bg-success-secondary);
+  --message-border-secondary: var(--state-border-success-secondary);
+  --message-bg-primary: var(--state-bg-success-primary);
+  --message-border-primary: var(--state-border-success-primary);
+}
+
+.ds-interactive:disabled[data-message="warning"],
+[data-state="disabled"][data-message="warning"] {
+  --message-text: var(--state-text-warning);
+  --message-icon: var(--state-icon-warning);
+  --message-bg-secondary: var(--state-bg-warning-secondary);
+  --message-border-secondary: var(--state-border-warning-secondary);
+  --message-bg-primary: var(--state-bg-warning-primary);
+  --message-border-primary: var(--state-border-warning-primary);
+}
+
+.ds-interactive:hover[data-message="error"],
+[data-state="hover"][data-message="error"] {
+  --message-text: var(--state-text-error);
+  --message-icon: var(--state-icon-error);
+  --message-bg-secondary: var(--state-bg-error-secondary);
+  --message-border-secondary: var(--state-border-error-secondary);
+  --message-bg-primary: var(--state-bg-error-primary);
+  --message-border-primary: var(--state-border-error-primary);
+}
+
+.ds-interactive:hover[data-message="success"],
+[data-state="hover"][data-message="success"] {
+  --message-text: var(--state-text-success);
+  --message-icon: var(--state-icon-success);
+  --message-bg-secondary: var(--state-bg-success-secondary);
+  --message-border-secondary: var(--state-border-success-secondary);
+  --message-bg-primary: var(--state-bg-success-primary);
+  --message-border-primary: var(--state-border-success-primary);
+}
+
+.ds-interactive:hover[data-message="warning"],
+[data-state="hover"][data-message="warning"] {
+  --message-text: var(--state-text-warning);
+  --message-icon: var(--state-icon-warning);
+  --message-bg-secondary: var(--state-bg-warning-secondary);
+  --message-border-secondary: var(--state-border-warning-secondary);
+  --message-bg-primary: var(--state-bg-warning-primary);
+  --message-border-primary: var(--state-border-warning-primary);
+}
+
+[data-accent="purple"][data-message="error"] {
+  --message-text: var(--state-text-error);
+  --message-icon: var(--state-icon-error);
+  --message-bg-secondary: var(--state-bg-error-secondary);
+  --message-border-secondary: var(--state-border-error-secondary);
+  --message-bg-primary: var(--state-bg-error-primary);
+  --message-border-primary: var(--state-border-error-primary);
+}
+
+[data-accent="purple"][data-message="success"] {
+  --message-text: var(--state-text-success);
+  --message-icon: var(--state-icon-success);
+  --message-bg-secondary: var(--state-bg-success-secondary);
+  --message-border-secondary: var(--state-border-success-secondary);
+  --message-bg-primary: var(--state-bg-success-primary);
+  --message-border-primary: var(--state-border-success-primary);
+}
+
+[data-accent="purple"][data-message="warning"] {
+  --message-text: var(--state-text-warning);
+  --message-icon: var(--state-icon-warning);
+  --message-bg-secondary: var(--state-bg-warning-secondary);
+  --message-border-secondary: var(--state-border-warning-secondary);
+  --message-bg-primary: var(--state-bg-warning-primary);
+  --message-border-primary: var(--state-border-warning-primary);
+}
+
+[data-accent="red"][data-message="error"] {
+  --message-text: var(--state-text-error);
+  --message-icon: var(--state-icon-error);
+  --message-bg-secondary: var(--state-bg-error-secondary);
+  --message-border-secondary: var(--state-border-error-secondary);
+  --message-bg-primary: var(--state-bg-error-primary);
+  --message-border-primary: var(--state-border-error-primary);
+}
+
+[data-accent="red"][data-message="success"] {
+  --message-text: var(--state-text-success);
+  --message-icon: var(--state-icon-success);
+  --message-bg-secondary: var(--state-bg-success-secondary);
+  --message-border-secondary: var(--state-border-success-secondary);
+  --message-bg-primary: var(--state-bg-success-primary);
+  --message-border-primary: var(--state-border-success-primary);
+}
+
+[data-accent="red"][data-message="warning"] {
+  --message-text: var(--state-text-warning);
+  --message-icon: var(--state-icon-warning);
+  --message-bg-secondary: var(--state-bg-warning-secondary);
+  --message-border-secondary: var(--state-border-warning-secondary);
+  --message-bg-primary: var(--state-bg-warning-primary);
+  --message-border-primary: var(--state-border-warning-primary);
+}
+
+[data-accent="sky"][data-message="error"] {
+  --message-text: var(--state-text-error);
+  --message-icon: var(--state-icon-error);
+  --message-bg-secondary: var(--state-bg-error-secondary);
+  --message-border-secondary: var(--state-border-error-secondary);
+  --message-bg-primary: var(--state-bg-error-primary);
+  --message-border-primary: var(--state-border-error-primary);
+}
+
+[data-accent="sky"][data-message="success"] {
+  --message-text: var(--state-text-success);
+  --message-icon: var(--state-icon-success);
+  --message-bg-secondary: var(--state-bg-success-secondary);
+  --message-border-secondary: var(--state-border-success-secondary);
+  --message-bg-primary: var(--state-bg-success-primary);
+  --message-border-primary: var(--state-border-success-primary);
+}
+
+[data-accent="sky"][data-message="warning"] {
+  --message-text: var(--state-text-warning);
+  --message-icon: var(--state-icon-warning);
+  --message-bg-secondary: var(--state-bg-warning-secondary);
+  --message-border-secondary: var(--state-border-warning-secondary);
+  --message-bg-primary: var(--state-bg-warning-primary);
+  --message-border-primary: var(--state-border-warning-primary);
+}
+
+[data-theme="dark"][data-message="error"] {
+  --message-text: var(--state-text-error);
+  --message-icon: var(--state-icon-error);
+  --message-bg-secondary: var(--state-bg-error-secondary);
+  --message-border-secondary: var(--state-border-error-secondary);
+  --message-bg-primary: var(--state-bg-error-primary);
+  --message-border-primary: var(--state-border-error-primary);
+}
+
+[data-theme="dark"][data-message="success"] {
+  --message-text: var(--state-text-success);
+  --message-icon: var(--state-icon-success);
+  --message-bg-secondary: var(--state-bg-success-secondary);
+  --message-border-secondary: var(--state-border-success-secondary);
+  --message-bg-primary: var(--state-bg-success-primary);
+  --message-border-primary: var(--state-border-success-primary);
+}
+
+[data-theme="dark"][data-message="warning"] {
+  --message-text: var(--state-text-warning);
+  --message-icon: var(--state-icon-warning);
+  --message-bg-secondary: var(--state-bg-warning-secondary);
+  --message-border-secondary: var(--state-border-warning-secondary);
+  --message-bg-primary: var(--state-bg-warning-primary);
+  --message-border-primary: var(--state-border-warning-primary);
+}
+
 [data-message="success"] {
   --message-text: var(--state-text-success);
   --message-icon: var(--state-icon-success);
@@ -760,6 +1654,179 @@
   --on-accent-border-message: var(--message-border-secondary);
   --on-accent-bg-message: var(--message-bg-secondary);
   --on-accent-border-tetriary: var(--state-border-tetriary);
+}
+
+.ds-interactive:active[data-on-accent],
+[data-state="pressed"][data-on-accent] {
+  --on-accent-text-primary: var(--state-text-on-accent);
+  --on-accent-text-secondary: var(--state-text-on-accent-secondary);
+  --on-accent-icon-primary: var(--state-icon-on-accent);
+  --on-accent-icon-secondary: var(--state-text-on-accent-secondary);
+  --on-accent-border-primary: var(--state-border-on-accent-primary);
+  --on-accent-border-secondary: var(--state-border-on-accent-secondary);
+  --on-accent-text-custom: var(--state-text-on-accent);
+  --on-accent-icon-custom: var(--state-text-on-accent);
+  --on-accent-border-custom: var(--state-border-on-accent-secondary);
+  --on-accent-text-message: var(--state-text-on-accent-secondary);
+  --on-accent-icon-message: var(--state-text-on-accent-secondary);
+  --on-accent-border-message: var(--message-border-primary);
+  --on-accent-bg-message: var(--message-bg-primary);
+  --on-accent-border-tetriary: var(--state-border-on-accent-tetriary);
+}
+
+.ds-interactive:disabled[data-on-accent],
+[data-state="disabled"][data-on-accent] {
+  --on-accent-text-primary: var(--state-text-on-accent);
+  --on-accent-text-secondary: var(--state-text-on-accent-secondary);
+  --on-accent-icon-primary: var(--state-icon-on-accent);
+  --on-accent-icon-secondary: var(--state-text-on-accent-secondary);
+  --on-accent-border-primary: var(--state-border-on-accent-primary);
+  --on-accent-border-secondary: var(--state-border-on-accent-secondary);
+  --on-accent-text-custom: var(--state-text-on-accent);
+  --on-accent-icon-custom: var(--state-text-on-accent);
+  --on-accent-border-custom: var(--state-border-on-accent-secondary);
+  --on-accent-text-message: var(--state-text-on-accent-secondary);
+  --on-accent-icon-message: var(--state-text-on-accent-secondary);
+  --on-accent-border-message: var(--message-border-primary);
+  --on-accent-bg-message: var(--message-bg-primary);
+  --on-accent-border-tetriary: var(--state-border-on-accent-tetriary);
+}
+
+.ds-interactive:hover[data-on-accent],
+[data-state="hover"][data-on-accent] {
+  --on-accent-text-primary: var(--state-text-on-accent);
+  --on-accent-text-secondary: var(--state-text-on-accent-secondary);
+  --on-accent-icon-primary: var(--state-icon-on-accent);
+  --on-accent-icon-secondary: var(--state-text-on-accent-secondary);
+  --on-accent-border-primary: var(--state-border-on-accent-primary);
+  --on-accent-border-secondary: var(--state-border-on-accent-secondary);
+  --on-accent-text-custom: var(--state-text-on-accent);
+  --on-accent-icon-custom: var(--state-text-on-accent);
+  --on-accent-border-custom: var(--state-border-on-accent-secondary);
+  --on-accent-text-message: var(--state-text-on-accent-secondary);
+  --on-accent-icon-message: var(--state-text-on-accent-secondary);
+  --on-accent-border-message: var(--message-border-primary);
+  --on-accent-bg-message: var(--message-bg-primary);
+  --on-accent-border-tetriary: var(--state-border-on-accent-tetriary);
+}
+
+[data-accent="purple"][data-on-accent] {
+  --on-accent-text-primary: var(--state-text-on-accent);
+  --on-accent-text-secondary: var(--state-text-on-accent-secondary);
+  --on-accent-icon-primary: var(--state-icon-on-accent);
+  --on-accent-icon-secondary: var(--state-text-on-accent-secondary);
+  --on-accent-border-primary: var(--state-border-on-accent-primary);
+  --on-accent-border-secondary: var(--state-border-on-accent-secondary);
+  --on-accent-text-custom: var(--state-text-on-accent);
+  --on-accent-icon-custom: var(--state-text-on-accent);
+  --on-accent-border-custom: var(--state-border-on-accent-secondary);
+  --on-accent-text-message: var(--state-text-on-accent-secondary);
+  --on-accent-icon-message: var(--state-text-on-accent-secondary);
+  --on-accent-border-message: var(--message-border-primary);
+  --on-accent-bg-message: var(--message-bg-primary);
+  --on-accent-border-tetriary: var(--state-border-on-accent-tetriary);
+}
+
+[data-accent="red"][data-on-accent] {
+  --on-accent-text-primary: var(--state-text-on-accent);
+  --on-accent-text-secondary: var(--state-text-on-accent-secondary);
+  --on-accent-icon-primary: var(--state-icon-on-accent);
+  --on-accent-icon-secondary: var(--state-text-on-accent-secondary);
+  --on-accent-border-primary: var(--state-border-on-accent-primary);
+  --on-accent-border-secondary: var(--state-border-on-accent-secondary);
+  --on-accent-text-custom: var(--state-text-on-accent);
+  --on-accent-icon-custom: var(--state-text-on-accent);
+  --on-accent-border-custom: var(--state-border-on-accent-secondary);
+  --on-accent-text-message: var(--state-text-on-accent-secondary);
+  --on-accent-icon-message: var(--state-text-on-accent-secondary);
+  --on-accent-border-message: var(--message-border-primary);
+  --on-accent-bg-message: var(--message-bg-primary);
+  --on-accent-border-tetriary: var(--state-border-on-accent-tetriary);
+}
+
+[data-accent="sky"][data-on-accent] {
+  --on-accent-text-primary: var(--state-text-on-accent);
+  --on-accent-text-secondary: var(--state-text-on-accent-secondary);
+  --on-accent-icon-primary: var(--state-icon-on-accent);
+  --on-accent-icon-secondary: var(--state-text-on-accent-secondary);
+  --on-accent-border-primary: var(--state-border-on-accent-primary);
+  --on-accent-border-secondary: var(--state-border-on-accent-secondary);
+  --on-accent-text-custom: var(--state-text-on-accent);
+  --on-accent-icon-custom: var(--state-text-on-accent);
+  --on-accent-border-custom: var(--state-border-on-accent-secondary);
+  --on-accent-text-message: var(--state-text-on-accent-secondary);
+  --on-accent-icon-message: var(--state-text-on-accent-secondary);
+  --on-accent-border-message: var(--message-border-primary);
+  --on-accent-bg-message: var(--message-bg-primary);
+  --on-accent-border-tetriary: var(--state-border-on-accent-tetriary);
+}
+
+[data-message="error"][data-on-accent] {
+  --on-accent-text-primary: var(--state-text-on-accent);
+  --on-accent-text-secondary: var(--state-text-on-accent-secondary);
+  --on-accent-icon-primary: var(--state-icon-on-accent);
+  --on-accent-icon-secondary: var(--state-text-on-accent-secondary);
+  --on-accent-border-primary: var(--state-border-on-accent-primary);
+  --on-accent-border-secondary: var(--state-border-on-accent-secondary);
+  --on-accent-text-custom: var(--state-text-on-accent);
+  --on-accent-icon-custom: var(--state-text-on-accent);
+  --on-accent-border-custom: var(--state-border-on-accent-secondary);
+  --on-accent-text-message: var(--state-text-on-accent-secondary);
+  --on-accent-icon-message: var(--state-text-on-accent-secondary);
+  --on-accent-border-message: var(--message-border-primary);
+  --on-accent-bg-message: var(--message-bg-primary);
+  --on-accent-border-tetriary: var(--state-border-on-accent-tetriary);
+}
+
+[data-message="success"][data-on-accent] {
+  --on-accent-text-primary: var(--state-text-on-accent);
+  --on-accent-text-secondary: var(--state-text-on-accent-secondary);
+  --on-accent-icon-primary: var(--state-icon-on-accent);
+  --on-accent-icon-secondary: var(--state-text-on-accent-secondary);
+  --on-accent-border-primary: var(--state-border-on-accent-primary);
+  --on-accent-border-secondary: var(--state-border-on-accent-secondary);
+  --on-accent-text-custom: var(--state-text-on-accent);
+  --on-accent-icon-custom: var(--state-text-on-accent);
+  --on-accent-border-custom: var(--state-border-on-accent-secondary);
+  --on-accent-text-message: var(--state-text-on-accent-secondary);
+  --on-accent-icon-message: var(--state-text-on-accent-secondary);
+  --on-accent-border-message: var(--message-border-primary);
+  --on-accent-bg-message: var(--message-bg-primary);
+  --on-accent-border-tetriary: var(--state-border-on-accent-tetriary);
+}
+
+[data-message="warning"][data-on-accent] {
+  --on-accent-text-primary: var(--state-text-on-accent);
+  --on-accent-text-secondary: var(--state-text-on-accent-secondary);
+  --on-accent-icon-primary: var(--state-icon-on-accent);
+  --on-accent-icon-secondary: var(--state-text-on-accent-secondary);
+  --on-accent-border-primary: var(--state-border-on-accent-primary);
+  --on-accent-border-secondary: var(--state-border-on-accent-secondary);
+  --on-accent-text-custom: var(--state-text-on-accent);
+  --on-accent-icon-custom: var(--state-text-on-accent);
+  --on-accent-border-custom: var(--state-border-on-accent-secondary);
+  --on-accent-text-message: var(--state-text-on-accent-secondary);
+  --on-accent-icon-message: var(--state-text-on-accent-secondary);
+  --on-accent-border-message: var(--message-border-primary);
+  --on-accent-bg-message: var(--message-bg-primary);
+  --on-accent-border-tetriary: var(--state-border-on-accent-tetriary);
+}
+
+[data-theme="dark"][data-on-accent] {
+  --on-accent-text-primary: var(--state-text-on-accent);
+  --on-accent-text-secondary: var(--state-text-on-accent-secondary);
+  --on-accent-icon-primary: var(--state-icon-on-accent);
+  --on-accent-icon-secondary: var(--state-text-on-accent-secondary);
+  --on-accent-border-primary: var(--state-border-on-accent-primary);
+  --on-accent-border-secondary: var(--state-border-on-accent-secondary);
+  --on-accent-text-custom: var(--state-text-on-accent);
+  --on-accent-icon-custom: var(--state-text-on-accent);
+  --on-accent-border-custom: var(--state-border-on-accent-secondary);
+  --on-accent-text-message: var(--state-text-on-accent-secondary);
+  --on-accent-icon-message: var(--state-text-on-accent-secondary);
+  --on-accent-border-message: var(--message-border-primary);
+  --on-accent-bg-message: var(--message-bg-primary);
+  --on-accent-border-tetriary: var(--state-border-on-accent-tetriary);
 }
 
 [data-on-accent] {

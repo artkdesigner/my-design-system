@@ -336,16 +336,68 @@ function computeReemission(model, config) {
     const defaultMode = collection.modes.find((mode) => mode.isDefault);
     if (!defaultMode || defaultMode.tokens.length === 0) continue; // нечего переизлучать
 
-    const declarations = renderDeclarations(defaultMode.tokens);
-
-    const blocks = [...bySelectorText.keys()]
+    const triggers = [...bySelectorText.keys()]
       .sort((a, b) => a.localeCompare(b))
-      .map((key) => `${key} {\n${declarations}\n}`);
+      .map((key) => bySelectorText.get(key));
+
+    const declarations = renderDeclarations(defaultMode.tokens);
+    const blocks = triggers.map(
+      (selectors) => `${selectors.join(',\n')} {\n${declarations}\n}`
+    );
+
+    blocks.push(...compoundBlocks(collection, config, triggers));
 
     reemission.set(collection.name, blocks);
   }
 
   return reemission;
+}
+
+/**
+ * Составные блоки: собственный неосновной режим коллекции, объявленный заново
+ * внутри каждого триггера переизлучения.
+ *
+ * Зачем. Переизлучённый блок несёт значения умолчательного режима под
+ * селектором зависимости. В этой дизайн-системе селекторы состояний несут
+ * класс — «.ds-interactive:hover», специфичность (0,2,0), — а контейнерные
+ * переключатели той же коллекции только атрибут: «[data-message="error"]»,
+ * (0,1,0). На элементе, который и интерактивен, и несёт переключатель (кнопка
+ * опасного действия под наведением), переизлучение побеждает по специфичности
+ * и возвращает умолчательный режим: красная кнопка становилась синей, тон
+ * info вместо error. Порядок блоков здесь не помогает — специфичность решает
+ * раньше порядка.
+ *
+ * Составной селектор «.ds-interactive:hover[data-message="error"]» специфичнее
+ * (0,3,0) и одного и другого, поэтому режим переживает состояние.
+ *
+ * Селекторы склеиваются попарно: каждый селектор триггера с каждым селектором
+ * режима. Склейка без пробела — оба относятся к одному элементу; пробел
+ * означал бы потомка и не сработал бы.
+ *
+ * Режимы с :root среди селекторов пропускаются: :root это и есть умолчательный
+ * режим, он уже переизлучён обычным блоком.
+ */
+function compoundBlocks(collection, config, triggers) {
+  const rules = config[collection.name];
+  const blocks = [];
+
+  for (const mode of collection.modes) {
+    if (mode.tokens.length === 0) continue;
+
+    const modeSelectors = rules.modes[mode.name];
+    if (modeSelectors.includes(':root')) continue;
+
+    const declarations = renderDeclarations(mode.tokens);
+
+    for (const trigger of triggers) {
+      const compound = trigger.flatMap((outer) => modeSelectors.map((inner) => outer + inner));
+      blocks.push(`${compound.join(',\n')} {\n${declarations}\n}`);
+    }
+  }
+
+  // Порядок блоков не должен зависеть от порядка режимов в выгрузке Figma:
+  // дизайнер переставит режимы местами — файл не должен меняться.
+  return blocks.sort((a, b) => a.localeCompare(b));
 }
 
 // Режим, среди селекторов которого есть :root, обязан идти первым блоком
