@@ -1,0 +1,39 @@
+{
+  "ColorsPalette": {
+    "layer": "palette",
+    "order": 1,
+    "modes": { "Default": [":root"] }
+  },
+  "ColorsTheme": {
+    "layer": "theme",
+    "order": 2,
+    "modes": {
+      "Light": [":root", "[data-theme=\"light\"]"],
+      "Dark": ["[data-theme=\"dark\"]"]
+    }
+  },
+  "ColorsState": {
+    "layer": "state",
+    "order": 3,
+    "modes": {
+      "Default": [":root"],
+      "Hover": [".ds-interactive:hover", "[data-state=\"hover\"]"],
+      "Pressed": [".ds-interactive:active", "[data-state=\"pressed\"]"],
+      "Disabled": [".ds-interactive:disabled", "[data-state=\"disabled\"]"]
+    }
+  },
+  "ComponentSize": {
+    "layer": "scale",
+    "order": 4,
+    "modes": {
+      "L": [":root", "[data-size=\"l\"]"],
+      "M": ["[data-size=\"m\"]"],
+      "S": ["[data-size=\"s\"]"]
+    }
+  },
+  "Typography": {
+    "layer": "scale",
+    "order": 4,
+    "modes": { "Default": [":root"] }
+  }
+}
