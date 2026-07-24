@@ -45,7 +45,7 @@ export const ТолькоИконка: Story = {
   args: { children: null, iconLeft: <PlusIcon />, 'aria-label': 'Добавить' }
 };
 
-/** Полная матрица для сверки с макетом: 3 вида × ghost × danger. */
+/** Полная матрица для сверки с макетом: 3 вида × ghost × тон сообщения. */
 export const Матрица: Story = {
   render: () => (
     <div style={page}>
@@ -65,8 +65,8 @@ export const Матрица: Story = {
             [
               ['обычная', {}],
               ['ghost', { ghost: true }],
-              ['danger', { danger: true }],
-              ['ghost + danger', { ghost: true, danger: true }]
+              ['message=error', { message: 'error' }],
+              ['ghost + message', { ghost: true, message: 'error' }]
             ] as const
           ).map(([name, props]) => (
             <tr key={name}>
@@ -92,8 +92,8 @@ export const Матрица: Story = {
  * взаимодействия и атрибут для принудительного показа. Атрибут ставится
  * на обёртку — кнопка внутри получает значения по наследованию.
  *
- * Это же и проверка составных селекторов переизлучения: опасная кнопка
- * в столбце «наведение» обязана остаться красной, а не посинеть.
+ * Это же и проверка составных селекторов переизлучения: кнопка с тоном error
+ * в столбце «наведение» обязана остаться красной, а не посинеть в info.
  */
 export const Состояния: Story = {
   render: () => {
@@ -118,7 +118,10 @@ export const Состояния: Story = {
             </tr>
           </thead>
           <tbody>
-            {[...VIEWS.map((view) => [view, { view }] as const), ['danger', { danger: true }] as const].map(
+            {[
+              ...VIEWS.map((view) => [view, { view }] as const),
+              ['message=error', { message: 'error' }] as const
+            ].map(
               ([name, props]) => (
                 <tr key={name}>
                   <td style={label}>{name}</td>
@@ -132,6 +135,58 @@ export const Состояния: Story = {
                 </tr>
               )
             )}
+          </tbody>
+        </table>
+      </div>
+    );
+  }
+};
+
+/**
+ * Четыре тона сообщения, залитые и прозрачные. Компонент про сами цвета не
+ * знает: проп message выбирает режим коллекции ColorsMessage, значения
+ * приходят из токенов.
+ *
+ * Тон стоит на самой кнопке, а не на контейнере вокруг неё, и это не
+ * косметика: с контейнера тон переживает покой, но под наведением
+ * сбрасывается в info — переизлучение слоя сообщений в .ds-interactive:hover
+ * объявляет его умолчательный режим.
+ */
+export const Тоны: Story = {
+  render: () => {
+    const tones = ['info', 'success', 'warning', 'error'] as const;
+
+    return (
+      <div style={page}>
+        <table style={{ borderSpacing: 'var(--margin-12)' }}>
+          <thead>
+            <tr>
+              <th />
+              {tones.map((tone) => (
+                <th key={tone} style={label}>
+                  {tone}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {(
+              [
+                ['залитая', {}],
+                ['ghost', { ghost: true }]
+              ] as const
+            ).map(([name, props]) => (
+              <tr key={name}>
+                <td style={label}>{name}</td>
+                {tones.map((tone) => (
+                  <td key={tone}>
+                    <Button {...props} message={tone}>
+                      Label
+                    </Button>
+                  </td>
+                ))}
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>

@@ -70,17 +70,37 @@ describe('Button', () => {
 
   it('включает onAccent и на прозрачном виде — режим у кнопки один на все виды', () => {
     render(
-      <Button ghost danger>
+      <Button ghost message="error">
         Удалить
       </Button>
     );
     expect(screen.getByRole('button').dataset.onAccent).toBe('true');
   });
 
-  it('переводит опасное действие на тон сообщения об ошибке', () => {
-    // Опасность в дизайн-системе выражена не отдельными токенами кнопки,
-    // а режимом коллекции сообщений — тем же, что у сообщений об ошибке.
-    render(<Button danger>Удалить</Button>);
+  it('ставит тон сообщения на саму кнопку', () => {
+    // Тон обязан быть на самом элементе, а не на контейнере. Проверено на
+    // живом CSS: тон с контейнера переживает покой, но под наведением
+    // сбрасывается в info — переизлучение слоя сообщений в .ds-interactive:hover
+    // объявляет его умолчательный режим. Составные селекторы спасают только
+    // когда режим стоит на том же элементе.
+    render(<Button message="error">Удалить</Button>);
     expect(screen.getByRole('button').dataset.message).toBe('error');
+  });
+
+  it('принимает любой из четырёх тонов', () => {
+    render(<Button message="success">Готово</Button>);
+    expect(screen.getByRole('button').dataset.message).toBe('success');
+  });
+
+  it('без пропа message режима сообщения не включает', () => {
+    render(<Button>Сохранить</Button>);
+    expect(screen.getByRole('button')).not.toHaveAttribute('data-message');
+  });
+
+  it('не заводит второго атрибута под тот же признак', () => {
+    // Раньше эмитилось два: data-danger для стилей и data-message для слоя
+    // токенов. Один признак в двух местах — лишний повод им разойтись.
+    render(<Button message="error">Удалить</Button>);
+    expect(screen.getByRole('button')).not.toHaveAttribute('data-danger');
   });
 });

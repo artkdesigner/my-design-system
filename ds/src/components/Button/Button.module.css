@@ -20,6 +20,11 @@
   font-weight: var(--font-weight-medium);
   line-height: 1;
 
+  /* Содержимое по умолчанию — как у залитых видов в макете (узел 297:4137):
+     подпись element_text_primary. В режиме onAccent, который кнопка включает
+     на себе, она белая. */
+  color: var(--element-text-primary);
+
   cursor: pointer;
   transition:
     background-color 120ms ease,
@@ -43,17 +48,6 @@
 
 .button:disabled {
   cursor: not-allowed;
-}
-
-/* Содержимое по умолчанию — как у залитых видов в макете (узел 297:4137):
-   подпись element_text_primary, иконка element_icon_primary. В режиме
-   onAccent, который кнопка включает на себе, оба дают белый. */
-.button {
-  color: var(--element-text-primary);
-}
-
-.addon {
-  color: var(--element-icon-primary);
 }
 
 /* Виды различаются только заливкой, обводки у залитых нет — сверено с макетом
@@ -88,39 +82,40 @@
   color: var(--element-icon-accent);
 }
 
-/* Опасное действие. Ни заливки, ни текста «для опасного» в дизайн-системе нет
-   отдельно — есть режим error коллекции сообщений, который компонент включает
-   на себе сам (см. data-message в Button.tsx).
+/* Тон сообщения: info, success, warning, error. Значение атрибута выбирает
+   режим коллекции ColorsMessage, а сами селекторы ниже смотрят только на
+   наличие атрибута — цвет каждого тона приходит из токенов, компонент про
+   тона ничего не знает.
 
-   Залитая опасная — красный фон, белая подпись: подтверждено дизайнером.
-   Так же выходит и по токенам: в режиме onAccent element_bg_message даёт
-   сплошной красный, а содержимое остаётся светлым, как у остальных залитых
-   видов. */
-.button[data-danger] {
+   Залитая кнопка с тоном — цветной фон и светлая подпись: подтверждено
+   дизайнером для error. Так же выходит и по токенам: в режиме onAccent
+   element_bg_message даёт сплошной цвет, а содержимое остаётся светлым,
+   как у остальных залитых видов. */
+.button[data-message] {
   background: var(--element-bg-message);
   border-color: var(--element-border-message-secondary);
 }
 
-/* Прозрачная опасная сверена по макету (узел 299:1844): подпись
+/* Прозрачная с тоном сверена по макету (узел 299:1844, тон error): подпись
    element_text_message, иконка element_icon_message, обводка
    element_border_message_secondary — в макете все три #cc2929. */
-.button[data-danger][data-ghost] {
+.button[data-message][data-ghost] {
   background: transparent;
   color: var(--element-text-message);
 }
 
-.button[data-danger][data-ghost] .addon {
+.button[data-message][data-ghost] .addon {
   color: var(--element-icon-message);
 }
 
 /* Иконка берёт свой токен того же оттенка, что подпись: в макете это отдельные
-   переменные element_icon_* рядом с element_text_*, а не currentColor.
-   Сам цвет задаётся ниже, вместе с видами. */
+   переменные element_icon_* рядом с element_text_*, а не currentColor. */
 .addon {
   display: inline-flex;
   flex-shrink: 0;
   width: var(--addon-size);
   height: var(--addon-size);
+  color: var(--element-icon-primary);
 }
 
 .addon > * {

@@ -8,8 +8,12 @@ type ButtonOwnProps = {
   size?: 'l' | 'm' | 's';
   /** Прозрачная кнопка без заливки. */
   ghost?: boolean;
-  /** Опасное действие: удаление, отмена, отключение. */
-  danger?: boolean;
+  /**
+   * Тон сообщения. Соответствует свойству Message в Figma вместе с режимом
+   * коллекции ColorsMessage: в Figma это флаг плюс режим, в коде — одно
+   * значение, потому что режим всё равно обязан стоять на самой кнопке.
+   */
+  message?: 'info' | 'success' | 'warning' | 'error';
   iconLeft?: ReactNode;
   iconRight?: ReactNode;
   children?: ReactNode;
@@ -33,8 +37,12 @@ export type ButtonProps = ButtonOwnProps &
  *     макетом и по имени токена, и по значению только в режиме onAccent —
  *     element_text_primary там #ffffff, element_border_message_secondary
  *     #cc2929. В режиме по умолчанию те же токены дают другие значения.
- *   — `data-message="error"` на опасном действии: отдельных «опасных» токенов
- *     в дизайн-системе нет, опасность выражена режимом коллекции сообщений.
+ *   — `data-message` с тоном, когда передан проп message. Тон обязан стоять
+ *     на самой кнопке, а не на контейнере вокруг неё: с контейнера он
+ *     переживает покой, но под наведением сбрасывается в info, потому что
+ *     переизлучение слоя сообщений в .ds-interactive:hover объявляет его
+ *     умолчательный режим. Составные селекторы выручают только когда режим
+ *     на том же элементе — проверено на живом CSS.
  *
  * Пометка режима на самом интерактивном элементе работает только потому, что
  * генератор выдаёт составные селекторы вида
@@ -46,7 +54,7 @@ export function Button({
   view = 'accent',
   size = 'l',
   ghost = false,
-  danger = false,
+  message,
   iconLeft,
   iconRight,
   children,
@@ -65,10 +73,9 @@ export function Button({
       data-view={view}
       data-size={size}
       data-ghost={ghost || undefined}
-      data-danger={danger || undefined}
       data-icon-only={isIconOnly || undefined}
       data-on-accent="true"
-      data-message={danger ? 'error' : undefined}
+      data-message={message}
     >
       {iconLeft && (
         <span className={styles.addon} aria-hidden="true">
