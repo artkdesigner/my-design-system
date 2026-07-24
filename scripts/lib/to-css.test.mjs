@@ -217,16 +217,33 @@ describe('переизлучение производных слоёв там, �
     expect(files['state.css']).toContain('Переменные CSS наследуют вычисленное значение');
   });
 
-  it('переизлучённые блоки идут после основных блоков той же коллекции', () => {
+  it('переизлучённые блоки идут после блока :root той же коллекции', () => {
     const files = toCss(model, config);
     const stateCss = files['state.css'];
+    const rootBlockIndex = stateCss.indexOf(':root {\n  --on-accent-surface:');
+    const reemitCommentIndex = stateCss.indexOf('Переменные CSS наследуют вычисленное значение');
+
+    expect(rootBlockIndex).toBeGreaterThan(-1);
+    expect(reemitCommentIndex).toBeGreaterThan(rootBlockIndex);
+  });
+
+  it('собственные блоки неосновных режимов идут ниже переизлучённых', () => {
+    // Иначе переизлучение затирает собственный режим коллекции. Переизлучённый
+    // блок несёт значения УМОЛЧАТЕЛЬНОГО режима, а специфичность у него и у
+    // блока неосновного режима одинаковая — [data-on-accent] и [data-state="hover"]
+    // это (0,1,0) оба. На элементе, попадающем под оба селектора, побеждает
+    // тот, что ниже в файле. Значит ниже обязан быть собственный режим:
+    // переключатель выставили осознанно, и его значения не должны молча
+    // подменяться умолчательными.
+    const files = toCss(model, config);
+    const stateCss = files['state.css'];
+    const reemitCommentIndex = stateCss.indexOf('Переменные CSS наследуют вычисленное значение');
     const ownOnAccentBlockIndex = stateCss.indexOf(
       '[data-on-accent] {\n  --on-accent-surface: var(--state-bg-accent);\n}'
     );
-    const reemitCommentIndex = stateCss.indexOf('Переменные CSS наследуют вычисленное значение');
 
-    expect(ownOnAccentBlockIndex).toBeGreaterThan(-1);
-    expect(reemitCommentIndex).toBeGreaterThan(ownOnAccentBlockIndex);
+    expect(reemitCommentIndex).toBeGreaterThan(-1);
+    expect(ownOnAccentBlockIndex).toBeGreaterThan(reemitCommentIndex);
   });
 
   it('коллекция без зависимостей не получает переизлучённых блоков', () => {

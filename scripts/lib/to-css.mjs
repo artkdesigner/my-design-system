@@ -106,7 +106,11 @@ export function toCss(model, config) {
 
     const modesInOrder = sortRootFirst(collection.modes, rules, collection.name);
 
-    const blocks = [];
+    // Блоки коллекции делятся на два разряда, между которыми встают
+    // переизлучённые: блок с :root (умолчательный режим) и блоки остальных
+    // режимов. Почему именно так — см. ниже, у вставки переизлучения.
+    const rootBlocks = [];
+    const modeBlocks = [];
     for (const mode of modesInOrder) {
       const selectors = rules.modes[mode.name];
 
@@ -118,7 +122,8 @@ export function toCss(model, config) {
       // породить пустое CSS-правило `{}`.
       if (mode.tokens.length === 0) continue;
 
-      blocks.push(`${selectors.join(',\n')} {\n${renderDeclarations(mode.tokens)}\n}`);
+      const block = `${selectors.join(',\n')} {\n${renderDeclarations(mode.tokens)}\n}`;
+      (selectors.includes(':root') ? rootBlocks : modeBlocks).push(block);
     }
 
     let entry = layers.get(rules.layer);
@@ -127,15 +132,34 @@ export function toCss(model, config) {
       layers.set(rules.layer, entry);
     }
     entry.sources.push(collection.name);
-    if (blocks.length > 0) {
-      entry.parts.push(blocks.join('\n\n'));
+
+    if (rootBlocks.length > 0) {
+      entry.parts.push(rootBlocks.join('\n\n'));
     }
 
-    // Переизлучённые блоки (если для этой коллекции они есть) идут сразу
-    // после её основных блоков, в том же файле слоя — см. computeReemission.
+    // Переизлучённые блоки (если для этой коллекции они есть) встают между
+    // блоком :root и блоками остальных режимов той же коллекции, в том же
+    // файле слоя — см. computeReemission.
+    //
+    // Место выбрано каскадом, а не косметикой. Переизлучённый блок несёт
+    // объявления УМОЛЧАТЕЛЬНОГО режима, и его селектор (скажем,
+    // [data-theme="dark"]) имеет ту же специфичность (0,1,0), что и селектор
+    // неосновного режима самой коллекции ([data-state="hover"]). На элементе,
+    // попадающем под оба, побеждает блок, который ниже в файле. Значит:
+    //   — переизлучение обязано быть НИЖЕ :root, иначе тема, включённая на
+    //     контейнере, не переопределит корневые значения;
+    //   — и обязано быть ВЫШЕ собственных неосновных режимов, иначе
+    //     умолчательные значения затрут осознанно включённый режим. Именно так
+    //     ломалось принудительное состояние в витрине: [data-theme="dark"]
+    //     стоял ниже [data-state="hover"] и возвращал наведению умолчательный
+    //     цвет.
     const extra = reemission.get(collection.name);
     if (extra) {
       entry.parts.push(`${REEMIT_COMMENT}\n\n${extra.join('\n\n')}`);
+    }
+
+    if (modeBlocks.length > 0) {
+      entry.parts.push(modeBlocks.join('\n\n'));
     }
   }
 
@@ -216,8 +240,10 @@ function renderDeclarations(tokens) {
  *      коллекций в её замыкании; если оно пусто, коллекция ничего не
  *      получает. Иначе для каждого (уникального) переопределяющего
  *      селектора собирается блок с объявлениями УМОЛЧАТЕЛЬНОГО режима
- *      коллекции (остальные её режимы, если они есть, переопределят это
- *      сами, каждый под своим собственным селектором).
+ *      коллекции. Остальные её режимы переопределяют это сами, каждый под
+ *      своим селектором, — но только за счёт того, что их блоки стоят в
+ *      файле НИЖЕ переизлучённых: специфичность у тех и других одинаковая,
+ *      и решает порядок. Место вставки задаётся в toCss, см. пояснение там.
  *
  * Селекторы схлопываются по точному тексту (`selectors.join(',\n')`) и
  * сортируются по нему же лексикографически — так порядок блоков в файле не
