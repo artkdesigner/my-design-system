@@ -1,0 +1,416 @@
+/* Слой: element. Источник: коллекция ColorsElement в Figma.
+   Файл генерируется скриптом sync-tokens — правки руками будут стёрты. */
+
+:root {
+  --element-text-primary: var(--on-accent-text-primary);
+  --element-text-secondary: var(--on-accent-text-secondary);
+  --element-text-accent: var(--state-text-accent);
+  --element-text-message: var(--message-text);
+  --element-text-custom: var(--on-accent-text-custom);
+  --element-icon-primary: var(--on-accent-icon-primary);
+  --element-icon-accent: var(--state-icon-accent);
+  --element-icon-secondary: var(--on-accent-icon-secondary);
+  --element-icon-message: var(--message-icon);
+  --element-icon-custom: var(--on-accent-icon-custom);
+  --element-bg-lvl-1: var(--theme-neutral-white);
+  --element-bg-lvl-2: var(--theme-neutral-200);
+  --element-bg-action-accent: var(--state-bg-accent);
+  --element-bg-action-primary: var(--state-bg-primary);
+  --element-bg-message: var(--on-accent-bg-message);
+  --element-bg-custom-primary: var(--state-bg-custom-primary);
+  --element-border-secondary: var(--on-accent-border-secondary);
+  --element-border-accent: var(--state-border-accent);
+  --element-border-message-secondary: var(--on-accent-border-message);
+  --element-border-custom: var(--on-accent-border-custom);
+  --element-border-focus: var(--theme-info-default);
+  --element-bg-overlay: var(--theme-neutral-overlay);
+  --element-border-primary: var(--on-accent-border-primary);
+  --element-bg-custom-secondary: var(--state-bg-custom-secondary);
+  --element-border-message-primary: var(--message-border-primary);
+  --element-bg-action-secondary: var(--state-bg-secondary);
+  --element-bg-action-tetriary: var(--state-bg-tetriary);
+  --element-border-tetriary: var(--on-accent-border-tetriary);
+  --element-bg-lvl-3: var(--theme-neutral-300);
+  --element-bg-shadow-dark: var(--theme-neutral-absolute-shadow-dark);
+  --element-bg-shadow-light: var(--theme-neutral-absolute-shadow-light);
+}
+
+/* Переменные CSS наследуют вычисленное значение, а не текст объявления —
+   поэтому производный слой переобъявляется здесь, там, где меняются его входы. */
+
+.ds-interactive:active,
+[data-state="pressed"] {
+  --element-text-primary: var(--on-accent-text-primary);
+  --element-text-secondary: var(--on-accent-text-secondary);
+  --element-text-accent: var(--state-text-accent);
+  --element-text-message: var(--message-text);
+  --element-text-custom: var(--on-accent-text-custom);
+  --element-icon-primary: var(--on-accent-icon-primary);
+  --element-icon-accent: var(--state-icon-accent);
+  --element-icon-secondary: var(--on-accent-icon-secondary);
+  --element-icon-message: var(--message-icon);
+  --element-icon-custom: var(--on-accent-icon-custom);
+  --element-bg-lvl-1: var(--theme-neutral-white);
+  --element-bg-lvl-2: var(--theme-neutral-200);
+  --element-bg-action-accent: var(--state-bg-accent);
+  --element-bg-action-primary: var(--state-bg-primary);
+  --element-bg-message: var(--on-accent-bg-message);
+  --element-bg-custom-primary: var(--state-bg-custom-primary);
+  --element-border-secondary: var(--on-accent-border-secondary);
+  --element-border-accent: var(--state-border-accent);
+  --element-border-message-secondary: var(--on-accent-border-message);
+  --element-border-custom: var(--on-accent-border-custom);
+  --element-border-focus: var(--theme-info-default);
+  --element-bg-overlay: var(--theme-neutral-overlay);
+  --element-border-primary: var(--on-accent-border-primary);
+  --element-bg-custom-secondary: var(--state-bg-custom-secondary);
+  --element-border-message-primary: var(--message-border-primary);
+  --element-bg-action-secondary: var(--state-bg-secondary);
+  --element-bg-action-tetriary: var(--state-bg-tetriary);
+  --element-border-tetriary: var(--on-accent-border-tetriary);
+  --element-bg-lvl-3: var(--theme-neutral-300);
+  --element-bg-shadow-dark: var(--theme-neutral-absolute-shadow-dark);
+  --element-bg-shadow-light: var(--theme-neutral-absolute-shadow-light);
+}
+
+.ds-interactive:disabled,
+[data-state="disabled"] {
+  --element-text-primary: var(--on-accent-text-primary);
+  --element-text-secondary: var(--on-accent-text-secondary);
+  --element-text-accent: var(--state-text-accent);
+  --element-text-message: var(--message-text);
+  --element-text-custom: var(--on-accent-text-custom);
+  --element-icon-primary: var(--on-accent-icon-primary);
+  --element-icon-accent: var(--state-icon-accent);
+  --element-icon-secondary: var(--on-accent-icon-secondary);
+  --element-icon-message: var(--message-icon);
+  --element-icon-custom: var(--on-accent-icon-custom);
+  --element-bg-lvl-1: var(--theme-neutral-white);
+  --element-bg-lvl-2: var(--theme-neutral-200);
+  --element-bg-action-accent: var(--state-bg-accent);
+  --element-bg-action-primary: var(--state-bg-primary);
+  --element-bg-message: var(--on-accent-bg-message);
+  --element-bg-custom-primary: var(--state-bg-custom-primary);
+  --element-border-secondary: var(--on-accent-border-secondary);
+  --element-border-accent: var(--state-border-accent);
+  --element-border-message-secondary: var(--on-accent-border-message);
+  --element-border-custom: var(--on-accent-border-custom);
+  --element-border-focus: var(--theme-info-default);
+  --element-bg-overlay: var(--theme-neutral-overlay);
+  --element-border-primary: var(--on-accent-border-primary);
+  --element-bg-custom-secondary: var(--state-bg-custom-secondary);
+  --element-border-message-primary: var(--message-border-primary);
+  --element-bg-action-secondary: var(--state-bg-secondary);
+  --element-bg-action-tetriary: var(--state-bg-tetriary);
+  --element-border-tetriary: var(--on-accent-border-tetriary);
+  --element-bg-lvl-3: var(--theme-neutral-300);
+  --element-bg-shadow-dark: var(--theme-neutral-absolute-shadow-dark);
+  --element-bg-shadow-light: var(--theme-neutral-absolute-shadow-light);
+}
+
+.ds-interactive:hover,
+[data-state="hover"] {
+  --element-text-primary: var(--on-accent-text-primary);
+  --element-text-secondary: var(--on-accent-text-secondary);
+  --element-text-accent: var(--state-text-accent);
+  --element-text-message: var(--message-text);
+  --element-text-custom: var(--on-accent-text-custom);
+  --element-icon-primary: var(--on-accent-icon-primary);
+  --element-icon-accent: var(--state-icon-accent);
+  --element-icon-secondary: var(--on-accent-icon-secondary);
+  --element-icon-message: var(--message-icon);
+  --element-icon-custom: var(--on-accent-icon-custom);
+  --element-bg-lvl-1: var(--theme-neutral-white);
+  --element-bg-lvl-2: var(--theme-neutral-200);
+  --element-bg-action-accent: var(--state-bg-accent);
+  --element-bg-action-primary: var(--state-bg-primary);
+  --element-bg-message: var(--on-accent-bg-message);
+  --element-bg-custom-primary: var(--state-bg-custom-primary);
+  --element-border-secondary: var(--on-accent-border-secondary);
+  --element-border-accent: var(--state-border-accent);
+  --element-border-message-secondary: var(--on-accent-border-message);
+  --element-border-custom: var(--on-accent-border-custom);
+  --element-border-focus: var(--theme-info-default);
+  --element-bg-overlay: var(--theme-neutral-overlay);
+  --element-border-primary: var(--on-accent-border-primary);
+  --element-bg-custom-secondary: var(--state-bg-custom-secondary);
+  --element-border-message-primary: var(--message-border-primary);
+  --element-bg-action-secondary: var(--state-bg-secondary);
+  --element-bg-action-tetriary: var(--state-bg-tetriary);
+  --element-border-tetriary: var(--on-accent-border-tetriary);
+  --element-bg-lvl-3: var(--theme-neutral-300);
+  --element-bg-shadow-dark: var(--theme-neutral-absolute-shadow-dark);
+  --element-bg-shadow-light: var(--theme-neutral-absolute-shadow-light);
+}
+
+[data-accent="purple"] {
+  --element-text-primary: var(--on-accent-text-primary);
+  --element-text-secondary: var(--on-accent-text-secondary);
+  --element-text-accent: var(--state-text-accent);
+  --element-text-message: var(--message-text);
+  --element-text-custom: var(--on-accent-text-custom);
+  --element-icon-primary: var(--on-accent-icon-primary);
+  --element-icon-accent: var(--state-icon-accent);
+  --element-icon-secondary: var(--on-accent-icon-secondary);
+  --element-icon-message: var(--message-icon);
+  --element-icon-custom: var(--on-accent-icon-custom);
+  --element-bg-lvl-1: var(--theme-neutral-white);
+  --element-bg-lvl-2: var(--theme-neutral-200);
+  --element-bg-action-accent: var(--state-bg-accent);
+  --element-bg-action-primary: var(--state-bg-primary);
+  --element-bg-message: var(--on-accent-bg-message);
+  --element-bg-custom-primary: var(--state-bg-custom-primary);
+  --element-border-secondary: var(--on-accent-border-secondary);
+  --element-border-accent: var(--state-border-accent);
+  --element-border-message-secondary: var(--on-accent-border-message);
+  --element-border-custom: var(--on-accent-border-custom);
+  --element-border-focus: var(--theme-info-default);
+  --element-bg-overlay: var(--theme-neutral-overlay);
+  --element-border-primary: var(--on-accent-border-primary);
+  --element-bg-custom-secondary: var(--state-bg-custom-secondary);
+  --element-border-message-primary: var(--message-border-primary);
+  --element-bg-action-secondary: var(--state-bg-secondary);
+  --element-bg-action-tetriary: var(--state-bg-tetriary);
+  --element-border-tetriary: var(--on-accent-border-tetriary);
+  --element-bg-lvl-3: var(--theme-neutral-300);
+  --element-bg-shadow-dark: var(--theme-neutral-absolute-shadow-dark);
+  --element-bg-shadow-light: var(--theme-neutral-absolute-shadow-light);
+}
+
+[data-accent="red"] {
+  --element-text-primary: var(--on-accent-text-primary);
+  --element-text-secondary: var(--on-accent-text-secondary);
+  --element-text-accent: var(--state-text-accent);
+  --element-text-message: var(--message-text);
+  --element-text-custom: var(--on-accent-text-custom);
+  --element-icon-primary: var(--on-accent-icon-primary);
+  --element-icon-accent: var(--state-icon-accent);
+  --element-icon-secondary: var(--on-accent-icon-secondary);
+  --element-icon-message: var(--message-icon);
+  --element-icon-custom: var(--on-accent-icon-custom);
+  --element-bg-lvl-1: var(--theme-neutral-white);
+  --element-bg-lvl-2: var(--theme-neutral-200);
+  --element-bg-action-accent: var(--state-bg-accent);
+  --element-bg-action-primary: var(--state-bg-primary);
+  --element-bg-message: var(--on-accent-bg-message);
+  --element-bg-custom-primary: var(--state-bg-custom-primary);
+  --element-border-secondary: var(--on-accent-border-secondary);
+  --element-border-accent: var(--state-border-accent);
+  --element-border-message-secondary: var(--on-accent-border-message);
+  --element-border-custom: var(--on-accent-border-custom);
+  --element-border-focus: var(--theme-info-default);
+  --element-bg-overlay: var(--theme-neutral-overlay);
+  --element-border-primary: var(--on-accent-border-primary);
+  --element-bg-custom-secondary: var(--state-bg-custom-secondary);
+  --element-border-message-primary: var(--message-border-primary);
+  --element-bg-action-secondary: var(--state-bg-secondary);
+  --element-bg-action-tetriary: var(--state-bg-tetriary);
+  --element-border-tetriary: var(--on-accent-border-tetriary);
+  --element-bg-lvl-3: var(--theme-neutral-300);
+  --element-bg-shadow-dark: var(--theme-neutral-absolute-shadow-dark);
+  --element-bg-shadow-light: var(--theme-neutral-absolute-shadow-light);
+}
+
+[data-accent="sky"] {
+  --element-text-primary: var(--on-accent-text-primary);
+  --element-text-secondary: var(--on-accent-text-secondary);
+  --element-text-accent: var(--state-text-accent);
+  --element-text-message: var(--message-text);
+  --element-text-custom: var(--on-accent-text-custom);
+  --element-icon-primary: var(--on-accent-icon-primary);
+  --element-icon-accent: var(--state-icon-accent);
+  --element-icon-secondary: var(--on-accent-icon-secondary);
+  --element-icon-message: var(--message-icon);
+  --element-icon-custom: var(--on-accent-icon-custom);
+  --element-bg-lvl-1: var(--theme-neutral-white);
+  --element-bg-lvl-2: var(--theme-neutral-200);
+  --element-bg-action-accent: var(--state-bg-accent);
+  --element-bg-action-primary: var(--state-bg-primary);
+  --element-bg-message: var(--on-accent-bg-message);
+  --element-bg-custom-primary: var(--state-bg-custom-primary);
+  --element-border-secondary: var(--on-accent-border-secondary);
+  --element-border-accent: var(--state-border-accent);
+  --element-border-message-secondary: var(--on-accent-border-message);
+  --element-border-custom: var(--on-accent-border-custom);
+  --element-border-focus: var(--theme-info-default);
+  --element-bg-overlay: var(--theme-neutral-overlay);
+  --element-border-primary: var(--on-accent-border-primary);
+  --element-bg-custom-secondary: var(--state-bg-custom-secondary);
+  --element-border-message-primary: var(--message-border-primary);
+  --element-bg-action-secondary: var(--state-bg-secondary);
+  --element-bg-action-tetriary: var(--state-bg-tetriary);
+  --element-border-tetriary: var(--on-accent-border-tetriary);
+  --element-bg-lvl-3: var(--theme-neutral-300);
+  --element-bg-shadow-dark: var(--theme-neutral-absolute-shadow-dark);
+  --element-bg-shadow-light: var(--theme-neutral-absolute-shadow-light);
+}
+
+[data-message="error"] {
+  --element-text-primary: var(--on-accent-text-primary);
+  --element-text-secondary: var(--on-accent-text-secondary);
+  --element-text-accent: var(--state-text-accent);
+  --element-text-message: var(--message-text);
+  --element-text-custom: var(--on-accent-text-custom);
+  --element-icon-primary: var(--on-accent-icon-primary);
+  --element-icon-accent: var(--state-icon-accent);
+  --element-icon-secondary: var(--on-accent-icon-secondary);
+  --element-icon-message: var(--message-icon);
+  --element-icon-custom: var(--on-accent-icon-custom);
+  --element-bg-lvl-1: var(--theme-neutral-white);
+  --element-bg-lvl-2: var(--theme-neutral-200);
+  --element-bg-action-accent: var(--state-bg-accent);
+  --element-bg-action-primary: var(--state-bg-primary);
+  --element-bg-message: var(--on-accent-bg-message);
+  --element-bg-custom-primary: var(--state-bg-custom-primary);
+  --element-border-secondary: var(--on-accent-border-secondary);
+  --element-border-accent: var(--state-border-accent);
+  --element-border-message-secondary: var(--on-accent-border-message);
+  --element-border-custom: var(--on-accent-border-custom);
+  --element-border-focus: var(--theme-info-default);
+  --element-bg-overlay: var(--theme-neutral-overlay);
+  --element-border-primary: var(--on-accent-border-primary);
+  --element-bg-custom-secondary: var(--state-bg-custom-secondary);
+  --element-border-message-primary: var(--message-border-primary);
+  --element-bg-action-secondary: var(--state-bg-secondary);
+  --element-bg-action-tetriary: var(--state-bg-tetriary);
+  --element-border-tetriary: var(--on-accent-border-tetriary);
+  --element-bg-lvl-3: var(--theme-neutral-300);
+  --element-bg-shadow-dark: var(--theme-neutral-absolute-shadow-dark);
+  --element-bg-shadow-light: var(--theme-neutral-absolute-shadow-light);
+}
+
+[data-message="success"] {
+  --element-text-primary: var(--on-accent-text-primary);
+  --element-text-secondary: var(--on-accent-text-secondary);
+  --element-text-accent: var(--state-text-accent);
+  --element-text-message: var(--message-text);
+  --element-text-custom: var(--on-accent-text-custom);
+  --element-icon-primary: var(--on-accent-icon-primary);
+  --element-icon-accent: var(--state-icon-accent);
+  --element-icon-secondary: var(--on-accent-icon-secondary);
+  --element-icon-message: var(--message-icon);
+  --element-icon-custom: var(--on-accent-icon-custom);
+  --element-bg-lvl-1: var(--theme-neutral-white);
+  --element-bg-lvl-2: var(--theme-neutral-200);
+  --element-bg-action-accent: var(--state-bg-accent);
+  --element-bg-action-primary: var(--state-bg-primary);
+  --element-bg-message: var(--on-accent-bg-message);
+  --element-bg-custom-primary: var(--state-bg-custom-primary);
+  --element-border-secondary: var(--on-accent-border-secondary);
+  --element-border-accent: var(--state-border-accent);
+  --element-border-message-secondary: var(--on-accent-border-message);
+  --element-border-custom: var(--on-accent-border-custom);
+  --element-border-focus: var(--theme-info-default);
+  --element-bg-overlay: var(--theme-neutral-overlay);
+  --element-border-primary: var(--on-accent-border-primary);
+  --element-bg-custom-secondary: var(--state-bg-custom-secondary);
+  --element-border-message-primary: var(--message-border-primary);
+  --element-bg-action-secondary: var(--state-bg-secondary);
+  --element-bg-action-tetriary: var(--state-bg-tetriary);
+  --element-border-tetriary: var(--on-accent-border-tetriary);
+  --element-bg-lvl-3: var(--theme-neutral-300);
+  --element-bg-shadow-dark: var(--theme-neutral-absolute-shadow-dark);
+  --element-bg-shadow-light: var(--theme-neutral-absolute-shadow-light);
+}
+
+[data-message="warning"] {
+  --element-text-primary: var(--on-accent-text-primary);
+  --element-text-secondary: var(--on-accent-text-secondary);
+  --element-text-accent: var(--state-text-accent);
+  --element-text-message: var(--message-text);
+  --element-text-custom: var(--on-accent-text-custom);
+  --element-icon-primary: var(--on-accent-icon-primary);
+  --element-icon-accent: var(--state-icon-accent);
+  --element-icon-secondary: var(--on-accent-icon-secondary);
+  --element-icon-message: var(--message-icon);
+  --element-icon-custom: var(--on-accent-icon-custom);
+  --element-bg-lvl-1: var(--theme-neutral-white);
+  --element-bg-lvl-2: var(--theme-neutral-200);
+  --element-bg-action-accent: var(--state-bg-accent);
+  --element-bg-action-primary: var(--state-bg-primary);
+  --element-bg-message: var(--on-accent-bg-message);
+  --element-bg-custom-primary: var(--state-bg-custom-primary);
+  --element-border-secondary: var(--on-accent-border-secondary);
+  --element-border-accent: var(--state-border-accent);
+  --element-border-message-secondary: var(--on-accent-border-message);
+  --element-border-custom: var(--on-accent-border-custom);
+  --element-border-focus: var(--theme-info-default);
+  --element-bg-overlay: var(--theme-neutral-overlay);
+  --element-border-primary: var(--on-accent-border-primary);
+  --element-bg-custom-secondary: var(--state-bg-custom-secondary);
+  --element-border-message-primary: var(--message-border-primary);
+  --element-bg-action-secondary: var(--state-bg-secondary);
+  --element-bg-action-tetriary: var(--state-bg-tetriary);
+  --element-border-tetriary: var(--on-accent-border-tetriary);
+  --element-bg-lvl-3: var(--theme-neutral-300);
+  --element-bg-shadow-dark: var(--theme-neutral-absolute-shadow-dark);
+  --element-bg-shadow-light: var(--theme-neutral-absolute-shadow-light);
+}
+
+[data-on-accent] {
+  --element-text-primary: var(--on-accent-text-primary);
+  --element-text-secondary: var(--on-accent-text-secondary);
+  --element-text-accent: var(--state-text-accent);
+  --element-text-message: var(--message-text);
+  --element-text-custom: var(--on-accent-text-custom);
+  --element-icon-primary: var(--on-accent-icon-primary);
+  --element-icon-accent: var(--state-icon-accent);
+  --element-icon-secondary: var(--on-accent-icon-secondary);
+  --element-icon-message: var(--message-icon);
+  --element-icon-custom: var(--on-accent-icon-custom);
+  --element-bg-lvl-1: var(--theme-neutral-white);
+  --element-bg-lvl-2: var(--theme-neutral-200);
+  --element-bg-action-accent: var(--state-bg-accent);
+  --element-bg-action-primary: var(--state-bg-primary);
+  --element-bg-message: var(--on-accent-bg-message);
+  --element-bg-custom-primary: var(--state-bg-custom-primary);
+  --element-border-secondary: var(--on-accent-border-secondary);
+  --element-border-accent: var(--state-border-accent);
+  --element-border-message-secondary: var(--on-accent-border-message);
+  --element-border-custom: var(--on-accent-border-custom);
+  --element-border-focus: var(--theme-info-default);
+  --element-bg-overlay: var(--theme-neutral-overlay);
+  --element-border-primary: var(--on-accent-border-primary);
+  --element-bg-custom-secondary: var(--state-bg-custom-secondary);
+  --element-border-message-primary: var(--message-border-primary);
+  --element-bg-action-secondary: var(--state-bg-secondary);
+  --element-bg-action-tetriary: var(--state-bg-tetriary);
+  --element-border-tetriary: var(--on-accent-border-tetriary);
+  --element-bg-lvl-3: var(--theme-neutral-300);
+  --element-bg-shadow-dark: var(--theme-neutral-absolute-shadow-dark);
+  --element-bg-shadow-light: var(--theme-neutral-absolute-shadow-light);
+}
+
+[data-theme="dark"] {
+  --element-text-primary: var(--on-accent-text-primary);
+  --element-text-secondary: var(--on-accent-text-secondary);
+  --element-text-accent: var(--state-text-accent);
+  --element-text-message: var(--message-text);
+  --element-text-custom: var(--on-accent-text-custom);
+  --element-icon-primary: var(--on-accent-icon-primary);
+  --element-icon-accent: var(--state-icon-accent);
+  --element-icon-secondary: var(--on-accent-icon-secondary);
+  --element-icon-message: var(--message-icon);
+  --element-icon-custom: var(--on-accent-icon-custom);
+  --element-bg-lvl-1: var(--theme-neutral-white);
+  --element-bg-lvl-2: var(--theme-neutral-200);
+  --element-bg-action-accent: var(--state-bg-accent);
+  --element-bg-action-primary: var(--state-bg-primary);
+  --element-bg-message: var(--on-accent-bg-message);
+  --element-bg-custom-primary: var(--state-bg-custom-primary);
+  --element-border-secondary: var(--on-accent-border-secondary);
+  --element-border-accent: var(--state-border-accent);
+  --element-border-message-secondary: var(--on-accent-border-message);
+  --element-border-custom: var(--on-accent-border-custom);
+  --element-border-focus: var(--theme-info-default);
+  --element-bg-overlay: var(--theme-neutral-overlay);
+  --element-border-primary: var(--on-accent-border-primary);
+  --element-bg-custom-secondary: var(--state-bg-custom-secondary);
+  --element-border-message-primary: var(--message-border-primary);
+  --element-bg-action-secondary: var(--state-bg-secondary);
+  --element-bg-action-tetriary: var(--state-bg-tetriary);
+  --element-border-tetriary: var(--on-accent-border-tetriary);
+  --element-bg-lvl-3: var(--theme-neutral-300);
+  --element-bg-shadow-dark: var(--theme-neutral-absolute-shadow-dark);
+  --element-bg-shadow-light: var(--theme-neutral-absolute-shadow-light);
+}
