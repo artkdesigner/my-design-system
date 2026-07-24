@@ -79,6 +79,15 @@
             "m5": { "type": "VALUE", "value": 56 },
             "m6": { "type": "VALUE", "value": 32 }
           }
+        },
+        {
+          "id": "V:15",
+          "name": "Button/Button/Button_min_width",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "m5": { "type": "VALUE", "value": 96 },
+            "m6": { "type": "ALIAS", "id": "V:6" }
+          }
         }
       ]
     },
@@ -125,6 +134,40 @@
           "valuesByMode": { "m7": { "type": "VALUE", "value": 0.4 } }
         }
       ]
+    },
+    {
+      "id": "C:6",
+      "name": "ColorsOnAccent",
+      "defaultModeId": "m8",
+      "modes": [
+        { "modeId": "m8", "name": "Default" },
+        { "modeId": "m9", "name": "onAccent" }
+      ],
+      "variables": [
+        {
+          "id": "V:13",
+          "name": "On accent/on_accent_surface",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "m8": { "type": "ALIAS", "id": "V:5" },
+            "m9": { "type": "ALIAS", "id": "V:5" }
+          }
+        }
+      ]
+    },
+    {
+      "id": "C:7",
+      "name": "ColorsElement",
+      "defaultModeId": "m10",
+      "modes": [{ "modeId": "m10", "name": "Value" }],
+      "variables": [
+        {
+          "id": "V:14",
+          "name": "Element/element_bg_accent",
+          "resolvedType": "COLOR",
+          "valuesByMode": { "m10": { "type": "ALIAS", "id": "V:13" } }
+        }
+      ]
     }
   ],
   "textStyles": [
@@ -141,8 +184,8 @@
     }
   ],
   "stats": {
-    "variables": 12,
-    "aliases": 4,
+    "variables": 15,
+    "aliases": 8,
     "danglingAliasIds": []
   }
 }

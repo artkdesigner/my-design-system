@@ -163,6 +163,96 @@ describe('toCss', () => {
   });
 });
 
+// Переменные CSS наследуют вычисленное значение, а не текст объявления, поэтому
+// объявленный только на :root производный слой не реагирует на переопределение
+// его входов на другом элементе (см. header toCss). Фикстура воспроизводит эту
+// схему: ColorsState — «источник состояния» с двумя режимами (Default/Hover);
+// ColorsOnAccent ссылается на ColorsState напрямую; ColorsElement ссылается на
+// ColorsOnAccent, то есть на ColorsState только транзитивно. ComponentSize,
+// в свою очередь, содержит токен, который ссылается сам на себя (как устроены
+// Scales в настоящей дизайн-системе) — на нём проверяется, что самоссылки не
+// порождают переизлучения.
+describe('переизлучение производных слоёв там, где меняются их входы', () => {
+  it('переизлучает производный слой под селектором, где меняется его прямой вход (наведение)', () => {
+    const files = toCss(model, config);
+    // ColorsOnAccent: --on-accent-surface: var(--state-bg-accent) — прямая
+    // ссылка на ColorsState. При наведении --state-bg-accent переопределяется
+    // на другом элементе (.ds-interactive:hover/[data-state="hover"]), поэтому
+    // --on-accent-surface обязана быть переобъявлена под тем же селектором.
+    expect(files['state.css']).toContain(
+      '.ds-interactive:hover,\n[data-state="hover"] {\n' +
+        '  --on-accent-surface: var(--state-bg-accent);\n' +
+        '}'
+    );
+  });
+
+  it('переизлучает слой, зависящий от источника изменения только транзитивно', () => {
+    const files = toCss(model, config);
+    const stateCss = files['state.css'];
+    // ColorsElement ссылается на ColorsOnAccent, а не напрямую на ColorsState —
+    // но ColorsOnAccent сама зависит от ColorsState, поэтому переизлучение
+    // ColorsElement обязано учитывать эту цепочку и сработать и на наведении...
+    expect(stateCss).toContain(
+      '.ds-interactive:hover,\n[data-state="hover"] {\n' +
+        '  --element-bg-accent: var(--on-accent-surface);\n' +
+        '}'
+    );
+    // ...и на собственном прямом входе ColorsElement — переключателе onAccent.
+    expect(stateCss).toContain(
+      '[data-on-accent] {\n  --element-bg-accent: var(--on-accent-surface);\n}'
+    );
+  });
+
+  it('текст объявлений в переизлучённом блоке совпадает с основным блоком коллекции', () => {
+    const files = toCss(model, config);
+    const declaration = '--on-accent-surface: var(--state-bg-accent);';
+    const occurrences = files['state.css'].split(declaration).length - 1;
+    // Три вхождения одного и того же текста: основной :root, основной
+    // [data-on-accent] и переизлучённый блок под hover.
+    expect(occurrences).toBe(3);
+  });
+
+  it('добавляет поясняющий комментарий перед переизлучёнными блоками', () => {
+    const files = toCss(model, config);
+    expect(files['state.css']).toContain('Переменные CSS наследуют вычисленное значение');
+  });
+
+  it('переизлучённые блоки идут после основных блоков той же коллекции', () => {
+    const files = toCss(model, config);
+    const stateCss = files['state.css'];
+    const ownOnAccentBlockIndex = stateCss.indexOf(
+      '[data-on-accent] {\n  --on-accent-surface: var(--state-bg-accent);\n}'
+    );
+    const reemitCommentIndex = stateCss.indexOf('Переменные CSS наследуют вычисленное значение');
+
+    expect(ownOnAccentBlockIndex).toBeGreaterThan(-1);
+    expect(reemitCommentIndex).toBeGreaterThan(ownOnAccentBlockIndex);
+  });
+
+  it('коллекция без зависимостей не получает переизлучённых блоков', () => {
+    const files = toCss(model, config);
+    // ColorsPalette не ссылается ни на что.
+    expect(files['palette.css']).not.toContain('Переменные CSS наследуют вычисленное значение');
+  });
+
+  it('самоссылка коллекции на саму себя не создаёт переизлучения', () => {
+    const files = toCss(model, config);
+    // --button-min-width в режиме S коллекции ComponentSize ссылается на
+    // --button-height той же коллекции. Без исключения самоссылок
+    // ComponentSize считала бы себя зависимой от себя и переизлучала бы
+    // умолчательный режим L под собственным override-селектором [data-size="s"].
+    expect(files['scale.css']).not.toContain('Переменные CSS наследуют вычисленное значение');
+  });
+
+  it('вывод детерминирован при повторном вызове на тех же данных', () => {
+    const files1 = toCss(model, config);
+    const files2 = toCss(model, config);
+
+    expect(files1).toEqual(files2);
+    expect(files1['state.css']).toBe(files2['state.css']);
+  });
+});
+
 describe('validateConfig (через toCss)', () => {
   it('падает, если у коллекции нет layer', () => {
     const broken = structuredClone(config);

@@ -47,6 +47,14 @@ const FONT_WEIGHT_NAMES = {
 // `font-style: var(--font-weight-italic);`, а не в font-weight.
 const FONT_STYLE_VALUES = new Set(['italic', 'oblique']);
 
+// Комментарий, который предваряет переизлучённые блоки производного слоя
+// (см. computeReemission ниже) в сгенерированном CSS — объясняет читателю
+// файла, зачем один и тот же текст объявлений повторяется под несколькими
+// селекторами.
+const REEMIT_COMMENT =
+  '/* Переменные CSS наследуют вычисленное значение, а не текст объявления —\n' +
+  '   поэтому производный слой переобъявляется здесь, там, где меняются его входы. */';
+
 /**
  * Превращает модель в набор файлов CSS: по файлу на слой,
  * внутри — по блоку на режим коллекции.
@@ -58,9 +66,23 @@ const FONT_STYLE_VALUES = new Set(['italic', 'oblique']);
  * определяется полем order в конфиге (уникальным для каждой коллекции),
  * а не порядком коллекций в выгрузке Figma — так дифф не шумит от
  * перестановок в самой Figma.
+ *
+ * Сверх основных блоков режимов каждая коллекция может получить
+ * «переизлучённые» блоки — см. computeReemission. Причина в том, что
+ * пользовательские свойства CSS наследуют уже ВЫЧИСЛЕННОЕ значение, а не
+ * текст объявления: `--element-bg: var(--state-bg)`, объявленное только на
+ * :root, вычисляется один раз на корне документа, и все потомки наследуют
+ * готовый результат — переопределение `--state-bg` на наведённой кнопке
+ * (`.ds-interactive:hover`) на уже вычисленный `--element-bg` не влияет,
+ * потому что это другой элемент. Чтобы производная переменная реагировала,
+ * её нужно заново объявить (тем же текстом) там же, где переопределяется
+ * хотя бы один из её входов.
  */
 export function toCss(model, config) {
   validateConfig(config);
+  assertCollectionsKnown(model, config);
+
+  const reemission = computeReemission(model, config);
 
   // layer -> { sources: string[], parts: string[] }
   const layers = new Map();
@@ -78,6 +100,66 @@ export function toCss(model, config) {
   });
 
   for (const collection of ordered) {
+    // Существование коллекции и всех её режимов в конфиге уже проверено
+    // выше, в assertCollectionsKnown — здесь это гарантировано.
+    const rules = config[collection.name];
+
+    const modesInOrder = sortRootFirst(collection.modes, rules, collection.name);
+
+    const blocks = [];
+    for (const mode of modesInOrder) {
+      const selectors = rules.modes[mode.name];
+
+      // Не мёртвый код: срабатывает не только на отдельных режимах, но и
+      // целиком на коллекции без переменных (тогда tokens пуст у каждого
+      // режима) — например, коллекцию завели в Figma, но переменные в неё
+      // ещё не добавили. Такая коллекция обязана пройти проверки выше
+      // (её имя и режимы всё равно должны быть в конфиге), но не должна
+      // породить пустое CSS-правило `{}`.
+      if (mode.tokens.length === 0) continue;
+
+      blocks.push(`${selectors.join(',\n')} {\n${renderDeclarations(mode.tokens)}\n}`);
+    }
+
+    let entry = layers.get(rules.layer);
+    if (!entry) {
+      entry = { sources: [], parts: [] };
+      layers.set(rules.layer, entry);
+    }
+    entry.sources.push(collection.name);
+    if (blocks.length > 0) {
+      entry.parts.push(blocks.join('\n\n'));
+    }
+
+    // Переизлучённые блоки (если для этой коллекции они есть) идут сразу
+    // после её основных блоков, в том же файле слоя — см. computeReemission.
+    const extra = reemission.get(collection.name);
+    if (extra) {
+      entry.parts.push(`${REEMIT_COMMENT}\n\n${extra.join('\n\n')}`);
+    }
+  }
+
+  const files = {};
+  for (const [layer, entry] of layers) {
+    const header =
+      `/* Слой: ${layer}. Источник: ${describeSources(entry.sources)} в Figma.\n` +
+      `   Файл генерируется скриптом sync-tokens — правки руками будут стёрты. */\n\n`;
+
+    files[`${layer}.css`] = header + entry.parts.join('\n\n') + '\n';
+  }
+
+  return files;
+}
+
+// Проверяет, что у каждой коллекции модели и у каждого её режима есть
+// запись в scripts/mode-selectors.json. Вынесено из основного цикла
+// генерации в отдельный проход по двум причинам: во-первых, computeReemission
+// (вызывается сразу после этой проверки) читает rules.modes для ЛЮБОЙ
+// коллекции модели, а не только для той, что генератор как раз обрабатывает,
+// поэтому к моменту его вызова конфиг обязан быть полным; во-вторых, так
+// сообщение об ошибке появляется до всякой другой работы, а не посреди неё.
+function assertCollectionsKnown(model, config) {
+  for (const collection of model.collections) {
     const rules = config[collection.name];
     if (!rules) {
       throw new Error(
@@ -94,49 +176,150 @@ export function toCss(model, config) {
         );
       }
     }
+  }
+}
 
-    const modesInOrder = sortRootFirst(collection.modes, rules, collection.name);
+// Общий рендер объявлений набора токенов — используется и для основных
+// блоков режимов, и для переизлучённых блоков ниже. Один и тот же код
+// гарантирует, что текст объявлений в переизлучённом блоке побайтово
+// совпадает с текстом в исходном блоке коллекции: это важно, потому что
+// именно на этой идентичности держится приём (см. header toCss) — какой из
+// двух блоков ни выиграл бы по специфичности CSS, результат один и тот же.
+function renderDeclarations(tokens) {
+  return tokens.map((token) => `  ${token.cssVar}: ${renderValue(token)};`).join('\n');
+}
 
-    const blocks = [];
-    for (const mode of modesInOrder) {
+/**
+ * Считает, какие коллекции надо переизлучить и под какими селекторами —
+ * см. развёрнутое объяснение в header toCss.
+ *
+ * Возвращает Map<имя коллекции, string[]> — готовые CSS-блоки (селектор(ы)
+ * + объявления по умолчательному режиму), которые нужно дописать в файл
+ * слоя сразу после основных блоков этой коллекции. Коллекции без такой
+ * необходимости в Map не попадают вовсе (см. «не плодить пустого» ниже).
+ *
+ * Шаги:
+ *   1) карта «имя CSS-переменной → коллекция, которой она принадлежит» —
+ *      нужна, чтобы по token.ref коллекции C понять, чья это переменная D;
+ *   2) прямые зависимости каждой коллекции: множество коллекций, чьи
+ *      переменные она читает через ref, по всем режимам, без самоссылок
+ *      (коллекция на саму себя — так устроены Scales, см. задание);
+ *   3) «переопределяющие» селекторы каждой коллекции: селекторы всех её
+ *      режимов, КРОМЕ режимов, где среди селекторов есть :root — именно
+ *      отсутствие :root означает «этот блок переопределяет значение не на
+ *      корне документа, а где-то ещё», то есть ровно то место, где
+ *      наследуемое вычисленное значение производной переменной перестаёт
+ *      быть верным;
+ *   4) транзитивное замыкание зависимостей (если A зависит от B, а B от C,
+ *      то A нужно переизлучить и там, где меняются входы C);
+ *   5) для каждой коллекции — объединение переопределяющих селекторов всех
+ *      коллекций в её замыкании; если оно пусто, коллекция ничего не
+ *      получает. Иначе для каждого (уникального) переопределяющего
+ *      селектора собирается блок с объявлениями УМОЛЧАТЕЛЬНОГО режима
+ *      коллекции (остальные её режимы, если они есть, переопределят это
+ *      сами, каждый под своим собственным селектором).
+ *
+ * Селекторы схлопываются по точному тексту (`selectors.join(',\n')`) и
+ * сортируются по нему же лексикографически — так порядок блоков в файле не
+ * зависит от порядка коллекций в выгрузке Figma или от порядка обхода
+ * Map/Set, и повторный запуск на тех же данных даёт побайтово тот же файл.
+ */
+function computeReemission(model, config) {
+  // 1) cssVar -> имя владеющей коллекции.
+  const ownerByCssVar = new Map();
+  for (const collection of model.collections) {
+    for (const mode of collection.modes) {
+      for (const token of mode.tokens) {
+        ownerByCssVar.set(token.cssVar, collection.name);
+      }
+    }
+  }
+
+  // 2) прямые зависимости, без самоссылок.
+  const directDeps = new Map();
+  for (const collection of model.collections) {
+    const deps = new Set();
+    for (const mode of collection.modes) {
+      for (const token of mode.tokens) {
+        if (!token.ref) continue;
+        const owner = ownerByCssVar.get(token.ref);
+        if (owner && owner !== collection.name) {
+          deps.add(owner);
+        }
+      }
+    }
+    directDeps.set(collection.name, deps);
+  }
+
+  // 3) переопределяющие селекторы (селекторы режимов без :root в списке).
+  const overrideGroups = new Map();
+  for (const collection of model.collections) {
+    const rules = config[collection.name];
+    const groups = [];
+    for (const mode of collection.modes) {
       const selectors = rules.modes[mode.name];
-
-      // Не мёртвый код: срабатывает не только на отдельных режимах, но и
-      // целиком на коллекции без переменных (тогда tokens пуст у каждого
-      // режима) — например, коллекцию завели в Figma, но переменные в неё
-      // ещё не добавили. Такая коллекция обязана пройти проверки выше
-      // (её имя и режимы всё равно должны быть в конфиге), но не должна
-      // породить пустое CSS-правило `{}`.
-      if (mode.tokens.length === 0) continue;
-
-      const declarations = mode.tokens
-        .map((token) => `  ${token.cssVar}: ${renderValue(token)};`)
-        .join('\n');
-
-      blocks.push(`${selectors.join(',\n')} {\n${declarations}\n}`);
+      if (selectors.includes(':root')) continue;
+      groups.push(selectors);
     }
-
-    let entry = layers.get(rules.layer);
-    if (!entry) {
-      entry = { sources: [], parts: [] };
-      layers.set(rules.layer, entry);
-    }
-    entry.sources.push(collection.name);
-    if (blocks.length > 0) {
-      entry.parts.push(blocks.join('\n\n'));
-    }
+    overrideGroups.set(collection.name, groups);
   }
 
-  const files = {};
-  for (const [layer, entry] of layers) {
-    const header =
-      `/* Слой: ${layer}. Источник: ${describeSources(entry.sources)} в Figma.\n` +
-      `   Файл генерируется скриптом sync-tokens — правки руками будут стёрты. */\n\n`;
+  // 4) транзитивное замыкание с мемоизацией и защитой от цикла (в реальных
+  // данных циклов быть не должно — ref всегда идёт «вниз», от производного
+  // токена к первичному, — но защита не даёт зациклиться, если где-то
+  // всё-таки образуется цикл, вместо переполнения стека).
+  const closureCache = new Map();
+  function closureOf(name, stack) {
+    if (closureCache.has(name)) return closureCache.get(name);
+    if (stack.has(name)) return new Set();
 
-    files[`${layer}.css`] = header + entry.parts.join('\n\n') + '\n';
+    stack.add(name);
+    const result = new Set();
+    for (const dep of directDeps.get(name) ?? []) {
+      result.add(dep);
+      for (const transitive of closureOf(dep, stack)) {
+        result.add(transitive);
+      }
+    }
+    stack.delete(name);
+
+    closureCache.set(name, result);
+    return result;
   }
 
-  return files;
+  // 5) итоговые блоки на коллекцию.
+  const reemission = new Map();
+  for (const collection of model.collections) {
+    const closure = new Set(closureOf(collection.name, new Set()));
+    closure.delete(collection.name); // страховка на случай цикла зависимостей
+
+    if (closure.size === 0) continue; // «не плодить пустого»: зависимостей нет вовсе
+
+    const bySelectorText = new Map(); // selectors.join(',\n') -> selectors
+    for (const depName of closure) {
+      for (const selectors of overrideGroups.get(depName) ?? []) {
+        const key = selectors.join(',\n');
+        if (!bySelectorText.has(key)) {
+          bySelectorText.set(key, selectors);
+        }
+      }
+    }
+
+    if (bySelectorText.size === 0) continue; // зависимости есть, но ни у одной нет переопределений
+
+    const defaultMode = collection.modes.find((mode) => mode.isDefault);
+    if (!defaultMode || defaultMode.tokens.length === 0) continue; // нечего переизлучать
+
+    const declarations = renderDeclarations(defaultMode.tokens);
+
+    const blocks = [...bySelectorText.keys()]
+      .sort((a, b) => a.localeCompare(b))
+      .map((key) => `${key} {\n${declarations}\n}`);
+
+    reemission.set(collection.name, blocks);
+  }
+
+  return reemission;
 }
 
 // Режим, среди селекторов которого есть :root, обязан идти первым блоком

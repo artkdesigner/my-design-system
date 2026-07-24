@@ -22,6 +22,23 @@
     }
   },
 
+  "ColorsOnAccent": {
+    "layer": "state",
+    "order": 10,
+    "modes": {
+      "Default": [":root"],
+      "onAccent": ["[data-on-accent]"]
+    }
+  },
+
+  "ColorsElement": {
+    "layer": "state",
+    "order": 11,
+    "modes": {
+      "Value": [":root"]
+    }
+  },
+
   "ComponentSize": {
     "layer": "scale",
     "order": 4,
