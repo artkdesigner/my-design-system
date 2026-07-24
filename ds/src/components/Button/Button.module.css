@@ -45,63 +45,73 @@
   cursor: not-allowed;
 }
 
-/* Виды различаются только заливкой: все три залитые, ни у одной нет границы —
-   сверено с макетом кнопки в Figma (узел 297:4137, вид secondary: заливка
-   element_bg_action_secondary, подпись и иконки белые, обводки нет).
-   Заливки берутся из слоя element — верхнего, который переизлучается
-   и потому отвечает и на наведение, и на тему.
+/* Содержимое по умолчанию — как у залитых видов в макете (узел 297:4137):
+   подпись element_text_primary, иконка element_icon_primary. В режиме
+   onAccent, который кнопка включает на себе, оба дают белый. */
+.button {
+  color: var(--element-text-primary);
+}
 
-   Текст — исключение из правила «компоненты читают element»: взят
-   --state-text-on-accent, потому что нужного значения в слое element надёжно
-   не получить. Путь через element требует пометить кнопку data-on-accent,
-   а такая пометка на интерактивном элементе не работает: у переизлучения
-   в .ds-interactive:hover|:active|:disabled специфичность (0,2,0),
-   у [data-on-accent] — (0,1,0), и на недоступной кнопке подпись получала цвет
-   заливки, то есть исчезала. У --state-text-on-accent объявления живут
-   в собственных блоках состояний, там этой беды нет. */
+.addon {
+  color: var(--element-icon-primary);
+}
+
+/* Виды различаются только заливкой, обводки у залитых нет — сверено с макетом
+   (узел 297:4137, вид secondary: заливка element_bg_action_secondary, подпись
+   и иконки белые, обводки нет). Заливки берутся из слоя element — верхнего,
+   который переизлучается и потому отвечает и на наведение, и на тему. */
 .button[data-view='accent'] {
   background: var(--element-bg-action-accent);
-  color: var(--state-text-on-accent);
 }
 
 .button[data-view='primary'] {
   background: var(--element-bg-action-primary);
-  color: var(--state-text-on-accent);
 }
 
 .button[data-view='secondary'] {
   background: var(--element-bg-action-secondary);
-  color: var(--state-text-on-accent);
 }
 
-/* Прозрачная кнопка: заливки нет, цвет уходит в текст. */
+/* Прозрачная кнопка: заливки нет, цвет уходит в текст и иконку.
+   Обводка НЕ сверена с макетом — у прозрачной опасной она есть, поэтому,
+   скорее всего, есть и здесь. Не выдумываю: выделите в Figma вид ghost. */
 .button[data-ghost] {
   background: transparent;
-  border-color: transparent;
   color: var(--element-text-accent);
+}
+
+.button[data-ghost] .addon {
+  color: var(--element-icon-accent);
 }
 
 /* Опасное действие. Ни заливки, ни текста «для опасного» в дизайн-системе нет
    отдельно — есть режим error коллекции сообщений, который компонент включает
    на себе сам (см. data-message в Button.tsx).
 
-   Без обводки, как и остальные виды. Сам вариант danger в макете не сверялся:
-   в Figma был выделен только вид secondary. Если у опасной кнопки в макете
-   обводка есть — вернуть --element-border-message-secondary. */
+   Залитая опасная кнопка остаётся с белым содержимым, как остальные залитые
+   виды: в режиме onAccent element_bg_message даёт сплошной красный, и красная
+   подпись на нём была бы невидима. Сам вариант в макете НЕ сверялся —
+   выделите его в Figma, если цвет заливки или подписи должен быть другим. */
 .button[data-danger] {
   background: var(--element-bg-message);
-  color: var(--element-text-message);
+  border-color: var(--element-border-message-secondary);
 }
 
+/* Прозрачная опасная сверена по макету (узел 299:1844): подпись
+   element_text_message, иконка element_icon_message, обводка
+   element_border_message_secondary — в макете все три #cc2929. */
 .button[data-danger][data-ghost] {
   background: transparent;
-  border-color: transparent;
   color: var(--element-text-message);
 }
 
-/* Иконка идёт цветом подписи (currentColor достаётся по наследованию), а не
-   своим токеном: в макете иконки залитой кнопки того же цвета, что подпись,
-   и отдельного токена «иконка на акценте» в дизайн-системе нет. */
+.button[data-danger][data-ghost] .addon {
+  color: var(--element-icon-message);
+}
+
+/* Иконка берёт свой токен того же оттенка, что подпись: в макете это отдельные
+   переменные element_icon_* рядом с element_text_*, а не currentColor.
+   Сам цвет задаётся ниже, вместе с видами. */
 .addon {
   display: inline-flex;
   flex-shrink: 0;

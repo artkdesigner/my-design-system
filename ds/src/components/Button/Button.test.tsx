@@ -59,12 +59,22 @@ describe('Button', () => {
     expect(screen.getByRole('button')).toHaveClass('ds-interactive');
   });
 
-  it('не помечает себя акцентной подложкой', () => {
-    // Пометка data-on-accent на интерактивном элементе не работает:
-    // переизлучение в .ds-interactive:* перебивает её по специфичности.
-    // Цвет подписи на заливке берётся из --state-text-on-accent, см. CSS.
+  it('включает на себе режим onAccent — так же, как компонент в Figma', () => {
+    // Сверено по двум образцам из макета: и у залитой кнопки, и у прозрачной
+    // опасной значения токенов совпадают с макетом только в режиме onAccent
+    // (element_text_primary = #ffffff, element_border_message_secondary =
+    // #cc2929). Без него получаются другие значения тех же токенов.
     render(<Button view="accent">Метка</Button>);
-    expect(screen.getByRole('button').dataset.onAccent).toBeUndefined();
+    expect(screen.getByRole('button').dataset.onAccent).toBe('true');
+  });
+
+  it('включает onAccent и на прозрачном виде — режим у кнопки один на все виды', () => {
+    render(
+      <Button ghost danger>
+        Удалить
+      </Button>
+    );
+    expect(screen.getByRole('button').dataset.onAccent).toBe('true');
   });
 
   it('переводит опасное действие на тон сообщения об ошибке', () => {
