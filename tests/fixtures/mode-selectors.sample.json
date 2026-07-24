@@ -1,0 +1,39 @@
+{
+  "ColorsPalette": {
+    "layer": "palette",
+    "order": 1,
+    "modes": { "Default": [":root"] }
+  },
+
+  "ColorsTheme": {
+    "layer": "theme",
+    "order": 2,
+    "modes": {
+      "Light": [":root"]
+    }
+  },
+
+  "ColorsState": {
+    "layer": "state",
+    "order": 3,
+    "modes": {
+      "Default": [":root"],
+      "Hover": [".ds-interactive:hover", "[data-state=\"hover\"]"]
+    }
+  },
+
+  "ComponentSize": {
+    "layer": "scale",
+    "order": 4,
+    "modes": {
+      "L": [":root", "[data-size=\"l\"]"],
+      "S": ["[data-size=\"s\"]"]
+    }
+  },
+
+  "Typography": {
+    "layer": "scale",
+    "order": 5,
+    "modes": { "Default": [":root"] }
+  }
+}

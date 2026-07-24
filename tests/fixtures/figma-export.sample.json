@@ -107,6 +107,12 @@
           "valuesByMode": { "m7": { "type": "VALUE", "value": "Medium" } }
         },
         {
+          "id": "V:12",
+          "name": "Font weight/Italic",
+          "resolvedType": "STRING",
+          "valuesByMode": { "m7": { "type": "VALUE", "value": "Italic" } }
+        },
+        {
           "id": "V:10",
           "name": "Line height/Body/body_m",
           "resolvedType": "FLOAT",
@@ -135,7 +141,7 @@
     }
   ],
   "stats": {
-    "variables": 11,
+    "variables": 12,
     "aliases": 4,
     "danglingAliasIds": []
   }

@@ -3,10 +3,22 @@ import { readFileSync } from 'node:fs';
 import { parseExport } from './parse-export.mjs';
 import { toCss } from './to-css.mjs';
 
+// Тесты гоняются против собственного тестового конфига
+// (tests/fixtures/mode-selectors.sample.json), а не против боевого
+// scripts/mode-selectors.json. Боевой конфиг описывает настоящую
+// дизайн-систему и меняется вместе с ней; тестовая фикстура —
+// небольшой фиксированный набор коллекций и режимов. Если тесты держать
+// на боевом конфиге, любое обновление реальной ДС (новые коллекции,
+// переименование режимов) ломает тесты, никак не связанные с сутью
+// изменения. Синхронизировать эту пару вручную не нужно: имена
+// коллекций/режимов в тестовом конфиге просто обязаны совпадать с тем,
+// что реально лежит в tests/fixtures/figma-export.sample.json.
 const raw = JSON.parse(
   readFileSync(new URL('../../tests/fixtures/figma-export.sample.json', import.meta.url))
 );
-const config = JSON.parse(readFileSync(new URL('../mode-selectors.json', import.meta.url)));
+const config = JSON.parse(
+  readFileSync(new URL('../../tests/fixtures/mode-selectors.sample.json', import.meta.url))
+);
 const model = parseExport(raw);
 
 describe('toCss', () => {
@@ -111,6 +123,11 @@ describe('toCss', () => {
     typography.modes[0].tokens.find((t) => t.cssVar === '--font-weight-medium').value = 'Ultra';
     expect(() => toCss(unknownWeight, config)).toThrow(/Ultra/);
     expect(() => toCss(unknownWeight, config)).toThrow(/regular/);
+  });
+
+  it('выводит стиль начертания «Italic» строкой font-style, а не числом и не падает', () => {
+    const files = toCss(model, config);
+    expect(files['scale.css']).toContain('--font-weight-italic: italic;');
   });
 
   it('выводит многословное семейство шрифта без кавычек', () => {

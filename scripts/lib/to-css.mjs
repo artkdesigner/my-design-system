@@ -14,6 +14,9 @@
 // (вес уже задан числом). На реальных данных начертания чаще приходят
 // строками («Medium», «Bold») — такие значения в этот список не попадают,
 // они переводятся в числа через FONT_WEIGHT_NAMES ниже, до всякого UNITLESS.
+// Значения-стили («Italic», «Oblique») — тоже строки, но не веса вовсе:
+// они выводятся как есть, строкой в нижнем регистре, см. FONT_STYLE_VALUES
+// и resolveFontWeight ниже.
 const UNITLESS = new Set(['--font-weight', '--line-height', '--opacity', '--z-index']);
 
 // Известные имена начертаний Figma → числовой font-weight CSS. Названия
@@ -30,6 +33,19 @@ const FONT_WEIGHT_NAMES = {
   extrabold: 800,
   black: 900
 };
+
+// ЛОВУШКА: в Figma группа «Font weight» хранит начертания в терминах Figma,
+// а не в терминах CSS-свойств — и там в одном ряду с весами (Regular,
+// Medium, Bold) лежат значения, которые на деле являются СТИЛЕМ шрифта, а
+// не весом (Italic, Oblique). Это не огрех выгрузки, а то, как устроена
+// сама дизайн-система в Figma. Токен всё равно называется на выходе
+// «--font-weight-italic» (так через naming.mjs переводится путь переменной
+// «Font weight/Italic»), но по смыслу значение годится только для
+// CSS-свойства font-style, а не font-weight: `font-weight: italic`
+// невалиден, браузер молча отбросит объявление, и начертание откатится
+// к унаследованному. Потребляйте такой токен как
+// `font-style: var(--font-weight-italic);`, а не в font-weight.
+const FONT_STYLE_VALUES = new Set(['italic', 'oblique']);
 
 /**
  * Превращает модель в набор файлов CSS: по файлу на слой,
@@ -295,9 +311,17 @@ function assertNoInjection(token) {
 
 function resolveFontWeight(token) {
   const key = token.value.toLowerCase();
+
+  // Стили (Italic, Oblique) выводятся как есть строкой в нижнем регистре —
+  // это законное значение font-style, но не число font-weight. См.
+  // пояснение у FONT_STYLE_VALUES выше про ловушку с потреблением.
+  if (FONT_STYLE_VALUES.has(key)) {
+    return key;
+  }
+
   const weight = FONT_WEIGHT_NAMES[key];
   if (weight === undefined) {
-    const known = Object.keys(FONT_WEIGHT_NAMES).join(', ');
+    const known = [...Object.keys(FONT_WEIGHT_NAMES), ...FONT_STYLE_VALUES].join(', ');
     throw new Error(
       `Токен ${token.cssVar} имеет начертание «${token.value}», которого нет в списке известных ` +
         `(${known}). Добавьте соответствие в FONT_WEIGHT_NAMES в scripts/lib/to-css.mjs или ` +
