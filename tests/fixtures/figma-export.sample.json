@@ -93,6 +93,30 @@
           "name": "Font size/Body/body_m",
           "resolvedType": "FLOAT",
           "valuesByMode": { "m7": { "type": "VALUE", "value": 16 } }
+        },
+        {
+          "id": "V:8",
+          "name": "Font family/Main",
+          "resolvedType": "STRING",
+          "valuesByMode": { "m7": { "type": "VALUE", "value": "Inter Tight" } }
+        },
+        {
+          "id": "V:9",
+          "name": "Font weight/Medium",
+          "resolvedType": "STRING",
+          "valuesByMode": { "m7": { "type": "VALUE", "value": "Medium" } }
+        },
+        {
+          "id": "V:10",
+          "name": "Line height/Body/body_m",
+          "resolvedType": "FLOAT",
+          "valuesByMode": { "m7": { "type": "VALUE", "value": 1.4 } }
+        },
+        {
+          "id": "V:11",
+          "name": "Opacity/opacity_disabled",
+          "resolvedType": "FLOAT",
+          "valuesByMode": { "m7": { "type": "VALUE", "value": 0.4 } }
         }
       ]
     }
@@ -111,7 +135,7 @@
     }
   ],
   "stats": {
-    "variables": 7,
+    "variables": 11,
     "aliases": 4,
     "danglingAliasIds": []
   }

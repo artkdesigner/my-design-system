@@ -33,7 +33,7 @@
   },
   "Typography": {
     "layer": "scale",
-    "order": 4,
+    "order": 5,
     "modes": { "Default": [":root"] }
   }
 }
