@@ -2,19 +2,32 @@
   "ColorsPalette": {
     "layer": "palette",
     "order": 1,
-    "modes": { "Default": [":root"] }
+    "modes": { "Mode 1": [":root"] }
   },
-  "ColorsTheme": {
+
+  "ColorsAccent": {
     "layer": "theme",
     "order": 2,
+    "modes": {
+      "Blue": [":root", "[data-accent=\"blue\"]"],
+      "Sky": ["[data-accent=\"sky\"]"],
+      "Purple": ["[data-accent=\"purple\"]"],
+      "Red": ["[data-accent=\"red\"]"]
+    }
+  },
+
+  "ColorsTheme": {
+    "layer": "theme",
+    "order": 3,
     "modes": {
       "Light": [":root", "[data-theme=\"light\"]"],
       "Dark": ["[data-theme=\"dark\"]"]
     }
   },
+
   "ColorsState": {
     "layer": "state",
-    "order": 3,
+    "order": 4,
     "modes": {
       "Default": [":root"],
       "Hover": [".ds-interactive:hover", "[data-state=\"hover\"]"],
@@ -22,18 +35,52 @@
       "Disabled": [".ds-interactive:disabled", "[data-state=\"disabled\"]"]
     }
   },
+
+  "ColorsMessage": {
+    "layer": "state",
+    "order": 5,
+    "modes": {
+      "Info": [":root", "[data-message=\"info\"]"],
+      "Success": ["[data-message=\"success\"]"],
+      "Warning": ["[data-message=\"warning\"]"],
+      "Error": ["[data-message=\"error\"]"]
+    }
+  },
+
+  "ColorsOnAccent": {
+    "layer": "state",
+    "order": 6,
+    "modes": {
+      "Default": [":root"],
+      "onAccent": ["[data-on-accent]"]
+    }
+  },
+
+  "ColorsElement": {
+    "layer": "element",
+    "order": 7,
+    "modes": { "Value": [":root"] }
+  },
+
+  "Scales": {
+    "layer": "scale",
+    "order": 8,
+    "modes": { "Mode 1": [":root"] }
+  },
+
+  "Typography": {
+    "layer": "scale",
+    "order": 9,
+    "modes": { "Mode 1": [":root"] }
+  },
+
   "ComponentSize": {
     "layer": "scale",
-    "order": 4,
+    "order": 10,
     "modes": {
       "L": [":root", "[data-size=\"l\"]"],
       "M": ["[data-size=\"m\"]"],
       "S": ["[data-size=\"s\"]"]
     }
-  },
-  "Typography": {
-    "layer": "scale",
-    "order": 5,
-    "modes": { "Default": [":root"] }
   }
 }
