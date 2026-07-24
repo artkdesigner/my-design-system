@@ -1,4 +1,4 @@
-import { toCssVarName } from './naming.mjs';
+import { toCssVarName, isValidCssVarName } from './naming.mjs';
 
 /**
  * Превращает выгрузку плагина в модель, пригодную для генерации:
@@ -13,13 +13,28 @@ import { toCssVarName } from './naming.mjs';
  * значений ниже по конвейеру идёт через typeof результата, а не через это
  * поле Figma. `textStyles` и `stats` в модель осознанно не переносятся — они
  * не нужны для генерации CSS и типов.
+ *
+ * `options.nameOverrides` — аварийный люк для одного конкретного случая:
+ * правило перевода имён (naming.mjs) схлопывает повторяющиеся слова пути и
+ * может свести две РАЗНЫЕ переменные Figma к одному имени CSS. Если у них
+ * разные значения — это настоящая коллизия, а не дубль, и конвейер обязан
+ * остановиться, пока имя не разведут — либо переименованием в Figma, либо
+ * записью в scripts/name-overrides.json (см. пояснение там). Ключ —
+ * точный путь переменной (variable.name), значение — готовое имя CSS
+ * целиком. Переопределённое имя проходит ту же проверку пригодности для
+ * CSS, что и обычный перевод, и участвует в проверке коллизий наравне со
+ * всеми остальными именами. Переопределение, которое не сослалось ни на
+ * одну переменную выгрузки, — тоже нарушение: обычно это значит, что
+ * переменную в Figma уже переименовали и запись пора убрать.
  */
-export function parseExport(raw) {
+export function parseExport(raw, options) {
   if (!raw || !Array.isArray(raw.collections)) {
     throw new Error(
       'Это не похоже на выгрузку плагина: в переданном объекте нет раздела collections.'
     );
   }
+
+  const nameOverrides = (options && options.nameOverrides) || {};
 
   // Нарушения копятся в один список за весь проход и бросаются одной
   // ошибкой в конце — см. formatViolations. Порядок списка зависит только
@@ -30,10 +45,20 @@ export function parseExport(raw) {
 
   const nameById = new Map();
   const figmaNameByCssVar = new Map();
+  const usedOverrides = new Set();
 
   for (const collection of raw.collections) {
     for (const variable of collection.variables) {
-      const cssVar = toCssVarName(variable.name);
+      let cssVar;
+      if (Object.prototype.hasOwnProperty.call(nameOverrides, variable.name)) {
+        cssVar = nameOverrides[variable.name];
+        usedOverrides.add(variable.name);
+        if (!isValidCssVarName(cssVar)) {
+          violations.push(formatInvalidOverrideViolation(variable.name, cssVar));
+        }
+      } else {
+        cssVar = toCssVarName(variable.name);
+      }
       nameById.set(variable.id, cssVar);
 
       const clashGroup = figmaNameByCssVar.get(cssVar) ?? [];
@@ -45,6 +70,12 @@ export function parseExport(raw) {
   for (const [cssVar, group] of figmaNameByCssVar) {
     if (group.length > 1) {
       violations.push(formatClashViolation(cssVar, group));
+    }
+  }
+
+  for (const figmaPath of Object.keys(nameOverrides)) {
+    if (!usedOverrides.has(figmaPath)) {
+      violations.push(formatUnusedOverrideViolation(figmaPath, nameOverrides[figmaPath]));
     }
   }
 
@@ -105,6 +136,22 @@ function formatClashViolation(cssVar, group) {
     `Имя ${cssVar} получается сразу из ${count} переменных:\n${lines}\n` +
     `Правило перевода имён схлопывает повторяющиеся слова пути (scripts/lib/naming.mjs), ` +
     `поэтому разные имена в Figma могут дать одно имя CSS. Переименуйте одну из них.`
+  );
+}
+
+function formatInvalidOverrideViolation(figmaPath, badName) {
+  return (
+    `Переопределение для «${figmaPath}» задаёт имя «${badName}» — так в CSS нельзя.\n` +
+    `Проверьте scripts/name-overrides.json: имя CSS-переменной должно состоять только из ` +
+    `строчных латинских букв, цифр и дефисов и начинаться с «--».`
+  );
+}
+
+function formatUnusedOverrideViolation(figmaPath, cssVar) {
+  return (
+    `Переопределение «${figmaPath}» → «${cssVar}» из scripts/name-overrides.json не ` +
+    `сослалось ни на одну переменную в выгрузке.\n` +
+    `Скорее всего переменную в Figma уже переименовали или удалили — уберите эту запись из файла.`
   );
 }
 

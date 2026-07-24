@@ -120,4 +120,67 @@ describe('parseExport', () => {
   it('падает с понятным сообщением, если в объекте нет раздела collections', () => {
     expect(() => parseExport({})).toThrow(/не похоже на выгрузку плагина/);
   });
+
+  describe('nameOverrides', () => {
+    it('без переопределений (или с пустым объектом) поведение прежнее', () => {
+      const withoutArg = parseExport(raw);
+      const withUndefinedOptions = parseExport(raw, undefined);
+      const withEmptyOverrides = parseExport(raw, { nameOverrides: {} });
+      expect(withUndefinedOptions).toEqual(withoutArg);
+      expect(withEmptyOverrides).toEqual(withoutArg);
+    });
+
+    it('переопределение подменяет имя токена', () => {
+      const model = parseExport(raw, {
+        nameOverrides: { 'Blue/palette_blue_default': '--palette-blue-primary' }
+      });
+      const palette = model.collections.find((c) => c.name === 'ColorsPalette');
+      expect(palette.modes[0].tokens[0].cssVar).toBe('--palette-blue-primary');
+
+      // Всё, что ссылается на эту переменную по id, обязано подхватить
+      // переопределённое имя, а не старое переведённое.
+      const theme = model.collections.find((c) => c.name === 'ColorsTheme');
+      const accent = theme.modes[0].tokens.find(
+        (t) => t.figmaName === 'Accent/theme_accent_default'
+      );
+      expect(accent.ref).toBe('--palette-blue-primary');
+    });
+
+    it('переопределение разводит коллизию имён', () => {
+      // Тот же трюк, что и в тесте на коллизию выше: делаем так, чтобы
+      // «Blue/palette_blue_default» и вторая переменная схлопывались в одно
+      // и то же имя CSS. Без переопределения parseExport бросил бы ошибку —
+      // проверяем это отдельно, а затем убеждаемся, что с переопределением
+      // для одного из двух путей разбор проходит и оба токена остаются
+      // различимыми.
+      const clashing = structuredClone(raw);
+      clashing.collections[0].variables[1].name = 'Palette/palette_blue_default';
+      expect(() => parseExport(clashing)).toThrow(/--palette-blue-default/);
+
+      const model = parseExport(clashing, {
+        nameOverrides: { 'Palette/palette_blue_default': '--palette-blue-default-alt' }
+      });
+      const palette = model.collections.find((c) => c.name === 'ColorsPalette');
+      expect(palette.modes[0].tokens.map((t) => t.cssVar)).toEqual([
+        '--palette-blue-default',
+        '--palette-blue-default-alt'
+      ]);
+    });
+
+    it('падает, если переопределение задаёт имя, непригодное для CSS', () => {
+      expect(() =>
+        parseExport(raw, {
+          nameOverrides: { 'Blue/palette_blue_default': '--Не Годится!' }
+        })
+      ).toThrow(/так в CSS нельзя/);
+    });
+
+    it('переопределение, не сославшееся ни на одну переменную, — тоже нарушение', () => {
+      expect(() =>
+        parseExport(raw, {
+          nameOverrides: { 'Давно/переименованный_путь': '--irrelevant-name' }
+        })
+      ).toThrow(/не сослалось ни на одну переменную/);
+    });
+  });
 });

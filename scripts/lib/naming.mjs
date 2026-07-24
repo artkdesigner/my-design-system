@@ -22,6 +22,19 @@
  * и другие символы отклоняются осознанно — пакет токенов отдаётся
  * разработчикам, и такие имена нужно поправить в Figma, а не молча пропустить.
  */
+const CSS_VAR_NAME_RE = /^--[a-z0-9][a-z0-9-]*$/;
+
+/**
+ * Проверяет, что строка годится в качестве имени CSS-пользовательского
+ * свойства (тот же критерий, что применяется к результату toCssVarName).
+ * Вынесена отдельно, чтобы её мог переиспользовать код, который получает
+ * готовое имя не из перевода пути, а из другого источника — например,
+ * ручное переопределение имени в parse-export.mjs.
+ */
+export function isValidCssVarName(name) {
+  return CSS_VAR_NAME_RE.test(name);
+}
+
 export function toCssVarName(figmaPath) {
   const words = figmaPath
     .split(/[/_\s]+/)
@@ -39,7 +52,7 @@ export function toCssVarName(figmaPath) {
   const kept = words.filter((word, i) => words.lastIndexOf(word) === i);
   const name = '--' + kept.join('-');
 
-  if (!/^--[a-z0-9][a-z0-9-]*$/.test(name)) {
+  if (!isValidCssVarName(name)) {
     throw new Error(
       `Имя «${figmaPath}» переводится в «${name}» — так в CSS нельзя. Переименуйте переменную в Figma.`
     );

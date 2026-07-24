@@ -14,12 +14,19 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
  * Возвращает список описаний каждого записанного файла: путь,
  * изменился ли он по сравнению с тем, что уже лежало на диске,
  * и был ли он новым. Используется и для отчёта в консоли, и тестами.
+ *
+ * `overridesPath` — необязательный путь к scripts/name-overrides.json
+ * (ручные переопределения имён CSS для разведения коллизий, см. пояснение
+ * в этом файле). Если путь не передан или файла нет на диске — работаем
+ * без переопределений, это не ошибка: файл заводится только когда реальная
+ * выгрузка Figma даёт коллизию имён.
  */
-export function generate({ exportPath, configPath, outDir }) {
+export function generate({ exportPath, configPath, outDir, overridesPath }) {
   const raw = readExport(exportPath);
   const config = JSON.parse(readFileSync(configPath, 'utf8'));
+  const nameOverrides = readOverrides(overridesPath);
 
-  const model = parseExport(raw);
+  const model = parseExport(raw, { nameOverrides });
   const files = toCss(model, config);
 
   mkdirSync(outDir, { recursive: true });
@@ -60,6 +67,13 @@ function readExport(exportPath) {
   }
 }
 
+function readOverrides(overridesPath) {
+  if (!overridesPath || !existsSync(overridesPath)) {
+    return {};
+  }
+  return JSON.parse(readFileSync(overridesPath, 'utf8'));
+}
+
 function countTokens(model) {
   return model.collections.reduce(
     (sum, collection) =>
@@ -79,7 +93,8 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     const written = generate({
       exportPath: join(root, 'figma-export.json'),
       configPath: join(root, 'scripts', 'mode-selectors.json'),
-      outDir: join(root, 'ds', 'src', 'tokens')
+      outDir: join(root, 'ds', 'src', 'tokens'),
+      overridesPath: join(root, 'scripts', 'name-overrides.json')
     });
 
     for (const file of written) {
