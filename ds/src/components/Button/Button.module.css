@@ -1,0 +1,121 @@
+/* Размеры, цвета и типографика — только из токенов. Из чисел здесь остались
+   line-height: 1 (это «без дополнительного интерлиньяжа», решение вёрстки,
+   а не величина дизайн-системы) и длительность перехода. */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+
+  height: var(--button-height);
+  min-width: var(--button-min-width);
+  padding-inline: var(--button-padding-hor);
+  gap: var(--button-gap);
+  border-radius: var(--button-radius);
+  border: var(--stroke-1) solid transparent;
+
+  font-family: var(--font-family-main);
+  font-size: var(--button-label-font-size);
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+
+  cursor: pointer;
+  transition:
+    background-color 120ms ease,
+    color 120ms ease,
+    border-color 120ms ease;
+}
+
+/* Иконочная кнопка — квадрат по своей же высоте. Отдельного токена стороны
+   у неё нет: --button-iconbutton-size это размер самой иконки (он совпадает
+   с --addon-size: 24/20/16), а не сторона кнопки. */
+.button[data-icon-only='true'] {
+  min-width: auto;
+  width: var(--button-height);
+  padding-inline: 0;
+}
+
+.button:focus-visible {
+  outline: var(--stroke-2) solid var(--element-border-focus);
+  outline-offset: var(--stroke-2);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+}
+
+/* Виды. Заливки берутся из слоя element — верхнего, который переизлучается
+   и потому отвечает и на наведение, и на тему.
+
+   Текст залитых видов — исключение из правила «компоненты читают element»:
+   взят --state-text-on-accent, потому что нужного значения в слое element
+   надёжно не получить. Путь через element требует пометить кнопку
+   data-on-accent, а такая пометка на интерактивном элементе не работает:
+   у переизлучения в .ds-interactive:hover|:active|:disabled специфичность
+   (0,2,0), у [data-on-accent] — (0,1,0), и на недоступной кнопке подпись
+   получала цвет заливки, то есть исчезала. У --state-text-on-accent
+   объявления живут в собственных блоках состояний, там этой беды нет. */
+.button[data-view='accent'] {
+  background: var(--element-bg-action-accent);
+  color: var(--state-text-on-accent);
+}
+
+.button[data-view='primary'] {
+  background: var(--element-bg-action-primary);
+  color: var(--state-text-on-accent);
+}
+
+.button[data-view='secondary'] {
+  background: var(--element-bg-action-secondary);
+  border-color: var(--element-border-secondary);
+  color: var(--element-text-primary);
+}
+
+/* Прозрачная кнопка: заливки нет, цвет уходит в текст. */
+.button[data-ghost] {
+  background: transparent;
+  border-color: transparent;
+  color: var(--element-text-accent);
+}
+
+/* Опасное действие. Ни заливки, ни текста «для опасного» в дизайн-системе нет
+   отдельно — есть режим error коллекции сообщений, который компонент включает
+   на себе сам (см. data-message в Button.tsx). */
+.button[data-danger] {
+  background: var(--element-bg-message);
+  border-color: var(--element-border-message-secondary);
+  color: var(--element-text-message);
+}
+
+.button[data-danger][data-ghost] {
+  background: transparent;
+  border-color: transparent;
+  color: var(--element-text-message);
+}
+
+.addon {
+  display: inline-flex;
+  flex-shrink: 0;
+  width: var(--addon-size);
+  height: var(--addon-size);
+  color: var(--element-icon-primary);
+}
+
+.addon > * {
+  width: 100%;
+  height: 100%;
+}
+
+/* На залитых видах и на прозрачных иконка идёт цветом подписи: отдельного
+   токена «иконка на акценте» в дизайн-системе нет. */
+.button[data-ghost] .addon,
+.button[data-view='accent'] .addon,
+.button[data-view='primary'] .addon,
+.button[data-danger] .addon {
+  color: currentColor;
+}
+
+.label {
+  white-space: nowrap;
+}

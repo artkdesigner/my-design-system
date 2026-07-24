@@ -2,7 +2,9 @@
   "name": "design-system-workspace",
   "private": true,
   "type": "module",
-  "workspaces": ["ds"],
+  "workspaces": [
+    "ds"
+  ],
   "scripts": {
     "test": "vitest run",
     "sync-tokens": "node scripts/sync-tokens.mjs",
@@ -11,6 +13,11 @@
     "build-storybook": "npm run build-storybook -w ds"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^7.0.0",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@vitejs/plugin-react": "^5.2.0",
+    "jsdom": "^29.1.1",
     "vitest": "^3.2.4"
   }
 }
