@@ -45,17 +45,20 @@
   cursor: not-allowed;
 }
 
-/* Виды. Заливки берутся из слоя element — верхнего, который переизлучается
+/* Виды различаются только заливкой: все три залитые, ни у одной нет границы —
+   сверено с макетом кнопки в Figma (узел 297:4137, вид secondary: заливка
+   element_bg_action_secondary, подпись и иконки белые, обводки нет).
+   Заливки берутся из слоя element — верхнего, который переизлучается
    и потому отвечает и на наведение, и на тему.
 
-   Текст залитых видов — исключение из правила «компоненты читают element»:
-   взят --state-text-on-accent, потому что нужного значения в слое element
-   надёжно не получить. Путь через element требует пометить кнопку
-   data-on-accent, а такая пометка на интерактивном элементе не работает:
-   у переизлучения в .ds-interactive:hover|:active|:disabled специфичность
-   (0,2,0), у [data-on-accent] — (0,1,0), и на недоступной кнопке подпись
-   получала цвет заливки, то есть исчезала. У --state-text-on-accent
-   объявления живут в собственных блоках состояний, там этой беды нет. */
+   Текст — исключение из правила «компоненты читают element»: взят
+   --state-text-on-accent, потому что нужного значения в слое element надёжно
+   не получить. Путь через element требует пометить кнопку data-on-accent,
+   а такая пометка на интерактивном элементе не работает: у переизлучения
+   в .ds-interactive:hover|:active|:disabled специфичность (0,2,0),
+   у [data-on-accent] — (0,1,0), и на недоступной кнопке подпись получала цвет
+   заливки, то есть исчезала. У --state-text-on-accent объявления живут
+   в собственных блоках состояний, там этой беды нет. */
 .button[data-view='accent'] {
   background: var(--element-bg-action-accent);
   color: var(--state-text-on-accent);
@@ -68,8 +71,7 @@
 
 .button[data-view='secondary'] {
   background: var(--element-bg-action-secondary);
-  border-color: var(--element-border-secondary);
-  color: var(--element-text-primary);
+  color: var(--state-text-on-accent);
 }
 
 /* Прозрачная кнопка: заливки нет, цвет уходит в текст. */
@@ -81,10 +83,13 @@
 
 /* Опасное действие. Ни заливки, ни текста «для опасного» в дизайн-системе нет
    отдельно — есть режим error коллекции сообщений, который компонент включает
-   на себе сам (см. data-message в Button.tsx). */
+   на себе сам (см. data-message в Button.tsx).
+
+   Без обводки, как и остальные виды. Сам вариант danger в макете не сверялся:
+   в Figma был выделен только вид secondary. Если у опасной кнопки в макете
+   обводка есть — вернуть --element-border-message-secondary. */
 .button[data-danger] {
   background: var(--element-bg-message);
-  border-color: var(--element-border-message-secondary);
   color: var(--element-text-message);
 }
 
@@ -94,26 +99,19 @@
   color: var(--element-text-message);
 }
 
+/* Иконка идёт цветом подписи (currentColor достаётся по наследованию), а не
+   своим токеном: в макете иконки залитой кнопки того же цвета, что подпись,
+   и отдельного токена «иконка на акценте» в дизайн-системе нет. */
 .addon {
   display: inline-flex;
   flex-shrink: 0;
   width: var(--addon-size);
   height: var(--addon-size);
-  color: var(--element-icon-primary);
 }
 
 .addon > * {
   width: 100%;
   height: 100%;
-}
-
-/* На залитых видах и на прозрачных иконка идёт цветом подписи: отдельного
-   токена «иконка на акценте» в дизайн-системе нет. */
-.button[data-ghost] .addon,
-.button[data-view='accent'] .addon,
-.button[data-view='primary'] .addon,
-.button[data-danger] .addon {
-  color: currentColor;
 }
 
 .label {
