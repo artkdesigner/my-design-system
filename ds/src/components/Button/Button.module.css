@@ -67,11 +67,12 @@
 }
 
 /* Прозрачная кнопка: заливки нет, обводка есть всегда, цвет уходит в текст
-   и иконку.
-
-   Оттенок обводки выведен, а не сверен поштучно: у прозрачной опасной кнопки
-   обводка и подпись — одного оттенка (message), поэтому здесь взят accent.
-   Значение совпадает с цветом подписи, #2936cc. */
+   и иконку. Оттенок обводки и текста зависит от вида — сверено по макету
+   (узлы 80:2174 accent, 80:2324 primary, 245:3773 secondary): у accent
+   обводка и подпись синие (element_border_accent/element_text_accent),
+   у primary и secondary — тёмные/серые (element_border_primary или
+   element_border_secondary, но подпись в обоих случаях element_text_primary:
+   в макете это одно и то же значение, #050607). */
 .button[data-ghost] {
   background: transparent;
   border-color: var(--element-border-accent);
@@ -80,6 +81,31 @@
 
 .button[data-ghost] .addon {
   color: var(--element-icon-accent);
+}
+
+/* :not([data-message]) обязателен: без него специфичность этих правил
+   (0,2,0) перебивала бы border-color из .button[data-message] (0,1,0) —
+   опасная прозрачная кнопка вида primary/secondary получала бы обводку
+   element_border_primary вместо element_border_message_secondary. Найдено
+   той же сверкой с макетом: обводка становилась белой (element_border_primary
+   уходит в вариант onAccent из-за combined-селектора
+   [data-message="error"][data-on-accent] в state.css). */
+.button[data-ghost][data-view='primary']:not([data-message]) {
+  border-color: var(--element-border-primary);
+  color: var(--element-text-primary);
+}
+
+.button[data-ghost][data-view='primary']:not([data-message]) .addon {
+  color: var(--element-icon-primary);
+}
+
+.button[data-ghost][data-view='secondary']:not([data-message]) {
+  border-color: var(--element-border-secondary);
+  color: var(--element-text-primary);
+}
+
+.button[data-ghost][data-view='secondary']:not([data-message]) .addon {
+  color: var(--element-icon-primary);
 }
 
 /* Тон сообщения: info, success, warning, error. Значение атрибута выбирает
