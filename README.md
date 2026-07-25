@@ -13,6 +13,21 @@
 | Подключение к Figma (Dev Mode MCP) | `.mcp.json`, описание в `mcp/SETUP.md` | подключено |
 | Каркас под скиллы | `.claude/skills/` | пусто намеренно |
 
+## Дизайн-система в коде
+
+Пакет лежит в `ds/`, токены генерируются из Figma и правятся только через
+выгрузку — см. `docs/synchronization.md`. Эталонный компонент — Button.
+
+| Команда | Что делает |
+|---|---|
+| `npm run storybook` | витрина на http://localhost:6006 |
+| `npm run build-storybook` | статическая сборка для передачи разработчикам |
+| `npm run sync-tokens` | перегенерировать токены из `figma-export.json` |
+| `npm run check-tokens` | сверить токены в коде с Figma |
+| `npm test` | прогнать тесты |
+
+Порядок синхронизации с Figma описан в [docs/synchronization.md](docs/synchronization.md).
+
 ## Что добавляется дальше
 
 - **MCP-подключения.** Figma подключена, дальше по надобности браузер и источники данных. Подробности в `mcp/SETUP.md`.
