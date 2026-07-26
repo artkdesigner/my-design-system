@@ -1,0 +1,71 @@
+/* Размеры, цвета и типографика — только из токенов. line-height: 1 — то же
+   решение вёрстки, что и в Button, а не величина дизайн-системы. */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+
+  padding: 0;
+  gap: var(--button-textbutton-gap);
+  background: transparent;
+  border: none;
+
+  font-family: var(--font-family-main);
+  font-size: var(--button-textbutton-label-font-size-2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+
+  color: var(--element-text-accent);
+
+  cursor: pointer;
+  transition: color 120ms ease;
+}
+
+.button:focus-visible {
+  outline: var(--stroke-2) solid var(--element-border-focus);
+  outline-offset: var(--stroke-2);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+}
+
+/* Вид различается только цветом подписи и иконок — сверено с макетом
+   (узлы 179:2682 accent, 179:2680 primary): у accent element_text_accent,
+   у primary element_text_primary. */
+.button[data-view='primary']:not([data-message]) {
+  color: var(--element-text-primary);
+}
+
+.button[data-view='primary']:not([data-message]) .addon {
+  color: var(--element-icon-primary);
+}
+
+/* Тон сообщения перебивает цвет вида — сверено с макетом (узел 179:2690,
+   тон error): подпись и иконка element_text_message/element_icon_message. */
+.button[data-message] {
+  color: var(--element-text-message);
+}
+
+.button[data-message] .addon {
+  color: var(--element-icon-message);
+}
+
+.addon {
+  display: inline-flex;
+  flex-shrink: 0;
+  width: var(--addon-size);
+  height: var(--addon-size);
+  color: var(--element-icon-accent);
+}
+
+.addon > * {
+  width: 100%;
+  height: 100%;
+}
+
+.label {
+  white-space: nowrap;
+}
