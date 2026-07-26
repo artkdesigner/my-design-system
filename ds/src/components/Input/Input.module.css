@@ -1,0 +1,138 @@
+/* Размеры, цвета и типографика — только из токенов. Из чисел здесь остались
+   line-height 1.2 и доли em для сворачивания строки подписи — это решения
+   вёрстки (тот же приём, что и line-height: 1 у Button), а не величины
+   дизайн-системы. */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: var(--font-family-main);
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: var(--field-input-min-height);
+  border-radius: var(--field-input-radius);
+  border: var(--field-input-stroke) solid transparent;
+  background: var(--element-bg-lvl-2);
+  transition:
+    background-color 120ms ease,
+    border-color 120ms ease;
+}
+
+/* :not([data-alert]) — тот же приём, что в Button: без него правило ниже
+   специфичностью перебивало бы обводку ошибки под фокусом. */
+.wrapper:not([data-alert]) .field:focus-within {
+  background: var(--element-bg-lvl-1);
+  border-color: var(--element-border-primary);
+}
+
+/* Обводка ошибки не зависит от фокуса и держится, пока не пропадёт disabled —
+   в макете нет варианта «Alert + Disabled», поэтому недоступность имеет
+   приоритет и полностью отключает вид ошибки. */
+.wrapper[data-alert]:not([data-state='disabled']) .field {
+  border-color: var(--element-border-message-primary);
+}
+
+.wrapper[data-state='disabled'] .field {
+  cursor: not-allowed;
+}
+
+.addon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: var(--addon-size);
+  height: var(--addon-size);
+  color: var(--element-icon-primary);
+}
+
+.addon > * {
+  width: 100%;
+  height: 100%;
+}
+
+.addonLeft {
+  margin-inline-start: var(--field-input-addon-padding-hor);
+}
+
+.addonRight {
+  margin-inline-end: var(--field-input-addon-padding-hor);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 auto;
+  min-width: 0;
+  padding-inline: var(--field-input-content-padding-hor);
+}
+
+/* Подпись свёрнута по умолчанию: max-height 0 и overflow hidden прячут её
+   визуально, не убирая из DOM, — она остаётся доступной для читалок экрана
+   даже тогда, когда её роль на месте занимает плейсхолдер поля ввода. */
+.label {
+  display: block;
+  overflow: hidden;
+  max-height: 0;
+  margin: 0;
+  opacity: 0;
+  color: var(--element-text-secondary);
+  font-size: var(--field-input-label-font-size-small);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.2;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition:
+    max-height 120ms ease,
+    opacity 120ms ease,
+    margin-bottom 120ms ease;
+}
+
+.wrapper[data-label-floated] .label {
+  max-height: 1.2em;
+  opacity: 1;
+  margin-bottom: var(--field-input-gap-content);
+}
+
+.input {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: var(--field-input-label-font-size-big);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.2;
+  color: var(--element-text-primary);
+}
+
+/* В покое плейсхолдер — это подпись, поэтому она того же цвета, что и
+   обычное значение (element_text_primary). В фокусе на её месте встаёт
+   настоящий проп placeholder, приглушённый как подсказка. */
+.input::placeholder {
+  color: var(--element-text-primary);
+}
+
+.input:focus::placeholder {
+  color: var(--element-text-secondary);
+}
+
+.hint {
+  padding-top: var(--field-input-hint-padding-vert);
+  color: var(--element-text-secondary);
+  font-size: var(--field-input-hint-font-size);
+  line-height: 1.2;
+}
+
+.wrapper[data-alert]:not([data-state='disabled']) .hint {
+  color: var(--element-text-message);
+}

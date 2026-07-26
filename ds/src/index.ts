@@ -11,3 +11,6 @@ export type { TextButtonProps } from './components/TextButton';
 
 export { ActionButton } from './components/ActionButton';
 export type { ActionButtonProps } from './components/ActionButton';
+
+export { Input } from './components/Input';
+export type { InputProps } from './components/Input';
