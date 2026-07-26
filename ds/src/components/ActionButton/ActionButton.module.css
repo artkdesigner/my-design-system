@@ -1,0 +1,121 @@
+/* Размеры, цвета и типографика — только из токенов. line-height: 1 и
+   длительность перехода — решения вёрстки, а не величины дизайн-системы. */
+
+.button {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+
+  width: var(--button-actionbutton-size);
+  gap: var(--button-actionbutton-gap);
+  padding: 0;
+  background: transparent;
+  border: none;
+
+  font-family: var(--font-family-main);
+  font-size: var(--button-label-font-size);
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+
+  /* Подпись лежит на фоне страницы, а не на заливке круга — сверено по
+     макету (узлы 155:6479, 155:6518, 155:6481, 155:6522): во всех берётся
+     обычный токен, не onAccent. */
+  color: var(--element-text-accent);
+
+  cursor: pointer;
+}
+
+.button:focus-visible {
+  outline: var(--stroke-2) solid var(--element-border-focus);
+  outline-offset: var(--stroke-2);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+}
+
+.circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-shrink: 0;
+
+  width: var(--button-actionbutton-size);
+  height: var(--button-actionbutton-size);
+  border-radius: var(--button-actionbutton-radius);
+  border: var(--stroke-1) solid transparent;
+
+  background: var(--element-bg-action-accent);
+  color: var(--element-icon-accent);
+
+  transition:
+    background-color 120ms ease,
+    color 120ms ease,
+    border-color 120ms ease;
+}
+
+.icon {
+  display: inline-flex;
+  width: var(--addon-size);
+  height: var(--addon-size);
+}
+
+.icon > * {
+  width: 100%;
+  height: 100%;
+}
+
+.label {
+  white-space: nowrap;
+}
+
+/* Вид Primary — сверено по макету (узел 155:6518): заливка
+   element_bg_action_primary, подпись и иконка element_text_primary /
+   element_icon_primary. */
+.button[data-view='primary'] .circle {
+  background: var(--element-bg-action-primary);
+}
+
+.button[data-view='primary']:not([data-message]) {
+  color: var(--element-text-primary);
+}
+
+.button[data-view='primary']:not([data-message]) .circle {
+  color: var(--element-icon-primary);
+}
+
+/* Ghost — круг без заливки, с обводкой; оттенок обводки и иконки зависит
+   от вида, как у ghost-кнопки Button (узлы 155:6481 accent, 155:6522
+   primary). */
+.button[data-ghost] .circle {
+  background: transparent;
+  border-color: var(--element-border-accent);
+  color: var(--element-icon-accent);
+}
+
+.button[data-ghost][data-view='primary']:not([data-message]) .circle {
+  border-color: var(--element-border-primary);
+  color: var(--element-icon-primary);
+}
+
+/* Тон сообщения — тот же message, что у Button. Подпись под кругом
+   остаётся в обычном режиме (сверено по узлу 155:6554), а вот заливка
+   и иконка внутри круга — в onAccent (см. data-on-accent на .circle
+   в ActionButton.tsx), потому что там читается element_bg_message /
+   element_icon_message в контексте, где они лежат на собственной заливке. */
+.button[data-message] {
+  color: var(--element-text-message);
+}
+
+.button[data-message] .circle {
+  background: var(--element-bg-message);
+  color: var(--element-icon-message);
+}
+
+.button[data-message][data-ghost] .circle {
+  background: transparent;
+  border-color: var(--element-border-message-secondary);
+  color: var(--element-icon-message);
+}
