@@ -35,9 +35,10 @@ const label: CSSProperties = {
   whiteSpace: 'nowrap'
 };
 
-export const Обычная: Story = {};
+export const Обычная: Story = { name: 'В покое' };
 
 export const СИконками: Story = {
+  name: 'С иконкой',
   args: { addonLeft: <PlusIcon />, addonRight: <PlusIcon /> }
 };
 

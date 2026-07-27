@@ -34,7 +34,7 @@ const caption: CSSProperties = {
   whiteSpace: 'nowrap'
 };
 
-export const Обычное: Story = {};
+export const Обычное: Story = { name: 'В покое' };
 
 export const СЗначением: Story = {
   args: { defaultValue: 'Value' }

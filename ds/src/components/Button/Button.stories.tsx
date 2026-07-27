@@ -35,13 +35,15 @@ const label: CSSProperties = {
   whiteSpace: 'nowrap'
 };
 
-export const Обычная: Story = {};
+export const Обычная: Story = { name: 'В покое' };
 
 export const СИконками: Story = {
+  name: 'С иконкой',
   args: { iconLeft: <PlusIcon />, iconRight: <PlusIcon /> }
 };
 
 export const ТолькоИконка: Story = {
+  name: 'Только с иконкой',
   args: { children: null, iconLeft: <PlusIcon />, 'aria-label': 'Добавить' }
 };
 
@@ -153,6 +155,7 @@ export const Состояния: Story = {
  * объявляет его умолчательный режим.
  */
 export const Тоны: Story = {
+  name: 'Тип сообщения',
   render: () => {
     const tones = ['info', 'success', 'warning', 'error'] as const;
 
