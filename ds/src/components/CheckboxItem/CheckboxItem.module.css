@@ -1,0 +1,47 @@
+/* Размеры и цвета — только из токенов. Иконка внутри позиционируется
+   абсолютно с отступом в минус толщину рамки (сверено с макетом, узел
+   125:2450: там inset -2px при рамке 2px) — она рисуется во весь квадрат
+   24×24 поверх рамки, а не сжимается до внутренней области под рамкой. */
+
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  overflow: hidden;
+
+  width: var(--checkbox-item-size);
+  height: var(--checkbox-item-size);
+  padding: 0;
+  border-radius: var(--checkbox-item-radius);
+  border: var(--checkbox-item-border) solid var(--element-border-secondary);
+  background: var(--element-bg-lvl-1);
+
+  color: var(--element-icon-primary);
+  cursor: pointer;
+  transition:
+    background-color 120ms ease,
+    border-color 120ms ease;
+}
+
+.button:focus-visible {
+  outline: var(--stroke-2) solid var(--element-border-focus);
+  outline-offset: var(--stroke-2);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+}
+
+.button[aria-checked='true'],
+.button[aria-checked='mixed'] {
+  border-color: var(--element-border-primary);
+}
+
+.icon {
+  position: absolute;
+  top: calc(var(--checkbox-item-border) * -1);
+  left: calc(var(--checkbox-item-border) * -1);
+}
