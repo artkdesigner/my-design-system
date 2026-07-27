@@ -1,5 +1,6 @@
 import type { Preview } from '@storybook/react-vite';
 import '../src/tokens/index.css';
+import './preview.css';
 
 /**
  * Каждый переключатель витрины — это режим коллекции Figma, выведенный
