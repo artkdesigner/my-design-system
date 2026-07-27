@@ -1,4 +1,5 @@
 import type { ButtonHTMLAttributes, ReactNode } from 'react';
+import { Addon } from '../Addon';
 import styles from './IconButton.module.css';
 
 type IconButtonOwnProps = {
@@ -6,6 +7,13 @@ type IconButtonOwnProps = {
   view?: 'accent' | 'primary' | 'secondary' | 'danger';
   /** Размер. Соответствует режимам коллекции ComponentSize. */
   size?: 'l' | 'm' | 's';
+  /**
+   * Содержимое слота Addon. Только декоративное: Icon, Checkmark, Spinner,
+   * Indicator, StatusBadge. IconButton и Text сюда не кладутся — тот же
+   * запрет, что и у Button: слот всегда aria-hidden, значит Text пропадёт
+   * для скринридера, а вложенный IconButton — интерактивная кнопка внутри
+   * кнопки, невалидный HTML и вдобавок недоступный элемент под aria-hidden.
+   */
   icon: ReactNode;
 };
 
@@ -47,9 +55,9 @@ export function IconButton({
       data-size={size}
       data-message={view === 'danger' ? 'error' : undefined}
     >
-      <span className={styles.icon} aria-hidden="true">
+      <Addon size={size} aria-hidden="true">
         {icon}
-      </span>
+      </Addon>
     </button>
   );
 }
