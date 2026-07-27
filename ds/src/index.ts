@@ -20,3 +20,6 @@ export type { IconProps, IconName } from './components/Icon';
 
 export { Addon } from './components/Addon';
 export type { AddonProps } from './components/Addon';
+
+export { Checkmark } from './components/Checkmark';
+export type { CheckmarkProps } from './components/Checkmark';
