@@ -1,0 +1,38 @@
+/* Размеры и цвета — только из токенов. Рамка не меняет цвет при выборе —
+   сверено с макетом (узлы 134:549/134:552, оба element_border_secondary),
+   это не упрощение, а то, как задумано в Figma: разница только в точке. */
+
+.button {
+  position: relative;
+  display: inline-flex;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  overflow: hidden;
+
+  width: var(--radio-item-size);
+  height: var(--radio-item-size);
+  padding: 0;
+  border-radius: var(--radio-item-radius);
+  border: var(--radio-item-border) solid var(--element-border-secondary);
+  background: var(--element-bg-lvl-1);
+
+  cursor: pointer;
+}
+
+.button:focus-visible {
+  outline: var(--stroke-2) solid var(--element-border-focus);
+  outline-offset: var(--stroke-2);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+}
+
+/* Точка: инсет в процентах — сам масштабируется под любой из трёх размеров,
+   отдельный токен на размер точки в Figma не заведён (только на сам круг). */
+.dot {
+  position: absolute;
+  inset: calc(29.17% - 0.83px);
+  border-radius: var(--radio-item-radius);
+  background: var(--element-bg-action-primary);
+}

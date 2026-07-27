@@ -29,3 +29,6 @@ export type { IconButtonProps } from './components/IconButton';
 
 export { CheckboxItem } from './components/CheckboxItem';
 export type { CheckboxItemProps } from './components/CheckboxItem';
+
+export { RadioItem } from './components/RadioItem';
+export type { RadioItemProps } from './components/RadioItem';
