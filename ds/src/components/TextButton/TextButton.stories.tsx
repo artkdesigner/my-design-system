@@ -88,6 +88,45 @@ export const Матрица: Story = {
   }
 };
 
+/**
+ * Четыре тона сообщения. В отличие от Button здесь одна строка, а не две:
+ * у TextButton нет заливки/ghost-варианта (см. комментарий над компонентом),
+ * только сам тон.
+ */
+export const Тоны: Story = {
+  name: 'Тип сообщения',
+  render: () => {
+    const tones = ['info', 'success', 'warning', 'error'] as const;
+
+    return (
+      <div style={page}>
+        <table style={{ borderSpacing: 'var(--margin-12)' }}>
+          <thead>
+            <tr>
+              <th />
+              {tones.map((tone) => (
+                <th key={tone} style={label}>
+                  {tone}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style={label}>message</td>
+              {tones.map((tone) => (
+                <td key={tone}>
+                  <TextButton message={tone}>Label</TextButton>
+                </td>
+              ))}
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    );
+  }
+};
+
 /** Три размера рядом — проверка режимов ComponentSize. */
 export const Размеры: Story = {
   render: () => (
