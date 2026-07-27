@@ -38,12 +38,12 @@ const label: CSSProperties = {
 export const Обычная: Story = { name: 'В покое' };
 
 export const СИконками: Story = {
-  name: 'С иконкой',
+  name: 'Текст + аддон',
   args: { iconLeft: <PlusIcon />, iconRight: <PlusIcon /> }
 };
 
 export const ТолькоИконка: Story = {
-  name: 'Только с иконкой',
+  name: 'Только аддон',
   args: { children: null, iconLeft: <PlusIcon />, 'aria-label': 'Добавить' }
 };
 

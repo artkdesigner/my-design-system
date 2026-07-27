@@ -38,7 +38,7 @@ const label: CSSProperties = {
 export const Обычная: Story = { name: 'В покое' };
 
 export const СИконками: Story = {
-  name: 'С иконкой',
+  name: 'Текст + аддон',
   args: { addonLeft: <PlusIcon />, addonRight: <PlusIcon /> }
 };
 
