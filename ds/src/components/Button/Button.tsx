@@ -1,4 +1,5 @@
 import type { ButtonHTMLAttributes, ReactNode } from 'react';
+import { Addon } from '../Addon';
 import styles from './Button.module.css';
 
 type ButtonOwnProps = {
@@ -14,7 +15,17 @@ type ButtonOwnProps = {
    * значение, потому что режим всё равно обязан стоять на самой кнопке.
    */
   message?: 'info' | 'success' | 'warning' | 'error';
+  /**
+   * Содержимое левого слота Addon. Только декоративное: Icon, Checkmark,
+   * Spinner, Indicator, StatusBadge — то, что можно спрятать от скринридера.
+   * Text и IconButton сюда не кладутся: слот у Button всегда aria-hidden,
+   * значит текст пропадёт для скринридера (а подпись у кнопки уже есть —
+   * проп children), а IconButton — интерактивный элемент, и он же кнопка,
+   * так что получилась бы кнопка внутри кнопки — невалидный HTML и вдобавок
+   * недоступный элемент под aria-hidden.
+   */
   iconLeft?: ReactNode;
+  /** Содержимое правого слота Addon. Те же ограничения, что у iconLeft. */
   iconRight?: ReactNode;
   children?: ReactNode;
 };
@@ -84,15 +95,15 @@ export function Button({
       data-message={message}
     >
       {iconLeft && (
-        <span className={styles.addon} aria-hidden="true">
+        <Addon size={size} className={styles.addon} aria-hidden="true">
           {iconLeft}
-        </span>
+        </Addon>
       )}
       {hasLabel && <span className={styles.label}>{children}</span>}
       {iconRight && (
-        <span className={styles.addon} aria-hidden="true">
+        <Addon size={size} className={styles.addon} aria-hidden="true">
           {iconRight}
-        </span>
+        </Addon>
       )}
     </button>
   );

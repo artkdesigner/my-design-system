@@ -1,4 +1,5 @@
 import type { ButtonHTMLAttributes, ReactNode } from 'react';
+import { Addon } from '../Addon';
 import styles from './TextButton.module.css';
 
 type TextButtonOwnProps = {
@@ -51,15 +52,15 @@ export function TextButton({
       data-message={message}
     >
       {addonLeft && (
-        <span className={styles.addon} aria-hidden="true">
+        <Addon size={size} className={styles.addon} aria-hidden="true">
           {addonLeft}
-        </span>
+        </Addon>
       )}
       <span className={styles.label}>{children}</span>
       {addonRight && (
-        <span className={styles.addon} aria-hidden="true">
+        <Addon size={size} className={styles.addon} aria-hidden="true">
           {addonRight}
-        </span>
+        </Addon>
       )}
     </button>
   );

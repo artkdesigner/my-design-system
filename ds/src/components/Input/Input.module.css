@@ -42,18 +42,7 @@
 }
 
 .addon {
-  display: flex;
-  flex-shrink: 0;
-  align-items: center;
-  justify-content: center;
-  width: var(--addon-size);
-  height: var(--addon-size);
   color: var(--element-icon-primary);
-}
-
-.addon > * {
-  width: 100%;
-  height: 100%;
 }
 
 .addonLeft {

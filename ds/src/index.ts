@@ -17,3 +17,6 @@ export type { InputProps } from './components/Input';
 
 export { Icon } from './components/Icon';
 export type { IconProps, IconName } from './components/Icon';
+
+export { Addon } from './components/Addon';
+export type { AddonProps } from './components/Addon';

@@ -6,6 +6,7 @@ import {
   type InputHTMLAttributes,
   type ReactNode
 } from 'react';
+import { Addon } from '../Addon';
 import styles from './Input.module.css';
 
 type InputOwnProps = {
@@ -96,9 +97,9 @@ export function Input({
     >
       <div className={styles.field}>
         {leftAddon && (
-          <span className={[styles.addon, styles.addonLeft].join(' ')} aria-hidden="true">
+          <Addon size={size} className={[styles.addon, styles.addonLeft].join(' ')} aria-hidden="true">
             {leftAddon}
-          </span>
+          </Addon>
         )}
         <div className={styles.content}>
           {label && (
@@ -120,9 +121,9 @@ export function Input({
           />
         </div>
         {rightAddon && (
-          <span className={[styles.addon, styles.addonRight].join(' ')} aria-hidden="true">
+          <Addon size={size} className={[styles.addon, styles.addonRight].join(' ')} aria-hidden="true">
             {rightAddon}
-          </span>
+          </Addon>
         )}
       </div>
       {hintText && <div className={styles.hint}>{hintText}</div>}

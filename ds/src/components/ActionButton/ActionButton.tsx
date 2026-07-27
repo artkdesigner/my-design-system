@@ -1,4 +1,5 @@
 import type { ButtonHTMLAttributes, ReactNode } from 'react';
+import { Addon } from '../Addon';
 import styles from './ActionButton.module.css';
 
 type ActionButtonOwnProps = {
@@ -50,9 +51,9 @@ export function ActionButton({
       data-message={message}
     >
       <span className={styles.circle} data-on-accent={!ghost || message ? 'true' : undefined}>
-        <span className={styles.icon} aria-hidden="true">
+        <Addon size={size} aria-hidden="true">
           {icon}
-        </span>
+        </Addon>
       </span>
       <span className={styles.label}>{children}</span>
     </button>
