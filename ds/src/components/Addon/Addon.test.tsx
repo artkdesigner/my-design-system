@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { Addon } from './Addon';
+import { ICONS } from '../Icon/icons.generated';
 
 describe('Addon', () => {
   it('рисует содержимое внутри слота', () => {
@@ -36,5 +37,39 @@ describe('Addon', () => {
   it('пропускает наружу произвольные атрибуты', () => {
     render(<Addon data-testid="my-addon">content</Addon>);
     expect(screen.getByTestId('my-addon')).toBeInTheDocument();
+  });
+
+  it('проп icon сам подставляет Icon нужного размера', () => {
+    const { container } = render(<Addon icon="activity" size="m" />);
+    const svg = container.querySelector('svg');
+    expect(svg).toHaveAttribute('data-size', 'm');
+    expect(container.querySelector('path')).toHaveAttribute('d', ICONS.activity.d);
+  });
+
+  it('проп checkmark сам подставляет Checkmark и передаёт ему selected', () => {
+    const { container } = render(<Addon checkmark size="s" />);
+    const checkmark = container.querySelector('[data-selected]');
+    expect(checkmark).toHaveAttribute('data-selected', 'true');
+    expect(checkmark).toHaveAttribute('data-size', 's');
+  });
+
+  it('checkmark={false} всё равно рисует Checkmark, просто невыбранный', () => {
+    const { container } = render(<Addon checkmark={false} />);
+    expect(container.querySelector('svg')).toBeInTheDocument();
+    expect(container.querySelectorAll('[data-selected]')).toHaveLength(0);
+  });
+
+  it('icon приоритетнее checkmark и children', () => {
+    render(
+      <Addon icon="activity" checkmark>
+        <span data-testid="children">children</span>
+      </Addon>
+    );
+    expect(screen.queryByTestId('children')).not.toBeInTheDocument();
+  });
+
+  it('без icon и checkmark рисует children как раньше', () => {
+    render(<Addon>{<svg data-testid="content" />}</Addon>);
+    expect(screen.getByTestId('content')).toBeInTheDocument();
   });
 });
