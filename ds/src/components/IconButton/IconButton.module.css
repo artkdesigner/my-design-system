@@ -1,0 +1,52 @@
+/* Размеры и цвета — только из токенов. Своей заливки и рамки нет ни в одном
+   виде (сверено скриншотом по узлу 124:2304) — компонент всегда прозрачный. */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+
+  width: var(--button-iconbutton-size);
+  height: var(--button-iconbutton-size);
+  padding: 0;
+  background: transparent;
+  border: none;
+
+  color: var(--element-icon-accent);
+
+  cursor: pointer;
+  transition: color 120ms ease;
+}
+
+.button:focus-visible {
+  outline: var(--stroke-2) solid var(--element-border-focus);
+  outline-offset: var(--stroke-2);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+}
+
+.button[data-view='primary'] {
+  color: var(--element-icon-primary);
+}
+
+.button[data-view='secondary'] {
+  color: var(--element-icon-secondary);
+}
+
+.button[data-message] {
+  color: var(--element-icon-message);
+}
+
+.icon {
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+}
+
+.icon > * {
+  width: 100%;
+  height: 100%;
+}

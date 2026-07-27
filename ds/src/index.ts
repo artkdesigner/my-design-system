@@ -23,3 +23,6 @@ export type { AddonProps } from './components/Addon';
 
 export { Checkmark } from './components/Checkmark';
 export type { CheckmarkProps } from './components/Checkmark';
+
+export { IconButton } from './components/IconButton';
+export type { IconButtonProps } from './components/IconButton';
