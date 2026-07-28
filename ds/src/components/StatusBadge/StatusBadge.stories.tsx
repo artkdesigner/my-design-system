@@ -1,11 +1,11 @@
 import type { CSSProperties } from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { StatusBadge } from './StatusBadge';
+import { StatusBadge, type StatusBadgeType } from './StatusBadge';
 
 const meta: Meta<typeof StatusBadge> = {
   title: 'Components/StatusBadge',
   component: StatusBadge,
-  args: { icon: 'information-circle-contained', status: 'info' }
+  args: { type: 'positiveCheck' }
 };
 
 export default meta;
@@ -28,22 +28,27 @@ const label: CSSProperties = {
 
 export const ВПокое: Story = { name: 'В покое' };
 
-/** Четыре смысловых статуса — иконку под каждый выбирает вызывающий код,
- * единого «default icon на статус» набора в icons.generated.ts нет. */
-export const Статусы: Story = {
+/** Все девять вариантов узла 181:1850 — у каждого своя пара иконка+цвет,
+ * не свободный выбор. */
+export const Типы: Story = {
   render: () => (
-    <div style={{ ...page, display: 'flex', alignItems: 'center', gap: 'var(--margin-24)' }}>
+    <div style={{ ...page, display: 'flex', flexWrap: 'wrap', gap: 'var(--margin-24)' }}>
       {(
         [
-          ['Info', 'information-circle-contained', 'info'],
-          ['Success', 'check-contained', 'success'],
-          ['Warning', 'alert-triangle', 'warning'],
-          ['Error', 'x-circle-contained', 'error']
-        ] as const
-      ).map(([name, icon, status]) => (
-        <div key={name} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 'var(--margin-8)' }}>
-          <StatusBadge icon={icon} status={status} />
-          <span style={label}>{name}</span>
+          'positiveCheck',
+          'negativeCross',
+          'neutralCross',
+          'negativeAlert',
+          'warningAlert',
+          'infoNeutral',
+          'infoAccent',
+          'operation',
+          'stop'
+        ] as StatusBadgeType[]
+      ).map((type) => (
+        <div key={type} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 'var(--margin-8)' }}>
+          <StatusBadge type={type} />
+          <span style={label}>{type}</span>
         </div>
       ))}
     </div>
@@ -53,9 +58,9 @@ export const Статусы: Story = {
 export const Размеры: Story = {
   render: () => (
     <div style={{ ...page, display: 'flex', alignItems: 'center', gap: 'var(--margin-16)' }}>
-      <StatusBadge icon="check-contained" status="success" size="l" />
-      <StatusBadge icon="check-contained" status="success" size="m" />
-      <StatusBadge icon="check-contained" status="success" size="s" />
+      <StatusBadge type="positiveCheck" size="l" />
+      <StatusBadge type="positiveCheck" size="m" />
+      <StatusBadge type="positiveCheck" size="s" />
     </div>
   )
 };

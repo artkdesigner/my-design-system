@@ -2,17 +2,19 @@ import type { HTMLAttributes } from 'react';
 import { Icon, type IconName } from '../Icon';
 import styles from './StatusBadge.module.css';
 
+export type StatusBadgeType =
+  | 'positiveCheck'
+  | 'negativeCross'
+  | 'neutralCross'
+  | 'negativeAlert'
+  | 'warningAlert'
+  | 'infoNeutral'
+  | 'infoAccent'
+  | 'operation'
+  | 'stop';
+
 type StatusBadgeOwnProps = {
-  /** Какую иконку показать. Обязателен: единого набора «своя иконка на
-   * каждый статус» в наборе icons.generated.ts нет — например, у info/error
-   * есть парные *-circle-contained/*-circle-filled, а у success подходящего
-   * check-circle-* варианта не существует вовсе (только check-contained,
-   * квадратный). Поэтому вместо угадывания смешанного набора форм —
-   * выбор иконки оставлен вызывающему коду. */
-  icon: IconName;
-  /** Цвет через семантический слой message (см. Input alert/CheckboxGroup/
-   * RadioGroup) — data-message переключает element-icon-message. */
-  status?: 'info' | 'success' | 'warning' | 'error';
+  type?: StatusBadgeType;
   size?: 'l' | 'm' | 's';
 };
 
@@ -20,29 +22,41 @@ export type StatusBadgeProps = StatusBadgeOwnProps &
   Omit<HTMLAttributes<HTMLSpanElement>, keyof StatusBadgeOwnProps>;
 
 /**
- * Маленький цветной значок статуса (StatusBadge/StatusBadge_size и
- * _padding в tokens.map.json) — не пилюля с подписью (это отдельный,
- * ещё не построенный компонент Status с addon/gap/label), а просто
- * иконка в отступе, покрашенная под статус. Своего фона/рамки нет:
- * токенов под них в StatusBadge не заведено, а значит цвет несёт сама
- * иконка (обычно один из *-contained/*-filled вариантов, где кружок или
- * квадрат уже нарисован внутри пути). Узел в Figma этой сессией не
- * проверен (мост к MCP не поднялся — см. комментарий в Checkbox.tsx).
- *
- * Иконка растягивается на всю внутреннюю область через override 100%×100%
- * (тот же приём, что у Checkmark), а не через свой size у Icon — иначе
- * пришлось бы гадать, какой из l/m/s size Icon даёт нужный пиксельный
- * размер после вычета statusbadge-padding.
+ * Узел 181:1850 в Figma, сверен через MCP-мост: девять готовых вариантов
+ * type, у каждого зашита СВОЯ пара иконка+цвет — это не свободная
+ * комбинация icon+status, как предполагалось до сверки. Три варианта
+ * (neutralCross/infoNeutral/operation) серые (element_bg_action_secondary,
+ * не зависит от статуса), остальные шесть красятся через семантический
+ * message (info/success/warning/error) с сплошной заливкой — bg берёт
+ * message-bg-primary, а не тинт message-bg-secondary, потому что везде
+ * стоит data-on-accent (тот же переключатель, что у Button на залитых
+ * вариантах): он же красит иконку в белый через element-icon-primary.
  */
-export function StatusBadge({ icon, status = 'info', size = 'l', className, ...rest }: StatusBadgeProps) {
+const CONFIG: Record<StatusBadgeType, { icon: IconName; message?: 'info' | 'success' | 'warning' | 'error' }> = {
+  positiveCheck: { icon: 'check', message: 'success' },
+  negativeCross: { icon: 'x-03', message: 'error' },
+  neutralCross: { icon: 'x-03' },
+  negativeAlert: { icon: 'exclamation-mark', message: 'error' },
+  warningAlert: { icon: 'exclamation-mark', message: 'warning' },
+  infoNeutral: { icon: 'information' },
+  infoAccent: { icon: 'information', message: 'info' },
+  operation: { icon: 'clock-02' },
+  stop: { icon: 'stop', message: 'error' }
+};
+
+export function StatusBadge({ type = 'positiveCheck', size = 'l', className, ...rest }: StatusBadgeProps) {
+  const { icon, message } = CONFIG[type];
+
   return (
     <span
       {...rest}
       data-size={size}
-      data-message={status}
+      data-on-accent="true"
+      data-tone={message ? 'message' : 'neutral'}
+      data-message={message}
       className={[styles.badge, className].filter(Boolean).join(' ')}
     >
-      <Icon name={icon} className={styles.icon} aria-hidden="true" />
+      <Icon name={icon} size={size} className={styles.icon} aria-hidden="true" />
     </span>
   );
 }

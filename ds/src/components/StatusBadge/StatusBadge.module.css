@@ -1,4 +1,5 @@
-/* Размеры и цвет — только из токенов. */
+/* Размеры и цвет — только из токенов. Форма — круг (radius-max), сверено
+   скриншотом узла 181:1850. */
 
 .badge {
   display: inline-flex;
@@ -10,8 +11,17 @@
   width: var(--statusbadge-size);
   height: var(--statusbadge-size);
   padding: var(--statusbadge-padding);
+  border-radius: var(--radius-max);
 
-  color: var(--element-icon-message);
+  color: var(--element-icon-primary);
+}
+
+.badge[data-tone='message'] {
+  background: var(--element-bg-message);
+}
+
+.badge[data-tone='neutral'] {
+  background: var(--element-bg-action-secondary);
 }
 
 .icon {
