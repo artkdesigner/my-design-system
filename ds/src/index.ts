@@ -44,3 +44,6 @@ export type { RadioProps } from './components/Radio';
 
 export { RadioGroup } from './components/RadioGroup';
 export type { RadioGroupProps } from './components/RadioGroup';
+
+export { StatusBadge } from './components/StatusBadge';
+export type { StatusBadgeProps } from './components/StatusBadge';

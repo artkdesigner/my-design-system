@@ -1,0 +1,20 @@
+/* Размеры и цвет — только из токенов. */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-shrink: 0;
+
+  width: var(--statusbadge-size);
+  height: var(--statusbadge-size);
+  padding: var(--statusbadge-padding);
+
+  color: var(--element-icon-message);
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+}
