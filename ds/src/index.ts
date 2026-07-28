@@ -50,3 +50,6 @@ export type { StatusBadgeProps } from './components/StatusBadge';
 
 export { Spinner } from './components/Spinner';
 export type { SpinnerProps } from './components/Spinner';
+
+export { Indicator } from './components/Indicator';
+export type { IndicatorProps } from './components/Indicator';

@@ -1,0 +1,44 @@
+/* Размеры и цвета — только из токенов. */
+
+.indicator {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: var(--indicator-radius);
+  font-family: var(--font-family-main);
+}
+
+.indicator[data-view='accent'] {
+  background: var(--element-bg-action-accent);
+}
+
+.indicator[data-view='neutral'] {
+  background: var(--element-bg-action-secondary);
+}
+
+.indicator[data-view='light'] {
+  background: var(--element-bg-lvl-1);
+}
+
+.indicator:not([data-dot]) {
+  height: var(--indicator-with-content-height);
+  min-width: var(--indicator-with-content-min-width);
+  padding-inline: var(--indicator-padding-hor);
+}
+
+/* empty_size не меняется по size в токенах — точка всегда 8px. */
+.indicator[data-dot] {
+  width: var(--indicator-empty-size);
+  height: var(--indicator-empty-size);
+}
+
+.count {
+  color: var(--element-text-primary);
+  font-size: var(--indicator-count-font-size);
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  white-space: nowrap;
+  text-align: center;
+}
