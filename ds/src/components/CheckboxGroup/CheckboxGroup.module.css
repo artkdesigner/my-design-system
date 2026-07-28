@@ -3,34 +3,49 @@
 .wrapper {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: var(--checkbox-group-gap);
   font-family: var(--font-family-main);
 }
 
-/* В макете нет варианта Alert + Disabled — как и у Input, приоритет у
-   недоступности. */
+/* Ошибка — рамка только слева на всю высоту группы плюс отступ слева на
+   её ширину, не рамка по контуру. В макете нет варианта Alert + Disabled —
+   как и у Input, приоритет у недоступности. */
 .wrapper[data-alert]:not([data-state='disabled']) {
-  padding: var(--checkbox-group-alert-padding);
-  border: var(--checkbox-group-alert-border) solid var(--element-border-message-primary);
+  padding-left: var(--checkbox-group-alert-padding);
+  border-left: var(--checkbox-group-alert-border) solid var(--element-border-message-primary);
 }
 
 .title {
+  max-width: 100%;
+  overflow: hidden;
   color: var(--element-text-primary);
   font-size: var(--checkbox-group-title-font-size);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-medium);
   line-height: 1.2;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
+/* direction=horizontal — ряд с checkbox-group-items-gap-hor, без переноса;
+   direction=vertical — колонка с checkbox-group-items-gap-vert. Это два
+   альтернативных режима, не совмещённый flex-wrap с обоими зазорами
+   сразу (как предполагалось до сверки с Figma). */
 .items {
   display: flex;
-  flex-wrap: wrap;
-  row-gap: var(--checkbox-group-items-gap-vert);
-  column-gap: var(--checkbox-group-items-gap-hor);
+  align-items: flex-start;
+  gap: var(--checkbox-group-items-gap-hor);
 }
 
-/* Отдельного токена под размер шрифта подсказки группы в tokens.map.json
-   нет — переиспользуем checkbox-hint-font-size, тот же масштаб по size. */
+.items[data-direction='vertical'] {
+  flex-direction: column;
+  gap: var(--checkbox-group-items-gap-vert);
+}
+
+/* Подсказка растянута на всю ширину группы (в макете — min-width:100%),
+   в отличие от заголовка и ряда пунктов, которые остаются по контенту. */
 .hint {
+  width: 100%;
   color: var(--element-text-secondary);
   font-size: var(--checkbox-hint-font-size);
   line-height: 1.2;

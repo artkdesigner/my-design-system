@@ -61,4 +61,24 @@ describe('RadioGroup', () => {
     );
     expect(container.firstChild).toHaveAttribute('data-size', 's');
   });
+
+  it('по умолчанию direction horizontal', () => {
+    const { container } = render(
+      <RadioGroup title="Способ оплаты">
+        <Radio label="Картой" />
+      </RadioGroup>
+    );
+    const items = (container.firstChild as HTMLElement).querySelector('[data-direction]');
+    expect(items).toHaveAttribute('data-direction', 'horizontal');
+  });
+
+  it('переносит direction в data-атрибут ряда пунктов', () => {
+    const { container } = render(
+      <RadioGroup title="Способ оплаты" direction="vertical">
+        <Radio label="Картой" />
+      </RadioGroup>
+    );
+    const items = (container.firstChild as HTMLElement).querySelector('[data-direction]');
+    expect(items).toHaveAttribute('data-direction', 'vertical');
+  });
 });

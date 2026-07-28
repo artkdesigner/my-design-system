@@ -6,6 +6,9 @@ type RadioGroupOwnProps = {
   hint?: ReactNode;
   alert?: boolean;
   alertText?: ReactNode;
+  /** Соответствует Direction в Figma. По умолчанию Horizontal — так же,
+   * как в узле 134:567. */
+  direction?: 'horizontal' | 'vertical';
   size?: 'l' | 'm' | 's';
 };
 
@@ -13,11 +16,12 @@ export type RadioGroupProps = RadioGroupOwnProps &
   Omit<HTMLAttributes<HTMLDivElement>, keyof RadioGroupOwnProps>;
 
 /**
- * Группа радиокнопок — заголовок, ряд дочерних Radio с переносом строк и
- * общая подсказка/ошибка снизу. Той же структуры, что CheckboxGroup:
- * токены Radio/Group/* в tokens.map.json, items-gap_hor и items-gap_vert
- * существуют одновременно — раскладка flex-wrap. Узел в Figma этой сессией
- * не проверен (мост к MCP не поднялся — см. комментарий в Checkbox.tsx).
+ * Группа радиокнопок. Узел 134:567 в Figma, сверен через MCP-мост — той
+ * же структуры, что CheckboxGroup (134:567 симметричен 133:537).
+ *
+ * Ошибка — не рамка по контуру, а рамка только слева (border-left) во всю
+ * высоту группы (заголовок + пункты + подсказка) плюс отступ слева на
+ * ширину этой рамки.
  *
  * role="radiogroup" — правильная роль-контейнер для дочерних role="radio"
  * (в отличие от role="group" у CheckboxGroup). При этом переключение
@@ -33,6 +37,7 @@ export function RadioGroup({
   hint,
   alert = false,
   alertText,
+  direction = 'horizontal',
   size = 'l',
   id,
   className,
@@ -59,7 +64,9 @@ export function RadioGroup({
           {title}
         </div>
       )}
-      <div className={styles.items}>{children}</div>
+      <div className={styles.items} data-direction={direction}>
+        {children}
+      </div>
       {hintText && <div className={styles.hint}>{hintText}</div>}
     </div>
   );

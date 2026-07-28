@@ -61,4 +61,24 @@ describe('CheckboxGroup', () => {
     );
     expect(container.firstChild).toHaveAttribute('data-size', 's');
   });
+
+  it('по умолчанию direction horizontal', () => {
+    const { container } = render(
+      <CheckboxGroup title="Уведомления">
+        <Checkbox label="Почта" />
+      </CheckboxGroup>
+    );
+    const items = (container.firstChild as HTMLElement).querySelector('[data-direction]');
+    expect(items).toHaveAttribute('data-direction', 'horizontal');
+  });
+
+  it('переносит direction в data-атрибут ряда пунктов', () => {
+    const { container } = render(
+      <CheckboxGroup title="Уведомления" direction="vertical">
+        <Checkbox label="Почта" />
+      </CheckboxGroup>
+    );
+    const items = (container.firstChild as HTMLElement).querySelector('[data-direction]');
+    expect(items).toHaveAttribute('data-direction', 'vertical');
+  });
 });

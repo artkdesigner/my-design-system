@@ -55,3 +55,9 @@ export const Недоступен: Story = {
     </div>
   )
 };
+
+/** Узел 125:2409 в Figma — вариант Alert=True: alertText вместо hint. */
+export const Ошибка: Story = {
+  name: 'Ошибка',
+  args: { alert: true, alertText: 'Нужно отметить чекбокс, чтобы продолжить' }
+};

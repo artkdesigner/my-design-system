@@ -44,6 +44,8 @@ export const СПодсказкой: Story = {
   )
 };
 
+/** Узел 134:567 в Figma — ошибка это рамка только слева во всю высоту
+ * группы, не рамка по контуру. */
 export const Ошибка: Story = {
   name: 'Ошибка',
   render: (args) => (
@@ -68,17 +70,20 @@ export const БезЗаголовка: Story = {
   )
 };
 
-/** Много пунктов — проверка переноса строк (flex-wrap, оба зазора сразу). */
-export const Перенос: Story = {
-  name: 'Перенос строк',
-  render: (args) => (
-    <div style={{ ...page, width: 360 }}>
-      <RadioGroup {...args}>
-        <Radio label="Понедельник" selected />
-        <Radio label="Вторник" />
-        <Radio label="Среда" />
-        <Radio label="Четверг" />
-        <Radio label="Пятница" />
+/** Direction=Horizontal (по умолчанию) и Direction=Vertical — два
+ * альтернативных режима раскладки, узел 134:567. */
+export const Направления: Story = {
+  render: () => (
+    <div style={{ ...page, display: 'flex', gap: 'var(--margin-48)' }}>
+      <RadioGroup title="Horizontal" direction="horizontal">
+        <Radio label="Картой" selected />
+        <Radio label="Наличными" />
+        <Radio label="СБП" />
+      </RadioGroup>
+      <RadioGroup title="Vertical" direction="vertical">
+        <Radio label="Картой" selected />
+        <Radio label="Наличными" />
+        <Radio label="СБП" />
       </RadioGroup>
     </div>
   )

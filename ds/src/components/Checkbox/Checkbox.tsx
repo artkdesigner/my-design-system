@@ -5,6 +5,10 @@ import styles from './Checkbox.module.css';
 type CheckboxOwnProps = {
   label?: ReactNode;
   hint?: ReactNode;
+  /** Тон ошибки — как у Input: отдельное булево, а не выбор тона у hint.
+   * Сверено узлом 125:2409 (варианты Alert=False/Alert=True). */
+  alert?: boolean;
+  alertText?: ReactNode;
   size?: 'l' | 'm' | 's';
 };
 
@@ -13,9 +17,7 @@ export type CheckboxProps = CheckboxOwnProps & Omit<CheckboxItemProps, keyof Che
 /**
  * Обёртка над CheckboxItem — добавляет подпись и подсказку сбоку от
  * квадрата (та самая обёртка, которую CheckboxItem называет ещё не
- * построенной). Токены — Checkbox/Checkbox/* в tokens.map.json, узел
- * в Figma этой сессией не проверен: мост к MCP поднимался с этого же
- * сервера, а не с локальной машины с Figma Desktop, и не установился.
+ * построенной). Узел 125:2409 в Figma, сверен через MCP-мост.
  *
  * Подпись — настоящий <label htmlFor>, связанный с id кнопки CheckboxItem:
  * клик по тексту переключает чекбокс тем же нативным механизмом, что у
@@ -29,6 +31,8 @@ export type CheckboxProps = CheckboxOwnProps & Omit<CheckboxItemProps, keyof Che
 export function Checkbox({
   label,
   hint,
+  alert = false,
+  alertText,
   size = 'l',
   id,
   disabled,
@@ -37,22 +41,24 @@ export function Checkbox({
 }: CheckboxProps) {
   const generatedId = useId();
   const checkboxId = id ?? generatedId;
+  const hintText = alert ? alertText : hint;
 
   return (
     <div
       className={[styles.wrapper, className].filter(Boolean).join(' ')}
       data-size={size}
+      data-alert={alert || undefined}
       data-state={disabled ? 'disabled' : undefined}
     >
       <CheckboxItem {...rest} id={checkboxId} size={size} disabled={disabled} className={styles.item} />
-      {(label || hint) && (
+      {(label || hintText) && (
         <div className={styles.content}>
           {label && (
             <label className={styles.label} htmlFor={checkboxId}>
               {label}
             </label>
           )}
-          {hint && <div className={styles.hint}>{hint}</div>}
+          {hintText && <div className={styles.hint}>{hintText}</div>}
         </div>
       )}
     </div>

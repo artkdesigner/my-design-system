@@ -44,6 +44,8 @@ export const СПодсказкой: Story = {
   )
 };
 
+/** Узел 133:537 в Figma — ошибка это рамка только слева во всю высоту
+ * группы, не рамка по контуру. */
 export const Ошибка: Story = {
   name: 'Ошибка',
   render: (args) => (
@@ -68,19 +70,20 @@ export const БезЗаголовка: Story = {
   )
 };
 
-/** Много пунктов — проверка переноса строк (flex-wrap, оба зазора сразу). */
-export const Перенос: Story = {
-  name: 'Перенос строк',
-  render: (args) => (
-    <div style={{ ...page, width: 360 }}>
-      <CheckboxGroup {...args}>
-        <Checkbox label="Понедельник" />
-        <Checkbox label="Вторник" />
-        <Checkbox label="Среда" />
-        <Checkbox label="Четверг" />
-        <Checkbox label="Пятница" />
-        <Checkbox label="Суббота" />
-        <Checkbox label="Воскресенье" />
+/** Direction=Horizontal (по умолчанию) и Direction=Vertical — два
+ * альтернативных режима раскладки, узел 133:537. */
+export const Направления: Story = {
+  render: () => (
+    <div style={{ ...page, display: 'flex', gap: 'var(--margin-48)' }}>
+      <CheckboxGroup title="Horizontal" direction="horizontal">
+        <Checkbox label="Почта" state="checked" />
+        <Checkbox label="SMS" />
+        <Checkbox label="Push" />
+      </CheckboxGroup>
+      <CheckboxGroup title="Vertical" direction="vertical">
+        <Checkbox label="Почта" state="checked" />
+        <Checkbox label="SMS" />
+        <Checkbox label="Push" />
       </CheckboxGroup>
     </div>
   )

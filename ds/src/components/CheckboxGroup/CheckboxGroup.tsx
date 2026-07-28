@@ -6,6 +6,9 @@ type CheckboxGroupOwnProps = {
   hint?: ReactNode;
   alert?: boolean;
   alertText?: ReactNode;
+  /** Соответствует Direction в Figma. По умолчанию Horizontal — так же,
+   * как в узле 133:537. */
+  direction?: 'horizontal' | 'vertical';
   size?: 'l' | 'm' | 's';
 };
 
@@ -13,12 +16,12 @@ export type CheckboxGroupProps = CheckboxGroupOwnProps &
   Omit<HTMLAttributes<HTMLDivElement>, keyof CheckboxGroupOwnProps>;
 
 /**
- * Группа чекбоксов — заголовок, ряд дочерних Checkbox с переносом строк и
- * общая подсказка/ошибка снизу. Токены — Checkbox/Group/* в
- * tokens.map.json: items-gap_hor и items-gap_vert существуют одновременно,
- * поэтому раскладка — flex-wrap (row-gap/column-gap), а не одна колонка;
- * узел в Figma этой сессией не проверен (мост к MCP не поднялся, см.
- * комментарий в Checkbox.tsx) — при появлении моста стоит сверить.
+ * Группа чекбоксов. Узел 133:537 в Figma, сверен через MCP-мост.
+ *
+ * Ошибка — не рамка по контуру, а рамка только слева (border-left) во всю
+ * высоту группы (заголовок + пункты + подсказка) плюс отступ слева на
+ * ширину этой рамки — сверено скриншотом (сплошная красная черта сбоку,
+ * не коробка).
  *
  * Группа не хранит состояние дочерних чекбоксов и не переключает их: как и
  * сам Checkbox, она только раскладывает и подписывает, каждый дочерний
@@ -30,6 +33,7 @@ export function CheckboxGroup({
   hint,
   alert = false,
   alertText,
+  direction = 'horizontal',
   size = 'l',
   id,
   className,
@@ -56,7 +60,9 @@ export function CheckboxGroup({
           {title}
         </div>
       )}
-      <div className={styles.items}>{children}</div>
+      <div className={styles.items} data-direction={direction}>
+        {children}
+      </div>
       {hintText && <div className={styles.hint}>{hintText}</div>}
     </div>
   );

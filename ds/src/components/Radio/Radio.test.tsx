@@ -48,4 +48,15 @@ describe('Radio', () => {
     render(<Radio label="Оплата картой" id="pay-card" />);
     expect(screen.getByRole('radio')).toHaveAttribute('id', 'pay-card');
   });
+
+  it('в состоянии alert показывает alertText вместо hint', () => {
+    render(<Radio label="Оплата картой" hint="Обычная подсказка" alert alertText="Выберите способ оплаты" />);
+    expect(screen.getByText('Выберите способ оплаты')).toBeInTheDocument();
+    expect(screen.queryByText('Обычная подсказка')).not.toBeInTheDocument();
+  });
+
+  it('без hint в состоянии alert всё равно показывает alertText', () => {
+    render(<Radio label="Оплата картой" alert alertText="Выберите способ оплаты" />);
+    expect(screen.getByText('Выберите способ оплаты')).toBeInTheDocument();
+  });
 });
