@@ -1,6 +1,7 @@
 import type { CSSProperties } from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { TextButton } from './TextButton';
+import { TextButton, type TextButtonProps } from './TextButton';
+import { Icon, type IconName } from '../Icon';
 
 const PlusIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -40,6 +41,39 @@ export const Обычная: Story = { name: 'В покое' };
 export const СИконками: Story = {
   name: 'Текст + аддон',
   args: { addonLeft: <PlusIcon />, addonRight: <PlusIcon /> }
+};
+
+const ADDON_ICONS = ['check', 'plus-01', 'dash', 'search-01', 'star-01', 'information', 'x-03'] as const;
+
+type AddonDemoProps = Omit<TextButtonProps, 'addonLeft' | 'addonRight'> & {
+  /** Включает левый аддон целиком — addonLeft у TextButton это ReactNode
+   * (значит, у Storybook нет для него готового контрола), поэтому здесь
+   * boolean + select собирают реальный addonLeft за кулисами. */
+  withAddon: boolean;
+  addonIcon: IconName;
+};
+
+function AddonDemo({ withAddon, addonIcon, ...rest }: AddonDemoProps) {
+  return <TextButton {...rest} addonLeft={withAddon ? <Icon name={addonIcon} /> : undefined} />;
+}
+
+/**
+ * Живой контрол для addonLeft: включить аддон и выбрать, что внутри —
+ * то, что не даёт сделать напрямую сам проп (ReactNode не превращается в
+ * контрол Storybook сам по себе).
+ */
+export const Аддон: StoryObj<typeof AddonDemo> = {
+  name: 'Аддон (контрол)',
+  args: { children: 'Label', withAddon: true, addonIcon: 'check' },
+  argTypes: {
+    withAddon: { control: 'boolean', name: 'Показать аддон' },
+    addonIcon: { control: 'select', options: ADDON_ICONS, name: 'Иконка в аддоне' }
+  },
+  render: (args) => (
+    <div style={page}>
+      <AddonDemo {...args} />
+    </div>
+  )
 };
 
 /** Матрица для сверки с макетом: 2 вида × 4 тона сообщения (+ обычная строка). */

@@ -54,6 +54,28 @@ describe('TextButton', () => {
     expect(screen.getByTestId('right')).toBeInTheDocument();
   });
 
+  it('без addonLeft/addonRight не рисует слоты вовсе', () => {
+    const { container } = render(<TextButton>Метка</TextButton>);
+    expect(container.querySelectorAll('span')).toHaveLength(1);
+  });
+
+  it('меняет содержимое аддона при повторном рендере с другой иконкой', () => {
+    const { rerender } = render(<TextButton addonLeft={<svg data-testid="icon-a" />}>Метка</TextButton>);
+    expect(screen.getByTestId('icon-a')).toBeInTheDocument();
+
+    rerender(<TextButton addonLeft={<svg data-testid="icon-b" />}>Метка</TextButton>);
+    expect(screen.queryByTestId('icon-a')).not.toBeInTheDocument();
+    expect(screen.getByTestId('icon-b')).toBeInTheDocument();
+  });
+
+  it('включает аддон при повторном рендере, если раньше его не было', () => {
+    const { rerender } = render(<TextButton>Метка</TextButton>);
+    expect(screen.queryByTestId('icon')).not.toBeInTheDocument();
+
+    rerender(<TextButton addonLeft={<svg data-testid="icon" />}>Метка</TextButton>);
+    expect(screen.getByTestId('icon')).toBeInTheDocument();
+  });
+
   it('вызывает обработчик по щелчку', async () => {
     const onClick = vi.fn();
     render(<TextButton onClick={onClick}>Жми</TextButton>);
