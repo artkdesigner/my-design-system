@@ -1,6 +1,12 @@
 import type { CSSProperties } from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Addon } from './Addon';
+import { IconButton } from '../IconButton';
+import { CheckboxItem } from '../CheckboxItem';
+import { RadioItem } from '../RadioItem';
+import { StatusBadge } from '../StatusBadge';
+import { Spinner } from '../Spinner';
+import { Indicator } from '../Indicator';
 
 const meta: Meta<typeof Addon> = {
   title: 'Components/Addon',
@@ -41,20 +47,23 @@ export const Размеры: Story = {
 };
 
 /**
- * Пропы icon и checkmark — короткий путь для двух самых частых начинок:
- * не нужно самому подставлять Icon/Checkmark и передавать им size, Addon
- * делает это сам. checkmark=false всё равно рисует Checkmark, просто
- * невыбранный — те же 10% непрозрачности, что у самого компонента.
+ * Пропы icon, checkmark и text — короткий путь для трёх самых частых
+ * начинок: не нужно самому подставлять компонент/вёрстку и передавать им
+ * size, Addon делает это сам. checkmark=false всё равно рисует Checkmark,
+ * просто невыбранный — те же 10% непрозрачности, что у самого компонента.
+ * text — единственный вариант, который меняет форму слота (не квадрат) и
+ * красит содержимое сам, а не оставляет цвет вызывающему коду.
  */
 export const ВыборСодержимого: Story = {
-  name: 'icon и checkmark',
+  name: 'icon, checkmark и text',
   render: () => (
     <div style={{ ...page, display: 'flex', alignItems: 'center', gap: 'var(--margin-24)' }}>
       {(
         [
           ['icon="activity"', <Addon key="icon" icon="activity" />],
           ['checkmark (выбран)', <Addon key="checkmark-true" checkmark />],
-          ['checkmark={false}', <Addon key="checkmark-false" checkmark={false} />]
+          ['checkmark={false}', <Addon key="checkmark-false" checkmark={false} />],
+          ['text="kg"', <Addon key="text" text="kg" />]
         ] as const
       ).map(([name, node]) => (
         <div key={name} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 'var(--margin-8)' }}>
@@ -66,12 +75,25 @@ export const ВыборСодержимого: Story = {
   )
 };
 
+/** Узел 241:484 в Figma — вариант Type=Text: не квадрат, ширина по
+ * контенту, скругление radius-4, свой цвет и размер шрифта. Соседние
+ * примеры показывают, что ширина растёт вместе с текстом, а не остаётся
+ * фиксированной. */
+export const Text: Story = {
+  name: 'Text — форма слота',
+  render: () => (
+    <div style={{ ...page, display: 'flex', alignItems: 'center', gap: 'var(--margin-16)' }}>
+      <Addon text="$" />
+      <Addon text="kg" />
+      <Addon text="per month" />
+    </div>
+  )
+};
+
 /**
  * Addon — это только место: слот сам не решает, что внутри. В Figma это
- * instance swap, в коде — либо готовые icon/checkmark, либо любой ReactNode
- * через children. Здесь показаны заглушки для содержимого, которое ещё не
- * оформлено отдельными компонентами (CheckboxItem, RadioItem, StatusBadge,
- * Spinner, Indicator, Text) — сам слот от их появления не изменится.
+ * instance swap на реальные компоненты дизайн-системы; в коде — либо
+ * готовые icon/checkmark/text, либо любой ReactNode через children.
  */
 export const Содержимое: Story = {
   name: 'Разное содержимое',
@@ -81,24 +103,41 @@ export const Содержимое: Story = {
         [
           ['Icon (проп icon)', <Addon key="icon" icon="activity" />],
           ['Checkmark (проп checkmark)', <Addon key="checkmark" checkmark />],
+          ['Text (проп text)', <Addon key="text" text="kg" />],
           [
-            'Text (children)',
-            <Addon key="text">
-              <span style={{ fontSize: 'var(--font-size-label-l)' }}>99+</span>
+            'IconButton (children)',
+            <Addon key="icon-button">
+              <IconButton icon="activity" aria-label="Действие" />
             </Addon>
           ],
           [
-            'Spinner (заглушка, children)',
+            'CheckboxItem (children)',
+            <Addon key="checkbox-item">
+              <CheckboxItem aria-label="Согласие" state="checked" />
+            </Addon>
+          ],
+          [
+            'RadioItem (children)',
+            <Addon key="radio-item">
+              <RadioItem aria-label="Вариант" selected />
+            </Addon>
+          ],
+          [
+            'StatusBadge (children)',
+            <Addon key="status-badge">
+              <StatusBadge type="positiveCheck" />
+            </Addon>
+          ],
+          [
+            'Spinner (children)',
             <Addon key="spinner">
-              <div
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  borderRadius: '50%',
-                  border: '2px solid currentColor',
-                  borderTopColor: 'transparent'
-                }}
-              />
+              <Spinner />
+            </Addon>
+          ],
+          [
+            'Indicator (children)',
+            <Addon key="indicator">
+              <Indicator dot />
             </Addon>
           ]
         ] as const

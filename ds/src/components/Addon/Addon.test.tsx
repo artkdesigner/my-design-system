@@ -72,4 +72,30 @@ describe('Addon', () => {
     render(<Addon>{<svg data-testid="content" />}</Addon>);
     expect(screen.getByTestId('content')).toBeInTheDocument();
   });
+
+  it('проп text рисует текст и переключает форму слота на data-content="text"', () => {
+    const { container } = render(<Addon text="kg" />);
+    expect(screen.getByText('kg')).toBeInTheDocument();
+    expect(container.firstElementChild).toHaveAttribute('data-content', 'text');
+  });
+
+  it('без text data-content отсутствует', () => {
+    const { container } = render(<Addon icon="activity" />);
+    expect(container.firstElementChild).not.toHaveAttribute('data-content');
+  });
+
+  it('icon и checkmark приоритетнее text', () => {
+    render(<Addon icon="activity" text="kg" />);
+    expect(screen.queryByText('kg')).not.toBeInTheDocument();
+  });
+
+  it('text приоритетнее children', () => {
+    render(
+      <Addon text="kg">
+        <span data-testid="children">children</span>
+      </Addon>
+    );
+    expect(screen.queryByTestId('children')).not.toBeInTheDocument();
+    expect(screen.getByText('kg')).toBeInTheDocument();
+  });
 });
