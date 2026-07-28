@@ -1,0 +1,46 @@
+/* Размеры, цвета и типографика — только из токенов. */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--tag-group-taggroup-gap);
+  font-family: var(--font-family-main);
+}
+
+/* Ошибка — рамка только слева на всю высоту группы плюс отступ слева на
+   её ширину, не рамка по контуру — тот же приём, что у Radio/CheckboxGroup. */
+.wrapper[data-alert] {
+  padding-left: var(--tag-group-taggroup-alert-padding);
+  border-left: var(--tag-group-taggroup-alert-border) solid var(--element-border-message-primary);
+}
+
+.title {
+  max-width: 100%;
+  overflow: hidden;
+  color: var(--element-text-primary);
+  font-size: var(--tag-group-taggroup-title-font-size);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.2;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--tag-group-taggroup-items-gap);
+  width: 100%;
+}
+
+.hint {
+  width: 100%;
+  color: var(--element-text-secondary);
+  font-size: var(--tag-group-taggroup-hint-font-size);
+  line-height: 1.2;
+}
+
+.wrapper[data-alert] .hint {
+  color: var(--element-text-message);
+}

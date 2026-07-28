@@ -71,3 +71,9 @@ export type { OptionListFooterProps } from './components/OptionListFooter';
 
 export { OptionList } from './components/OptionList';
 export type { OptionListProps } from './components/OptionList';
+
+export { Tag } from './components/Tag';
+export type { TagProps } from './components/Tag';
+
+export { TagGroup } from './components/TagGroup';
+export type { TagGroupProps } from './components/TagGroup';

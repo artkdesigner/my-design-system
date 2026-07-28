@@ -1,0 +1,68 @@
+/* Размеры, цвета и типографика — только из токенов. line-height: 1 —
+   решение вёрстки, а не величина дизайн-системы. */
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+
+  height: var(--tag-height);
+  min-width: var(--tag-min-width);
+  gap: var(--tag-gap);
+  padding-inline: var(--tag-padding-hor);
+  border: none;
+
+  background: var(--element-bg-action-tetriary);
+  color: var(--element-text-primary);
+
+  font-family: var(--font-family-main);
+  font-size: var(--tag-label-font-size);
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+
+  cursor: pointer;
+  transition:
+    background-color 120ms ease,
+    color 120ms ease;
+}
+
+.tag[data-corners='rounded'] {
+  border-radius: var(--tag-radius-round);
+}
+
+.tag[data-corners='square'] {
+  border-radius: var(--tag-radius-square);
+}
+
+/* Заливка селектора выбора — сама подпись и иконка не переопределяются
+   тут: они уже переключаются в белый через on-accent (data-on-accent на
+   кнопке), тот же приём, что у залитой Button/ActionButton. */
+.tag[data-selected] {
+  background: var(--element-bg-action-primary);
+}
+
+/* Иконочный режим — квадрат/круг по своей же высоте, без паддинга и
+   min-width, тот же приём, что у Button[data-icon-only]. */
+.tag[data-icon-only] {
+  width: var(--tag-height);
+  min-width: auto;
+  padding-inline: 0;
+}
+
+.tag:focus-visible {
+  outline: var(--stroke-2) solid var(--element-border-focus);
+  outline-offset: var(--stroke-2);
+}
+
+.tag:disabled {
+  cursor: not-allowed;
+}
+
+.addon {
+  color: var(--element-icon-primary);
+}
+
+.label {
+  white-space: nowrap;
+}
