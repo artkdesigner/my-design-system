@@ -30,13 +30,26 @@ const OPTIONS = ['Первая опция', 'Вторая опция', 'Трет
  * поле ввода, Cell просто пункт), а обычная фильтрация списка в коде
  * вызывающей стороны по value из OptionListHeader: OptionList ничего не
  * знает про query, просто получает уже отфильтрованный набор children.
+ *
+ * Выбор — множественный (Set), а не одно значение: OptionListCell сам не
+ * решает, что значит клик, просто сообщает о нём наружу через onClick, а
+ * форму состояния выбирает вызывающий код — здесь toggle в наборе, а не
+ * замена одного значения на другое.
  */
 export const ВПокое: Story = {
   name: 'В покое',
   render: () => {
     const [query, setQuery] = useState('');
-    const [selected, setSelected] = useState(OPTIONS[0]);
+    const [selected, setSelected] = useState<Set<string>>(new Set(['Первая опция']));
     const found = OPTIONS.filter((option) => option.toLocaleLowerCase().includes(query.trim().toLocaleLowerCase()));
+
+    const toggle = (option: string) =>
+      setSelected((prev) => {
+        const next = new Set(prev);
+        if (next.has(option)) next.delete(option);
+        else next.add(option);
+        return next;
+      });
 
     return (
       <div style={{ ...page, width: '320px' }}>
@@ -44,7 +57,7 @@ export const ВПокое: Story = {
           <OptionListHeader value={query} onChange={(e) => setQuery(e.target.value)} />
           {found.length > 0 ? (
             found.map((option) => (
-              <OptionListCell key={option} label={option} selected={selected === option} onClick={() => setSelected(option)} />
+              <OptionListCell key={option} label={option} selected={selected.has(option)} onClick={() => toggle(option)} />
             ))
           ) : (
             <div
