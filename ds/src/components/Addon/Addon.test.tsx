@@ -98,4 +98,54 @@ describe('Addon', () => {
     expect(screen.queryByTestId('children')).not.toBeInTheDocument();
     expect(screen.getByText('kg')).toBeInTheDocument();
   });
+
+  it('проп checkboxItem сам подставляет CheckboxItem нужного размера', () => {
+    const { container } = render(<Addon checkboxItem={{ state: 'checked', 'aria-label': 'Согласие' }} size="m" />);
+    const item = screen.getByRole('checkbox');
+    expect(item).toHaveAttribute('aria-checked', 'true');
+    expect(item.dataset.size).toBe('m');
+    expect(container.firstElementChild).not.toHaveAttribute('data-content');
+  });
+
+  it('проп radioItem сам подставляет RadioItem нужного размера', () => {
+    render(<Addon radioItem={{ selected: true, 'aria-label': 'Вариант' }} size="s" />);
+    const item = screen.getByRole('radio');
+    expect(item).toHaveAttribute('aria-checked', 'true');
+    expect(item.dataset.size).toBe('s');
+  });
+
+  it('проп statusBadge сам подставляет StatusBadge нужного размера', () => {
+    const { container } = render(<Addon statusBadge={{ type: 'warningAlert' }} size="m" />);
+    expect(container.querySelector('[data-message="warning"]')).toBeInTheDocument();
+  });
+
+  it('проп spinner сам подставляет Spinner нужного размера', () => {
+    const { container } = render(<Addon spinner={{}} size="s" />);
+    expect(container.querySelector('[data-size="s"][aria-hidden="true"]')).toBeInTheDocument();
+  });
+
+  it('проп indicator сам подставляет Indicator и переключает форму слота на data-content="indicator"', () => {
+    const { container } = render(<Addon indicator={{ count: '99+' }} />);
+    expect(screen.getByText('99+')).toBeInTheDocument();
+    expect(container.firstElementChild).toHaveAttribute('data-content', 'indicator');
+  });
+
+  it('checkboxItem приоритетнее radioItem/statusBadge/spinner/indicator/text/children', () => {
+    render(
+      <Addon
+        checkboxItem={{ 'aria-label': 'Согласие' }}
+        radioItem={{ 'aria-label': 'Вариант' }}
+        statusBadge={{}}
+        spinner={{}}
+        indicator={{ count: '1' }}
+        text="kg"
+      >
+        <span data-testid="children">children</span>
+      </Addon>
+    );
+    expect(screen.getByRole('checkbox')).toBeInTheDocument();
+    expect(screen.queryByRole('radio')).not.toBeInTheDocument();
+    expect(screen.queryByText('kg')).not.toBeInTheDocument();
+    expect(screen.queryByTestId('children')).not.toBeInTheDocument();
+  });
 });

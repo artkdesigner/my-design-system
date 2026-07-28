@@ -12,16 +12,22 @@
   height: 100%;
 }
 
-/* Type=Text (узел 241:484) — не квадрат: ширина по контенту, а не
-   --addon-size, поэтому текстовый узел не наследует общее правило
-   .addon > * на 100%×100%. */
-.addon[data-content='text'] {
+/* Type=Text и Type=Indicator (узлы 241:484, 205:965) — не квадрат:
+   ширина по контенту, а не --addon-size, иначе счётчик indicator с
+   длинным count («99+») обрезался бы до ширины квадрата, а точка (dot)
+   растянулась бы на весь addon-size вместо своих 8px. */
+.addon[data-content='text'],
+.addon[data-content='indicator'] {
   width: auto;
   min-width: 0;
+}
+
+.addon[data-content='text'] {
   border-radius: var(--radius-4);
 }
 
-.addon[data-content='text'] > .text {
+.addon[data-content='text'] > .text,
+.addon[data-content='indicator'] > * {
   width: auto;
   height: auto;
 }
