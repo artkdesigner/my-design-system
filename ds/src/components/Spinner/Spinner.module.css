@@ -1,0 +1,40 @@
+/* Размер — только из токена (--addon-size, общий с Icon/Addon). Толщина
+   кольца и размер головной точки — проценты от size, взятые с макета
+   (узел 183:4853: кольцо ~12.5% диаметра, точка того же порядка). */
+
+.spinner {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  width: var(--addon-size);
+  height: var(--addon-size);
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, transparent 0%, transparent 6.5%, var(--element-bg-action-primary) 100%);
+  -webkit-mask: radial-gradient(farthest-side, transparent 87.5%, #000 87.5%);
+  mask: radial-gradient(farthest-side, transparent 87.5%, #000 87.5%);
+  animation: spinner-rotate 0.8s linear infinite;
+}
+
+.spinner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 12.5%;
+  height: 12.5%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: var(--element-icon-primary);
+}
+
+@keyframes spinner-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation-duration: 2.4s;
+  }
+}
