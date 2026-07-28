@@ -1,0 +1,27 @@
+/* Размеры и цвета — только из токенов. */
+
+.cell {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: var(--optionlist-cell-min-width);
+  min-height: var(--optionlist-cell-height);
+  gap: var(--optionlist-cell-gap-hor);
+  padding-block: var(--optionlist-cell-padding-vertical);
+  padding-inline: var(--optionlist-cell-padding-hor);
+  border: none;
+  background: var(--element-bg-lvl-1);
+  font-family: var(--font-family-main);
+  text-align: left;
+  cursor: pointer;
+}
+
+.cell:disabled {
+  cursor: not-allowed;
+}
+
+.label {
+  flex: 1 1 auto;
+  min-width: 0;
+}

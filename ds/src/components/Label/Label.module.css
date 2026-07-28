@@ -1,0 +1,33 @@
+/* Размеры, цвета и типографика — только из токенов. line-height: 1.2 у
+   подписи и подсказки — решение вёрстки (тот же приём, что в Input и
+   RadioGroup), а не величина дизайн-системы. */
+
+.wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--label-gap);
+  font-family: var(--font-family-main);
+}
+
+.addon {
+  color: var(--element-icon-primary);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--label-hint-gap);
+}
+
+.label {
+  color: var(--element-text-primary);
+  font-size: var(--label-label-size);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.2;
+}
+
+.hint {
+  color: var(--element-text-secondary);
+  font-size: var(--label-hint-size);
+  line-height: 1.2;
+}

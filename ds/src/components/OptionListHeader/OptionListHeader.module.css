@@ -1,0 +1,6 @@
+.wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  padding-inline: var(--optionlist-header-padding-hor);
+  padding-block: var(--optionlist-header-padding-vert);
+}

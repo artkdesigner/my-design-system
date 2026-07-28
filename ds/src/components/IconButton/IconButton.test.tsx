@@ -26,10 +26,10 @@ describe('IconButton', () => {
     expect(screen.getByRole('button')).toHaveClass('ds-interactive');
   });
 
-  it('включает режим сообщения error у вида danger', () => {
+  it('включает режим сообщения error у вида message', () => {
     // element_icon_message без data-message остаётся info (см. состав токенов
-    // в state.css): без атрибута danger был бы синим, а не красным.
-    render(<IconButton icon={<svg />} aria-label="Удалить" view="danger" />);
+    // в state.css): без атрибута message был бы синим, а не красным.
+    render(<IconButton icon={<svg />} aria-label="Удалить" view="message" />);
     expect(screen.getByRole('button').dataset.message).toBe('error');
   });
 

@@ -1,0 +1,12 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: var(--optionlist-list-min-width);
+  overflow: hidden;
+  border: var(--optionlist-list-border) solid var(--element-border-secondary);
+  border-radius: var(--optionlist-list-radius);
+  background: var(--element-bg-lvl-1);
+}

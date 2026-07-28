@@ -21,6 +21,9 @@ export type { IconProps, IconName } from './components/Icon';
 export { Addon } from './components/Addon';
 export type { AddonProps } from './components/Addon';
 
+export { Label } from './components/Label';
+export type { LabelProps } from './components/Label';
+
 export { Checkmark } from './components/Checkmark';
 export type { CheckmarkProps } from './components/Checkmark';
 
@@ -48,8 +51,23 @@ export type { RadioGroupProps } from './components/RadioGroup';
 export { StatusBadge } from './components/StatusBadge';
 export type { StatusBadgeProps } from './components/StatusBadge';
 
+export { Status } from './components/Status';
+export type { StatusProps } from './components/Status';
+
 export { Spinner } from './components/Spinner';
 export type { SpinnerProps } from './components/Spinner';
 
 export { Indicator } from './components/Indicator';
 export type { IndicatorProps } from './components/Indicator';
+
+export { OptionListCell } from './components/OptionListCell';
+export type { OptionListCellProps } from './components/OptionListCell';
+
+export { OptionListHeader } from './components/OptionListHeader';
+export type { OptionListHeaderProps } from './components/OptionListHeader';
+
+export { OptionListFooter } from './components/OptionListFooter';
+export type { OptionListFooterProps } from './components/OptionListFooter';
+
+export { OptionList } from './components/OptionList';
+export type { OptionListProps } from './components/OptionList';

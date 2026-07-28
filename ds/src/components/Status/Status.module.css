@@ -1,0 +1,60 @@
+/* Размеры, цвета и типографика — только из токенов. line-height: 1.2 —
+   решение вёрстки (тот же приём, что в Input/Label), а не величина
+   дизайн-системы. */
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  gap: var(--status-gap);
+  height: var(--status-height);
+  min-width: var(--status-min-width);
+  padding-inline: var(--status-padding-hor);
+  border-radius: var(--status-radius);
+  font-family: var(--font-family-main);
+}
+
+.pill[data-tone='message'] {
+  background: var(--element-bg-message);
+  color: var(--element-text-message);
+}
+
+.pill[data-tone='custom'] {
+  background: var(--element-bg-custom-secondary);
+  color: var(--element-text-custom);
+}
+
+.pill[data-tone='custom'][data-on-accent] {
+  background: var(--element-bg-custom-primary);
+}
+
+/* Общее для обеих тонов: в accent-режиме текст и addon всегда белые
+   (element_text_primary), а не производный цвет своего тона — фон message
+   при этом сам переключается в сплошной через --element-bg-message,
+   держащий тот же on-accent слой, что и StatusBadge. */
+.pill[data-on-accent] {
+  color: var(--element-text-primary);
+}
+
+.addon {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: var(--status-addon-size);
+  height: var(--status-addon-size);
+}
+
+.addon > * {
+  width: 100%;
+  height: 100%;
+}
+
+.label {
+  font-size: var(--status-label-font-size);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.2;
+  white-space: nowrap;
+}

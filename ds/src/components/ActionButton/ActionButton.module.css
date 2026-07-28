@@ -47,8 +47,12 @@
   border-radius: var(--button-actionbutton-radius);
   border: var(--stroke-1) solid transparent;
 
+  /* element_icon_primary, не element_icon_accent — сверено по узлу
+     155:6479: на залитом акцентном круге иконка белая (element_icon_primary
+     уходит в белый через data-on-accent на самом .circle), а не акцентного
+     цвета — тем же оттенком, что заливка, иконка слилась бы с фоном. */
   background: var(--element-bg-action-accent);
-  color: var(--element-icon-accent);
+  color: var(--element-icon-primary);
 
   transition:
     background-color 120ms ease,

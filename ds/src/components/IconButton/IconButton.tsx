@@ -4,7 +4,7 @@ import styles from './IconButton.module.css';
 
 type IconButtonOwnProps = {
   /** Вид. Соответствует свойству View в Figma (узел 124:2304). */
-  view?: 'accent' | 'primary' | 'secondary' | 'danger';
+  view?: 'accent' | 'primary' | 'secondary' | 'message';
   /** Размер. Соответствует режимам коллекции ComponentSize. */
   size?: 'l' | 'm' | 's';
   /**
@@ -28,15 +28,17 @@ export type IconButtonProps = IconButtonOwnProps &
  * aria-label или aria-labelledby — так же, как у Button в режиме
  * «только иконка».
  *
- * Danger — не отдельный флаг message, как у Button, а одно из четырёх
- * значений view: в Figma это единственная опция, не выбор из четырёх
- * тонов. Внутри она всё равно включает режим ColorsMessage (data-message
- * ставится в error), потому что element_icon_message — производный токен:
- * без data-message он тихо остаётся синим (info по умолчанию), а под
- * наведением/нажатием/недоступностью для danger нужны именно составные
- * селекторы вида .ds-interactive:hover[data-message="error"] — без
- * атрибута на самом элементе цвет на этих состояниях съезжает обратно
- * в info, тот же эффект, что разобран в Button.
+ * Значение view «message» (переименовано из «danger» вслед за Figma) — не
+ * то же самое, что проп message у Button: там это отдельный флаг с выбором
+ * тона (info/success/warning/error), здесь — одно из четырёх значений view,
+ * в Figma единственная опция, не выбор из четырёх тонов. Внутри оно всё
+ * равно включает режим ColorsMessage (data-message ставится в error),
+ * потому что element_icon_message — производный токен: без data-message он
+ * тихо остаётся синим (info по умолчанию), а под наведением/нажатием/
+ * недоступностью нужны именно составные селекторы вида
+ * .ds-interactive:hover[data-message="error"] — без атрибута на самом
+ * элементе цвет на этих состояниях съезжает обратно в info, тот же эффект,
+ * что разобран в Button.
  */
 export function IconButton({
   view = 'accent',
@@ -53,7 +55,7 @@ export function IconButton({
       className={[styles.button, 'ds-interactive', className].filter(Boolean).join(' ')}
       data-view={view}
       data-size={size}
-      data-message={view === 'danger' ? 'error' : undefined}
+      data-message={view === 'message' ? 'error' : undefined}
     >
       <Addon size={size} aria-hidden="true">
         {icon}

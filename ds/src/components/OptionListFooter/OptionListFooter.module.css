@@ -1,0 +1,11 @@
+.footer {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  gap: var(--margin-8);
+  padding-inline: var(--optionlist-footer-padding-hor);
+  padding-block: var(--optionlist-footer-padding-vert);
+  border-top: var(--optionlist-footer-border) solid var(--element-border-secondary);
+  background: var(--element-bg-lvl-1);
+}
