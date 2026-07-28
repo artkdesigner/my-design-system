@@ -25,10 +25,17 @@ const OPTIONS = ['Первая', 'Вторая', 'Третья', 'Четвёрт
 /**
  * Узел 134:4243 в Figma — множественный выбор: каждый Tag сам решает,
  * входит ли он в набор selected, TagGroup не хранит это состояние сама.
+ *
+ * render принимает args, а не игнорирует их: иначе контролы Storybook
+ * (в частности size) ни на что не влияют — сам TagGroup размер меняет
+ * корректно, но Tag внутри не наследует его автоматически (как Radio/
+ * Checkbox у RadioGroup/CheckboxGroup), поэтому size нужно прокинуть
+ * в каждый Tag явно.
  */
 export const ВПокое: Story = {
   name: 'В покое',
-  render: () => {
+  args: { hint: 'Можно выбрать несколько' },
+  render: (args) => {
     const [selected, setSelected] = useState<Set<string>>(new Set(['Первая']));
     const toggle = (option: string) =>
       setSelected((prev) => {
@@ -40,9 +47,9 @@ export const ВПокое: Story = {
 
     return (
       <div style={page}>
-        <TagGroup title="Group title" hint="Можно выбрать несколько">
+        <TagGroup {...args}>
           {OPTIONS.map((option) => (
-            <Tag key={option} label={option} selected={selected.has(option)} onClick={() => toggle(option)} />
+            <Tag key={option} label={option} size={args.size} selected={selected.has(option)} onClick={() => toggle(option)} />
           ))}
         </TagGroup>
       </div>
@@ -52,11 +59,11 @@ export const ВПокое: Story = {
 
 export const БезЗаголовкаИПодсказки: Story = {
   name: 'Без заголовка и подсказки',
-  render: () => (
+  render: (args) => (
     <div style={page}>
-      <TagGroup>
+      <TagGroup size={args.size}>
         {OPTIONS.slice(0, 3).map((option, i) => (
-          <Tag key={option} label={option} selected={i === 0} />
+          <Tag key={option} label={option} size={args.size} selected={i === 0} />
         ))}
       </TagGroup>
     </div>
@@ -71,7 +78,7 @@ export const Ошибка: Story = {
     <div style={page}>
       <TagGroup {...args}>
         {OPTIONS.slice(0, 3).map((option) => (
-          <Tag key={option} label={option} />
+          <Tag key={option} label={option} size={args.size} />
         ))}
       </TagGroup>
     </div>
