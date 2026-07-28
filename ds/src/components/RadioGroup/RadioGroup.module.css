@@ -1,0 +1,41 @@
+/* Размеры, цвета и типографика — только из токенов. */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--radio-group-gap);
+  font-family: var(--font-family-main);
+}
+
+/* В макете нет варианта Alert + Disabled — как и у Input/CheckboxGroup,
+   приоритет у недоступности. */
+.wrapper[data-alert]:not([data-state='disabled']) {
+  padding: var(--radio-group-alert-padding);
+  border: var(--radio-group-alert-border) solid var(--element-border-message-primary);
+}
+
+.title {
+  color: var(--element-text-primary);
+  font-size: var(--radio-group-title-font-size);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.2;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--radio-group-items-gap-vert);
+  column-gap: var(--radio-group-items-gap-hor);
+}
+
+/* Отдельного токена под размер шрифта подсказки группы в tokens.map.json
+   нет — переиспользуем radio-hint-font-size, тот же масштаб по size. */
+.hint {
+  color: var(--element-text-secondary);
+  font-size: var(--radio-hint-font-size);
+  line-height: 1.2;
+}
+
+.wrapper[data-alert] .hint {
+  color: var(--element-text-message);
+}

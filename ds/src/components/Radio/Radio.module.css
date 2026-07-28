@@ -1,0 +1,41 @@
+/* Размеры, цвета и типографика — только из токенов. */
+
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--radio-gap-hor);
+  font-family: var(--font-family-main);
+}
+
+.item {
+  flex-shrink: 0;
+}
+
+/* Отступ сверху — тот же приём выравнивания подписи с кружком, что и в
+   RadioItem/CheckboxItem: значение из radio-label-padding-top-vert-2. */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--radio-gap-vert);
+  min-width: 0;
+  padding-top: var(--radio-label-padding-top-vert-2);
+}
+
+.label {
+  margin: 0;
+  color: var(--element-text-primary);
+  font-size: var(--radio-label-font-size);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.hint {
+  color: var(--element-text-secondary);
+  font-size: var(--radio-hint-font-size);
+  line-height: 1.2;
+}
+
+.wrapper[data-state='disabled'] .label {
+  cursor: not-allowed;
+}
