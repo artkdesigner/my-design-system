@@ -115,6 +115,14 @@
   color: var(--element-text-secondary);
 }
 
+.stepper {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  height: 100%;
+  padding-inline-end: var(--field-input-stepper-padding-hor);
+}
+
 .hint {
   padding-top: var(--field-input-hint-padding-vert);
   color: var(--element-text-secondary);

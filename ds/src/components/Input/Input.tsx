@@ -19,6 +19,12 @@ type InputOwnProps = {
   alertText?: ReactNode;
   leftAddon?: ReactNode;
   rightAddon?: ReactNode;
+  /** Слот справа в поле, после rightAddon — под Stepper у NumberInput
+   * (токен input_stepper_padding_hor лежит в неймспейсе самого Input в
+   * Figma, не отдельного компонента). Общий слот, а не специфичный под
+   * Stepper проп: NumberInput передаёт сюда готовый Stepper, но слот сам
+   * не знает, что в нём лежит. */
+  stepper?: ReactNode;
   size?: 'l' | 'm' | 's';
 };
 
@@ -48,6 +54,7 @@ export function Input({
   alertText,
   leftAddon,
   rightAddon,
+  stepper,
   size = 'l',
   id,
   disabled,
@@ -125,6 +132,7 @@ export function Input({
             {rightAddon}
           </Addon>
         )}
+        {stepper && <div className={styles.stepper}>{stepper}</div>}
       </div>
       {hintText && <div className={styles.hint}>{hintText}</div>}
     </div>

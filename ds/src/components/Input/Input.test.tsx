@@ -78,4 +78,11 @@ describe('Input', () => {
     render(<Input label="Имя" name="firstName" />);
     expect(screen.getByLabelText('Имя')).toHaveAttribute('name', 'firstName');
   });
+
+  it('рисует переданный stepper и не рисует слот, если его нет', () => {
+    const { container, rerender } = render(<Input label="Имя" stepper={<button data-testid="stepper" />} />);
+    expect(screen.getByTestId('stepper')).toBeInTheDocument();
+    rerender(<Input label="Имя" />);
+    expect(container.querySelector('[data-testid="stepper"]')).not.toBeInTheDocument();
+  });
 });

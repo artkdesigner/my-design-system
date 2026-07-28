@@ -77,3 +77,9 @@ export type { TagProps } from './components/Tag';
 
 export { TagGroup } from './components/TagGroup';
 export type { TagGroupProps } from './components/TagGroup';
+
+export { Stepper } from './components/Stepper';
+export type { StepperProps } from './components/Stepper';
+
+export { NumberInput } from './components/NumberInput';
+export type { NumberInputProps } from './components/NumberInput';

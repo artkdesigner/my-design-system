@@ -1,0 +1,18 @@
+/* Размеры и цвета — только из токенов. */
+
+.stepper {
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  gap: var(--input-stepper-gap);
+  padding-inline: var(--input-stepper-padding-hor);
+  padding-block: var(--input-stepper-padding-vert);
+  border-radius: var(--input-stepper-radius);
+  background: var(--element-bg-lvl-1);
+}
+
+.separator {
+  align-self: stretch;
+  width: var(--input-stepper-line-border);
+  background: var(--element-border-secondary);
+}
