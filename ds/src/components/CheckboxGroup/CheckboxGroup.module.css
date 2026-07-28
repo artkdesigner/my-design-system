@@ -1,0 +1,41 @@
+/* Размеры, цвета и типографика — только из токенов. */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--checkbox-group-gap);
+  font-family: var(--font-family-main);
+}
+
+/* В макете нет варианта Alert + Disabled — как и у Input, приоритет у
+   недоступности. */
+.wrapper[data-alert]:not([data-state='disabled']) {
+  padding: var(--checkbox-group-alert-padding);
+  border: var(--checkbox-group-alert-border) solid var(--element-border-message-primary);
+}
+
+.title {
+  color: var(--element-text-primary);
+  font-size: var(--checkbox-group-title-font-size);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.2;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--checkbox-group-items-gap-vert);
+  column-gap: var(--checkbox-group-items-gap-hor);
+}
+
+/* Отдельного токена под размер шрифта подсказки группы в tokens.map.json
+   нет — переиспользуем checkbox-hint-font-size, тот же масштаб по size. */
+.hint {
+  color: var(--element-text-secondary);
+  font-size: var(--checkbox-hint-font-size);
+  line-height: 1.2;
+}
+
+.wrapper[data-alert] .hint {
+  color: var(--element-text-message);
+}

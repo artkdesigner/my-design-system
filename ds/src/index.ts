@@ -32,3 +32,9 @@ export type { CheckboxItemProps } from './components/CheckboxItem';
 
 export { RadioItem } from './components/RadioItem';
 export type { RadioItemProps } from './components/RadioItem';
+
+export { Checkbox } from './components/Checkbox';
+export type { CheckboxProps } from './components/Checkbox';
+
+export { CheckboxGroup } from './components/CheckboxGroup';
+export type { CheckboxGroupProps } from './components/CheckboxGroup';
