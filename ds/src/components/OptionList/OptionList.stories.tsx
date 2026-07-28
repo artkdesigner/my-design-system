@@ -58,8 +58,10 @@ export const ВПокое: Story = {
             </div>
           )}
           <OptionListFooter>
-            <Button view="primary">Применить</Button>
-            <Button view="primary" ghost>
+            <Button view="primary" size="s">
+              Применить
+            </Button>
+            <Button view="primary" ghost size="s">
               Сбросить
             </Button>
           </OptionListFooter>
