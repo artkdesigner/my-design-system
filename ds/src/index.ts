@@ -92,3 +92,6 @@ export type { TextAreaProps } from './components/TextArea';
 
 export { Slider } from './components/Slider';
 export type { SliderProps } from './components/Slider';
+
+export { InputSlider } from './components/InputSlider';
+export type { InputSliderProps } from './components/InputSlider';

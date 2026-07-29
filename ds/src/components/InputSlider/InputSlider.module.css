@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: var(--font-family-main);
+}
+
+.slider {
+  width: 100%;
+}
+
+.hint {
+  padding-top: var(--field-input-hint-padding-vert);
+  color: var(--element-text-secondary);
+  font-size: var(--field-input-hint-font-size);
+  line-height: 1.2;
+}
+
+.wrapper[data-alert]:not([data-state='disabled']) .hint {
+  color: var(--element-text-message);
+}
