@@ -83,3 +83,6 @@ export type { StepperProps } from './components/Stepper';
 
 export { NumberInput } from './components/NumberInput';
 export type { NumberInputProps } from './components/NumberInput';
+
+export { InputAutoComplete } from './components/InputAutoComplete';
+export type { InputAutoCompleteProps, InputAutoCompleteOption } from './components/InputAutoComplete';
