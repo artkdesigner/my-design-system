@@ -101,3 +101,6 @@ export type { SegmentProps } from './components/Segment';
 
 export { SegmentedControl } from './components/SegmentedControl';
 export type { SegmentedControlProps } from './components/SegmentedControl';
+
+export { Select } from './components/Select';
+export type { SelectProps, SelectOption } from './components/Select';

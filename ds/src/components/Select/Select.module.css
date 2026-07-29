@@ -1,0 +1,140 @@
+/* Размеры, цвета и типографика — только из токенов input/field, тех же,
+   что у Input. line-height 1.2 — решение вёрстки, не величина
+   дизайн-системы. */
+
+.wrapper {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: var(--font-family-main);
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: var(--field-input-min-height);
+  margin: 0;
+  padding: 0;
+  border-radius: var(--field-input-radius);
+  border: var(--field-input-stroke) solid transparent;
+  background: var(--element-bg-lvl-2);
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background-color 120ms ease,
+    border-color 120ms ease;
+}
+
+/* :not([data-alert]) — тот же приём, что у Input: без него правило ниже
+   специфичностью перебивало бы обводку ошибки в открытом состоянии. */
+.wrapper[data-active]:not([data-alert]) .field {
+  background: var(--element-bg-lvl-1);
+  border-color: var(--element-border-primary);
+}
+
+.wrapper[data-alert]:not([data-state='disabled']) .field {
+  border-color: var(--element-border-message-primary);
+}
+
+.field:focus-visible {
+  outline: var(--stroke-2) solid var(--element-border-focus);
+  outline-offset: var(--stroke-2);
+}
+
+.field:disabled {
+  cursor: not-allowed;
+}
+
+.addon {
+  flex-shrink: 0;
+  color: var(--element-icon-primary);
+}
+
+.addonLeft {
+  margin-inline-start: var(--field-input-addon-padding-hor);
+}
+
+.chevron {
+  margin-inline-end: var(--field-input-addon-padding-hor);
+  transition: transform 150ms ease;
+}
+
+.wrapper[data-active] .chevron {
+  transform: rotate(180deg);
+}
+
+.content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  padding-inline: var(--field-input-content-padding-hor);
+}
+
+/* Подпись не подменяется placeholder’ом, как у Input (тут нет <input>) —
+   один и тот же элемент переключается между крупным видом на месте
+   значения и мелким всплывшим над ним. */
+.label {
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  color: var(--element-text-primary);
+  font-size: var(--field-input-label-font-size-big);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.2;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition:
+    font-size 120ms ease,
+    color 120ms ease,
+    margin-bottom 120ms ease;
+}
+
+.wrapper[data-label-floated] .label {
+  margin-bottom: var(--field-input-gap-content);
+  color: var(--element-text-secondary);
+  font-size: var(--field-input-label-font-size-small);
+}
+
+.value {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  color: var(--element-text-primary);
+  font-size: var(--field-input-label-font-size-big);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.2;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.dropdown {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding-top: var(--optionlist-list-padding-top);
+}
+
+.highlighted {
+  background: var(--element-bg-lvl-2);
+}
+
+.hint {
+  padding-top: var(--field-input-hint-padding-vert);
+  color: var(--element-text-secondary);
+  font-size: var(--field-input-hint-font-size);
+  line-height: 1.2;
+}
+
+.wrapper[data-alert]:not([data-state='disabled']) .hint {
+  color: var(--element-text-message);
+}
