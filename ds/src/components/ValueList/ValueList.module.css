@@ -1,0 +1,7 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--select-valuelist-gap);
+  width: 100%;
+}

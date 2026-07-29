@@ -1,0 +1,35 @@
+/* Коробка — те же токены select/selecttag, что у SelectTag: тот же
+   размерный ряд, другая заливка. */
+
+.control {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+
+  height: var(--select-selecttag-height);
+  padding-inline: var(--select-selecttag-padding-hor);
+  border: none;
+  border-radius: var(--select-selecttag-radius);
+
+  background: var(--element-bg-action-tetriary);
+  color: var(--element-text-primary);
+
+  font-family: var(--font-family-main);
+  font-size: var(--select-selecttag-font-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--select-selecttag-line-height);
+  white-space: nowrap;
+
+  cursor: pointer;
+  transition: background-color 120ms ease;
+}
+
+.control:focus-visible {
+  outline: var(--stroke-2) solid var(--element-border-focus);
+  outline-offset: var(--stroke-2);
+}
+
+.control:disabled {
+  cursor: not-allowed;
+}

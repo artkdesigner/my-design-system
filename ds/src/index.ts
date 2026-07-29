@@ -104,3 +104,15 @@ export type { SegmentedControlProps } from './components/SegmentedControl';
 
 export { Select } from './components/Select';
 export type { SelectProps, SelectOption } from './components/Select';
+
+export { SelectTag } from './components/SelectTag';
+export type { SelectTagProps } from './components/SelectTag';
+
+export { TagControl } from './components/TagControl';
+export type { TagControlProps } from './components/TagControl';
+
+export { ValueList } from './components/ValueList';
+export type { ValueListProps, ValueListItem } from './components/ValueList';
+
+export { SelectWithTags } from './components/SelectWithTags';
+export type { SelectWithTagsProps, SelectWithTagsOption } from './components/SelectWithTags';
