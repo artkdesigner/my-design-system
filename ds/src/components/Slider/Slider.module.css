@@ -1,0 +1,77 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: var(--font-family-main);
+}
+
+.fixer {
+  display: flex;
+  align-items: center;
+  padding-inline: var(--input-slider-padding-hor);
+}
+
+.line {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  /* Высота ряда — под размер указателя, а не только линии: иначе
+     кружок обрезался бы по высоте родителя. */
+  height: var(--input-slider-pointer-size);
+  cursor: pointer;
+}
+
+.wrapper[data-state='disabled'] .line {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.fill {
+  position: relative;
+  flex: 0 0 auto;
+  height: var(--input-slider-line-height);
+  border-radius: var(--input-slider-line-radius);
+  background: var(--element-bg-action-accent);
+}
+
+.remainder {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: var(--input-slider-line-height);
+  border-radius: var(--input-slider-line-radius);
+  background: var(--element-bg-action-tetriary);
+}
+
+.pointer {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+  width: var(--input-slider-pointer-size);
+  height: var(--input-slider-pointer-size);
+  border-radius: 50%;
+  background: var(--element-bg-action-accent);
+  outline: none;
+}
+
+.pointer:focus-visible {
+  outline: var(--stroke-2) solid var(--element-border-focus);
+  outline-offset: var(--stroke-2);
+}
+
+.pips {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--input-slider-pips-padding-vert);
+  padding-inline: var(--input-slider-padding-hor);
+}
+
+.pip {
+  color: var(--element-text-secondary);
+  font-size: var(--field-input-hint-font-size);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.2;
+  white-space: nowrap;
+}

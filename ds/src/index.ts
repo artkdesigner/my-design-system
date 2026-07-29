@@ -89,3 +89,6 @@ export type { InputAutoCompleteProps, InputAutoCompleteOption } from './componen
 
 export { TextArea } from './components/TextArea';
 export type { TextAreaProps } from './components/TextArea';
+
+export { Slider } from './components/Slider';
+export type { SliderProps } from './components/Slider';
