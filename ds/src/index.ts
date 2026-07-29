@@ -98,3 +98,6 @@ export type { InputSliderProps } from './components/InputSlider';
 
 export { Segment } from './components/Segment';
 export type { SegmentProps } from './components/Segment';
+
+export { SegmentedControl } from './components/SegmentedControl';
+export type { SegmentedControlProps } from './components/SegmentedControl';

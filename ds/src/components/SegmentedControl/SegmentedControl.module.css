@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--segmentedcontrol-gap);
+  padding: var(--segmentedcontrol-padding);
+  border-radius: var(--segmentedcontrol-radius);
+  background: var(--element-bg-lvl-2);
+  font-family: var(--font-family-main);
+}
+
+.wrapper > * {
+  flex-shrink: 0;
+}
+
+.wrapper[data-adaptive] {
+  width: 100%;
+}
+
+.wrapper[data-adaptive] > * {
+  flex: 1 1 0;
+}
