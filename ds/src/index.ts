@@ -95,3 +95,6 @@ export type { SliderProps } from './components/Slider';
 
 export { InputSlider } from './components/InputSlider';
 export type { InputSliderProps } from './components/InputSlider';
+
+export { Segment } from './components/Segment';
+export type { SegmentProps } from './components/Segment';

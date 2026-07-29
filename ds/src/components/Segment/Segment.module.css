@@ -1,0 +1,56 @@
+/* Размеры, цвета и типографика — только из токенов. line-height: 1 —
+   решение вёрстки (тот же приём, что у Button), не величина дизайн-системы. */
+
+.segment {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+
+  height: var(--segmentedcontrol-segment-height);
+  min-width: var(--segmentedcontrol-segment-min-width);
+  padding-inline: var(--segmentedcontrol-segment-padding-hor);
+  gap: var(--segmentedcontrol-segment-gap);
+  border: none;
+  border-radius: var(--segmentedcontrol-segment-radius);
+
+  font-family: var(--font-family-main);
+  font-size: var(--segmentedcontrol-segment-label-font-size);
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+  color: var(--element-text-primary);
+
+  background: var(--element-bg-action-tetriary);
+  cursor: pointer;
+  transition:
+    background-color 120ms ease,
+    color 120ms ease;
+}
+
+.segment[data-selected] {
+  background: var(--element-bg-action-accent);
+}
+
+/* Иконочный сегмент — квадрат по своей же высоте, как иконочная Button. */
+.segment[data-icon-only] {
+  min-width: auto;
+  width: var(--segmentedcontrol-segment-height);
+  padding-inline: 0;
+}
+
+.segment:focus-visible {
+  outline: var(--stroke-2) solid var(--element-border-focus);
+  outline-offset: var(--stroke-2);
+}
+
+.segment:disabled {
+  cursor: not-allowed;
+}
+
+.addon {
+  color: var(--element-icon-primary);
+}
+
+.label {
+  white-space: nowrap;
+}
