@@ -1,0 +1,106 @@
+/* Размеры, цвета и типографика — только из токенов. line-height 1.2/1.4 —
+   решения вёрстки (тот же приём, что и в Input.module.css), не величины
+   дизайн-системы. */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: var(--font-family-main);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: var(--field-input-max-height);
+  padding-block: var(--field-input-content-padding-vert);
+  padding-inline: var(--field-input-content-padding-hor);
+  border-radius: var(--field-input-radius);
+  border: var(--field-input-stroke) solid transparent;
+  background: var(--element-bg-lvl-2);
+  transition:
+    background-color 120ms ease,
+    border-color 120ms ease;
+}
+
+/* :not([data-alert]) — тот же приём, что в Input: без него правило ниже
+   специфичностью перебивало бы обводку ошибки под фокусом. */
+.wrapper:not([data-alert]) .field:focus-within {
+  background: var(--element-bg-lvl-1);
+  border-color: var(--element-border-primary);
+}
+
+.wrapper[data-alert]:not([data-state='disabled']) .field {
+  border-color: var(--element-border-message-primary);
+}
+
+.wrapper[data-state='disabled'] .field {
+  cursor: not-allowed;
+}
+
+/* Подпись свёрнута по умолчанию: max-height 0 и overflow hidden прячут её
+   визуально, не убирая из DOM (см. Input.module.css). */
+.label {
+  display: block;
+  overflow: hidden;
+  max-height: 0;
+  margin: 0;
+  opacity: 0;
+  color: var(--element-text-secondary);
+  font-size: var(--field-input-label-font-size-small);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.2;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition:
+    max-height 120ms ease,
+    opacity 120ms ease,
+    margin-bottom 120ms ease;
+}
+
+.wrapper[data-label-floated] .label {
+  max-height: 1.2em;
+  opacity: 1;
+  margin-bottom: var(--field-input-gap-content);
+}
+
+.textarea {
+  display: block;
+  width: 100%;
+  flex: 1 1 auto;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  resize: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: var(--field-input-label-font-size-big);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.4;
+  color: var(--element-text-primary);
+}
+
+/* В покое плейсхолдер — это подпись, поэтому она того же цвета, что и
+   обычное значение. В фокусе на её месте встаёт настоящий проп placeholder,
+   приглушённый как подсказка. */
+.textarea::placeholder {
+  color: var(--element-text-primary);
+}
+
+.textarea:focus::placeholder {
+  color: var(--element-text-secondary);
+}
+
+.hint {
+  padding-top: var(--field-input-hint-padding-vert);
+  color: var(--element-text-secondary);
+  font-size: var(--field-input-hint-font-size);
+  line-height: 1.2;
+}
+
+.wrapper[data-alert]:not([data-state='disabled']) .hint {
+  color: var(--element-text-message);
+}

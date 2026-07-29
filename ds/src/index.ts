@@ -86,3 +86,6 @@ export type { NumberInputProps } from './components/NumberInput';
 
 export { InputAutoComplete } from './components/InputAutoComplete';
 export type { InputAutoCompleteProps, InputAutoCompleteOption } from './components/InputAutoComplete';
+
+export { TextArea } from './components/TextArea';
+export type { TextAreaProps } from './components/TextArea';
