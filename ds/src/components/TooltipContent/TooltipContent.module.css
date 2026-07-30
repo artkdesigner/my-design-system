@@ -1,0 +1,17 @@
+/* Размеры, цвета и типографика — только из токенов. */
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.text {
+  margin: 0;
+  width: 100%;
+  font-family: var(--font-family-main);
+  font-size: var(--text-tooltip-text-font-size);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.4;
+  color: var(--element-text-primary);
+}

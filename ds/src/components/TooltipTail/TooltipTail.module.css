@@ -1,0 +1,26 @@
+/* Размеры и цвет — только из токенов. */
+
+.wrapper {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  width: var(--tail-tooltip-tail-width);
+  height: 100%;
+  color: var(--element-bg-lvl-1);
+}
+
+.wrapper[data-position='start'] {
+  align-items: flex-start;
+  padding-top: var(--tail-tooltip-tail-margin);
+}
+
+.wrapper[data-position='end'] {
+  align-items: flex-end;
+  padding-bottom: var(--tail-tooltip-tail-margin);
+}
+
+.shape {
+  flex-shrink: 0;
+  width: var(--tail-tooltip-tail-width);
+  height: var(--tail-tooltip-tail-height);
+}

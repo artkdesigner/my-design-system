@@ -1,0 +1,54 @@
+/* Размеры и цвета — только из токенов, кроме смещений/радиусов тени
+   (см. комментарий в Tooltip.tsx — токена на весь стек эффекта нет). */
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  font-family: var(--font-family-main);
+  filter: drop-shadow(0 -2px 4px var(--element-bg-shadow-light)) drop-shadow(0 4px 8px var(--element-bg-shadow-light))
+    drop-shadow(0 12px 16px var(--element-bg-shadow-light)) drop-shadow(0 20px 24px var(--element-bg-shadow-dark));
+}
+
+.wrapper[data-axis='column'] {
+  flex-direction: column;
+}
+
+.body {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: var(--tooltip-padding-vert) var(--tooltip-padding-hor);
+  border-radius: var(--tooltip-radius);
+  background: var(--element-bg-lvl-1);
+}
+
+/* Хвостик растягивается на всю высоту тела только у left/right — так
+   работает Start/End у самого TooltipTail (см. его комментарий). У
+   up/down стретч не нужен (Position там не поддерживаем, хвостик всегда
+   по центру): растянутый ДО поворота на всю ширину тела прямоугольник
+   после rotate() увёл бы маленький треугольник далеко от центра — он
+   вращается вокруг центра уже готовой раскладки, а не вокруг своей
+   визуальной формы. */
+.tailSlot {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.wrapper[data-axis='row'] > .tailSlot {
+  align-self: stretch;
+}
+
+.tailSlot[data-direction='right'] {
+  transform: scaleX(-1);
+}
+
+.tailSlot[data-direction='up'] {
+  transform: rotate(90deg);
+}
+
+.tailSlot[data-direction='down'] {
+  transform: rotate(-90deg);
+}

@@ -122,3 +122,12 @@ export type { CodeInputItemProps } from './components/CodeInputItem';
 
 export { CodeInput } from './components/CodeInput';
 export type { CodeInputProps } from './components/CodeInput';
+
+export { TooltipTail } from './components/TooltipTail';
+export type { TooltipTailProps } from './components/TooltipTail';
+
+export { TooltipContent } from './components/TooltipContent';
+export type { TooltipContentProps } from './components/TooltipContent';
+
+export { Tooltip } from './components/Tooltip';
+export type { TooltipProps } from './components/Tooltip';
