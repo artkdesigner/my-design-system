@@ -131,3 +131,6 @@ export type { TooltipContentProps } from './components/TooltipContent';
 
 export { Tooltip } from './components/Tooltip';
 export type { TooltipProps } from './components/Tooltip';
+
+export { Scrollbar } from './components/Scrollbar';
+export type { ScrollbarProps } from './components/Scrollbar';

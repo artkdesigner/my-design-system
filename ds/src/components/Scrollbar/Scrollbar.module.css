@@ -1,0 +1,32 @@
+/* Размеры и цвета — только из токенов (общие примитивы, у самого узла
+   в Figma нет своих алиасов). */
+
+.scrollbar {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--element-bg-action-tetriary) transparent;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: calc(var(--padding-4) * 2 + var(--scales-4));
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* В макете нет кнопок-стрелок на концах трека — только рельс с бегунком. */
+.scrollbar::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* border + background-clip — единственный способ отступить бегунок от
+   края нативного скроллбара (у ::-webkit-scrollbar-thumb нет padding):
+   прозрачная рамка шириной padding-4 держит просвет, background-clip
+   не даёт заливке вылезти под неё. */
+.scrollbar::-webkit-scrollbar-thumb {
+  background: var(--element-bg-action-tetriary);
+  background-clip: padding-box;
+  border: var(--padding-4) solid transparent;
+  border-radius: var(--radius-max);
+}
