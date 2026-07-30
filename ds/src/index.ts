@@ -116,3 +116,9 @@ export type { ValueListProps, ValueListItem } from './components/ValueList';
 
 export { SelectWithTags } from './components/SelectWithTags';
 export type { SelectWithTagsProps, SelectWithTagsOption } from './components/SelectWithTags';
+
+export { CodeInputItem } from './components/CodeInputItem';
+export type { CodeInputItemProps } from './components/CodeInputItem';
+
+export { CodeInput } from './components/CodeInput';
+export type { CodeInputProps } from './components/CodeInput';

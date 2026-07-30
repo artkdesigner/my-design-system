@@ -1,0 +1,37 @@
+/* Размеры, цвета и типографика — только из токенов. */
+
+.cell {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  box-sizing: border-box;
+
+  width: var(--input-codeinput-codeinputitem-width);
+  height: var(--input-codeinput-codeinputitem-height);
+  border-radius: var(--input-codeinput-codeinputitem-radius);
+  background: var(--element-bg-lvl-2);
+}
+
+.cell[data-error] {
+  background: var(--element-bg-message);
+}
+
+.value {
+  font-family: var(--font-family-main);
+  font-size: var(--input-codeinput-codeinputitem-value-font-size);
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  color: var(--element-text-primary);
+}
+
+.cell[data-error] .value {
+  color: var(--element-text-message);
+}
+
+.cursor {
+  width: var(--stroke-1);
+  height: var(--input-codeinput-codeinputitem-cursor-height);
+  background: var(--element-icon-primary);
+}

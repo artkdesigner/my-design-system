@@ -1,0 +1,54 @@
+/* Размеры, цвета и типографика — только из токенов. */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  font-family: var(--font-family-main);
+}
+
+.fields {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--input-codeinput-gap);
+  border-radius: var(--input-codeinput-codeinputitem-radius);
+}
+
+.fields[data-focused] {
+  outline: var(--stroke-2) solid var(--element-border-focus);
+  outline-offset: var(--stroke-2);
+}
+
+.wrapper[data-state='disabled'] .fields {
+  cursor: not-allowed;
+}
+
+/* Настоящее поле лежит поверх ряда ячеек прозрачным слоем на всю
+   ширину — оно и ловит клики/ввод/вставку/автоподстановку SMS-кода,
+   ячейки под ним только показывают текущее value. Тот же приём, что у
+   нативного OTP-поля: один input, а не по одному на цифру. */
+.input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: transparent;
+  caret-color: transparent;
+  cursor: text;
+}
+
+.wrapper[data-state='disabled'] .input {
+  cursor: not-allowed;
+}
+
+.hint {
+  padding-top: var(--field-input-hint-padding-vert);
+  text-align: center;
+  color: var(--element-text-message);
+  font-size: var(--field-input-hint-font-size);
+  line-height: 1.2;
+}
