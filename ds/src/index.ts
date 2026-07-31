@@ -49,7 +49,7 @@ export { RadioGroup } from './components/RadioGroup';
 export type { RadioGroupProps } from './components/RadioGroup';
 
 export { StatusBadge } from './components/StatusBadge';
-export type { StatusBadgeProps } from './components/StatusBadge';
+export type { StatusBadgeProps, StatusBadgeType } from './components/StatusBadge';
 
 export { Status } from './components/Status';
 export type { StatusProps } from './components/Status';
@@ -179,3 +179,6 @@ export type { PageButtonProps } from './components/PageButton';
 
 export { Pagination } from './components/Pagination';
 export type { PaginationProps } from './components/Pagination';
+
+export { Notification } from './components/Notification';
+export type { NotificationProps } from './components/Notification';

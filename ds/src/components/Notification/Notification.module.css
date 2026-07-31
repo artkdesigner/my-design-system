@@ -1,0 +1,73 @@
+.notification {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-left: var(--padding-16);
+  border-radius: var(--radius-16);
+  background: var(--element-bg-action-primary);
+  font-family: var(--font-family-main);
+}
+
+.badgeSlot {
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+  padding-top: var(--padding-14);
+  padding-right: var(--padding-12);
+  padding-bottom: var(--padding-12);
+}
+
+.text {
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--margin-4);
+  min-width: 0;
+  padding: var(--padding-16);
+  color: var(--element-text-primary);
+}
+
+.title {
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  font-size: var(--font-size-heading-xs);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  text-overflow: ellipsis;
+}
+
+.caption {
+  margin: 0;
+  width: 100%;
+  font-size: var(--font-size-body-s);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.4;
+}
+
+.buttonSlot {
+  display: flex;
+  align-self: stretch;
+  flex-shrink: 0;
+  align-items: flex-start;
+  padding-top: var(--padding-12);
+  padding-right: var(--padding-16);
+}
+
+.closerSlot {
+  display: flex;
+  align-self: stretch;
+  flex-shrink: 0;
+  align-items: center;
+  gap: var(--margin-12);
+  padding: var(--padding-12);
+}
+
+.divider {
+  align-self: stretch;
+  width: var(--stroke-1);
+  background: var(--element-border-tetriary);
+}
