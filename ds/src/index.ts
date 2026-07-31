@@ -173,3 +173,9 @@ export type { FileUploadItemProps } from './components/FileUploadItem';
 
 export { FileUploadForm } from './components/FileUploadForm';
 export type { FileUploadFormProps, FileUploadFormFile } from './components/FileUploadForm';
+
+export { PageButton } from './components/PageButton';
+export type { PageButtonProps } from './components/PageButton';
+
+export { Pagination } from './components/Pagination';
+export type { PaginationProps } from './components/Pagination';

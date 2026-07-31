@@ -1,0 +1,14 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: var(--margin-12);
+}
+
+.text {
+  font-family: var(--font-family-main);
+  font-size: var(--font-size-label-m);
+  font-weight: var(--font-weight-regular);
+  line-height: 1;
+  color: var(--element-text-primary);
+  white-space: nowrap;
+}

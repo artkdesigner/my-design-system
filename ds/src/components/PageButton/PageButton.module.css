@@ -1,0 +1,29 @@
+.button {
+  box-sizing: border-box;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--scales-32);
+  width: var(--scales-32);
+  height: var(--scales-32);
+  border: none;
+  border-radius: var(--radius-8);
+  background: transparent;
+  font-family: var(--font-family-main);
+  font-size: var(--font-size-label-m);
+  font-weight: var(--font-weight-regular);
+  line-height: 1;
+  color: var(--element-text-secondary);
+  text-align: center;
+  cursor: pointer;
+}
+
+.button[data-selected] {
+  background: var(--element-bg-action-primary);
+  color: var(--element-text-primary);
+}
+
+.ellipsis {
+  cursor: default;
+}
