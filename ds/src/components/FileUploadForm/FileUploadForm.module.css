@@ -1,0 +1,94 @@
+.form {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  width: 100%;
+  border-radius: var(--radius-24);
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--margin-24);
+  width: 100%;
+  box-sizing: border-box;
+  padding: var(--padding-32);
+  background: var(--element-bg-lvl-1);
+  transition:
+    opacity 0.12s ease;
+}
+
+.form[data-dragged] .content {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dropzoneLayer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--padding-12);
+  width: 100%;
+  font-family: var(--font-family-main);
+}
+
+.title {
+  margin: 0;
+  width: 100%;
+  color: var(--element-text-primary);
+  font-size: var(--font-size-heading-m);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+}
+
+.description {
+  margin: 0;
+  width: 100%;
+  color: var(--element-text-secondary);
+  font-size: var(--font-size-body-m);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.4;
+}
+
+.files {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--margin-12);
+  width: 100%;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: var(--margin-8);
+  font-family: var(--font-family-main);
+  font-size: var(--font-size-body-m);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.4;
+}
+
+.counterLabel {
+  color: var(--element-text-secondary);
+}
+
+.counterValue {
+  color: var(--element-text-primary);
+}
+
+.filesGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--margin-16);
+  width: 100%;
+}

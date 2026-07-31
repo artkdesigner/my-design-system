@@ -170,3 +170,6 @@ export type { FileUploadControlsProps } from './components/FileUploadControls';
 
 export { FileUploadItem } from './components/FileUploadItem';
 export type { FileUploadItemProps } from './components/FileUploadItem';
+
+export { FileUploadForm } from './components/FileUploadForm';
+export type { FileUploadFormProps, FileUploadFormFile } from './components/FileUploadForm';
