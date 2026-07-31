@@ -155,3 +155,6 @@ export type { AttachFileItemProps } from './components/AttachFileItem';
 
 export { Attach } from './components/Attach';
 export type { AttachProps } from './components/Attach';
+
+export { Dropzone } from './components/Dropzone';
+export type { DropzoneProps } from './components/Dropzone';
