@@ -149,3 +149,9 @@ export type { AccordionBodyProps } from './components/AccordionBody';
 
 export { Accordion } from './components/Accordion';
 export type { AccordionProps } from './components/Accordion';
+
+export { AttachFileItem } from './components/AttachFileItem';
+export type { AttachFileItemProps } from './components/AttachFileItem';
+
+export { Attach } from './components/Attach';
+export type { AttachProps } from './components/Attach';

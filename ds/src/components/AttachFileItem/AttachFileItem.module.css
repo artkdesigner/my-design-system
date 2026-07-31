@@ -1,0 +1,51 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--scales-4);
+  font-family: var(--font-family-main);
+}
+
+.item[data-state='noFile'] {
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--attach-fileitem-gap-hor);
+  max-width: var(--scales-160);
+}
+
+.hint,
+.filename,
+.error {
+  font-weight: var(--font-weight-regular);
+  font-size: var(--attach-hint-font-size);
+  line-height: var(--attach-hint-line-height);
+  white-space: nowrap;
+}
+
+.hint {
+  color: var(--element-text-secondary);
+}
+
+.filename {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--element-text-secondary);
+  text-overflow: ellipsis;
+}
+
+.error {
+  color: var(--element-text-message);
+}
+
+.remove {
+  flex-shrink: 0;
+}
+
+.progress {
+  width: 100%;
+}
