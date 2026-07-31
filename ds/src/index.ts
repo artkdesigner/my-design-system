@@ -158,3 +158,15 @@ export type { AttachProps } from './components/Attach';
 
 export { Dropzone } from './components/Dropzone';
 export type { DropzoneProps } from './components/Dropzone';
+
+export { FileUploadLeftSlot } from './components/FileUploadLeftSlot';
+export type { FileUploadLeftSlotProps } from './components/FileUploadLeftSlot';
+
+export { FileUploadContent } from './components/FileUploadContent';
+export type { FileUploadContentProps } from './components/FileUploadContent';
+
+export { FileUploadControls } from './components/FileUploadControls';
+export type { FileUploadControlsProps } from './components/FileUploadControls';
+
+export { FileUploadItem } from './components/FileUploadItem';
+export type { FileUploadItemProps } from './components/FileUploadItem';

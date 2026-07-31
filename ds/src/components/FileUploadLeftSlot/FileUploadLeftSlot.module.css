@@ -1,0 +1,77 @@
+.slot {
+  position: relative;
+  display: flex;
+  isolation: isolate;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+  width: var(--fileupload-leftslot-size);
+  height: var(--fileupload-leftslot-size);
+}
+
+.ring {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: var(--fileupload-leftslot-radius-progress);
+  border: var(--fileupload-leftslot-border-progress) solid var(--element-border-secondary);
+}
+
+.slot[data-status='loading'] .ring {
+  border: none;
+}
+
+.slot[data-status='error'] .ring,
+.slot[data-status='success'] .ring {
+  border-color: var(--element-border-message-primary);
+}
+
+.slot[data-status='deleted'] .ring {
+  border-color: var(--element-border-primary);
+}
+
+.bg {
+  position: absolute;
+  inset: var(--fileupload-leftslot-border-progress);
+  z-index: 2;
+  border-radius: var(--fileupload-leftslot-radius-bg);
+  background: var(--element-bg-lvl-2);
+}
+
+.icon {
+  position: relative;
+  z-index: 3;
+  flex-shrink: 0;
+  color: var(--element-icon-primary);
+}
+
+.slot[data-status='deleted'] .icon {
+  color: var(--element-icon-secondary);
+}
+
+.cross {
+  position: absolute;
+  z-index: 4;
+  width: 60%;
+  height: 60%;
+}
+
+.cross::before,
+.cross::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: var(--stroke-2);
+  background: var(--element-icon-secondary);
+}
+
+.cross::before {
+  transform: rotate(45deg);
+}
+
+.cross::after {
+  transform: rotate(-45deg);
+}

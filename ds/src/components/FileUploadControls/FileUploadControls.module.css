@@ -1,0 +1,14 @@
+.controls {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-height: var(--fileupload-controlls-height);
+  padding-inline: var(--fileupload-controlls-padding-hor);
+}
