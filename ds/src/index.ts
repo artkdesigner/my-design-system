@@ -134,3 +134,6 @@ export type { TooltipProps } from './components/Tooltip';
 
 export { Scrollbar } from './components/Scrollbar';
 export type { ScrollbarProps } from './components/Scrollbar';
+
+export { ProgressBar } from './components/ProgressBar';
+export type { ProgressBarProps } from './components/ProgressBar';

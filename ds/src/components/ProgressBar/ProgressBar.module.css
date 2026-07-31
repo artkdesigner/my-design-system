@@ -1,0 +1,24 @@
+/* Размеры и цвета — только из токенов (общие примитивы, у самого узла
+   в Figma нет своих алиасов). */
+
+.track {
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: var(--radius-max);
+  background: var(--element-bg-lvl-2);
+  overflow: hidden;
+}
+
+.track[data-size='l'] {
+  height: var(--scales-8);
+}
+
+.track[data-size='s'] {
+  height: var(--scales-4);
+}
+
+.fill {
+  height: 100%;
+  border-radius: var(--radius-max);
+  background: var(--element-bg-action-primary);
+}
