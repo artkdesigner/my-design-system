@@ -1,0 +1,29 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--margin-12);
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--margin-4);
+  width: 100%;
+  min-height: var(--scales-24);
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.title {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+.body {
+  width: 100%;
+}

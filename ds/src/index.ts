@@ -137,3 +137,15 @@ export type { ScrollbarProps } from './components/Scrollbar';
 
 export { ProgressBar } from './components/ProgressBar';
 export type { ProgressBarProps } from './components/ProgressBar';
+
+export { AccordionControl } from './components/AccordionControl';
+export type { AccordionControlProps } from './components/AccordionControl';
+
+export { AccordionTitle } from './components/AccordionTitle';
+export type { AccordionTitleProps } from './components/AccordionTitle';
+
+export { AccordionBody } from './components/AccordionBody';
+export type { AccordionBodyProps } from './components/AccordionBody';
+
+export { Accordion } from './components/Accordion';
+export type { AccordionProps } from './components/Accordion';

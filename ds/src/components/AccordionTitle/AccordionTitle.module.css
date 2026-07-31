@@ -1,0 +1,18 @@
+.title {
+  display: flex;
+  flex: 1 1 0%;
+  min-width: 0;
+  align-items: center;
+}
+
+.text {
+  flex: 1 1 0%;
+  min-width: 0;
+  margin: 0;
+  font-family: var(--font-family-main);
+  font-size: var(--font-size-heading-s);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  color: var(--element-text-primary);
+  word-break: break-word;
+}

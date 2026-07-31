@@ -1,0 +1,18 @@
+.control {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  transition: transform 0.15s ease;
+}
+
+.control[data-preset='downChevron'][data-open] .icon {
+  transform: rotate(180deg);
+}
+
+.control[data-preset='rightChevron'][data-open] .icon {
+  transform: rotate(90deg);
+}

@@ -1,0 +1,13 @@
+.body {
+  width: 100%;
+}
+
+.text {
+  margin: 0;
+  font-family: var(--font-family-main);
+  font-size: var(--font-size-body-m);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.4;
+  color: var(--element-text-primary);
+  word-break: break-word;
+}
