@@ -197,3 +197,9 @@ export type { TabProps } from './components/Tab';
 
 export { TabGroup } from './components/TabGroup';
 export type { TabGroupProps } from './components/TabGroup';
+
+export { Modal } from './components/Modal';
+export type { ModalProps } from './components/Modal';
+
+export { PickerButton } from './components/PickerButton';
+export type { PickerButtonProps } from './components/PickerButton';
