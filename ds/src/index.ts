@@ -182,3 +182,6 @@ export type { PaginationProps } from './components/Pagination';
 
 export { Notification } from './components/Notification';
 export type { NotificationProps } from './components/Notification';
+
+export { Toast } from './components/Toast';
+export type { ToastProps } from './components/Toast';

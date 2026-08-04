@@ -1,0 +1,103 @@
+.toast {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-left: var(--padding-16);
+  border-width: var(--stroke-1);
+  border-style: solid;
+  border-radius: var(--radius-16);
+  font-family: var(--font-family-main);
+}
+
+.toast[data-view='neutral'] {
+  background: var(--element-bg-lvl-2);
+  border-color: var(--element-border-secondary);
+}
+
+.toast[data-view='message'] {
+  background: var(--element-bg-message);
+  border-color: var(--element-border-message-secondary);
+}
+
+.badgeSlot {
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-shrink: 0;
+  padding-top: var(--padding-14);
+  padding-right: var(--padding-12);
+  padding-bottom: var(--padding-12);
+}
+
+.text {
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--margin-4);
+  min-width: 0;
+  padding-top: var(--padding-16);
+  padding-right: var(--padding-16);
+  padding-bottom: var(--padding-16);
+}
+
+.toast[data-view='neutral'] .text {
+  color: var(--element-text-primary);
+}
+
+.toast[data-view='message'] .text {
+  color: var(--element-text-message);
+}
+
+.title {
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  font-size: var(--font-size-heading-xs);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  text-overflow: ellipsis;
+}
+
+.caption {
+  margin: 0;
+  width: 100%;
+  font-size: var(--font-size-body-s);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.4;
+}
+
+.buttonSlot {
+  display: flex;
+  align-self: stretch;
+  flex-shrink: 0;
+  align-items: flex-start;
+  padding-top: var(--padding-12);
+  padding-right: var(--padding-16);
+}
+
+.closerSlot {
+  display: flex;
+  align-self: stretch;
+  flex-shrink: 0;
+  align-items: center;
+  gap: var(--margin-12);
+  padding-top: var(--padding-12);
+  padding-right: var(--padding-12);
+  padding-bottom: var(--padding-12);
+}
+
+.divider {
+  align-self: stretch;
+  width: var(--stroke-1);
+  background: var(--element-border-secondary);
+}
+
+.toast[data-view='message'] .divider {
+  background: var(--element-border-message-secondary);
+}
+
+.toast[data-view='message'] .closerSlot {
+  --element-icon-secondary: var(--element-icon-message);
+}
