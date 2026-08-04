@@ -1,0 +1,43 @@
+/* Размеры, цвета и типографика — только из токенов. */
+
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--switch-gap-hor);
+  font-family: var(--font-family-main);
+}
+
+.item {
+  flex-shrink: 0;
+}
+
+/* Отступ сверху — тот же приём выравнивания подписи с пилюлей, что и
+   в Checkbox/RadioItem, только в Figma для Switch привязан к токену
+   Radio (radio-label-padding-top-vert-2), а не собственному switch-*. */
+.content {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  gap: var(--switch-gap-vert);
+  min-width: 0;
+  padding-top: var(--radio-label-padding-top-vert-2);
+}
+
+.label {
+  margin: 0;
+  color: var(--element-text-primary);
+  font-size: var(--switch-label-font-size);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.hint {
+  color: var(--element-text-secondary);
+  font-size: var(--switch-hint-font-size);
+  line-height: 1.2;
+}
+
+.wrapper[data-state='disabled'] .label {
+  cursor: not-allowed;
+}

@@ -1,0 +1,46 @@
+/* Размеры и цвета — только из токенов. */
+
+.track {
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  width: var(--switch-switchitem-width);
+  height: var(--switch-switchitem-height);
+  padding: var(--switch-switchitem-padding);
+  border: none;
+  border-radius: 9999px;
+  background: var(--element-bg-action-secondary);
+  cursor: pointer;
+  transition: background-color 120ms ease;
+}
+
+.track:focus-visible {
+  outline: var(--stroke-2) solid var(--element-border-focus);
+  outline-offset: var(--stroke-2);
+}
+
+.track:disabled {
+  cursor: not-allowed;
+}
+
+.track[data-checked] {
+  justify-content: flex-end;
+  background: var(--element-bg-action-accent);
+}
+
+/*
+ * Кружок — постоянно белый в обеих темах (сверено скриншотом узла 169:2208,
+ * секции Light/Dark: кружок не темнеет в тёмной теме). В выгрузке узла это
+ * static_neutral/0 — токен вне слоёв темы/состояния/размера, поэтому он не
+ * синхронизирован в element.css как element-*: element-bg-lvl-1 для этого
+ * не подходит, потому что тот сам инвертируется в тёмной теме. Ближайший
+ * уже синхронизированный источник того же значения — палитра.
+ */
+.thumb {
+  flex-shrink: 0;
+  width: var(--switch-switchitem-pointer-size);
+  height: var(--switch-switchitem-pointer-size);
+  border-radius: 50%;
+  background: var(--palette-foundation-white-primary);
+}
