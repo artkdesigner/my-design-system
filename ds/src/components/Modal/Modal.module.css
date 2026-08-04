@@ -1,0 +1,109 @@
+/* Размеры и цвета — только из токенов. 480px и z-index — реальные
+   значения раскладки/стекинга, для которых в Figma нет и не может быть
+   токена (это не значение дизайн-системы, а частность вёрстки диалога). */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: var(--padding-12);
+  background: var(--element-bg-overlay);
+}
+
+.dialog {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 480px;
+  max-height: calc(100dvh - var(--padding-12) * 2);
+  overflow: hidden;
+  border-radius: var(--radius-24);
+  background: var(--element-bg-lvl-1);
+  font-family: var(--font-family-main);
+}
+
+.dialog:focus-visible {
+  outline: none;
+}
+
+.header {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  padding: var(--padding-12) var(--padding-20) var(--padding-16);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.spacer {
+  flex: 1 0 0;
+}
+
+.closeSlot {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: var(--scales-48);
+  height: var(--scales-48);
+  border-radius: var(--radius-max);
+}
+
+.title {
+  margin: 0;
+  width: 100%;
+  padding: var(--padding-12) var(--padding-12) var(--padding-16);
+  overflow: hidden;
+  color: var(--element-text-primary);
+  font-size: var(--font-size-heading-m);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  text-overflow: ellipsis;
+}
+
+.body {
+  box-sizing: border-box;
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: 0 var(--padding-32);
+}
+
+.footer {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  padding: var(--padding-24) var(--padding-32) var(--padding-32);
+}
+
+.footerSpacer {
+  flex-shrink: 0;
+  height: var(--padding-32);
+}
+
+.actions {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--margin-16);
+}
+
+.actions[data-layout='horizontalFull'] > * {
+  flex: 1 0 0;
+}
+
+.actions[data-layout='vertical'] {
+  flex-direction: column;
+  gap: var(--margin-8);
+}
+
+.actions[data-layout='vertical'] > * {
+  width: 100%;
+}
