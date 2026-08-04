@@ -1,0 +1,109 @@
+/* Размеры и цвета — только из токенов. */
+
+.tag {
+  position: relative;
+  isolation: isolate;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  height: var(--filtertag-size);
+  border-radius: var(--filtertag-radius);
+  background: var(--element-bg-action-tetriary);
+  font-family: var(--font-family-main);
+}
+
+.tag[data-on-accent] {
+  background: var(--element-bg-action-primary);
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: var(--filtertag-gap);
+  height: 100%;
+  padding: var(--filtertag-padding-vert) var(--filtertag-padding-hor);
+  border: none;
+  border-radius: inherit;
+  background: transparent;
+  color: var(--element-text-primary);
+  cursor: pointer;
+}
+
+.tag[data-has-clear] .trigger {
+  padding-right: 0;
+}
+
+.trigger:focus-visible {
+  outline: var(--stroke-2) solid var(--element-border-focus);
+  outline-offset: calc(var(--stroke-2) * -1);
+}
+
+.trigger:disabled {
+  cursor: not-allowed;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  gap: var(--margin-4);
+  white-space: nowrap;
+  font-size: var(--filtertag-label-font-size);
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+}
+
+.value {
+  font-weight: var(--font-weight-bold);
+}
+
+.addon {
+  flex-shrink: 0;
+  color: var(--element-icon-primary);
+}
+
+.clearSlot {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  flex-shrink: 0;
+  gap: var(--filtertag-clear-gap);
+  padding-right: var(--filtertag-clear-padding-right);
+}
+
+.divider {
+  width: var(--stroke-1);
+  height: var(--filtertag-crear-line-size);
+  background: var(--element-border-secondary);
+}
+
+.clear {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: var(--filtertag-crear-icon-size);
+  height: var(--filtertag-crear-icon-size);
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--element-icon-secondary);
+  cursor: pointer;
+}
+
+.clear:focus-visible {
+  outline: var(--stroke-2) solid var(--element-border-focus);
+  outline-offset: var(--stroke-2);
+}
+
+.clear:disabled {
+  cursor: not-allowed;
+}
+
+.dropdown {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding-top: var(--filtertag-optionlist-padding-top);
+}
