@@ -203,3 +203,9 @@ export type { ModalProps } from './components/Modal';
 
 export { PickerButton } from './components/PickerButton';
 export type { PickerButtonProps } from './components/PickerButton';
+
+export { FilterTag } from './components/FilterTag';
+export type { FilterTagProps } from './components/FilterTag';
+
+export { Divider } from './components/Divider';
+export type { DividerProps } from './components/Divider';

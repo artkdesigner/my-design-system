@@ -1,0 +1,16 @@
+.divider {
+  flex-shrink: 0;
+  margin: 0;
+  border: none;
+  background: var(--element-border-secondary);
+}
+
+.divider[data-orientation='horizontal'] {
+  width: 100%;
+  height: var(--stroke-1);
+}
+
+.divider[data-orientation='vertical'] {
+  width: var(--stroke-1);
+  height: 100%;
+}
