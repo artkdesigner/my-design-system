@@ -1,0 +1,11 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--tabs-group-tabgroup-gap);
+  border-bottom: var(--tabs-group-tabgroup-border) solid var(--element-border-secondary);
+  font-family: var(--font-family-main);
+}
+
+.wrapper > * {
+  flex-shrink: 0;
+}

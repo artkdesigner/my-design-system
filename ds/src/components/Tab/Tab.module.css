@@ -1,0 +1,42 @@
+/* Размеры и цвета — только из токенов. */
+
+.tab {
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: var(--tab-gap);
+  padding: 0;
+  padding-bottom: var(--tab-padding-bottom);
+  border: none;
+  border-bottom: var(--tab-border) solid transparent;
+  background: transparent;
+  font-family: var(--font-family-main);
+  cursor: pointer;
+  transition: border-color 120ms ease;
+}
+
+.tab:focus-visible {
+  outline: var(--stroke-2) solid var(--element-border-focus);
+  outline-offset: var(--stroke-2);
+}
+
+.tab:disabled {
+  cursor: not-allowed;
+}
+
+.tab[data-active] {
+  border-bottom-color: var(--element-border-accent);
+}
+
+.label {
+  color: var(--element-text-primary);
+  font-size: var(--tab-label-font-size);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--tab-label-line-height);
+  white-space: nowrap;
+}
+
+.addon {
+  color: var(--element-icon-primary);
+}

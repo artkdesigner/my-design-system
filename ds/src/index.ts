@@ -185,3 +185,15 @@ export type { NotificationProps } from './components/Notification';
 
 export { Toast } from './components/Toast';
 export type { ToastProps } from './components/Toast';
+
+export { SwitchItem } from './components/SwitchItem';
+export type { SwitchItemProps } from './components/SwitchItem';
+
+export { Switch } from './components/Switch';
+export type { SwitchProps } from './components/Switch';
+
+export { Tab } from './components/Tab';
+export type { TabProps } from './components/Tab';
+
+export { TabGroup } from './components/TabGroup';
+export type { TabGroupProps } from './components/TabGroup';
