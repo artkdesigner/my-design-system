@@ -1,5 +1,7 @@
-/* Размеры, цвета и типографика — только из токенов. line-height: 1 — то же
-   решение вёрстки, что и в Button, а не величина дизайн-системы. */
+/* Размеры, цвета и типографика — только из токенов. В отличие от Button
+   (там line-height: 1 без токена, см. Button.module.css), у TextButton
+   в ComponentSize есть свой TextButton_label_line-height (24/20/16 для
+   L/M/S) — используем его, а не копируем решение Button. */
 
 .button {
   display: inline-flex;
@@ -15,7 +17,7 @@
   font-family: var(--font-family-main);
   font-size: var(--button-textbutton-label-font-size-2);
   font-weight: var(--font-weight-medium);
-  line-height: 1;
+  line-height: var(--button-textbutton-label-line-height);
 
   color: var(--element-text-accent);
 
