@@ -102,9 +102,15 @@
   color: var(--element-text-message);
 }
 
+/* --element-icon-message не заведён на ColorsOnAccent в Figma (в отличие
+   от --element-bg-message), поэтому на залитом message-фоне он остаётся
+   тем же красным/зелёным/жёлтым текстовым цветом, что и на обычном фоне —
+   иконка сливается с кругом. Берём --on-accent-icon-message напрямую:
+   тот же токен, что уже правильно переключается по data-on-accent
+   (который на .circle стоит всегда при активном message, см. ActionButton.tsx). */
 .button[data-message] .circle {
   background: var(--element-bg-message);
-  color: var(--element-icon-message);
+  color: var(--on-accent-icon-message);
 }
 
 .button[data-message][data-ghost] .circle {
