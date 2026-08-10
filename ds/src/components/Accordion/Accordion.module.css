@@ -1,7 +1,6 @@
 .accordion {
   display: flex;
   flex-direction: column;
-  gap: var(--margin-12);
   width: 100%;
 }
 
@@ -24,6 +23,26 @@
   min-width: 0;
 }
 
+/* Грид-трюк для плавной анимации высоты без измерения контента в JS:
+   у грид-контейнера с одной строкой transition работает на
+   grid-template-rows (0fr закрыто, 1fr открыто); overflow: hidden на
+   единственном грид-элементе даёт ему auto-minimum-size 0, поэтому он
+   способен схлопнуться до 0 несмотря на высоту содержимого. */
+.bodyWrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 200ms ease;
+}
+
+.bodyWrapper[data-open] {
+  grid-template-rows: 1fr;
+}
+
+.bodyInner {
+  overflow: hidden;
+}
+
 .body {
   width: 100%;
+  padding-top: var(--margin-12);
 }

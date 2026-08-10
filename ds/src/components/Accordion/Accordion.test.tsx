@@ -3,23 +3,29 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import { Accordion } from './Accordion';
 
 describe('Accordion', () => {
-  it('closed: заголовок виден, тело — нет', () => {
+  it('closed: заголовок виден, тело скрыто от a11y и вынуто из табиндекса', () => {
     render(
       <Accordion title="Title" opened={false}>
         Body text
       </Accordion>
     );
     expect(screen.getByText('Title')).toBeInTheDocument();
-    expect(screen.queryByText('Body text')).not.toBeInTheDocument();
+    // Тело остаётся в DOM (нужно для плавной CSS-анимации высоты), но
+    // помечается aria-hidden + inert, а не размонтируется.
+    const wrapper = screen.getByText('Body text').closest('[aria-hidden]') as HTMLElement;
+    expect(wrapper).toHaveAttribute('aria-hidden', 'true');
+    expect(wrapper).toHaveAttribute('inert');
   });
 
-  it('opened: тело тоже видно', () => {
+  it('opened: тело видно и доступно', () => {
     render(
       <Accordion title="Title" opened>
         Body text
       </Accordion>
     );
-    expect(screen.getByText('Body text')).toBeInTheDocument();
+    const wrapper = screen.getByText('Body text').closest('[aria-hidden]') as HTMLElement;
+    expect(wrapper).toHaveAttribute('aria-hidden', 'false');
+    expect(wrapper).not.toHaveAttribute('inert');
   });
 
   it('клик по заголовку зовёт onOpenedChange с инвертированным opened', () => {
@@ -40,7 +46,8 @@ describe('Accordion', () => {
       </Accordion>
     );
     fireEvent.click(screen.getByRole('button'));
-    expect(screen.queryByText('Body text')).not.toBeInTheDocument();
+    const wrapper = screen.getByText('Body text').closest('[aria-hidden]') as HTMLElement;
+    expect(wrapper).toHaveAttribute('aria-hidden', 'true');
   });
 
   it('aria-expanded отражает opened', () => {

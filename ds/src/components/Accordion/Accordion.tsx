@@ -61,7 +61,11 @@ export function Accordion({
         <AccordionTitle className={styles.title} preset="title" titleText={title} />
         {controlSide === 'right' && control}
       </button>
-      {opened && <AccordionBody className={styles.body} preset="text" text={children} />}
+      <div className={styles.bodyWrapper} data-open={opened || undefined} aria-hidden={!opened} inert={!opened}>
+        <div className={styles.bodyInner}>
+          <AccordionBody className={styles.body} preset="text" text={children} />
+        </div>
+      </div>
     </div>
   );
 }
