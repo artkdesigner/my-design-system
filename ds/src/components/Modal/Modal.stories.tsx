@@ -20,10 +20,10 @@ const page: CSSProperties = {
 };
 
 const body: CSSProperties = {
+  margin: 0,
   color: 'var(--element-text-secondary)',
   fontSize: 'var(--font-size-body-m)',
-  lineHeight: 1.4,
-  padding: 'var(--padding-24) 0'
+  lineHeight: 1.4
 };
 
 /** Узел 179:6872 в Figma — заголовок, назад, тело и пара кнопок футера. */
@@ -112,7 +112,7 @@ export const СвойФутер: Story = {
           open={open}
           onClose={() => setOpen(false)}
           title="Title"
-          footer={<p style={{ ...body, padding: 0, textAlign: 'center' }}>Произвольный контент футера</p>}
+          footer={<p style={{ ...body, textAlign: 'center' }}>Произвольный контент футера</p>}
         >
           <p style={body}>Содержимое диалога.</p>
         </Modal>
@@ -137,7 +137,7 @@ export const ДлинноеСодержимое: Story = {
           primaryAction={{ label: 'Label', onClick: () => setOpen(false) }}
         >
           {Array.from({ length: 20 }, (_, index) => (
-            <p key={index} style={body}>
+            <p key={index} style={{ ...body, marginBottom: 'var(--margin-12)' }}>
               Строка содержимого {index + 1} — тело скроллится через Scrollbar, шапка и футер остаются на месте.
             </p>
           ))}
