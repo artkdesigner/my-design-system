@@ -177,7 +177,7 @@
   --element-bg-shadow-light: var(--theme-neutral-shadow-light);
 }
 
-[data-accent="red"] {
+[data-accent="ruby"] {
   --element-text-primary: var(--on-accent-text-primary);
   --element-text-secondary: var(--on-accent-text-secondary);
   --element-text-accent: var(--state-text-accent);

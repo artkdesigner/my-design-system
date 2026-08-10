@@ -30,7 +30,7 @@ const preview: Preview = {
           { value: 'blue', title: 'Синий' },
           { value: 'sky', title: 'Голубой' },
           { value: 'purple', title: 'Фиолетовый' },
-          { value: 'red', title: 'Красный' }
+          { value: 'ruby', title: 'Рубиновый' }
         ]
       }
     },

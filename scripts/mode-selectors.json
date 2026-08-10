@@ -12,7 +12,7 @@
       "Blue": [":root", "[data-accent=\"blue\"]"],
       "Sky": ["[data-accent=\"sky\"]"],
       "Purple": ["[data-accent=\"purple\"]"],
-      "Red": ["[data-accent=\"red\"]"]
+      "Ruby": ["[data-accent=\"ruby\"]"]
     }
   },
 

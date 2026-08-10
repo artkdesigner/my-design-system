@@ -38,7 +38,7 @@
   --brand-accent-100: var(--palette-purple-100);
 }
 
-[data-accent="red"] {
+[data-accent="ruby"] {
   --brand-accent-900: var(--palette-red-900);
   --brand-accent-800: var(--palette-red-800);
   --brand-accent-700: var(--palette-red-700);
@@ -202,7 +202,7 @@
   --theme-neutral-shadow-light: var(--palette-foundation-black-04);
 }
 
-[data-accent="red"] {
+[data-accent="ruby"] {
   --theme-neutral-900: var(--palette-gray-900);
   --theme-neutral-800: var(--palette-gray-800);
   --theme-neutral-700: var(--palette-gray-700);
@@ -424,7 +424,7 @@
   --theme-neutral-shadow-light: var(--palette-foundation-white-04);
 }
 
-[data-accent="red"][data-theme="dark"] {
+[data-accent="ruby"][data-theme="dark"] {
   --theme-neutral-900: var(--palette-gray-100);
   --theme-neutral-800: var(--palette-gray-200);
   --theme-neutral-700: var(--palette-gray-300);
