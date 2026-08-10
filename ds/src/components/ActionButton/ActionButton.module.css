@@ -55,9 +55,9 @@
   color: var(--element-icon-primary);
 
   transition:
-    background-color 120ms ease,
-    color 120ms ease,
-    border-color 120ms ease;
+    background-color 300ms ease,
+    color 300ms ease,
+    border-color 300ms ease;
 }
 
 .label {

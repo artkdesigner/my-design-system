@@ -16,7 +16,7 @@
   color: var(--element-icon-accent);
 
   cursor: pointer;
-  transition: color 120ms ease;
+  transition: color 300ms ease;
 }
 
 .button:focus-visible {
