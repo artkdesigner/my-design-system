@@ -31,7 +31,7 @@
 .bodyWrapper {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 200ms ease;
+  transition: grid-template-rows 400ms ease;
 }
 
 .bodyWrapper[data-open] {
