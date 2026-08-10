@@ -65,8 +65,11 @@
 }
 
 /* Вид Primary — сверено по макету (узел 155:6518): заливка
-   element_bg_action_primary, подпись и иконка element_text_primary /
-   element_icon_primary. */
+   element_bg_action_primary, подпись element_text_primary. Иконка —
+   element_icon_absolute, а не element_icon_primary (в отличие от вида
+   Accent, узел 155:6479, где именно element_icon_primary): absolute не
+   зависит от каскада data-on-accent/data-state, поэтому белый цвет иконки
+   на тёмной заливке не может съехать при смене состояния. */
 .button[data-view='primary'] .circle {
   background: var(--element-bg-action-primary);
 }
@@ -76,7 +79,7 @@
 }
 
 .button[data-view='primary']:not([data-message]) .circle {
-  color: var(--element-icon-primary);
+  color: var(--element-icon-absolute);
 }
 
 /* Ghost — круг без заливки, с обводкой; оттенок обводки и иконки зависит
