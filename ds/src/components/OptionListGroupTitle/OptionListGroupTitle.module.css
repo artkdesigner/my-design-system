@@ -1,0 +1,18 @@
+.wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  padding-top: var(--optionlist-grouptitle-padding-top);
+  padding-bottom: var(--optionlist-grouptitle-padding-bottom);
+  padding-inline: var(--optionlist-grouptitle-padding-hor);
+}
+
+.title {
+  margin: 0;
+  width: 100%;
+  overflow-wrap: break-word;
+  color: var(--element-text-secondary);
+  font-family: var(--font-family-main);
+  font-size: var(--optionlist-grouptitle-font-size);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.4;
+}

@@ -5,6 +5,8 @@ import { OptionList } from './OptionList';
 import { OptionListHeader } from '../OptionListHeader';
 import { OptionListCell } from '../OptionListCell';
 import { OptionListFooter } from '../OptionListFooter';
+import { OptionListGroupTitle } from '../OptionListGroupTitle';
+import { OptionListEmptyState } from '../OptionListEmptyState';
 import { Button } from '../Button';
 
 const meta: Meta<typeof OptionList> = {
@@ -60,15 +62,7 @@ export const ВПокое: Story = {
               <OptionListCell key={option} label={option} selected={selected.has(option)} onClick={() => toggle(option)} />
             ))
           ) : (
-            <div
-              style={{
-                padding: 'var(--optionlist-emptystate-padding-vert) var(--optionlist-emptystate-padding-hor)',
-                color: 'var(--element-text-secondary)',
-                fontSize: 'var(--optionlist-emptystate-font-size)'
-              }}
-            >
-              Ничего не найдено
-            </div>
+            <OptionListEmptyState />
           )}
           <OptionListFooter>
             <Button view="primary" size="s">
@@ -130,6 +124,28 @@ export const БезHeaderИFooter: Story = {
         {OPTIONS.slice(0, 3).map((option, i) => (
           <OptionListCell key={option} label={option} selected={i === 0} />
         ))}
+      </OptionList>
+    </div>
+  )
+};
+
+/**
+ * OptionListGroupTitle (узел 120:9178) — необязательная подпись над
+ * частью Cell, когда список разбит на смысловые группы. Компонент не
+ * группирует ничего сам — просто заголовок, вызывающий код расставляет
+ * его между нужными Cell.
+ */
+export const СГруппами: Story = {
+  name: 'С группами',
+  render: () => (
+    <div style={{ ...page, width: '320px' }}>
+      <OptionList>
+        <OptionListGroupTitle title="Фрукты" />
+        <OptionListCell label="Яблоко" selected />
+        <OptionListCell label="Груша" />
+        <OptionListGroupTitle title="Овощи" />
+        <OptionListCell label="Морковь" />
+        <OptionListCell label="Огурец" />
       </OptionList>
     </div>
   )

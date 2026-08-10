@@ -1,0 +1,21 @@
+.wrapper {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-block: var(--optionlist-emptystate-padding-vert);
+  padding-inline: var(--optionlist-emptystate-padding-hor);
+}
+
+.text {
+  margin: 0;
+  width: 100%;
+  overflow-wrap: break-word;
+  color: var(--element-text-secondary);
+  font-family: var(--font-family-main);
+  font-size: var(--optionlist-emptystate-font-size);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.4;
+  text-align: center;
+}

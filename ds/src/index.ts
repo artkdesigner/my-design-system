@@ -69,6 +69,12 @@ export type { OptionListHeaderProps } from './components/OptionListHeader';
 export { OptionListFooter } from './components/OptionListFooter';
 export type { OptionListFooterProps } from './components/OptionListFooter';
 
+export { OptionListGroupTitle } from './components/OptionListGroupTitle';
+export type { OptionListGroupTitleProps } from './components/OptionListGroupTitle';
+
+export { OptionListEmptyState } from './components/OptionListEmptyState';
+export type { OptionListEmptyStateProps } from './components/OptionListEmptyState';
+
 export { OptionList } from './components/OptionList';
 export type { OptionListProps } from './components/OptionList';
 
