@@ -33,6 +33,10 @@
   --element-bg-lvl-3: var(--theme-neutral-300);
   --element-bg-shadow-dark: var(--theme-neutral-shadow-dark);
   --element-bg-shadow-light: var(--theme-neutral-shadow-light);
+  --element-text-absolute: var(--theme-neutral-absolute);
+  --element-icon-absolute: var(--theme-neutral-absolute);
+  --element-text-tetriary: var(--on-accent-text-tetriary);
+  --element-icon-tetriary: var(--on-accent-icon-tetriary);
 }
 
 /* Переменные CSS наследуют вычисленное значение, а не текст объявления —
@@ -71,6 +75,10 @@
   --element-bg-lvl-3: var(--theme-neutral-300);
   --element-bg-shadow-dark: var(--theme-neutral-shadow-dark);
   --element-bg-shadow-light: var(--theme-neutral-shadow-light);
+  --element-text-absolute: var(--theme-neutral-absolute);
+  --element-icon-absolute: var(--theme-neutral-absolute);
+  --element-text-tetriary: var(--on-accent-text-tetriary);
+  --element-icon-tetriary: var(--on-accent-icon-tetriary);
 }
 
 .ds-interactive:disabled,
@@ -106,6 +114,10 @@
   --element-bg-lvl-3: var(--theme-neutral-300);
   --element-bg-shadow-dark: var(--theme-neutral-shadow-dark);
   --element-bg-shadow-light: var(--theme-neutral-shadow-light);
+  --element-text-absolute: var(--theme-neutral-absolute);
+  --element-icon-absolute: var(--theme-neutral-absolute);
+  --element-text-tetriary: var(--on-accent-text-tetriary);
+  --element-icon-tetriary: var(--on-accent-icon-tetriary);
 }
 
 .ds-interactive:hover,
@@ -141,6 +153,10 @@
   --element-bg-lvl-3: var(--theme-neutral-300);
   --element-bg-shadow-dark: var(--theme-neutral-shadow-dark);
   --element-bg-shadow-light: var(--theme-neutral-shadow-light);
+  --element-text-absolute: var(--theme-neutral-absolute);
+  --element-icon-absolute: var(--theme-neutral-absolute);
+  --element-text-tetriary: var(--on-accent-text-tetriary);
+  --element-icon-tetriary: var(--on-accent-icon-tetriary);
 }
 
 [data-accent="purple"] {
@@ -175,6 +191,10 @@
   --element-bg-lvl-3: var(--theme-neutral-300);
   --element-bg-shadow-dark: var(--theme-neutral-shadow-dark);
   --element-bg-shadow-light: var(--theme-neutral-shadow-light);
+  --element-text-absolute: var(--theme-neutral-absolute);
+  --element-icon-absolute: var(--theme-neutral-absolute);
+  --element-text-tetriary: var(--on-accent-text-tetriary);
+  --element-icon-tetriary: var(--on-accent-icon-tetriary);
 }
 
 [data-accent="ruby"] {
@@ -209,6 +229,10 @@
   --element-bg-lvl-3: var(--theme-neutral-300);
   --element-bg-shadow-dark: var(--theme-neutral-shadow-dark);
   --element-bg-shadow-light: var(--theme-neutral-shadow-light);
+  --element-text-absolute: var(--theme-neutral-absolute);
+  --element-icon-absolute: var(--theme-neutral-absolute);
+  --element-text-tetriary: var(--on-accent-text-tetriary);
+  --element-icon-tetriary: var(--on-accent-icon-tetriary);
 }
 
 [data-accent="sky"] {
@@ -243,6 +267,10 @@
   --element-bg-lvl-3: var(--theme-neutral-300);
   --element-bg-shadow-dark: var(--theme-neutral-shadow-dark);
   --element-bg-shadow-light: var(--theme-neutral-shadow-light);
+  --element-text-absolute: var(--theme-neutral-absolute);
+  --element-icon-absolute: var(--theme-neutral-absolute);
+  --element-text-tetriary: var(--on-accent-text-tetriary);
+  --element-icon-tetriary: var(--on-accent-icon-tetriary);
 }
 
 [data-message="error"] {
@@ -277,6 +305,10 @@
   --element-bg-lvl-3: var(--theme-neutral-300);
   --element-bg-shadow-dark: var(--theme-neutral-shadow-dark);
   --element-bg-shadow-light: var(--theme-neutral-shadow-light);
+  --element-text-absolute: var(--theme-neutral-absolute);
+  --element-icon-absolute: var(--theme-neutral-absolute);
+  --element-text-tetriary: var(--on-accent-text-tetriary);
+  --element-icon-tetriary: var(--on-accent-icon-tetriary);
 }
 
 [data-message="success"] {
@@ -311,6 +343,10 @@
   --element-bg-lvl-3: var(--theme-neutral-300);
   --element-bg-shadow-dark: var(--theme-neutral-shadow-dark);
   --element-bg-shadow-light: var(--theme-neutral-shadow-light);
+  --element-text-absolute: var(--theme-neutral-absolute);
+  --element-icon-absolute: var(--theme-neutral-absolute);
+  --element-text-tetriary: var(--on-accent-text-tetriary);
+  --element-icon-tetriary: var(--on-accent-icon-tetriary);
 }
 
 [data-message="warning"] {
@@ -345,6 +381,10 @@
   --element-bg-lvl-3: var(--theme-neutral-300);
   --element-bg-shadow-dark: var(--theme-neutral-shadow-dark);
   --element-bg-shadow-light: var(--theme-neutral-shadow-light);
+  --element-text-absolute: var(--theme-neutral-absolute);
+  --element-icon-absolute: var(--theme-neutral-absolute);
+  --element-text-tetriary: var(--on-accent-text-tetriary);
+  --element-icon-tetriary: var(--on-accent-icon-tetriary);
 }
 
 [data-on-accent] {
@@ -379,6 +419,10 @@
   --element-bg-lvl-3: var(--theme-neutral-300);
   --element-bg-shadow-dark: var(--theme-neutral-shadow-dark);
   --element-bg-shadow-light: var(--theme-neutral-shadow-light);
+  --element-text-absolute: var(--theme-neutral-absolute);
+  --element-icon-absolute: var(--theme-neutral-absolute);
+  --element-text-tetriary: var(--on-accent-text-tetriary);
+  --element-icon-tetriary: var(--on-accent-icon-tetriary);
 }
 
 [data-theme="dark"] {
@@ -413,4 +457,8 @@
   --element-bg-lvl-3: var(--theme-neutral-300);
   --element-bg-shadow-dark: var(--theme-neutral-shadow-dark);
   --element-bg-shadow-light: var(--theme-neutral-shadow-light);
+  --element-text-absolute: var(--theme-neutral-absolute);
+  --element-icon-absolute: var(--theme-neutral-absolute);
+  --element-text-tetriary: var(--on-accent-text-tetriary);
+  --element-icon-tetriary: var(--on-accent-icon-tetriary);
 }

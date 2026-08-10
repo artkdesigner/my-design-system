@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-10T11:28:24.537Z",
+  "exportedAt": "2026-08-10T14:40:56.657Z",
   "fileName": "Design system",
   "collections": [
     {
@@ -1897,6 +1897,21 @@
               "id": "VariableID:268:22408"
             }
           }
+        },
+        {
+          "id": "VariableID:420:20809",
+          "name": "Neutral/theme_neutral_absolute",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "37:0": {
+              "type": "ALIAS",
+              "id": "VariableID:50:659"
+            },
+            "40:0": {
+              "type": "ALIAS",
+              "id": "VariableID:50:660"
+            }
+          }
         }
       ]
     },
@@ -2483,6 +2498,50 @@
               "id": "VariableID:268:22412"
             }
           }
+        },
+        {
+          "id": "VariableID:420:20810",
+          "name": "Text/element_text_absolute",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "50:5": {
+              "type": "ALIAS",
+              "id": "VariableID:420:20809"
+            }
+          }
+        },
+        {
+          "id": "VariableID:420:20811",
+          "name": "Icon/element_icon_absolute",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "50:5": {
+              "type": "ALIAS",
+              "id": "VariableID:420:20809"
+            }
+          }
+        },
+        {
+          "id": "VariableID:421:21431",
+          "name": "Text/element_text_tetriary",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "50:5": {
+              "type": "ALIAS",
+              "id": "VariableID:420:21377"
+            }
+          }
+        },
+        {
+          "id": "VariableID:421:21432",
+          "name": "Icon/element_icon_tetriary",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "50:5": {
+              "type": "ALIAS",
+              "id": "VariableID:420:21380"
+            }
+          }
         }
       ]
     },
@@ -2695,7 +2754,7 @@
         },
         {
           "id": "VariableID:80:2149",
-          "name": "Text/state_text_on-accent",
+          "name": "Text/state_text_on-accent-primary",
           "resolvedType": "COLOR",
           "valuesByMode": {
             "54:0": {
@@ -2735,7 +2794,7 @@
             },
             "54:5": {
               "type": "ALIAS",
-              "id": "VariableID:79:4091"
+              "id": "VariableID:207:8228"
             }
           }
         },
@@ -2787,7 +2846,7 @@
         },
         {
           "id": "VariableID:80:2156",
-          "name": "Icons/state_icon_on-accent",
+          "name": "Icons/state_icon_on-accent-primary",
           "resolvedType": "COLOR",
           "valuesByMode": {
             "54:0": {
@@ -2827,7 +2886,7 @@
             },
             "54:5": {
               "type": "ALIAS",
-              "id": "VariableID:79:4091"
+              "id": "VariableID:207:8228"
             }
           }
         },
@@ -2919,7 +2978,7 @@
             },
             "54:5": {
               "type": "ALIAS",
-              "id": "VariableID:79:4091"
+              "id": "VariableID:207:8228"
             }
           }
         },
@@ -3748,6 +3807,98 @@
             "54:5": {
               "type": "ALIAS",
               "id": "VariableID:79:4091"
+            }
+          }
+        },
+        {
+          "id": "VariableID:420:21360",
+          "name": "Text/state_text_on-accent-tetruiary",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "54:0": {
+              "type": "ALIAS",
+              "id": "VariableID:207:8228"
+            },
+            "54:3": {
+              "type": "ALIAS",
+              "id": "VariableID:207:8228"
+            },
+            "54:4": {
+              "type": "ALIAS",
+              "id": "VariableID:207:8228"
+            },
+            "54:5": {
+              "type": "ALIAS",
+              "id": "VariableID:207:8228"
+            }
+          }
+        },
+        {
+          "id": "VariableID:420:21361",
+          "name": "Icons/state_icon_on-accent-tetriary",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "54:0": {
+              "type": "ALIAS",
+              "id": "VariableID:207:8228"
+            },
+            "54:3": {
+              "type": "ALIAS",
+              "id": "VariableID:207:8228"
+            },
+            "54:4": {
+              "type": "ALIAS",
+              "id": "VariableID:207:8228"
+            },
+            "54:5": {
+              "type": "ALIAS",
+              "id": "VariableID:207:8228"
+            }
+          }
+        },
+        {
+          "id": "VariableID:420:21378",
+          "name": "Text/state_text_tetriary",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "54:0": {
+              "type": "ALIAS",
+              "id": "VariableID:39:418"
+            },
+            "54:3": {
+              "type": "ALIAS",
+              "id": "VariableID:39:417"
+            },
+            "54:4": {
+              "type": "ALIAS",
+              "id": "VariableID:39:418"
+            },
+            "54:5": {
+              "type": "ALIAS",
+              "id": "VariableID:39:420"
+            }
+          }
+        },
+        {
+          "id": "VariableID:420:21379",
+          "name": "Icons/state_icon_tetriary",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "54:0": {
+              "type": "ALIAS",
+              "id": "VariableID:39:418"
+            },
+            "54:3": {
+              "type": "ALIAS",
+              "id": "VariableID:39:417"
+            },
+            "54:4": {
+              "type": "ALIAS",
+              "id": "VariableID:39:418"
+            },
+            "54:5": {
+              "type": "ALIAS",
+              "id": "VariableID:39:420"
             }
           }
         }
@@ -7218,14 +7369,344 @@
               "id": "VariableID:207:8227"
             }
           }
+        },
+        {
+          "id": "VariableID:420:21377",
+          "name": "Text/on-accent_text_tetriary",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "80:0": {
+              "type": "ALIAS",
+              "id": "VariableID:420:21378"
+            },
+            "80:1": {
+              "type": "ALIAS",
+              "id": "VariableID:420:21360"
+            }
+          }
+        },
+        {
+          "id": "VariableID:420:21380",
+          "name": "Icon/on-accent_icon_tetriary",
+          "resolvedType": "COLOR",
+          "valuesByMode": {
+            "80:0": {
+              "type": "ALIAS",
+              "id": "VariableID:420:21379"
+            },
+            "80:1": {
+              "type": "ALIAS",
+              "id": "VariableID:420:21360"
+            }
+          }
         }
       ]
     }
   ],
-  "textStyles": [],
+  "textStyles": [
+    {
+      "id": "S:c30c179962580e83fa058d6ffeb4b832fc80f652,",
+      "name": "Heading/XL",
+      "fontName": { "family": "Inter Tight", "style": "Bold" },
+      "fontSize": 48,
+      "lineHeight": { "unit": "PERCENT", "value": 120.00000476837158 },
+      "letterSpacing": { "unit": "PERCENT", "value": 0 },
+      "boundVariables": {
+        "fontSize": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:549" },
+        "fontStyle": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:551" },
+        "fontFamily": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:537" }
+      }
+    },
+    {
+      "id": "S:fa866bc54e8ed613fad86daffbcd9d2b3993d6e7,",
+      "name": "Heading/L",
+      "fontName": { "family": "Inter Tight", "style": "Bold" },
+      "fontSize": 36,
+      "lineHeight": { "unit": "PERCENT", "value": 120.00000476837158 },
+      "letterSpacing": { "unit": "PERCENT", "value": 0 },
+      "boundVariables": {
+        "fontSize": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:548" },
+        "fontStyle": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:551" },
+        "fontFamily": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:537" }
+      }
+    },
+    {
+      "id": "S:efb3a1ebdacde61c6d505e77953ab6e52a68e37f,",
+      "name": "Heading/M",
+      "fontName": { "family": "Inter Tight", "style": "Bold" },
+      "fontSize": 24,
+      "lineHeight": { "unit": "PERCENT", "value": 120.00000476837158 },
+      "letterSpacing": { "unit": "PERCENT", "value": 0 },
+      "boundVariables": {
+        "fontSize": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:546" },
+        "fontStyle": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:551" },
+        "fontFamily": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:537" }
+      }
+    },
+    {
+      "id": "S:11d6b65d4c7144152534c20868400a9d7bf89700,",
+      "name": "Heading/S",
+      "fontName": { "family": "Inter Tight", "style": "Bold" },
+      "fontSize": 20,
+      "lineHeight": { "unit": "PERCENT", "value": 120.00000476837158 },
+      "letterSpacing": { "unit": "PERCENT", "value": 0 },
+      "boundVariables": {
+        "fontSize": { "type": "VARIABLE_ALIAS", "id": "VariableID:213:3809" },
+        "fontStyle": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:551" },
+        "fontFamily": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:537" }
+      }
+    },
+    {
+      "id": "S:9641d38dfd16e927bf4e2a16917e9196192d120f,",
+      "name": "Heading/XS",
+      "fontName": { "family": "Inter Tight", "style": "Bold" },
+      "fontSize": 16,
+      "lineHeight": { "unit": "PERCENT", "value": 120.00000476837158 },
+      "letterSpacing": { "unit": "PERCENT", "value": 0 },
+      "boundVariables": {
+        "fontSize": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:544" },
+        "fontStyle": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:551" },
+        "fontFamily": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:537" }
+      }
+    },
+    {
+      "id": "S:d07ed0403b97149b1a3b1020f5e48f69c85ea815,",
+      "name": "Body L/Regular",
+      "fontName": { "family": "Inter Tight", "style": "Regular" },
+      "fontSize": 20,
+      "lineHeight": { "unit": "PERCENT", "value": 139.9999976158142 },
+      "letterSpacing": { "unit": "PERCENT", "value": 0 },
+      "boundVariables": {
+        "fontSize": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:545" },
+        "fontStyle": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:550" },
+        "fontFamily": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:537" }
+      }
+    },
+    {
+      "id": "S:a7d3d3d7c8f7d6afce7aec24cbb8dfcdb14e44a3,",
+      "name": "Body L/Bold",
+      "fontName": { "family": "Inter Tight", "style": "Bold" },
+      "fontSize": 20,
+      "lineHeight": { "unit": "PERCENT", "value": 139.9999976158142 },
+      "letterSpacing": { "unit": "PERCENT", "value": 0 },
+      "boundVariables": {
+        "fontSize": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:545" },
+        "fontStyle": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:551" },
+        "fontFamily": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:537" }
+      }
+    },
+    {
+      "id": "S:ece83ed3cd1c3ac8ddb40789767b5478d49a4bc0,",
+      "name": "Body L/Italic",
+      "fontName": { "family": "Inter Tight", "style": "Italic" },
+      "fontSize": 20,
+      "lineHeight": { "unit": "PERCENT", "value": 139.9999976158142 },
+      "letterSpacing": { "unit": "PERCENT", "value": 0 },
+      "boundVariables": {
+        "fontSize": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:545" },
+        "fontStyle": { "type": "VARIABLE_ALIAS", "id": "VariableID:72:424" },
+        "fontFamily": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:537" }
+      }
+    },
+    {
+      "id": "S:66139be3ae0530734bbef7a1fa775536e5fed119,",
+      "name": "Body L/Underline",
+      "fontName": { "family": "Inter Tight", "style": "Regular" },
+      "fontSize": 20,
+      "lineHeight": { "unit": "PERCENT", "value": 139.9999976158142 },
+      "letterSpacing": { "unit": "PERCENT", "value": 0 },
+      "boundVariables": {
+        "fontSize": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:545" },
+        "fontStyle": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:550" },
+        "fontFamily": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:537" }
+      }
+    },
+    {
+      "id": "S:f1405ecd2f428c1eaaecf4e15946b5c5821ebc83,",
+      "name": "Body L/Deleted",
+      "fontName": { "family": "Inter Tight", "style": "Regular" },
+      "fontSize": 20,
+      "lineHeight": { "unit": "PERCENT", "value": 139.9999976158142 },
+      "letterSpacing": { "unit": "PERCENT", "value": 0 },
+      "boundVariables": {
+        "fontSize": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:545" },
+        "fontStyle": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:550" },
+        "fontFamily": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:537" }
+      }
+    },
+    {
+      "id": "S:68ab131471b09201cb2af1d5440ecc4a3b7f304d,",
+      "name": "Body L/Code",
+      "fontName": { "family": "IBM Plex Mono", "style": "Regular" },
+      "fontSize": 20,
+      "lineHeight": { "unit": "PERCENT", "value": 120.00000476837158 },
+      "letterSpacing": { "unit": "PERCENT", "value": 0 },
+      "boundVariables": {
+        "fontSize": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:545" },
+        "fontStyle": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:550" },
+        "fontFamily": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:539" }
+      }
+    },
+    {
+      "id": "S:386f7ed05ac34127ed5ff04ef794279ab2b47087,",
+      "name": "Body M/Regular",
+      "fontName": { "family": "Inter Tight", "style": "Regular" },
+      "fontSize": 16,
+      "lineHeight": { "unit": "PERCENT", "value": 139.9999976158142 },
+      "letterSpacing": { "unit": "PERCENT", "value": 0 },
+      "boundVariables": {
+        "fontSize": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:543" },
+        "fontStyle": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:550" },
+        "fontFamily": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:537" }
+      }
+    },
+    {
+      "id": "S:69d053cc169d486e31e6c1a27c7abcac6ca73083,",
+      "name": "Body M/Bold",
+      "fontName": { "family": "Inter Tight", "style": "Bold" },
+      "fontSize": 16,
+      "lineHeight": { "unit": "PERCENT", "value": 139.9999976158142 },
+      "letterSpacing": { "unit": "PERCENT", "value": 0 },
+      "boundVariables": {
+        "fontSize": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:543" },
+        "fontStyle": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:551" },
+        "fontFamily": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:537" }
+      }
+    },
+    {
+      "id": "S:f71466d9e285005bcdf952852b6b7beea1a76222,",
+      "name": "Body M/Italic",
+      "fontName": { "family": "Inter Tight", "style": "Italic" },
+      "fontSize": 16,
+      "lineHeight": { "unit": "PERCENT", "value": 139.9999976158142 },
+      "letterSpacing": { "unit": "PERCENT", "value": 0 },
+      "boundVariables": {
+        "fontSize": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:543" },
+        "fontStyle": { "type": "VARIABLE_ALIAS", "id": "VariableID:72:424" },
+        "fontFamily": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:537" }
+      }
+    },
+    {
+      "id": "S:564dd242367cfeba5bf00a56bb1016f7f028fc6e,",
+      "name": "Body M/Underline",
+      "fontName": { "family": "Inter Tight", "style": "Regular" },
+      "fontSize": 16,
+      "lineHeight": { "unit": "PERCENT", "value": 139.9999976158142 },
+      "letterSpacing": { "unit": "PERCENT", "value": 0 },
+      "boundVariables": {
+        "fontSize": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:543" },
+        "fontStyle": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:550" },
+        "fontFamily": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:537" }
+      }
+    },
+    {
+      "id": "S:7de72f8c523ff37f654a98e7ac5eff99ec7962ef,",
+      "name": "Body M/Deleted",
+      "fontName": { "family": "Inter Tight", "style": "Regular" },
+      "fontSize": 16,
+      "lineHeight": { "unit": "PERCENT", "value": 139.9999976158142 },
+      "letterSpacing": { "unit": "PERCENT", "value": 0 },
+      "boundVariables": {
+        "fontSize": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:543" },
+        "fontStyle": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:550" },
+        "fontFamily": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:537" }
+      }
+    },
+    {
+      "id": "S:9ce4e418cb540f360c01c771fd820fa137e0d9a6,",
+      "name": "Body M/Code",
+      "fontName": { "family": "IBM Plex Mono", "style": "Regular" },
+      "fontSize": 16,
+      "lineHeight": { "unit": "PERCENT", "value": 120.00000476837158 },
+      "letterSpacing": { "unit": "PERCENT", "value": 0 },
+      "boundVariables": {
+        "fontSize": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:543" },
+        "fontStyle": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:550" },
+        "fontFamily": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:539" }
+      }
+    },
+    {
+      "id": "S:7a782026cb952897875e7813d9983ef39a420f8f,",
+      "name": "Body S/Regular",
+      "fontName": { "family": "Inter Tight", "style": "Regular" },
+      "fontSize": 12,
+      "lineHeight": { "unit": "PERCENT", "value": 139.9999976158142 },
+      "letterSpacing": { "unit": "PERCENT", "value": 0 },
+      "boundVariables": {
+        "fontSize": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:540" },
+        "fontStyle": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:550" },
+        "fontFamily": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:537" }
+      }
+    },
+    {
+      "id": "S:8f8de02920e45e79a96188fcbec31bc3833d1c51,",
+      "name": "Body S/Bold",
+      "fontName": { "family": "Inter Tight", "style": "Bold" },
+      "fontSize": 12,
+      "lineHeight": { "unit": "PERCENT", "value": 139.9999976158142 },
+      "letterSpacing": { "unit": "PERCENT", "value": 0 },
+      "boundVariables": {
+        "fontSize": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:540" },
+        "fontStyle": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:551" },
+        "fontFamily": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:537" }
+      }
+    },
+    {
+      "id": "S:8d4337e7bbe4ec61f62a5881739b2dd9ef1cb902,",
+      "name": "Body S/Italic",
+      "fontName": { "family": "Inter Tight", "style": "Italic" },
+      "fontSize": 12,
+      "lineHeight": { "unit": "PERCENT", "value": 139.9999976158142 },
+      "letterSpacing": { "unit": "PERCENT", "value": 0 },
+      "boundVariables": {
+        "fontSize": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:540" },
+        "fontStyle": { "type": "VARIABLE_ALIAS", "id": "VariableID:72:424" },
+        "fontFamily": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:537" }
+      }
+    },
+    {
+      "id": "S:73ef8bcbe4fa8f3012b589f61369f8ba86d53da4,",
+      "name": "Body S/Underline",
+      "fontName": { "family": "Inter Tight", "style": "Regular" },
+      "fontSize": 12,
+      "lineHeight": { "unit": "PERCENT", "value": 139.9999976158142 },
+      "letterSpacing": { "unit": "PERCENT", "value": 0 },
+      "boundVariables": {
+        "fontSize": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:540" },
+        "fontStyle": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:550" },
+        "fontFamily": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:537" }
+      }
+    },
+    {
+      "id": "S:cb9727c525fee5a2b3a40ba9bd5733e2de4a0da4,",
+      "name": "Body S/Deleted",
+      "fontName": { "family": "Inter Tight", "style": "Regular" },
+      "fontSize": 12,
+      "lineHeight": { "unit": "PERCENT", "value": 139.9999976158142 },
+      "letterSpacing": { "unit": "PERCENT", "value": 0 },
+      "boundVariables": {
+        "fontSize": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:540" },
+        "fontStyle": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:550" },
+        "fontFamily": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:537" }
+      }
+    },
+    {
+      "id": "S:f17c01751f4707c01cbd2621e04ea169657af1e3,",
+      "name": "Body S/Code",
+      "fontName": { "family": "IBM Plex Mono", "style": "Regular" },
+      "fontSize": 12,
+      "lineHeight": { "unit": "PERCENT", "value": 120.00000476837158 },
+      "letterSpacing": { "unit": "PERCENT", "value": 0 },
+      "boundVariables": {
+        "fontSize": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:540" },
+        "fontStyle": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:550" },
+        "fontFamily": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:539" }
+      }
+    }
+  ],
   "stats": {
-    "variables": 552,
-    "aliases": 1138,
+    "variables": 563,
+    "aliases": 1164,
     "danglingAliasIds": [],
     "textStyles": 23,
     "danglingTextStyleAliasIds": [],

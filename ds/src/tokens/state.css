@@ -10,11 +10,11 @@
   --state-bg-primary: var(--theme-neutral-800);
   --state-border-accent: var(--theme-accent-default);
   --state-border-secondary: var(--theme-neutral-300);
-  --state-text-on-accent: var(--theme-neutral-on-accent-primary);
+  --state-text-on-accent-primary: var(--theme-neutral-on-accent-primary);
   --state-text-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
   --state-text-secondary: var(--theme-neutral-default);
   --state-icon-secondary: var(--theme-neutral-default);
-  --state-icon-on-accent: var(--theme-neutral-on-accent-primary);
+  --state-icon-on-accent-primary: var(--theme-neutral-on-accent-primary);
   --state-icon-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
   --state-border-primary: var(--theme-neutral-600);
   --state-bg-secondary: var(--theme-neutral-default);
@@ -56,6 +56,10 @@
   --state-border-on-accent-primary-2: var(--theme-neutral-on-accent-primary);
   --state-border-on-accent-primary-3: var(--theme-neutral-on-accent-primary);
   --state-border-on-accent-primary-4: var(--theme-neutral-on-accent-primary);
+  --state-text-on-accent-tetruiary: var(--theme-neutral-on-accent-tetriary);
+  --state-icon-on-accent-tetriary: var(--theme-neutral-on-accent-tetriary);
+  --state-text-tetriary: var(--theme-neutral-400);
+  --state-icon-tetriary: var(--theme-neutral-400);
 }
 
 /* Переменные CSS наследуют вычисленное значение, а не текст объявления —
@@ -70,11 +74,11 @@
   --state-bg-primary: var(--theme-neutral-800);
   --state-border-accent: var(--theme-accent-default);
   --state-border-secondary: var(--theme-neutral-300);
-  --state-text-on-accent: var(--theme-neutral-on-accent-primary);
+  --state-text-on-accent-primary: var(--theme-neutral-on-accent-primary);
   --state-text-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
   --state-text-secondary: var(--theme-neutral-default);
   --state-icon-secondary: var(--theme-neutral-default);
-  --state-icon-on-accent: var(--theme-neutral-on-accent-primary);
+  --state-icon-on-accent-primary: var(--theme-neutral-on-accent-primary);
   --state-icon-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
   --state-border-primary: var(--theme-neutral-600);
   --state-bg-secondary: var(--theme-neutral-default);
@@ -116,6 +120,10 @@
   --state-border-on-accent-primary-2: var(--theme-neutral-on-accent-primary);
   --state-border-on-accent-primary-3: var(--theme-neutral-on-accent-primary);
   --state-border-on-accent-primary-4: var(--theme-neutral-on-accent-primary);
+  --state-text-on-accent-tetruiary: var(--theme-neutral-on-accent-tetriary);
+  --state-icon-on-accent-tetriary: var(--theme-neutral-on-accent-tetriary);
+  --state-text-tetriary: var(--theme-neutral-400);
+  --state-icon-tetriary: var(--theme-neutral-400);
 }
 
 [data-accent="ruby"] {
@@ -127,11 +135,11 @@
   --state-bg-primary: var(--theme-neutral-800);
   --state-border-accent: var(--theme-accent-default);
   --state-border-secondary: var(--theme-neutral-300);
-  --state-text-on-accent: var(--theme-neutral-on-accent-primary);
+  --state-text-on-accent-primary: var(--theme-neutral-on-accent-primary);
   --state-text-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
   --state-text-secondary: var(--theme-neutral-default);
   --state-icon-secondary: var(--theme-neutral-default);
-  --state-icon-on-accent: var(--theme-neutral-on-accent-primary);
+  --state-icon-on-accent-primary: var(--theme-neutral-on-accent-primary);
   --state-icon-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
   --state-border-primary: var(--theme-neutral-600);
   --state-bg-secondary: var(--theme-neutral-default);
@@ -173,6 +181,10 @@
   --state-border-on-accent-primary-2: var(--theme-neutral-on-accent-primary);
   --state-border-on-accent-primary-3: var(--theme-neutral-on-accent-primary);
   --state-border-on-accent-primary-4: var(--theme-neutral-on-accent-primary);
+  --state-text-on-accent-tetruiary: var(--theme-neutral-on-accent-tetriary);
+  --state-icon-on-accent-tetriary: var(--theme-neutral-on-accent-tetriary);
+  --state-text-tetriary: var(--theme-neutral-400);
+  --state-icon-tetriary: var(--theme-neutral-400);
 }
 
 [data-accent="sky"] {
@@ -184,11 +196,11 @@
   --state-bg-primary: var(--theme-neutral-800);
   --state-border-accent: var(--theme-accent-default);
   --state-border-secondary: var(--theme-neutral-300);
-  --state-text-on-accent: var(--theme-neutral-on-accent-primary);
+  --state-text-on-accent-primary: var(--theme-neutral-on-accent-primary);
   --state-text-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
   --state-text-secondary: var(--theme-neutral-default);
   --state-icon-secondary: var(--theme-neutral-default);
-  --state-icon-on-accent: var(--theme-neutral-on-accent-primary);
+  --state-icon-on-accent-primary: var(--theme-neutral-on-accent-primary);
   --state-icon-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
   --state-border-primary: var(--theme-neutral-600);
   --state-bg-secondary: var(--theme-neutral-default);
@@ -230,6 +242,10 @@
   --state-border-on-accent-primary-2: var(--theme-neutral-on-accent-primary);
   --state-border-on-accent-primary-3: var(--theme-neutral-on-accent-primary);
   --state-border-on-accent-primary-4: var(--theme-neutral-on-accent-primary);
+  --state-text-on-accent-tetruiary: var(--theme-neutral-on-accent-tetriary);
+  --state-icon-on-accent-tetriary: var(--theme-neutral-on-accent-tetriary);
+  --state-text-tetriary: var(--theme-neutral-400);
+  --state-icon-tetriary: var(--theme-neutral-400);
 }
 
 [data-theme="dark"] {
@@ -241,11 +257,11 @@
   --state-bg-primary: var(--theme-neutral-800);
   --state-border-accent: var(--theme-accent-default);
   --state-border-secondary: var(--theme-neutral-300);
-  --state-text-on-accent: var(--theme-neutral-on-accent-primary);
+  --state-text-on-accent-primary: var(--theme-neutral-on-accent-primary);
   --state-text-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
   --state-text-secondary: var(--theme-neutral-default);
   --state-icon-secondary: var(--theme-neutral-default);
-  --state-icon-on-accent: var(--theme-neutral-on-accent-primary);
+  --state-icon-on-accent-primary: var(--theme-neutral-on-accent-primary);
   --state-icon-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
   --state-border-primary: var(--theme-neutral-600);
   --state-bg-secondary: var(--theme-neutral-default);
@@ -287,6 +303,10 @@
   --state-border-on-accent-primary-2: var(--theme-neutral-on-accent-primary);
   --state-border-on-accent-primary-3: var(--theme-neutral-on-accent-primary);
   --state-border-on-accent-primary-4: var(--theme-neutral-on-accent-primary);
+  --state-text-on-accent-tetruiary: var(--theme-neutral-on-accent-tetriary);
+  --state-icon-on-accent-tetriary: var(--theme-neutral-on-accent-tetriary);
+  --state-text-tetriary: var(--theme-neutral-400);
+  --state-icon-tetriary: var(--theme-neutral-400);
 }
 
 [data-accent="purple"].ds-interactive:active,
@@ -299,11 +319,11 @@
   --state-bg-primary: var(--theme-neutral-900);
   --state-border-accent: var(--theme-accent-default);
   --state-border-secondary: var(--theme-neutral-300);
-  --state-text-on-accent: var(--theme-neutral-on-accent-primary);
+  --state-text-on-accent-primary: var(--theme-neutral-on-accent-primary);
   --state-text-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
   --state-text-secondary: var(--theme-neutral-default);
   --state-icon-secondary: var(--theme-neutral-default);
-  --state-icon-on-accent: var(--theme-neutral-on-accent-primary);
+  --state-icon-on-accent-primary: var(--theme-neutral-on-accent-primary);
   --state-icon-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
   --state-border-primary: var(--theme-neutral-600);
   --state-bg-secondary: var(--theme-neutral-default);
@@ -345,6 +365,10 @@
   --state-border-on-accent-primary-2: var(--theme-neutral-on-accent-primary);
   --state-border-on-accent-primary-3: var(--theme-neutral-on-accent-primary);
   --state-border-on-accent-primary-4: var(--theme-neutral-on-accent-primary);
+  --state-text-on-accent-tetruiary: var(--theme-neutral-on-accent-tetriary);
+  --state-icon-on-accent-tetriary: var(--theme-neutral-on-accent-tetriary);
+  --state-text-tetriary: var(--theme-neutral-400);
+  --state-icon-tetriary: var(--theme-neutral-400);
 }
 
 [data-accent="purple"].ds-interactive:disabled,
@@ -357,16 +381,16 @@
   --state-bg-primary: var(--theme-neutral-400);
   --state-border-accent: var(--theme-neutral-400);
   --state-border-secondary: var(--theme-neutral-200);
-  --state-text-on-accent: var(--theme-neutral-on-accent-secondary);
-  --state-text-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
+  --state-text-on-accent-primary: var(--theme-neutral-on-accent-secondary);
+  --state-text-on-accent-secondary: var(--theme-neutral-on-accent-tetriary);
   --state-text-secondary: var(--theme-neutral-300);
   --state-icon-secondary: var(--theme-neutral-300);
-  --state-icon-on-accent: var(--theme-neutral-on-accent-secondary);
-  --state-icon-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
+  --state-icon-on-accent-primary: var(--theme-neutral-on-accent-secondary);
+  --state-icon-on-accent-secondary: var(--theme-neutral-on-accent-tetriary);
   --state-border-primary: var(--theme-neutral-400);
   --state-bg-secondary: var(--theme-neutral-300);
   --state-border-on-accent-primary: var(--theme-neutral-on-accent-secondary);
-  --state-border-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
+  --state-border-on-accent-secondary: var(--theme-neutral-on-accent-tetriary);
   --state-text-info: var(--theme-neutral-400);
   --state-text-success: var(--theme-neutral-400);
   --state-text-warning: var(--theme-neutral-400);
@@ -403,6 +427,10 @@
   --state-border-on-accent-primary-2: var(--theme-neutral-on-accent-secondary);
   --state-border-on-accent-primary-3: var(--theme-neutral-on-accent-secondary);
   --state-border-on-accent-primary-4: var(--theme-neutral-on-accent-secondary);
+  --state-text-on-accent-tetruiary: var(--theme-neutral-on-accent-tetriary);
+  --state-icon-on-accent-tetriary: var(--theme-neutral-on-accent-tetriary);
+  --state-text-tetriary: var(--theme-neutral-200);
+  --state-icon-tetriary: var(--theme-neutral-200);
 }
 
 [data-accent="purple"].ds-interactive:hover,
@@ -415,11 +443,11 @@
   --state-bg-primary: var(--theme-neutral-900);
   --state-border-accent: var(--theme-accent-600);
   --state-border-secondary: var(--theme-neutral-400);
-  --state-text-on-accent: var(--theme-neutral-on-accent-primary);
+  --state-text-on-accent-primary: var(--theme-neutral-on-accent-primary);
   --state-text-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
   --state-text-secondary: var(--theme-neutral-600);
   --state-icon-secondary: var(--theme-neutral-600);
-  --state-icon-on-accent: var(--theme-neutral-on-accent-primary);
+  --state-icon-on-accent-primary: var(--theme-neutral-on-accent-primary);
   --state-icon-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
   --state-border-primary: var(--theme-neutral-default);
   --state-bg-secondary: var(--theme-neutral-600);
@@ -461,6 +489,10 @@
   --state-border-on-accent-primary-2: var(--theme-neutral-on-accent-primary);
   --state-border-on-accent-primary-3: var(--theme-neutral-on-accent-primary);
   --state-border-on-accent-primary-4: var(--theme-neutral-on-accent-primary);
+  --state-text-on-accent-tetruiary: var(--theme-neutral-on-accent-tetriary);
+  --state-icon-on-accent-tetriary: var(--theme-neutral-on-accent-tetriary);
+  --state-text-tetriary: var(--theme-neutral-default);
+  --state-icon-tetriary: var(--theme-neutral-default);
 }
 
 [data-accent="ruby"].ds-interactive:active,
@@ -473,11 +505,11 @@
   --state-bg-primary: var(--theme-neutral-900);
   --state-border-accent: var(--theme-accent-default);
   --state-border-secondary: var(--theme-neutral-300);
-  --state-text-on-accent: var(--theme-neutral-on-accent-primary);
+  --state-text-on-accent-primary: var(--theme-neutral-on-accent-primary);
   --state-text-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
   --state-text-secondary: var(--theme-neutral-default);
   --state-icon-secondary: var(--theme-neutral-default);
-  --state-icon-on-accent: var(--theme-neutral-on-accent-primary);
+  --state-icon-on-accent-primary: var(--theme-neutral-on-accent-primary);
   --state-icon-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
   --state-border-primary: var(--theme-neutral-600);
   --state-bg-secondary: var(--theme-neutral-default);
@@ -519,6 +551,10 @@
   --state-border-on-accent-primary-2: var(--theme-neutral-on-accent-primary);
   --state-border-on-accent-primary-3: var(--theme-neutral-on-accent-primary);
   --state-border-on-accent-primary-4: var(--theme-neutral-on-accent-primary);
+  --state-text-on-accent-tetruiary: var(--theme-neutral-on-accent-tetriary);
+  --state-icon-on-accent-tetriary: var(--theme-neutral-on-accent-tetriary);
+  --state-text-tetriary: var(--theme-neutral-400);
+  --state-icon-tetriary: var(--theme-neutral-400);
 }
 
 [data-accent="ruby"].ds-interactive:disabled,
@@ -531,16 +567,16 @@
   --state-bg-primary: var(--theme-neutral-400);
   --state-border-accent: var(--theme-neutral-400);
   --state-border-secondary: var(--theme-neutral-200);
-  --state-text-on-accent: var(--theme-neutral-on-accent-secondary);
-  --state-text-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
+  --state-text-on-accent-primary: var(--theme-neutral-on-accent-secondary);
+  --state-text-on-accent-secondary: var(--theme-neutral-on-accent-tetriary);
   --state-text-secondary: var(--theme-neutral-300);
   --state-icon-secondary: var(--theme-neutral-300);
-  --state-icon-on-accent: var(--theme-neutral-on-accent-secondary);
-  --state-icon-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
+  --state-icon-on-accent-primary: var(--theme-neutral-on-accent-secondary);
+  --state-icon-on-accent-secondary: var(--theme-neutral-on-accent-tetriary);
   --state-border-primary: var(--theme-neutral-400);
   --state-bg-secondary: var(--theme-neutral-300);
   --state-border-on-accent-primary: var(--theme-neutral-on-accent-secondary);
-  --state-border-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
+  --state-border-on-accent-secondary: var(--theme-neutral-on-accent-tetriary);
   --state-text-info: var(--theme-neutral-400);
   --state-text-success: var(--theme-neutral-400);
   --state-text-warning: var(--theme-neutral-400);
@@ -577,6 +613,10 @@
   --state-border-on-accent-primary-2: var(--theme-neutral-on-accent-secondary);
   --state-border-on-accent-primary-3: var(--theme-neutral-on-accent-secondary);
   --state-border-on-accent-primary-4: var(--theme-neutral-on-accent-secondary);
+  --state-text-on-accent-tetruiary: var(--theme-neutral-on-accent-tetriary);
+  --state-icon-on-accent-tetriary: var(--theme-neutral-on-accent-tetriary);
+  --state-text-tetriary: var(--theme-neutral-200);
+  --state-icon-tetriary: var(--theme-neutral-200);
 }
 
 [data-accent="ruby"].ds-interactive:hover,
@@ -589,11 +629,11 @@
   --state-bg-primary: var(--theme-neutral-900);
   --state-border-accent: var(--theme-accent-600);
   --state-border-secondary: var(--theme-neutral-400);
-  --state-text-on-accent: var(--theme-neutral-on-accent-primary);
+  --state-text-on-accent-primary: var(--theme-neutral-on-accent-primary);
   --state-text-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
   --state-text-secondary: var(--theme-neutral-600);
   --state-icon-secondary: var(--theme-neutral-600);
-  --state-icon-on-accent: var(--theme-neutral-on-accent-primary);
+  --state-icon-on-accent-primary: var(--theme-neutral-on-accent-primary);
   --state-icon-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
   --state-border-primary: var(--theme-neutral-default);
   --state-bg-secondary: var(--theme-neutral-600);
@@ -635,6 +675,10 @@
   --state-border-on-accent-primary-2: var(--theme-neutral-on-accent-primary);
   --state-border-on-accent-primary-3: var(--theme-neutral-on-accent-primary);
   --state-border-on-accent-primary-4: var(--theme-neutral-on-accent-primary);
+  --state-text-on-accent-tetruiary: var(--theme-neutral-on-accent-tetriary);
+  --state-icon-on-accent-tetriary: var(--theme-neutral-on-accent-tetriary);
+  --state-text-tetriary: var(--theme-neutral-default);
+  --state-icon-tetriary: var(--theme-neutral-default);
 }
 
 [data-accent="sky"].ds-interactive:active,
@@ -647,11 +691,11 @@
   --state-bg-primary: var(--theme-neutral-900);
   --state-border-accent: var(--theme-accent-default);
   --state-border-secondary: var(--theme-neutral-300);
-  --state-text-on-accent: var(--theme-neutral-on-accent-primary);
+  --state-text-on-accent-primary: var(--theme-neutral-on-accent-primary);
   --state-text-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
   --state-text-secondary: var(--theme-neutral-default);
   --state-icon-secondary: var(--theme-neutral-default);
-  --state-icon-on-accent: var(--theme-neutral-on-accent-primary);
+  --state-icon-on-accent-primary: var(--theme-neutral-on-accent-primary);
   --state-icon-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
   --state-border-primary: var(--theme-neutral-600);
   --state-bg-secondary: var(--theme-neutral-default);
@@ -693,6 +737,10 @@
   --state-border-on-accent-primary-2: var(--theme-neutral-on-accent-primary);
   --state-border-on-accent-primary-3: var(--theme-neutral-on-accent-primary);
   --state-border-on-accent-primary-4: var(--theme-neutral-on-accent-primary);
+  --state-text-on-accent-tetruiary: var(--theme-neutral-on-accent-tetriary);
+  --state-icon-on-accent-tetriary: var(--theme-neutral-on-accent-tetriary);
+  --state-text-tetriary: var(--theme-neutral-400);
+  --state-icon-tetriary: var(--theme-neutral-400);
 }
 
 [data-accent="sky"].ds-interactive:disabled,
@@ -705,16 +753,16 @@
   --state-bg-primary: var(--theme-neutral-400);
   --state-border-accent: var(--theme-neutral-400);
   --state-border-secondary: var(--theme-neutral-200);
-  --state-text-on-accent: var(--theme-neutral-on-accent-secondary);
-  --state-text-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
+  --state-text-on-accent-primary: var(--theme-neutral-on-accent-secondary);
+  --state-text-on-accent-secondary: var(--theme-neutral-on-accent-tetriary);
   --state-text-secondary: var(--theme-neutral-300);
   --state-icon-secondary: var(--theme-neutral-300);
-  --state-icon-on-accent: var(--theme-neutral-on-accent-secondary);
-  --state-icon-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
+  --state-icon-on-accent-primary: var(--theme-neutral-on-accent-secondary);
+  --state-icon-on-accent-secondary: var(--theme-neutral-on-accent-tetriary);
   --state-border-primary: var(--theme-neutral-400);
   --state-bg-secondary: var(--theme-neutral-300);
   --state-border-on-accent-primary: var(--theme-neutral-on-accent-secondary);
-  --state-border-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
+  --state-border-on-accent-secondary: var(--theme-neutral-on-accent-tetriary);
   --state-text-info: var(--theme-neutral-400);
   --state-text-success: var(--theme-neutral-400);
   --state-text-warning: var(--theme-neutral-400);
@@ -751,6 +799,10 @@
   --state-border-on-accent-primary-2: var(--theme-neutral-on-accent-secondary);
   --state-border-on-accent-primary-3: var(--theme-neutral-on-accent-secondary);
   --state-border-on-accent-primary-4: var(--theme-neutral-on-accent-secondary);
+  --state-text-on-accent-tetruiary: var(--theme-neutral-on-accent-tetriary);
+  --state-icon-on-accent-tetriary: var(--theme-neutral-on-accent-tetriary);
+  --state-text-tetriary: var(--theme-neutral-200);
+  --state-icon-tetriary: var(--theme-neutral-200);
 }
 
 [data-accent="sky"].ds-interactive:hover,
@@ -763,11 +815,11 @@
   --state-bg-primary: var(--theme-neutral-900);
   --state-border-accent: var(--theme-accent-600);
   --state-border-secondary: var(--theme-neutral-400);
-  --state-text-on-accent: var(--theme-neutral-on-accent-primary);
+  --state-text-on-accent-primary: var(--theme-neutral-on-accent-primary);
   --state-text-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
   --state-text-secondary: var(--theme-neutral-600);
   --state-icon-secondary: var(--theme-neutral-600);
-  --state-icon-on-accent: var(--theme-neutral-on-accent-primary);
+  --state-icon-on-accent-primary: var(--theme-neutral-on-accent-primary);
   --state-icon-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
   --state-border-primary: var(--theme-neutral-default);
   --state-bg-secondary: var(--theme-neutral-600);
@@ -809,6 +861,10 @@
   --state-border-on-accent-primary-2: var(--theme-neutral-on-accent-primary);
   --state-border-on-accent-primary-3: var(--theme-neutral-on-accent-primary);
   --state-border-on-accent-primary-4: var(--theme-neutral-on-accent-primary);
+  --state-text-on-accent-tetruiary: var(--theme-neutral-on-accent-tetriary);
+  --state-icon-on-accent-tetriary: var(--theme-neutral-on-accent-tetriary);
+  --state-text-tetriary: var(--theme-neutral-default);
+  --state-icon-tetriary: var(--theme-neutral-default);
 }
 
 [data-theme="dark"].ds-interactive:active,
@@ -821,11 +877,11 @@
   --state-bg-primary: var(--theme-neutral-900);
   --state-border-accent: var(--theme-accent-default);
   --state-border-secondary: var(--theme-neutral-300);
-  --state-text-on-accent: var(--theme-neutral-on-accent-primary);
+  --state-text-on-accent-primary: var(--theme-neutral-on-accent-primary);
   --state-text-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
   --state-text-secondary: var(--theme-neutral-default);
   --state-icon-secondary: var(--theme-neutral-default);
-  --state-icon-on-accent: var(--theme-neutral-on-accent-primary);
+  --state-icon-on-accent-primary: var(--theme-neutral-on-accent-primary);
   --state-icon-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
   --state-border-primary: var(--theme-neutral-600);
   --state-bg-secondary: var(--theme-neutral-default);
@@ -867,6 +923,10 @@
   --state-border-on-accent-primary-2: var(--theme-neutral-on-accent-primary);
   --state-border-on-accent-primary-3: var(--theme-neutral-on-accent-primary);
   --state-border-on-accent-primary-4: var(--theme-neutral-on-accent-primary);
+  --state-text-on-accent-tetruiary: var(--theme-neutral-on-accent-tetriary);
+  --state-icon-on-accent-tetriary: var(--theme-neutral-on-accent-tetriary);
+  --state-text-tetriary: var(--theme-neutral-400);
+  --state-icon-tetriary: var(--theme-neutral-400);
 }
 
 [data-theme="dark"].ds-interactive:disabled,
@@ -879,16 +939,16 @@
   --state-bg-primary: var(--theme-neutral-400);
   --state-border-accent: var(--theme-neutral-400);
   --state-border-secondary: var(--theme-neutral-200);
-  --state-text-on-accent: var(--theme-neutral-on-accent-secondary);
-  --state-text-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
+  --state-text-on-accent-primary: var(--theme-neutral-on-accent-secondary);
+  --state-text-on-accent-secondary: var(--theme-neutral-on-accent-tetriary);
   --state-text-secondary: var(--theme-neutral-300);
   --state-icon-secondary: var(--theme-neutral-300);
-  --state-icon-on-accent: var(--theme-neutral-on-accent-secondary);
-  --state-icon-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
+  --state-icon-on-accent-primary: var(--theme-neutral-on-accent-secondary);
+  --state-icon-on-accent-secondary: var(--theme-neutral-on-accent-tetriary);
   --state-border-primary: var(--theme-neutral-400);
   --state-bg-secondary: var(--theme-neutral-300);
   --state-border-on-accent-primary: var(--theme-neutral-on-accent-secondary);
-  --state-border-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
+  --state-border-on-accent-secondary: var(--theme-neutral-on-accent-tetriary);
   --state-text-info: var(--theme-neutral-400);
   --state-text-success: var(--theme-neutral-400);
   --state-text-warning: var(--theme-neutral-400);
@@ -925,6 +985,10 @@
   --state-border-on-accent-primary-2: var(--theme-neutral-on-accent-secondary);
   --state-border-on-accent-primary-3: var(--theme-neutral-on-accent-secondary);
   --state-border-on-accent-primary-4: var(--theme-neutral-on-accent-secondary);
+  --state-text-on-accent-tetruiary: var(--theme-neutral-on-accent-tetriary);
+  --state-icon-on-accent-tetriary: var(--theme-neutral-on-accent-tetriary);
+  --state-text-tetriary: var(--theme-neutral-200);
+  --state-icon-tetriary: var(--theme-neutral-200);
 }
 
 [data-theme="dark"].ds-interactive:hover,
@@ -937,11 +1001,11 @@
   --state-bg-primary: var(--theme-neutral-900);
   --state-border-accent: var(--theme-accent-600);
   --state-border-secondary: var(--theme-neutral-400);
-  --state-text-on-accent: var(--theme-neutral-on-accent-primary);
+  --state-text-on-accent-primary: var(--theme-neutral-on-accent-primary);
   --state-text-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
   --state-text-secondary: var(--theme-neutral-600);
   --state-icon-secondary: var(--theme-neutral-600);
-  --state-icon-on-accent: var(--theme-neutral-on-accent-primary);
+  --state-icon-on-accent-primary: var(--theme-neutral-on-accent-primary);
   --state-icon-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
   --state-border-primary: var(--theme-neutral-default);
   --state-bg-secondary: var(--theme-neutral-600);
@@ -983,6 +1047,10 @@
   --state-border-on-accent-primary-2: var(--theme-neutral-on-accent-primary);
   --state-border-on-accent-primary-3: var(--theme-neutral-on-accent-primary);
   --state-border-on-accent-primary-4: var(--theme-neutral-on-accent-primary);
+  --state-text-on-accent-tetruiary: var(--theme-neutral-on-accent-tetriary);
+  --state-icon-on-accent-tetriary: var(--theme-neutral-on-accent-tetriary);
+  --state-text-tetriary: var(--theme-neutral-default);
+  --state-icon-tetriary: var(--theme-neutral-default);
 }
 
 .ds-interactive:hover,
@@ -995,11 +1063,11 @@
   --state-bg-primary: var(--theme-neutral-900);
   --state-border-accent: var(--theme-accent-600);
   --state-border-secondary: var(--theme-neutral-400);
-  --state-text-on-accent: var(--theme-neutral-on-accent-primary);
+  --state-text-on-accent-primary: var(--theme-neutral-on-accent-primary);
   --state-text-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
   --state-text-secondary: var(--theme-neutral-600);
   --state-icon-secondary: var(--theme-neutral-600);
-  --state-icon-on-accent: var(--theme-neutral-on-accent-primary);
+  --state-icon-on-accent-primary: var(--theme-neutral-on-accent-primary);
   --state-icon-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
   --state-border-primary: var(--theme-neutral-default);
   --state-bg-secondary: var(--theme-neutral-600);
@@ -1041,6 +1109,10 @@
   --state-border-on-accent-primary-2: var(--theme-neutral-on-accent-primary);
   --state-border-on-accent-primary-3: var(--theme-neutral-on-accent-primary);
   --state-border-on-accent-primary-4: var(--theme-neutral-on-accent-primary);
+  --state-text-on-accent-tetruiary: var(--theme-neutral-on-accent-tetriary);
+  --state-icon-on-accent-tetriary: var(--theme-neutral-on-accent-tetriary);
+  --state-text-tetriary: var(--theme-neutral-default);
+  --state-icon-tetriary: var(--theme-neutral-default);
 }
 
 .ds-interactive:active,
@@ -1053,11 +1125,11 @@
   --state-bg-primary: var(--theme-neutral-900);
   --state-border-accent: var(--theme-accent-default);
   --state-border-secondary: var(--theme-neutral-300);
-  --state-text-on-accent: var(--theme-neutral-on-accent-primary);
+  --state-text-on-accent-primary: var(--theme-neutral-on-accent-primary);
   --state-text-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
   --state-text-secondary: var(--theme-neutral-default);
   --state-icon-secondary: var(--theme-neutral-default);
-  --state-icon-on-accent: var(--theme-neutral-on-accent-primary);
+  --state-icon-on-accent-primary: var(--theme-neutral-on-accent-primary);
   --state-icon-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
   --state-border-primary: var(--theme-neutral-600);
   --state-bg-secondary: var(--theme-neutral-default);
@@ -1099,6 +1171,10 @@
   --state-border-on-accent-primary-2: var(--theme-neutral-on-accent-primary);
   --state-border-on-accent-primary-3: var(--theme-neutral-on-accent-primary);
   --state-border-on-accent-primary-4: var(--theme-neutral-on-accent-primary);
+  --state-text-on-accent-tetruiary: var(--theme-neutral-on-accent-tetriary);
+  --state-icon-on-accent-tetriary: var(--theme-neutral-on-accent-tetriary);
+  --state-text-tetriary: var(--theme-neutral-400);
+  --state-icon-tetriary: var(--theme-neutral-400);
 }
 
 .ds-interactive:disabled,
@@ -1111,16 +1187,16 @@
   --state-bg-primary: var(--theme-neutral-400);
   --state-border-accent: var(--theme-neutral-400);
   --state-border-secondary: var(--theme-neutral-200);
-  --state-text-on-accent: var(--theme-neutral-on-accent-secondary);
-  --state-text-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
+  --state-text-on-accent-primary: var(--theme-neutral-on-accent-secondary);
+  --state-text-on-accent-secondary: var(--theme-neutral-on-accent-tetriary);
   --state-text-secondary: var(--theme-neutral-300);
   --state-icon-secondary: var(--theme-neutral-300);
-  --state-icon-on-accent: var(--theme-neutral-on-accent-secondary);
-  --state-icon-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
+  --state-icon-on-accent-primary: var(--theme-neutral-on-accent-secondary);
+  --state-icon-on-accent-secondary: var(--theme-neutral-on-accent-tetriary);
   --state-border-primary: var(--theme-neutral-400);
   --state-bg-secondary: var(--theme-neutral-300);
   --state-border-on-accent-primary: var(--theme-neutral-on-accent-secondary);
-  --state-border-on-accent-secondary: var(--theme-neutral-on-accent-secondary);
+  --state-border-on-accent-secondary: var(--theme-neutral-on-accent-tetriary);
   --state-text-info: var(--theme-neutral-400);
   --state-text-success: var(--theme-neutral-400);
   --state-text-warning: var(--theme-neutral-400);
@@ -1157,6 +1233,10 @@
   --state-border-on-accent-primary-2: var(--theme-neutral-on-accent-secondary);
   --state-border-on-accent-primary-3: var(--theme-neutral-on-accent-secondary);
   --state-border-on-accent-primary-4: var(--theme-neutral-on-accent-secondary);
+  --state-text-on-accent-tetruiary: var(--theme-neutral-on-accent-tetriary);
+  --state-icon-on-accent-tetriary: var(--theme-neutral-on-accent-tetriary);
+  --state-text-tetriary: var(--theme-neutral-200);
+  --state-icon-tetriary: var(--theme-neutral-200);
 }
 
 :root,
@@ -1478,6 +1558,8 @@
   --on-accent-border-message: var(--message-border-secondary);
   --on-accent-bg-message: var(--message-bg-secondary);
   --on-accent-border-tetriary: var(--state-border-tetriary);
+  --on-accent-text-tetriary: var(--state-text-tetriary);
+  --on-accent-icon-tetriary: var(--state-icon-tetriary);
 }
 
 /* Переменные CSS наследуют вычисленное значение, а не текст объявления —
@@ -1499,6 +1581,8 @@
   --on-accent-border-message: var(--message-border-secondary);
   --on-accent-bg-message: var(--message-bg-secondary);
   --on-accent-border-tetriary: var(--state-border-tetriary);
+  --on-accent-text-tetriary: var(--state-text-tetriary);
+  --on-accent-icon-tetriary: var(--state-icon-tetriary);
 }
 
 .ds-interactive:disabled,
@@ -1517,6 +1601,8 @@
   --on-accent-border-message: var(--message-border-secondary);
   --on-accent-bg-message: var(--message-bg-secondary);
   --on-accent-border-tetriary: var(--state-border-tetriary);
+  --on-accent-text-tetriary: var(--state-text-tetriary);
+  --on-accent-icon-tetriary: var(--state-icon-tetriary);
 }
 
 .ds-interactive:hover,
@@ -1535,6 +1621,8 @@
   --on-accent-border-message: var(--message-border-secondary);
   --on-accent-bg-message: var(--message-bg-secondary);
   --on-accent-border-tetriary: var(--state-border-tetriary);
+  --on-accent-text-tetriary: var(--state-text-tetriary);
+  --on-accent-icon-tetriary: var(--state-icon-tetriary);
 }
 
 [data-accent="purple"] {
@@ -1552,6 +1640,8 @@
   --on-accent-border-message: var(--message-border-secondary);
   --on-accent-bg-message: var(--message-bg-secondary);
   --on-accent-border-tetriary: var(--state-border-tetriary);
+  --on-accent-text-tetriary: var(--state-text-tetriary);
+  --on-accent-icon-tetriary: var(--state-icon-tetriary);
 }
 
 [data-accent="ruby"] {
@@ -1569,6 +1659,8 @@
   --on-accent-border-message: var(--message-border-secondary);
   --on-accent-bg-message: var(--message-bg-secondary);
   --on-accent-border-tetriary: var(--state-border-tetriary);
+  --on-accent-text-tetriary: var(--state-text-tetriary);
+  --on-accent-icon-tetriary: var(--state-icon-tetriary);
 }
 
 [data-accent="sky"] {
@@ -1586,6 +1678,8 @@
   --on-accent-border-message: var(--message-border-secondary);
   --on-accent-bg-message: var(--message-bg-secondary);
   --on-accent-border-tetriary: var(--state-border-tetriary);
+  --on-accent-text-tetriary: var(--state-text-tetriary);
+  --on-accent-icon-tetriary: var(--state-icon-tetriary);
 }
 
 [data-message="error"] {
@@ -1603,6 +1697,8 @@
   --on-accent-border-message: var(--message-border-secondary);
   --on-accent-bg-message: var(--message-bg-secondary);
   --on-accent-border-tetriary: var(--state-border-tetriary);
+  --on-accent-text-tetriary: var(--state-text-tetriary);
+  --on-accent-icon-tetriary: var(--state-icon-tetriary);
 }
 
 [data-message="success"] {
@@ -1620,6 +1716,8 @@
   --on-accent-border-message: var(--message-border-secondary);
   --on-accent-bg-message: var(--message-bg-secondary);
   --on-accent-border-tetriary: var(--state-border-tetriary);
+  --on-accent-text-tetriary: var(--state-text-tetriary);
+  --on-accent-icon-tetriary: var(--state-icon-tetriary);
 }
 
 [data-message="warning"] {
@@ -1637,6 +1735,8 @@
   --on-accent-border-message: var(--message-border-secondary);
   --on-accent-bg-message: var(--message-bg-secondary);
   --on-accent-border-tetriary: var(--state-border-tetriary);
+  --on-accent-text-tetriary: var(--state-text-tetriary);
+  --on-accent-icon-tetriary: var(--state-icon-tetriary);
 }
 
 [data-theme="dark"] {
@@ -1654,194 +1754,218 @@
   --on-accent-border-message: var(--message-border-secondary);
   --on-accent-bg-message: var(--message-bg-secondary);
   --on-accent-border-tetriary: var(--state-border-tetriary);
+  --on-accent-text-tetriary: var(--state-text-tetriary);
+  --on-accent-icon-tetriary: var(--state-icon-tetriary);
 }
 
 .ds-interactive:active[data-on-accent],
 [data-state="pressed"][data-on-accent] {
-  --on-accent-text-primary: var(--state-text-on-accent);
+  --on-accent-text-primary: var(--state-text-on-accent-primary);
   --on-accent-text-secondary: var(--state-text-on-accent-secondary);
-  --on-accent-icon-primary: var(--state-icon-on-accent);
+  --on-accent-icon-primary: var(--state-icon-on-accent-primary);
   --on-accent-icon-secondary: var(--state-text-on-accent-secondary);
   --on-accent-border-primary: var(--state-border-on-accent-primary);
   --on-accent-border-secondary: var(--state-border-on-accent-secondary);
-  --on-accent-text-custom: var(--state-text-on-accent);
-  --on-accent-icon-custom: var(--state-text-on-accent);
+  --on-accent-text-custom: var(--state-text-on-accent-primary);
+  --on-accent-icon-custom: var(--state-text-on-accent-primary);
   --on-accent-border-custom: var(--state-border-on-accent-secondary);
   --on-accent-text-message: var(--state-text-on-accent-secondary);
   --on-accent-icon-message: var(--state-text-on-accent-secondary);
   --on-accent-border-message: var(--message-border-primary);
   --on-accent-bg-message: var(--message-bg-primary);
   --on-accent-border-tetriary: var(--state-border-on-accent-tetriary);
+  --on-accent-text-tetriary: var(--state-text-on-accent-tetruiary);
+  --on-accent-icon-tetriary: var(--state-text-on-accent-tetruiary);
 }
 
 .ds-interactive:disabled[data-on-accent],
 [data-state="disabled"][data-on-accent] {
-  --on-accent-text-primary: var(--state-text-on-accent);
+  --on-accent-text-primary: var(--state-text-on-accent-primary);
   --on-accent-text-secondary: var(--state-text-on-accent-secondary);
-  --on-accent-icon-primary: var(--state-icon-on-accent);
+  --on-accent-icon-primary: var(--state-icon-on-accent-primary);
   --on-accent-icon-secondary: var(--state-text-on-accent-secondary);
   --on-accent-border-primary: var(--state-border-on-accent-primary);
   --on-accent-border-secondary: var(--state-border-on-accent-secondary);
-  --on-accent-text-custom: var(--state-text-on-accent);
-  --on-accent-icon-custom: var(--state-text-on-accent);
+  --on-accent-text-custom: var(--state-text-on-accent-primary);
+  --on-accent-icon-custom: var(--state-text-on-accent-primary);
   --on-accent-border-custom: var(--state-border-on-accent-secondary);
   --on-accent-text-message: var(--state-text-on-accent-secondary);
   --on-accent-icon-message: var(--state-text-on-accent-secondary);
   --on-accent-border-message: var(--message-border-primary);
   --on-accent-bg-message: var(--message-bg-primary);
   --on-accent-border-tetriary: var(--state-border-on-accent-tetriary);
+  --on-accent-text-tetriary: var(--state-text-on-accent-tetruiary);
+  --on-accent-icon-tetriary: var(--state-text-on-accent-tetruiary);
 }
 
 .ds-interactive:hover[data-on-accent],
 [data-state="hover"][data-on-accent] {
-  --on-accent-text-primary: var(--state-text-on-accent);
+  --on-accent-text-primary: var(--state-text-on-accent-primary);
   --on-accent-text-secondary: var(--state-text-on-accent-secondary);
-  --on-accent-icon-primary: var(--state-icon-on-accent);
+  --on-accent-icon-primary: var(--state-icon-on-accent-primary);
   --on-accent-icon-secondary: var(--state-text-on-accent-secondary);
   --on-accent-border-primary: var(--state-border-on-accent-primary);
   --on-accent-border-secondary: var(--state-border-on-accent-secondary);
-  --on-accent-text-custom: var(--state-text-on-accent);
-  --on-accent-icon-custom: var(--state-text-on-accent);
+  --on-accent-text-custom: var(--state-text-on-accent-primary);
+  --on-accent-icon-custom: var(--state-text-on-accent-primary);
   --on-accent-border-custom: var(--state-border-on-accent-secondary);
   --on-accent-text-message: var(--state-text-on-accent-secondary);
   --on-accent-icon-message: var(--state-text-on-accent-secondary);
   --on-accent-border-message: var(--message-border-primary);
   --on-accent-bg-message: var(--message-bg-primary);
   --on-accent-border-tetriary: var(--state-border-on-accent-tetriary);
+  --on-accent-text-tetriary: var(--state-text-on-accent-tetruiary);
+  --on-accent-icon-tetriary: var(--state-text-on-accent-tetruiary);
 }
 
 [data-accent="purple"][data-on-accent] {
-  --on-accent-text-primary: var(--state-text-on-accent);
+  --on-accent-text-primary: var(--state-text-on-accent-primary);
   --on-accent-text-secondary: var(--state-text-on-accent-secondary);
-  --on-accent-icon-primary: var(--state-icon-on-accent);
+  --on-accent-icon-primary: var(--state-icon-on-accent-primary);
   --on-accent-icon-secondary: var(--state-text-on-accent-secondary);
   --on-accent-border-primary: var(--state-border-on-accent-primary);
   --on-accent-border-secondary: var(--state-border-on-accent-secondary);
-  --on-accent-text-custom: var(--state-text-on-accent);
-  --on-accent-icon-custom: var(--state-text-on-accent);
+  --on-accent-text-custom: var(--state-text-on-accent-primary);
+  --on-accent-icon-custom: var(--state-text-on-accent-primary);
   --on-accent-border-custom: var(--state-border-on-accent-secondary);
   --on-accent-text-message: var(--state-text-on-accent-secondary);
   --on-accent-icon-message: var(--state-text-on-accent-secondary);
   --on-accent-border-message: var(--message-border-primary);
   --on-accent-bg-message: var(--message-bg-primary);
   --on-accent-border-tetriary: var(--state-border-on-accent-tetriary);
+  --on-accent-text-tetriary: var(--state-text-on-accent-tetruiary);
+  --on-accent-icon-tetriary: var(--state-text-on-accent-tetruiary);
 }
 
 [data-accent="ruby"][data-on-accent] {
-  --on-accent-text-primary: var(--state-text-on-accent);
+  --on-accent-text-primary: var(--state-text-on-accent-primary);
   --on-accent-text-secondary: var(--state-text-on-accent-secondary);
-  --on-accent-icon-primary: var(--state-icon-on-accent);
+  --on-accent-icon-primary: var(--state-icon-on-accent-primary);
   --on-accent-icon-secondary: var(--state-text-on-accent-secondary);
   --on-accent-border-primary: var(--state-border-on-accent-primary);
   --on-accent-border-secondary: var(--state-border-on-accent-secondary);
-  --on-accent-text-custom: var(--state-text-on-accent);
-  --on-accent-icon-custom: var(--state-text-on-accent);
+  --on-accent-text-custom: var(--state-text-on-accent-primary);
+  --on-accent-icon-custom: var(--state-text-on-accent-primary);
   --on-accent-border-custom: var(--state-border-on-accent-secondary);
   --on-accent-text-message: var(--state-text-on-accent-secondary);
   --on-accent-icon-message: var(--state-text-on-accent-secondary);
   --on-accent-border-message: var(--message-border-primary);
   --on-accent-bg-message: var(--message-bg-primary);
   --on-accent-border-tetriary: var(--state-border-on-accent-tetriary);
+  --on-accent-text-tetriary: var(--state-text-on-accent-tetruiary);
+  --on-accent-icon-tetriary: var(--state-text-on-accent-tetruiary);
 }
 
 [data-accent="sky"][data-on-accent] {
-  --on-accent-text-primary: var(--state-text-on-accent);
+  --on-accent-text-primary: var(--state-text-on-accent-primary);
   --on-accent-text-secondary: var(--state-text-on-accent-secondary);
-  --on-accent-icon-primary: var(--state-icon-on-accent);
+  --on-accent-icon-primary: var(--state-icon-on-accent-primary);
   --on-accent-icon-secondary: var(--state-text-on-accent-secondary);
   --on-accent-border-primary: var(--state-border-on-accent-primary);
   --on-accent-border-secondary: var(--state-border-on-accent-secondary);
-  --on-accent-text-custom: var(--state-text-on-accent);
-  --on-accent-icon-custom: var(--state-text-on-accent);
+  --on-accent-text-custom: var(--state-text-on-accent-primary);
+  --on-accent-icon-custom: var(--state-text-on-accent-primary);
   --on-accent-border-custom: var(--state-border-on-accent-secondary);
   --on-accent-text-message: var(--state-text-on-accent-secondary);
   --on-accent-icon-message: var(--state-text-on-accent-secondary);
   --on-accent-border-message: var(--message-border-primary);
   --on-accent-bg-message: var(--message-bg-primary);
   --on-accent-border-tetriary: var(--state-border-on-accent-tetriary);
+  --on-accent-text-tetriary: var(--state-text-on-accent-tetruiary);
+  --on-accent-icon-tetriary: var(--state-text-on-accent-tetruiary);
 }
 
 [data-message="error"][data-on-accent] {
-  --on-accent-text-primary: var(--state-text-on-accent);
+  --on-accent-text-primary: var(--state-text-on-accent-primary);
   --on-accent-text-secondary: var(--state-text-on-accent-secondary);
-  --on-accent-icon-primary: var(--state-icon-on-accent);
+  --on-accent-icon-primary: var(--state-icon-on-accent-primary);
   --on-accent-icon-secondary: var(--state-text-on-accent-secondary);
   --on-accent-border-primary: var(--state-border-on-accent-primary);
   --on-accent-border-secondary: var(--state-border-on-accent-secondary);
-  --on-accent-text-custom: var(--state-text-on-accent);
-  --on-accent-icon-custom: var(--state-text-on-accent);
+  --on-accent-text-custom: var(--state-text-on-accent-primary);
+  --on-accent-icon-custom: var(--state-text-on-accent-primary);
   --on-accent-border-custom: var(--state-border-on-accent-secondary);
   --on-accent-text-message: var(--state-text-on-accent-secondary);
   --on-accent-icon-message: var(--state-text-on-accent-secondary);
   --on-accent-border-message: var(--message-border-primary);
   --on-accent-bg-message: var(--message-bg-primary);
   --on-accent-border-tetriary: var(--state-border-on-accent-tetriary);
+  --on-accent-text-tetriary: var(--state-text-on-accent-tetruiary);
+  --on-accent-icon-tetriary: var(--state-text-on-accent-tetruiary);
 }
 
 [data-message="success"][data-on-accent] {
-  --on-accent-text-primary: var(--state-text-on-accent);
+  --on-accent-text-primary: var(--state-text-on-accent-primary);
   --on-accent-text-secondary: var(--state-text-on-accent-secondary);
-  --on-accent-icon-primary: var(--state-icon-on-accent);
+  --on-accent-icon-primary: var(--state-icon-on-accent-primary);
   --on-accent-icon-secondary: var(--state-text-on-accent-secondary);
   --on-accent-border-primary: var(--state-border-on-accent-primary);
   --on-accent-border-secondary: var(--state-border-on-accent-secondary);
-  --on-accent-text-custom: var(--state-text-on-accent);
-  --on-accent-icon-custom: var(--state-text-on-accent);
+  --on-accent-text-custom: var(--state-text-on-accent-primary);
+  --on-accent-icon-custom: var(--state-text-on-accent-primary);
   --on-accent-border-custom: var(--state-border-on-accent-secondary);
   --on-accent-text-message: var(--state-text-on-accent-secondary);
   --on-accent-icon-message: var(--state-text-on-accent-secondary);
   --on-accent-border-message: var(--message-border-primary);
   --on-accent-bg-message: var(--message-bg-primary);
   --on-accent-border-tetriary: var(--state-border-on-accent-tetriary);
+  --on-accent-text-tetriary: var(--state-text-on-accent-tetruiary);
+  --on-accent-icon-tetriary: var(--state-text-on-accent-tetruiary);
 }
 
 [data-message="warning"][data-on-accent] {
-  --on-accent-text-primary: var(--state-text-on-accent);
+  --on-accent-text-primary: var(--state-text-on-accent-primary);
   --on-accent-text-secondary: var(--state-text-on-accent-secondary);
-  --on-accent-icon-primary: var(--state-icon-on-accent);
+  --on-accent-icon-primary: var(--state-icon-on-accent-primary);
   --on-accent-icon-secondary: var(--state-text-on-accent-secondary);
   --on-accent-border-primary: var(--state-border-on-accent-primary);
   --on-accent-border-secondary: var(--state-border-on-accent-secondary);
-  --on-accent-text-custom: var(--state-text-on-accent);
-  --on-accent-icon-custom: var(--state-text-on-accent);
+  --on-accent-text-custom: var(--state-text-on-accent-primary);
+  --on-accent-icon-custom: var(--state-text-on-accent-primary);
   --on-accent-border-custom: var(--state-border-on-accent-secondary);
   --on-accent-text-message: var(--state-text-on-accent-secondary);
   --on-accent-icon-message: var(--state-text-on-accent-secondary);
   --on-accent-border-message: var(--message-border-primary);
   --on-accent-bg-message: var(--message-bg-primary);
   --on-accent-border-tetriary: var(--state-border-on-accent-tetriary);
+  --on-accent-text-tetriary: var(--state-text-on-accent-tetruiary);
+  --on-accent-icon-tetriary: var(--state-text-on-accent-tetruiary);
 }
 
 [data-theme="dark"][data-on-accent] {
-  --on-accent-text-primary: var(--state-text-on-accent);
+  --on-accent-text-primary: var(--state-text-on-accent-primary);
   --on-accent-text-secondary: var(--state-text-on-accent-secondary);
-  --on-accent-icon-primary: var(--state-icon-on-accent);
+  --on-accent-icon-primary: var(--state-icon-on-accent-primary);
   --on-accent-icon-secondary: var(--state-text-on-accent-secondary);
   --on-accent-border-primary: var(--state-border-on-accent-primary);
   --on-accent-border-secondary: var(--state-border-on-accent-secondary);
-  --on-accent-text-custom: var(--state-text-on-accent);
-  --on-accent-icon-custom: var(--state-text-on-accent);
+  --on-accent-text-custom: var(--state-text-on-accent-primary);
+  --on-accent-icon-custom: var(--state-text-on-accent-primary);
   --on-accent-border-custom: var(--state-border-on-accent-secondary);
   --on-accent-text-message: var(--state-text-on-accent-secondary);
   --on-accent-icon-message: var(--state-text-on-accent-secondary);
   --on-accent-border-message: var(--message-border-primary);
   --on-accent-bg-message: var(--message-bg-primary);
   --on-accent-border-tetriary: var(--state-border-on-accent-tetriary);
+  --on-accent-text-tetriary: var(--state-text-on-accent-tetruiary);
+  --on-accent-icon-tetriary: var(--state-text-on-accent-tetruiary);
 }
 
 [data-on-accent] {
-  --on-accent-text-primary: var(--state-text-on-accent);
+  --on-accent-text-primary: var(--state-text-on-accent-primary);
   --on-accent-text-secondary: var(--state-text-on-accent-secondary);
-  --on-accent-icon-primary: var(--state-icon-on-accent);
+  --on-accent-icon-primary: var(--state-icon-on-accent-primary);
   --on-accent-icon-secondary: var(--state-text-on-accent-secondary);
   --on-accent-border-primary: var(--state-border-on-accent-primary);
   --on-accent-border-secondary: var(--state-border-on-accent-secondary);
-  --on-accent-text-custom: var(--state-text-on-accent);
-  --on-accent-icon-custom: var(--state-text-on-accent);
+  --on-accent-text-custom: var(--state-text-on-accent-primary);
+  --on-accent-icon-custom: var(--state-text-on-accent-primary);
   --on-accent-border-custom: var(--state-border-on-accent-secondary);
   --on-accent-text-message: var(--state-text-on-accent-secondary);
   --on-accent-icon-message: var(--state-text-on-accent-secondary);
   --on-accent-border-message: var(--message-border-primary);
   --on-accent-bg-message: var(--message-bg-primary);
   --on-accent-border-tetriary: var(--state-border-on-accent-tetriary);
+  --on-accent-text-tetriary: var(--state-text-on-accent-tetruiary);
+  --on-accent-icon-tetriary: var(--state-text-on-accent-tetruiary);
 }

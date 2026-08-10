@@ -5,7 +5,11 @@
   width: 100%;
   padding-left: var(--padding-16);
   border-radius: var(--radius-16);
-  background: var(--element-bg-action-primary);
+  background: var(--element-bg-lvl-2);
+  box-shadow:
+    0 -2px 4px 0 var(--element-bg-shadow-light),
+    0 4px 8px 0 var(--element-bg-shadow-light),
+    0 20px 24px 0 var(--element-bg-shadow-dark);
   font-family: var(--font-family-main);
 }
 
@@ -27,13 +31,13 @@
   gap: var(--margin-4);
   min-width: 0;
   padding: var(--padding-16);
-  color: var(--element-text-primary);
 }
 
 .title {
   margin: 0;
   width: 100%;
   overflow: hidden;
+  color: var(--element-text-primary);
   font-size: var(--font-size-heading-xs);
   font-weight: var(--font-weight-bold);
   line-height: 1.2;
@@ -43,6 +47,7 @@
 .caption {
   margin: 0;
   width: 100%;
+  color: var(--element-text-secondary);
   font-size: var(--font-size-body-s);
   font-weight: var(--font-weight-regular);
   line-height: 1.4;
@@ -69,5 +74,5 @@
 .divider {
   align-self: stretch;
   width: var(--stroke-1);
-  background: var(--element-border-tetriary);
+  background: var(--element-border-secondary);
 }

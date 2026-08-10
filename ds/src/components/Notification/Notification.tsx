@@ -20,17 +20,18 @@ export type NotificationProps = NotificationOwnProps &
   Omit<HTMLAttributes<HTMLDivElement>, keyof NotificationOwnProps>;
 
 /**
- * Уведомление-тост. Узел 207:6151 в Figma, сверен через MCP-мост: тёмный
- * фон и три необязательных слота (кнопка, разделитель+крестик закрытия)
- * видны только при переданном обработчике — так же, как onRemove у
- * AttachFileItem, а не отдельным булевым флагом, который надо синхронизировать
- * с наличием колбэка вручную.
+ * Уведомление-тост. Узел 207:6151 в Figma, сверен через MCP-мост: светлая
+ * карточка (element_bg_lvl_2) с тенью, а не залитая акцентом плашка —
+ * три необязательных слота (кнопка, разделитель+крестик закрытия) видны
+ * только при переданном обработчике — так же, как onRemove у AttachFileItem,
+ * а не отдельным булевым флагом, который надо синхронизировать с наличием
+ * колбэка вручную.
  *
- * Белый цвет текста/иконок нигде не задан вручную: один data-on-accent
- * на корне — тот же переключатель, что у залитых Button/Indicator —
- * каскадом красит element_text_primary/element_icon_secondary/
- * element_border_tetriary во вложенных TextButton/IconButton/разделителе
- * в их on-accent варианты, ровно как в макете.
+ * Никакого data-on-accent на корне: фон нейтральный, поэтому title/caption/
+ * TextButton/IconButton/разделитель берут обычные (не on-accent) варианты
+ * своих токенов через тот же каскад — title element_text_primary, caption
+ * element_text_secondary, разделитель element_border_secondary, ровно как
+ * в макете.
  *
  * role="status" — тост объявляется скринридером при появлении без
  * необходимости переводить на него фокус (в макете этого нет, но без
@@ -50,7 +51,7 @@ export function Notification({
   ...rest
 }: NotificationProps) {
   return (
-    <div {...rest} data-on-accent="true" role="status" className={[styles.notification, className].filter(Boolean).join(' ')}>
+    <div {...rest} role="status" className={[styles.notification, className].filter(Boolean).join(' ')}>
       {showBadge && (
         <div className={styles.badgeSlot}>
           <StatusBadge type={badgeType} />

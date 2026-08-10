@@ -123,6 +123,7 @@
   --theme-neutral-on-accent-tetriary: var(--palette-foundation-white-tetriary);
   --theme-neutral-shadow-dark: var(--palette-foundation-black-08);
   --theme-neutral-shadow-light: var(--palette-foundation-black-04);
+  --theme-neutral-absolute: var(--palette-foundation-white-primary);
 }
 
 /* Переменные CSS наследуют вычисленное значение, а не текст объявления —
@@ -200,6 +201,7 @@
   --theme-neutral-on-accent-tetriary: var(--palette-foundation-white-tetriary);
   --theme-neutral-shadow-dark: var(--palette-foundation-black-08);
   --theme-neutral-shadow-light: var(--palette-foundation-black-04);
+  --theme-neutral-absolute: var(--palette-foundation-white-primary);
 }
 
 [data-accent="ruby"] {
@@ -274,6 +276,7 @@
   --theme-neutral-on-accent-tetriary: var(--palette-foundation-white-tetriary);
   --theme-neutral-shadow-dark: var(--palette-foundation-black-08);
   --theme-neutral-shadow-light: var(--palette-foundation-black-04);
+  --theme-neutral-absolute: var(--palette-foundation-white-primary);
 }
 
 [data-accent="sky"] {
@@ -348,6 +351,7 @@
   --theme-neutral-on-accent-tetriary: var(--palette-foundation-white-tetriary);
   --theme-neutral-shadow-dark: var(--palette-foundation-black-08);
   --theme-neutral-shadow-light: var(--palette-foundation-black-04);
+  --theme-neutral-absolute: var(--palette-foundation-white-primary);
 }
 
 [data-accent="purple"][data-theme="dark"] {
@@ -422,6 +426,7 @@
   --theme-neutral-on-accent-tetriary: var(--palette-foundation-white-tetriary);
   --theme-neutral-shadow-dark: var(--palette-foundation-white-08);
   --theme-neutral-shadow-light: var(--palette-foundation-white-04);
+  --theme-neutral-absolute: var(--palette-foundation-black-primary);
 }
 
 [data-accent="ruby"][data-theme="dark"] {
@@ -496,6 +501,7 @@
   --theme-neutral-on-accent-tetriary: var(--palette-foundation-white-tetriary);
   --theme-neutral-shadow-dark: var(--palette-foundation-white-08);
   --theme-neutral-shadow-light: var(--palette-foundation-white-04);
+  --theme-neutral-absolute: var(--palette-foundation-black-primary);
 }
 
 [data-accent="sky"][data-theme="dark"] {
@@ -570,6 +576,7 @@
   --theme-neutral-on-accent-tetriary: var(--palette-foundation-white-tetriary);
   --theme-neutral-shadow-dark: var(--palette-foundation-white-08);
   --theme-neutral-shadow-light: var(--palette-foundation-white-04);
+  --theme-neutral-absolute: var(--palette-foundation-black-primary);
 }
 
 [data-theme="dark"] {
@@ -644,4 +651,5 @@
   --theme-neutral-on-accent-tetriary: var(--palette-foundation-white-tetriary);
   --theme-neutral-shadow-dark: var(--palette-foundation-white-08);
   --theme-neutral-shadow-light: var(--palette-foundation-white-04);
+  --theme-neutral-absolute: var(--palette-foundation-black-primary);
 }
