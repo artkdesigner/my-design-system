@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-10T09:31:48.001Z",
+  "exportedAt": "2026-08-10T11:28:24.537Z",
   "fileName": "Design system",
   "collections": [
     {
@@ -1819,7 +1819,7 @@
             },
             "40:0": {
               "type": "ALIAS",
-              "id": "VariableID:50:660"
+              "id": "VariableID:50:659"
             }
           }
         },
@@ -1849,7 +1849,7 @@
             },
             "40:0": {
               "type": "ALIAS",
-              "id": "VariableID:57:833"
+              "id": "VariableID:79:4092"
             }
           }
         },
@@ -1864,7 +1864,7 @@
             },
             "40:0": {
               "type": "ALIAS",
-              "id": "VariableID:262:2529"
+              "id": "VariableID:207:8229"
             }
           }
         },
