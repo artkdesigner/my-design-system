@@ -4,7 +4,7 @@ import { Tooltip } from './Tooltip';
 import { TooltipContent } from '../TooltipContent';
 
 const meta: Meta<typeof Tooltip> = {
-  title: 'Components/Tooltip',
+  title: 'Components/Tooltip/Tooltip',
   component: Tooltip
 };
 

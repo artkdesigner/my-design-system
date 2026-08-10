@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { SelectTag } from './SelectTag';
 
 const meta: Meta<typeof SelectTag> = {
-  title: 'Components/SelectTag',
+  title: 'Components/SelectWithTags/SelectTag',
   component: SelectTag,
   args: { label: 'Aurum' }
 };

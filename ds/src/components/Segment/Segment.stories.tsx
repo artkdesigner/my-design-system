@@ -10,7 +10,7 @@ const PinIcon = () => (
 );
 
 const meta: Meta<typeof Segment> = {
-  title: 'Components/Segment',
+  title: 'Components/SegmentedControl/Segment',
   component: Segment,
   args: { children: 'Label' }
 };

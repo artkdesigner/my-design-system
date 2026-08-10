@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { FileUploadContent } from './FileUploadContent';
 
 const meta: Meta<typeof FileUploadContent> = {
-  title: 'Components/FileUploadContent',
+  title: 'Components/FileUploadItem/FileUploadContent',
   component: FileUploadContent,
   args: { name: 'Name', format: 'format', subtitle1: 'Subtitle 1', subtitle2: 'Subtitle 2' }
 };

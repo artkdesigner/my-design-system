@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { TooltipContent } from './TooltipContent';
 
 const meta: Meta<typeof TooltipContent> = {
-  title: 'Components/TooltipContent',
+  title: 'Components/Tooltip/TooltipContent',
   component: TooltipContent,
   args: { text: 'Tooltip text. Tooltip text. Tooltip text.' }
 };

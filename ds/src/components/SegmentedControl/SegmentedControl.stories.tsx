@@ -7,7 +7,7 @@ import { Segment } from '../Segment';
 const OPTIONS = ['Label', 'Label', 'Label', 'Label', 'Label'];
 
 const meta: Meta<typeof SegmentedControl> = {
-  title: 'Components/SegmentedControl',
+  title: 'Components/SegmentedControl/SegmentedControl',
   component: SegmentedControl
 };
 

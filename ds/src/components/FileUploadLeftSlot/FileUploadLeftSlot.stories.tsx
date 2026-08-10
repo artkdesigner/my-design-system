@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { FileUploadLeftSlot } from './FileUploadLeftSlot';
 
 const meta: Meta<typeof FileUploadLeftSlot> = {
-  title: 'Components/FileUploadLeftSlot',
+  title: 'Components/FileUploadItem/FileUploadLeftSlot',
   component: FileUploadLeftSlot
 };
 

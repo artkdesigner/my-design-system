@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { AccordionBody } from './AccordionBody';
 
 const meta: Meta<typeof AccordionBody> = {
-  title: 'Components/AccordionBody',
+  title: 'Components/Accordion/AccordionBody',
   component: AccordionBody,
   args: { preset: 'text', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.' }
 };

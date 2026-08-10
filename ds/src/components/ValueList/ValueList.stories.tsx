@@ -12,7 +12,7 @@ const items: ValueListItem[] = [
 ];
 
 const meta: Meta<typeof ValueList> = {
-  title: 'Components/ValueList',
+  title: 'Components/SelectWithTags/ValueList',
   component: ValueList,
   args: { items }
 };

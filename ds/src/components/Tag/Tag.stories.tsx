@@ -5,7 +5,7 @@ import { Tag } from './Tag';
 import { Icon } from '../Icon';
 
 const meta: Meta<typeof Tag> = {
-  title: 'Components/Tag',
+  title: 'Components/Tag/Tag',
   component: Tag,
   args: { label: 'Label' }
 };

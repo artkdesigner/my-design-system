@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { SwitchItem } from './SwitchItem';
 
 const meta: Meta<typeof SwitchItem> = {
-  title: 'Components/SwitchItem',
+  title: 'Components/Switch/SwitchItem',
   component: SwitchItem,
   args: { 'aria-label': 'Уведомления' }
 };

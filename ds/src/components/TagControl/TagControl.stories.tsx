@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { TagControl } from './TagControl';
 
 const meta: Meta<typeof TagControl> = {
-  title: 'Components/TagControl',
+  title: 'Components/SelectWithTags/TagControl',
   component: TagControl
 };
 

@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { TooltipTail } from './TooltipTail';
 
 const meta: Meta<typeof TooltipTail> = {
-  title: 'Components/TooltipTail',
+  title: 'Components/Tooltip/TooltipTail',
   component: TooltipTail
 };
 

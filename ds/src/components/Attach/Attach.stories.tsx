@@ -4,7 +4,7 @@ import { Attach } from './Attach';
 import { AttachFileItem } from '../AttachFileItem';
 
 const meta: Meta<typeof Attach> = {
-  title: 'Components/Attach',
+  title: 'Components/Attach/Attach',
   component: Attach,
   args: { hint: 'Hint text' }
 };

@@ -4,7 +4,7 @@ import { Tab } from './Tab';
 import { Icon } from '../Icon';
 
 const meta: Meta<typeof Tab> = {
-  title: 'Components/Tab',
+  title: 'Components/Tab/Tab',
   component: Tab,
   args: { children: 'Label' }
 };

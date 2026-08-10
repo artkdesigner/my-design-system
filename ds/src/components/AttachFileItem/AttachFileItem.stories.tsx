@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { AttachFileItem } from './AttachFileItem';
 
 const meta: Meta<typeof AttachFileItem> = {
-  title: 'Components/AttachFileItem',
+  title: 'Components/Attach/AttachFileItem',
   component: AttachFileItem
 };
 

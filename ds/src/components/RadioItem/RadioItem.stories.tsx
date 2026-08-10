@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { RadioItem } from './RadioItem';
 
 const meta: Meta<typeof RadioItem> = {
-  title: 'Components/RadioItem',
+  title: 'Components/Radio/RadioItem',
   component: RadioItem,
   args: { 'aria-label': 'Вариант' }
 };

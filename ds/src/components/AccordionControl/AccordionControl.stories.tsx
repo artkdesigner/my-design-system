@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { AccordionControl } from './AccordionControl';
 
 const meta: Meta<typeof AccordionControl> = {
-  title: 'Components/AccordionControl',
+  title: 'Components/Accordion/AccordionControl',
   component: AccordionControl
 };
 

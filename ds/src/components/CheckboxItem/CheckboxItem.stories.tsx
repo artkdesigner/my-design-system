@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { CheckboxItem } from './CheckboxItem';
 
 const meta: Meta<typeof CheckboxItem> = {
-  title: 'Components/CheckboxItem',
+  title: 'Components/Checkbox/CheckboxItem',
   component: CheckboxItem,
   args: { 'aria-label': 'Согласие' }
 };

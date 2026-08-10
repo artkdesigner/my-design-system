@@ -12,7 +12,7 @@ const options = [
 ];
 
 const meta: Meta<typeof SelectWithTags> = {
-  title: 'Components/SelectWithTags',
+  title: 'Components/SelectWithTags/SelectWithTags',
   component: SelectWithTags,
   args: { label: 'Label', hint: 'Hint text', placeholder: 'Placeholder', options }
 };

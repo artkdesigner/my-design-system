@@ -4,7 +4,7 @@ import { TabGroup } from './TabGroup';
 import { Tab } from '../Tab';
 
 const meta: Meta<typeof TabGroup> = {
-  title: 'Components/TabGroup',
+  title: 'Components/Tab/TabGroup',
   component: TabGroup
 };
 
