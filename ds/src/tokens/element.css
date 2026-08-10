@@ -31,8 +31,8 @@
   --element-bg-action-tetriary: var(--state-bg-tetriary);
   --element-border-tetriary: var(--on-accent-border-tetriary);
   --element-bg-lvl-3: var(--theme-neutral-300);
-  --element-bg-shadow-dark: var(--theme-neutral-absolute-shadow-dark);
-  --element-bg-shadow-light: var(--theme-neutral-absolute-shadow-light);
+  --element-bg-shadow-dark: var(--theme-neutral-shadow-dark);
+  --element-bg-shadow-light: var(--theme-neutral-shadow-light);
 }
 
 /* Переменные CSS наследуют вычисленное значение, а не текст объявления —
@@ -69,8 +69,8 @@
   --element-bg-action-tetriary: var(--state-bg-tetriary);
   --element-border-tetriary: var(--on-accent-border-tetriary);
   --element-bg-lvl-3: var(--theme-neutral-300);
-  --element-bg-shadow-dark: var(--theme-neutral-absolute-shadow-dark);
-  --element-bg-shadow-light: var(--theme-neutral-absolute-shadow-light);
+  --element-bg-shadow-dark: var(--theme-neutral-shadow-dark);
+  --element-bg-shadow-light: var(--theme-neutral-shadow-light);
 }
 
 .ds-interactive:disabled,
@@ -104,8 +104,8 @@
   --element-bg-action-tetriary: var(--state-bg-tetriary);
   --element-border-tetriary: var(--on-accent-border-tetriary);
   --element-bg-lvl-3: var(--theme-neutral-300);
-  --element-bg-shadow-dark: var(--theme-neutral-absolute-shadow-dark);
-  --element-bg-shadow-light: var(--theme-neutral-absolute-shadow-light);
+  --element-bg-shadow-dark: var(--theme-neutral-shadow-dark);
+  --element-bg-shadow-light: var(--theme-neutral-shadow-light);
 }
 
 .ds-interactive:hover,
@@ -139,8 +139,8 @@
   --element-bg-action-tetriary: var(--state-bg-tetriary);
   --element-border-tetriary: var(--on-accent-border-tetriary);
   --element-bg-lvl-3: var(--theme-neutral-300);
-  --element-bg-shadow-dark: var(--theme-neutral-absolute-shadow-dark);
-  --element-bg-shadow-light: var(--theme-neutral-absolute-shadow-light);
+  --element-bg-shadow-dark: var(--theme-neutral-shadow-dark);
+  --element-bg-shadow-light: var(--theme-neutral-shadow-light);
 }
 
 [data-accent="purple"] {
@@ -173,8 +173,8 @@
   --element-bg-action-tetriary: var(--state-bg-tetriary);
   --element-border-tetriary: var(--on-accent-border-tetriary);
   --element-bg-lvl-3: var(--theme-neutral-300);
-  --element-bg-shadow-dark: var(--theme-neutral-absolute-shadow-dark);
-  --element-bg-shadow-light: var(--theme-neutral-absolute-shadow-light);
+  --element-bg-shadow-dark: var(--theme-neutral-shadow-dark);
+  --element-bg-shadow-light: var(--theme-neutral-shadow-light);
 }
 
 [data-accent="red"] {
@@ -207,8 +207,8 @@
   --element-bg-action-tetriary: var(--state-bg-tetriary);
   --element-border-tetriary: var(--on-accent-border-tetriary);
   --element-bg-lvl-3: var(--theme-neutral-300);
-  --element-bg-shadow-dark: var(--theme-neutral-absolute-shadow-dark);
-  --element-bg-shadow-light: var(--theme-neutral-absolute-shadow-light);
+  --element-bg-shadow-dark: var(--theme-neutral-shadow-dark);
+  --element-bg-shadow-light: var(--theme-neutral-shadow-light);
 }
 
 [data-accent="sky"] {
@@ -241,8 +241,8 @@
   --element-bg-action-tetriary: var(--state-bg-tetriary);
   --element-border-tetriary: var(--on-accent-border-tetriary);
   --element-bg-lvl-3: var(--theme-neutral-300);
-  --element-bg-shadow-dark: var(--theme-neutral-absolute-shadow-dark);
-  --element-bg-shadow-light: var(--theme-neutral-absolute-shadow-light);
+  --element-bg-shadow-dark: var(--theme-neutral-shadow-dark);
+  --element-bg-shadow-light: var(--theme-neutral-shadow-light);
 }
 
 [data-message="error"] {
@@ -275,8 +275,8 @@
   --element-bg-action-tetriary: var(--state-bg-tetriary);
   --element-border-tetriary: var(--on-accent-border-tetriary);
   --element-bg-lvl-3: var(--theme-neutral-300);
-  --element-bg-shadow-dark: var(--theme-neutral-absolute-shadow-dark);
-  --element-bg-shadow-light: var(--theme-neutral-absolute-shadow-light);
+  --element-bg-shadow-dark: var(--theme-neutral-shadow-dark);
+  --element-bg-shadow-light: var(--theme-neutral-shadow-light);
 }
 
 [data-message="success"] {
@@ -309,8 +309,8 @@
   --element-bg-action-tetriary: var(--state-bg-tetriary);
   --element-border-tetriary: var(--on-accent-border-tetriary);
   --element-bg-lvl-3: var(--theme-neutral-300);
-  --element-bg-shadow-dark: var(--theme-neutral-absolute-shadow-dark);
-  --element-bg-shadow-light: var(--theme-neutral-absolute-shadow-light);
+  --element-bg-shadow-dark: var(--theme-neutral-shadow-dark);
+  --element-bg-shadow-light: var(--theme-neutral-shadow-light);
 }
 
 [data-message="warning"] {
@@ -343,8 +343,8 @@
   --element-bg-action-tetriary: var(--state-bg-tetriary);
   --element-border-tetriary: var(--on-accent-border-tetriary);
   --element-bg-lvl-3: var(--theme-neutral-300);
-  --element-bg-shadow-dark: var(--theme-neutral-absolute-shadow-dark);
-  --element-bg-shadow-light: var(--theme-neutral-absolute-shadow-light);
+  --element-bg-shadow-dark: var(--theme-neutral-shadow-dark);
+  --element-bg-shadow-light: var(--theme-neutral-shadow-light);
 }
 
 [data-on-accent] {
@@ -377,8 +377,8 @@
   --element-bg-action-tetriary: var(--state-bg-tetriary);
   --element-border-tetriary: var(--on-accent-border-tetriary);
   --element-bg-lvl-3: var(--theme-neutral-300);
-  --element-bg-shadow-dark: var(--theme-neutral-absolute-shadow-dark);
-  --element-bg-shadow-light: var(--theme-neutral-absolute-shadow-light);
+  --element-bg-shadow-dark: var(--theme-neutral-shadow-dark);
+  --element-bg-shadow-light: var(--theme-neutral-shadow-light);
 }
 
 [data-theme="dark"] {
@@ -411,6 +411,6 @@
   --element-bg-action-tetriary: var(--state-bg-tetriary);
   --element-border-tetriary: var(--on-accent-border-tetriary);
   --element-bg-lvl-3: var(--theme-neutral-300);
-  --element-bg-shadow-dark: var(--theme-neutral-absolute-shadow-dark);
-  --element-bg-shadow-light: var(--theme-neutral-absolute-shadow-light);
+  --element-bg-shadow-dark: var(--theme-neutral-shadow-dark);
+  --element-bg-shadow-light: var(--theme-neutral-shadow-light);
 }

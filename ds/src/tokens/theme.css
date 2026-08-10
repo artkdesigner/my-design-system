@@ -117,12 +117,12 @@
   --theme-custom-100: var(--palette-purple-100);
   --theme-neutral-white: var(--palette-foundation-white-primary);
   --theme-neutral-black: var(--palette-foundation-black-primary);
-  --theme-neutral-absolute-primary: var(--palette-foundation-white-primary);
+  --theme-neutral-on-accent-primary: var(--palette-foundation-white-primary);
   --theme-neutral-overlay: var(--palette-foundation-black-secondary);
-  --theme-neutral-absolute-secondary: var(--palette-foundation-white-secondary);
-  --theme-neutral-absolute-tetriary: var(--palette-foundation-white-tetriary);
-  --theme-neutral-absolute-shadow-dark: var(--palette-foundation-black-08);
-  --theme-neutral-absolute-shadow-light: var(--palette-foundation-black-04);
+  --theme-neutral-on-accent-secondary: var(--palette-foundation-white-secondary);
+  --theme-neutral-on-accent-tetriary: var(--palette-foundation-white-tetriary);
+  --theme-neutral-shadow-dark: var(--palette-foundation-black-08);
+  --theme-neutral-shadow-light: var(--palette-foundation-black-04);
 }
 
 /* Переменные CSS наследуют вычисленное значение, а не текст объявления —
@@ -194,12 +194,12 @@
   --theme-custom-100: var(--palette-purple-100);
   --theme-neutral-white: var(--palette-foundation-white-primary);
   --theme-neutral-black: var(--palette-foundation-black-primary);
-  --theme-neutral-absolute-primary: var(--palette-foundation-white-primary);
+  --theme-neutral-on-accent-primary: var(--palette-foundation-white-primary);
   --theme-neutral-overlay: var(--palette-foundation-black-secondary);
-  --theme-neutral-absolute-secondary: var(--palette-foundation-white-secondary);
-  --theme-neutral-absolute-tetriary: var(--palette-foundation-white-tetriary);
-  --theme-neutral-absolute-shadow-dark: var(--palette-foundation-black-08);
-  --theme-neutral-absolute-shadow-light: var(--palette-foundation-black-04);
+  --theme-neutral-on-accent-secondary: var(--palette-foundation-white-secondary);
+  --theme-neutral-on-accent-tetriary: var(--palette-foundation-white-tetriary);
+  --theme-neutral-shadow-dark: var(--palette-foundation-black-08);
+  --theme-neutral-shadow-light: var(--palette-foundation-black-04);
 }
 
 [data-accent="red"] {
@@ -268,12 +268,12 @@
   --theme-custom-100: var(--palette-purple-100);
   --theme-neutral-white: var(--palette-foundation-white-primary);
   --theme-neutral-black: var(--palette-foundation-black-primary);
-  --theme-neutral-absolute-primary: var(--palette-foundation-white-primary);
+  --theme-neutral-on-accent-primary: var(--palette-foundation-white-primary);
   --theme-neutral-overlay: var(--palette-foundation-black-secondary);
-  --theme-neutral-absolute-secondary: var(--palette-foundation-white-secondary);
-  --theme-neutral-absolute-tetriary: var(--palette-foundation-white-tetriary);
-  --theme-neutral-absolute-shadow-dark: var(--palette-foundation-black-08);
-  --theme-neutral-absolute-shadow-light: var(--palette-foundation-black-04);
+  --theme-neutral-on-accent-secondary: var(--palette-foundation-white-secondary);
+  --theme-neutral-on-accent-tetriary: var(--palette-foundation-white-tetriary);
+  --theme-neutral-shadow-dark: var(--palette-foundation-black-08);
+  --theme-neutral-shadow-light: var(--palette-foundation-black-04);
 }
 
 [data-accent="sky"] {
@@ -342,12 +342,12 @@
   --theme-custom-100: var(--palette-purple-100);
   --theme-neutral-white: var(--palette-foundation-white-primary);
   --theme-neutral-black: var(--palette-foundation-black-primary);
-  --theme-neutral-absolute-primary: var(--palette-foundation-white-primary);
+  --theme-neutral-on-accent-primary: var(--palette-foundation-white-primary);
   --theme-neutral-overlay: var(--palette-foundation-black-secondary);
-  --theme-neutral-absolute-secondary: var(--palette-foundation-white-secondary);
-  --theme-neutral-absolute-tetriary: var(--palette-foundation-white-tetriary);
-  --theme-neutral-absolute-shadow-dark: var(--palette-foundation-black-08);
-  --theme-neutral-absolute-shadow-light: var(--palette-foundation-black-04);
+  --theme-neutral-on-accent-secondary: var(--palette-foundation-white-secondary);
+  --theme-neutral-on-accent-tetriary: var(--palette-foundation-white-tetriary);
+  --theme-neutral-shadow-dark: var(--palette-foundation-black-08);
+  --theme-neutral-shadow-light: var(--palette-foundation-black-04);
 }
 
 [data-accent="purple"][data-theme="dark"] {
@@ -416,12 +416,12 @@
   --theme-custom-100: var(--palette-purple-900);
   --theme-neutral-white: var(--palette-foundation-black-primary);
   --theme-neutral-black: var(--palette-foundation-white-primary);
-  --theme-neutral-absolute-primary: var(--palette-foundation-black-primary);
+  --theme-neutral-on-accent-primary: var(--palette-foundation-black-primary);
   --theme-neutral-overlay: var(--palette-foundation-black-secondary);
-  --theme-neutral-absolute-secondary: var(--palette-foundation-black-secondary);
-  --theme-neutral-absolute-tetriary: var(--palette-foundation-black-tetriary);
-  --theme-neutral-absolute-shadow-dark: var(--palette-foundation-white-08);
-  --theme-neutral-absolute-shadow-light: var(--palette-foundation-white-04);
+  --theme-neutral-on-accent-secondary: var(--palette-foundation-black-secondary);
+  --theme-neutral-on-accent-tetriary: var(--palette-foundation-black-tetriary);
+  --theme-neutral-shadow-dark: var(--palette-foundation-white-08);
+  --theme-neutral-shadow-light: var(--palette-foundation-white-04);
 }
 
 [data-accent="red"][data-theme="dark"] {
@@ -490,12 +490,12 @@
   --theme-custom-100: var(--palette-purple-900);
   --theme-neutral-white: var(--palette-foundation-black-primary);
   --theme-neutral-black: var(--palette-foundation-white-primary);
-  --theme-neutral-absolute-primary: var(--palette-foundation-black-primary);
+  --theme-neutral-on-accent-primary: var(--palette-foundation-black-primary);
   --theme-neutral-overlay: var(--palette-foundation-black-secondary);
-  --theme-neutral-absolute-secondary: var(--palette-foundation-black-secondary);
-  --theme-neutral-absolute-tetriary: var(--palette-foundation-black-tetriary);
-  --theme-neutral-absolute-shadow-dark: var(--palette-foundation-white-08);
-  --theme-neutral-absolute-shadow-light: var(--palette-foundation-white-04);
+  --theme-neutral-on-accent-secondary: var(--palette-foundation-black-secondary);
+  --theme-neutral-on-accent-tetriary: var(--palette-foundation-black-tetriary);
+  --theme-neutral-shadow-dark: var(--palette-foundation-white-08);
+  --theme-neutral-shadow-light: var(--palette-foundation-white-04);
 }
 
 [data-accent="sky"][data-theme="dark"] {
@@ -564,12 +564,12 @@
   --theme-custom-100: var(--palette-purple-900);
   --theme-neutral-white: var(--palette-foundation-black-primary);
   --theme-neutral-black: var(--palette-foundation-white-primary);
-  --theme-neutral-absolute-primary: var(--palette-foundation-black-primary);
+  --theme-neutral-on-accent-primary: var(--palette-foundation-black-primary);
   --theme-neutral-overlay: var(--palette-foundation-black-secondary);
-  --theme-neutral-absolute-secondary: var(--palette-foundation-black-secondary);
-  --theme-neutral-absolute-tetriary: var(--palette-foundation-black-tetriary);
-  --theme-neutral-absolute-shadow-dark: var(--palette-foundation-white-08);
-  --theme-neutral-absolute-shadow-light: var(--palette-foundation-white-04);
+  --theme-neutral-on-accent-secondary: var(--palette-foundation-black-secondary);
+  --theme-neutral-on-accent-tetriary: var(--palette-foundation-black-tetriary);
+  --theme-neutral-shadow-dark: var(--palette-foundation-white-08);
+  --theme-neutral-shadow-light: var(--palette-foundation-white-04);
 }
 
 [data-theme="dark"] {
@@ -638,10 +638,10 @@
   --theme-custom-100: var(--palette-purple-900);
   --theme-neutral-white: var(--palette-foundation-black-primary);
   --theme-neutral-black: var(--palette-foundation-white-primary);
-  --theme-neutral-absolute-primary: var(--palette-foundation-black-primary);
+  --theme-neutral-on-accent-primary: var(--palette-foundation-black-primary);
   --theme-neutral-overlay: var(--palette-foundation-black-secondary);
-  --theme-neutral-absolute-secondary: var(--palette-foundation-black-secondary);
-  --theme-neutral-absolute-tetriary: var(--palette-foundation-black-tetriary);
-  --theme-neutral-absolute-shadow-dark: var(--palette-foundation-white-08);
-  --theme-neutral-absolute-shadow-light: var(--palette-foundation-white-04);
+  --theme-neutral-on-accent-secondary: var(--palette-foundation-black-secondary);
+  --theme-neutral-on-accent-tetriary: var(--palette-foundation-black-tetriary);
+  --theme-neutral-shadow-dark: var(--palette-foundation-white-08);
+  --theme-neutral-shadow-light: var(--palette-foundation-white-04);
 }

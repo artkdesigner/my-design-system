@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-07-24T08:35:18.437Z",
+  "exportedAt": "2026-08-10T09:31:48.001Z",
   "fileName": "Design system",
   "collections": [
     {
@@ -1810,7 +1810,7 @@
         },
         {
           "id": "VariableID:50:779",
-          "name": "Neutral/theme_neutral_absolute_primary",
+          "name": "Neutral/theme_neutral_on-accent_primary",
           "resolvedType": "COLOR",
           "valuesByMode": {
             "37:0": {
@@ -1840,7 +1840,7 @@
         },
         {
           "id": "VariableID:79:4091",
-          "name": "Neutral/theme_neutral_absolute_secondary",
+          "name": "Neutral/theme_neutral_on-accent_secondary",
           "resolvedType": "COLOR",
           "valuesByMode": {
             "37:0": {
@@ -1855,7 +1855,7 @@
         },
         {
           "id": "VariableID:207:8228",
-          "name": "Neutral/theme_neutral_absolute_tetriary",
+          "name": "Neutral/theme_neutral_on-accent_tetriary",
           "resolvedType": "COLOR",
           "valuesByMode": {
             "37:0": {
@@ -1870,7 +1870,7 @@
         },
         {
           "id": "VariableID:268:22411",
-          "name": "Neutral/theme_neutral_absolute_shadow_dark",
+          "name": "Neutral/theme_neutral_shadow_dark",
           "resolvedType": "COLOR",
           "valuesByMode": {
             "37:0": {
@@ -1885,7 +1885,7 @@
         },
         {
           "id": "VariableID:268:22412",
-          "name": "Neutral/theme_neutral_absolute_shadow_light",
+          "name": "Neutral/theme_neutral_shadow_light",
           "resolvedType": "COLOR",
           "valuesByMode": {
             "37:0": {
@@ -4967,18 +4967,9 @@
           "name": "Label/Label_label-size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3700"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3717"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:110:532"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:78:3700" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:78:3717" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:110:532" }
           }
         },
         {
@@ -4986,18 +4977,9 @@
           "name": "Addon/Addon_size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:873"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:865"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:874"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:873" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:865" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:874" }
           }
         },
         {
@@ -5005,18 +4987,9 @@
           "name": "Label/Label_gap",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:535"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:530"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:531"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:535" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:530" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:531" }
           }
         },
         {
@@ -5024,18 +4997,9 @@
           "name": "Label/Label_hint-gap",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:530"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:536"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:530"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:530" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:536" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:530" }
           }
         },
         {
@@ -5043,18 +5007,9 @@
           "name": "Label/Label_hint-size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3701"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:126:489"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:110:494"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:78:3701" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:126:489" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:110:494" }
           }
         },
         {
@@ -5062,18 +5017,9 @@
           "name": "Button/Button/Button_padding_hor",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:527"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:528"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:527" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:526" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:528" }
           }
         },
         {
@@ -5081,18 +5027,9 @@
           "name": "Button/Button/Button_height",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:878"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:876"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:880"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:878" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:876" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:880" }
           }
         },
         {
@@ -5100,18 +5037,9 @@
           "name": "Button/Button/Button_radius",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:153:10445"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:517"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:514"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:153:10445" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:517" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:514" }
           }
         },
         {
@@ -5119,18 +5047,9 @@
           "name": "Button/Button/Button_min-width",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:883"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:882"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:884"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:883" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:882" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:884" }
           }
         },
         {
@@ -5138,18 +5057,9 @@
           "name": "Button/Button/Button_gap",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:535"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:530"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:531"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:535" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:530" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:531" }
           }
         },
         {
@@ -5157,18 +5067,9 @@
           "name": "Button/Button/Button_label_font-size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3700"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3717"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:110:532"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:78:3700" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:78:3717" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:110:532" }
           }
         },
         {
@@ -5176,18 +5077,9 @@
           "name": "Input/Field/Input_addon_padding_hor",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:527"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:526" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:525" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:527" }
           }
         },
         {
@@ -5195,18 +5087,9 @@
           "name": "Input/Field/Input_min-height",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:878"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:876"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:880"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:878" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:876" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:880" }
           }
         },
         {
@@ -5214,18 +5097,9 @@
           "name": "Input/Field/Input_radius",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:514"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:517"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:110:589"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:514" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:517" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:110:589" }
           }
         },
         {
@@ -5233,18 +5107,9 @@
           "name": "Input/Field/Input_hint_padding_vert",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1292"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:524"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:126:1292" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:524" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:525" }
           }
         },
         {
@@ -5252,18 +5117,9 @@
           "name": "Input/Field/Input_hint_font-size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3701"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3701"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:110:494"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:78:3701" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:78:3701" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:110:494" }
           }
         },
         {
@@ -5271,18 +5127,9 @@
           "name": "Input/Field/Input_label_font-size_big",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3700"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3717"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:110:532"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:78:3700" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:78:3717" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:110:532" }
           }
         },
         {
@@ -5290,18 +5137,9 @@
           "name": "Input/Field/Input_gap_content",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:530"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:530"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:530"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:530" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:530" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:530" }
           }
         },
         {
@@ -5309,18 +5147,9 @@
           "name": "Input/Field/Input_label_font-size_small",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3717"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:110:646"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3700"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:78:3717" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:110:646" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:78:3700" }
           }
         },
         {
@@ -5328,18 +5157,9 @@
           "name": "Input/Field/Input_stroke",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:522"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:521"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:522"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:522" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:521" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:522" }
           }
         },
         {
@@ -5347,18 +5167,9 @@
           "name": "Input/Field/Input_max-height",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:883"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:882"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:884"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:883" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:882" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:884" }
           }
         },
         {
@@ -5366,18 +5177,9 @@
           "name": "Input/Field/Input_content_padding_vert",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1291"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1292"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:126:1291" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:126:1292" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:526" }
           }
         },
         {
@@ -5385,18 +5187,9 @@
           "name": "Input/Field/Input_label_padding_vert",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:527"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1293"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:527" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:526" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:126:1293" }
           }
         },
         {
@@ -5404,18 +5197,9 @@
           "name": "Input/Field/Input_content_padding_hor",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:527"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:526" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:525" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:527" }
           }
         },
         {
@@ -5423,18 +5207,9 @@
           "name": "Checkmark/Checkmark_size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:873"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:865"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:874"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:873" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:865" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:874" }
           }
         },
         {
@@ -5442,18 +5217,9 @@
           "name": "Button/IconButton/IconButton_size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:873"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:865"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:874"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:873" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:865" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:874" }
           }
         },
         {
@@ -5461,18 +5227,9 @@
           "name": "OptionList/List/List_radius",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:514"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:517"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:110:589"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:514" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:517" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:110:589" }
           }
         },
         {
@@ -5480,18 +5237,9 @@
           "name": "OptionList/List/List_padding_top",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "VALUE",
-              "value": 44
-            },
-            "78:1": {
-              "type": "VALUE",
-              "value": 36
-            },
-            "79:0": {
-              "type": "VALUE",
-              "value": 60
-            }
+            "78:0": { "type": "VALUE", "value": 44 },
+            "78:1": { "type": "VALUE", "value": 36 },
+            "79:0": { "type": "VALUE", "value": 60 }
           }
         },
         {
@@ -5499,18 +5247,9 @@
           "name": "OptionList/List/List_border",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:522"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:521"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:522"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:522" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:521" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:522" }
           }
         },
         {
@@ -5518,18 +5257,9 @@
           "name": "OptionList/GroupTitle/GroupTitle_font-size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:69:543"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:69:540"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:69:543"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:69:543" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:69:540" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:69:543" }
           }
         },
         {
@@ -5537,18 +5267,9 @@
           "name": "OptionList/GroupTitle/GroupTitle_padding_top",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1291"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:126:1291" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:525" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:526" }
           }
         },
         {
@@ -5556,18 +5277,9 @@
           "name": "OptionList/GroupTitle/GroupTitle_padding_hor",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:527"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:526" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:525" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:527" }
           }
         },
         {
@@ -5575,18 +5287,9 @@
           "name": "OptionList/GroupTitle/GroupTitle_padding_bottom",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:524"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:524"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:524"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:524" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:524" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:524" }
           }
         },
         {
@@ -5594,18 +5297,9 @@
           "name": "OptionList/Cell/Cell_padding_vertical",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1291"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:126:1291" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:525" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:526" }
           }
         },
         {
@@ -5613,18 +5307,9 @@
           "name": "OptionList/Cell/Cell_padding_hor",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1291"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:126:1291" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:525" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:526" }
           }
         },
         {
@@ -5632,18 +5317,9 @@
           "name": "OptionList/Cell/Cell_gap_hor",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:532"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:531"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:533"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:532" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:531" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:533" }
           }
         },
         {
@@ -5651,18 +5327,9 @@
           "name": "OptionList/EmptyState/EmptyState_padding_vert",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:527"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:526" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:525" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:527" }
           }
         },
         {
@@ -5670,18 +5337,9 @@
           "name": "OptionList/EmptyState/EmptyState_font-size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:69:543"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:69:540"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:69:543"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:69:543" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:69:540" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:69:543" }
           }
         },
         {
@@ -5689,18 +5347,9 @@
           "name": "OptionList/EmptyState/EmptyState_padding_hor",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:527"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:526" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:525" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:527" }
           }
         },
         {
@@ -5708,18 +5357,9 @@
           "name": "OptionList/Footer/Footer_padding_vert",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:527"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:526" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:525" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:527" }
           }
         },
         {
@@ -5727,18 +5367,9 @@
           "name": "OptionList/Footer/Footer_padding_hor",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:527"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:526" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:525" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:527" }
           }
         },
         {
@@ -5746,18 +5377,9 @@
           "name": "OptionList/Footer/Footer_border",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:522"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:521"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:522"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:522" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:521" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:522" }
           }
         },
         {
@@ -5765,18 +5387,9 @@
           "name": "Checkbox/Checkbox/Checkbox_label_font-size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3700"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3717"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:110:532"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:78:3700" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:78:3717" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:110:532" }
           }
         },
         {
@@ -5784,18 +5397,9 @@
           "name": "Checkbox/Checkbox/Checkbox_hint_font-size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3701"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:126:489"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:110:494"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:78:3701" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:126:489" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:110:494" }
           }
         },
         {
@@ -5803,18 +5407,9 @@
           "name": "Checkbox/Checkbox/Checkbox_gap_hor",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:490"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:531"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:532"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:126:490" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:531" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:532" }
           }
         },
         {
@@ -5822,18 +5417,9 @@
           "name": "Checkbox/Checkbox/Checkbox_gap_vert",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:530"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:536"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:530"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:530" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:536" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:530" }
           }
         },
         {
@@ -5841,18 +5427,9 @@
           "name": "Checkbox/Item/Item_size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:873"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:865"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:874"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:873" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:865" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:874" }
           }
         },
         {
@@ -5860,18 +5437,9 @@
           "name": "Checkbox/Item/Item_radius",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:515"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:515"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:518"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:515" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:515" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:518" }
           }
         },
         {
@@ -5879,18 +5447,9 @@
           "name": "Checkbox/Checkbox/Checkbox_label_padding_top_vert 2",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1277"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:523"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1277"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:126:1277" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:523" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:126:1277" }
           }
         },
         {
@@ -5898,18 +5457,9 @@
           "name": "OptionList/Header/header_padding_vert",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:527"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:526" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:525" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:527" }
           }
         },
         {
@@ -5917,18 +5467,9 @@
           "name": "OptionList/Header/header_padding_hor",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:527"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:526" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:525" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:527" }
           }
         },
         {
@@ -5936,18 +5477,9 @@
           "name": "Checkbox/Group/Group_gap",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:532"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:531"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:533"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:532" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:531" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:533" }
           }
         },
         {
@@ -5955,18 +5487,9 @@
           "name": "Checkbox/Group/Group_items-gap_vert",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:532"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:531"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:533"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:532" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:531" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:533" }
           }
         },
         {
@@ -5974,18 +5497,9 @@
           "name": "Checkbox/Group/Group_items-gap_hor",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:133:1125"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:533"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:534"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:133:1125" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:533" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:534" }
           }
         },
         {
@@ -5993,18 +5507,9 @@
           "name": "Checkbox/Group/Group_alert_padding",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1291"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:126:1291" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:525" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:526" }
           }
         },
         {
@@ -6012,18 +5517,9 @@
           "name": "Checkbox/Group/Group_alert_border",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:522"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:521"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:522"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:522" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:521" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:522" }
           }
         },
         {
@@ -6031,18 +5527,9 @@
           "name": "Checkbox/Group/Group_title_font-size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:69:543"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:69:540"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:69:545"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:69:543" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:69:540" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:69:545" }
           }
         },
         {
@@ -6050,18 +5537,9 @@
           "name": "Checkbox/Item/Item_border",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:522"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:521"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:522"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:522" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:521" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:522" }
           }
         },
         {
@@ -6069,18 +5547,9 @@
           "name": "Radio/Item/Item_size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:873"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:865"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:874"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:873" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:865" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:874" }
           }
         },
         {
@@ -6088,18 +5557,9 @@
           "name": "Radio/Item/Item_radius",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:512"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:512"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:512"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:512" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:512" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:512" }
           }
         },
         {
@@ -6107,18 +5567,9 @@
           "name": "Radio/Item/Item_border",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:522"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:521"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:522"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:522" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:521" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:522" }
           }
         },
         {
@@ -6126,18 +5577,9 @@
           "name": "Radio/Radio/Radio_label_font-size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3700"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3717"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:110:532"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:78:3700" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:78:3717" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:110:532" }
           }
         },
         {
@@ -6145,18 +5587,9 @@
           "name": "Radio/Group/Group_title_font-size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:69:543"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:69:540"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:69:545"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:69:543" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:69:540" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:69:545" }
           }
         },
         {
@@ -6164,18 +5597,9 @@
           "name": "Radio/Group/Group_gap",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:532"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:531"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:533"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:532" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:531" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:533" }
           }
         },
         {
@@ -6183,18 +5607,9 @@
           "name": "Radio/Group/Group_items-gap_vert",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:532"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:531"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:533"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:532" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:531" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:533" }
           }
         },
         {
@@ -6202,18 +5617,9 @@
           "name": "Radio/Group/Group_items-gap_hor",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:133:1125"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:533"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:534"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:133:1125" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:533" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:534" }
           }
         },
         {
@@ -6221,18 +5627,9 @@
           "name": "Radio/Group/Group_alert_padding",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1291"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:126:1291" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:525" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:526" }
           }
         },
         {
@@ -6240,18 +5637,9 @@
           "name": "Radio/Group/Group_alert_border",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:522"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:521"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:522"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:522" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:521" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:522" }
           }
         },
         {
@@ -6259,18 +5647,9 @@
           "name": "Radio/Radio/Radio_hint_font-size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3701"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:126:489"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:110:494"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:78:3701" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:126:489" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:110:494" }
           }
         },
         {
@@ -6278,18 +5657,9 @@
           "name": "Radio/Radio/Radio_gap_hor",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:490"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:531"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:532"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:126:490" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:531" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:532" }
           }
         },
         {
@@ -6297,18 +5667,9 @@
           "name": "Radio/Radio/Radio_gap_vert",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:530"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:536"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:530"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:530" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:536" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:530" }
           }
         },
         {
@@ -6316,18 +5677,9 @@
           "name": "Radio/Radio/Radio_label_padding_top_vert 2",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1277"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:523"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1277"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:126:1277" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:523" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:126:1277" }
           }
         },
         {
@@ -6335,18 +5687,9 @@
           "name": "Tag/Tag/Tag_radius_round",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:512"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:512"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:512"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:512" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:512" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:512" }
           }
         },
         {
@@ -6354,18 +5697,9 @@
           "name": "Tag/Tag/Tag_padding_hor",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:527"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1293"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:527" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:526" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:126:1293" }
           }
         },
         {
@@ -6373,18 +5707,9 @@
           "name": "Tag/Tag/Tag_height",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:878"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:876"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:880"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:878" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:876" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:880" }
           }
         },
         {
@@ -6392,18 +5717,9 @@
           "name": "Tag/Tag/Tag_gap",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1292"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:524"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:531"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:126:1292" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:524" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:531" }
           }
         },
         {
@@ -6411,18 +5727,9 @@
           "name": "Tag/Tag/Tag_min-width",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:883"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:882"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:884"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:883" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:882" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:884" }
           }
         },
         {
@@ -6430,18 +5737,9 @@
           "name": "Tag/Tag/Tag_label_font-size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3700"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3717"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:110:532"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:78:3700" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:78:3717" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:110:532" }
           }
         },
         {
@@ -6449,18 +5747,9 @@
           "name": "Tag/Group/TagGroup_title_font-size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:69:543"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:69:540"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:69:545"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:69:543" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:69:540" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:69:545" }
           }
         },
         {
@@ -6468,18 +5757,9 @@
           "name": "Tag/Group/TagGroup_gap",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:532"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:531"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:533"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:532" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:531" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:533" }
           }
         },
         {
@@ -6487,18 +5767,9 @@
           "name": "Tag/Group/TagGroup_items-gap",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:535"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:530"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:531"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:535" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:530" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:531" }
           }
         },
         {
@@ -6506,18 +5777,9 @@
           "name": "Tag/Group/TagGroup_alert_padding",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1291"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:126:1291" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:525" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:526" }
           }
         },
         {
@@ -6525,18 +5787,9 @@
           "name": "Tag/Group/TagGroup_alert_border",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:522"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:521"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:522"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:522" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:521" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:522" }
           }
         },
         {
@@ -6544,18 +5797,9 @@
           "name": "Tag/Group/TagGroup_hint_font-size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3701"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:126:489"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:110:494"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:78:3701" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:126:489" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:110:494" }
           }
         },
         {
@@ -6563,18 +5807,9 @@
           "name": "Input/Field/Input_stepper_padding_hor",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:524"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:524"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:524" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:524" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:525" }
           }
         },
         {
@@ -6582,18 +5817,9 @@
           "name": "Input/Stepper/Stepper_radius",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:517"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:515"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:514"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:517" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:515" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:514" }
           }
         },
         {
@@ -6601,18 +5827,9 @@
           "name": "Input/Stepper/Stepper_padding_hor",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1292"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:525" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:126:1292" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:526" }
           }
         },
         {
@@ -6620,18 +5837,9 @@
           "name": "Input/Stepper/Stepper_gap",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1292"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:525" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:126:1292" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:526" }
           }
         },
         {
@@ -6639,18 +5847,9 @@
           "name": "Input/Stepper/Stepper_padding_vert",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1292"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:524"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:126:1292" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:524" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:525" }
           }
         },
         {
@@ -6658,18 +5857,9 @@
           "name": "Input/Stepper/Stepper_line_border",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:521"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:521"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:521"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:521" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:521" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:521" }
           }
         },
         {
@@ -6677,18 +5867,9 @@
           "name": "Select/SelectTag/SelectTag_radius",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:518"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:515"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:517"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:518" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:515" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:517" }
           }
         },
         {
@@ -6696,18 +5877,9 @@
           "name": "Select/SelectTag/SelectTag_gap",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:530"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:536"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:530"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:530" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:536" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:530" }
           }
         },
         {
@@ -6715,18 +5887,9 @@
           "name": "Select/SelectTag/SelectTag_padding_hor",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1292"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1291"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:525" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:126:1292" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:126:1291" }
           }
         },
         {
@@ -6734,18 +5897,9 @@
           "name": "Select/SelectTag/SelectTag_height",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:874"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:873"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:876"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:874" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:873" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:876" }
           }
         },
         {
@@ -6753,18 +5907,9 @@
           "name": "Select/SelectTag/SelectTag_font-size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3717"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:110:646"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3700"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:78:3717" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:110:646" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:78:3700" }
           }
         },
         {
@@ -6772,18 +5917,9 @@
           "name": "Select/SelectTag/SelectTag_icon-close_size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:862"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:861"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:865"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:862" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:861" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:865" }
           }
         },
         {
@@ -6791,18 +5927,9 @@
           "name": "Select/SelectTag/SelectTag_line-height",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:862"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:861"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:865"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:862" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:861" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:865" }
           }
         },
         {
@@ -6810,18 +5937,9 @@
           "name": "Select/ValueList/ValueList_gap",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:530"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:536"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:530"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:530" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:536" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:530" }
           }
         },
         {
@@ -6829,18 +5947,9 @@
           "name": "Select/SelectWithTags/SelectWithTags_content_padding_vert",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:525" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:525" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:526" }
           }
         },
         {
@@ -6848,18 +5957,9 @@
           "name": "Select/SelectWithTags/SelectWithTags_addon_padding_vert",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1291"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:527"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:126:1291" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:525" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:527" }
           }
         },
         {
@@ -6867,18 +5967,9 @@
           "name": "OptionList/Cell/Cell_height",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:878"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:876"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:880"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:878" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:876" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:880" }
           }
         },
         {
@@ -6886,18 +5977,9 @@
           "name": "Input/Slider/Slider_pointer_size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:862"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:860"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:865"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:862" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:860" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:865" }
           }
         },
         {
@@ -6905,18 +5987,9 @@
           "name": "Input/Slider/Slider_line_radius",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:512"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:512"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:512"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:512" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:512" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:512" }
           }
         },
         {
@@ -6924,18 +5997,9 @@
           "name": "Input/Slider/Slider_pointer-box_size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:858"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:857"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:858"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:858" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:857" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:858" }
           }
         },
         {
@@ -6943,18 +6007,9 @@
           "name": "Input/Slider/Slider_line_height",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:858"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:857"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:858"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:858" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:857" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:858" }
           }
         },
         {
@@ -6962,18 +6017,9 @@
           "name": "Input/Slider/Slider_padding_hor",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:527"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:526" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:525" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:527" }
           }
         },
         {
@@ -6981,18 +6027,9 @@
           "name": "Input/Slider/Slider_pips_padding_vert",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1292"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:524"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:126:1292" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:524" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:525" }
           }
         },
         {
@@ -7000,18 +6037,9 @@
           "name": "Button/ActionButton/ActionButton_size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:878"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:876"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:880"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:878" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:876" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:880" }
           }
         },
         {
@@ -7019,18 +6047,9 @@
           "name": "Button/ActionButton/ActionButton_radius",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:512"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:512"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:512"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:512" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:512" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:512" }
           }
         },
         {
@@ -7038,18 +6057,9 @@
           "name": "Button/ActionButton/ActionButton_gap",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:535"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:530"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:531"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:535" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:530" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:531" }
           }
         },
         {
@@ -7057,18 +6067,9 @@
           "name": "FilterTag/FilterTag_size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:878"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:876"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:879"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:878" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:876" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:879" }
           }
         },
         {
@@ -7076,18 +6077,9 @@
           "name": "FilterTag/FilterTag_gap",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:535"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:530"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:531"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:535" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:530" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:531" }
           }
         },
         {
@@ -7095,18 +6087,9 @@
           "name": "FilterTag/FilterTag_padding_hor",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:527"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1293"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:527" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:526" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:126:1293" }
           }
         },
         {
@@ -7114,18 +6097,9 @@
           "name": "FilterTag/FilterTag_padding_vert",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:523"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:523"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:523"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:523" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:523" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:523" }
           }
         },
         {
@@ -7133,18 +6107,9 @@
           "name": "FilterTag/FilterTag_radius",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:512"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:512"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:512"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:512" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:512" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:512" }
           }
         },
         {
@@ -7152,18 +6117,9 @@
           "name": "FilterTag/FilterTag_clear_padding_right",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1291"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:126:1291" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:525" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:526" }
           }
         },
         {
@@ -7171,18 +6127,9 @@
           "name": "FilterTag/FilterTag_clear_gap",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:531"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:535"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:490"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:531" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:535" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:126:490" }
           }
         },
         {
@@ -7190,18 +6137,9 @@
           "name": "FilterTag/FilterTag_crear-icon_size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:873"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:865"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:874"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:873" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:865" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:874" }
           }
         },
         {
@@ -7209,18 +6147,9 @@
           "name": "FilterTag/FilterTag_crear-line_size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:873"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:865"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:874"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:873" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:865" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:874" }
           }
         },
         {
@@ -7228,18 +6157,9 @@
           "name": "FilterTag/FilterTag_label_font-size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3700"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3717"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:110:532"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:78:3700" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:78:3717" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:110:532" }
           }
         },
         {
@@ -7247,18 +6167,9 @@
           "name": "FilterTag/FilterTag_optionList_padding_top",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "VALUE",
-              "value": 44
-            },
-            "78:1": {
-              "type": "VALUE",
-              "value": 36
-            },
-            "79:0": {
-              "type": "VALUE",
-              "value": 52
-            }
+            "78:0": { "type": "VALUE", "value": 44 },
+            "78:1": { "type": "VALUE", "value": 36 },
+            "79:0": { "type": "VALUE", "value": 52 }
           }
         },
         {
@@ -7266,18 +6177,9 @@
           "name": "OptionList/List/List_min-width",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:124:2727"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:884"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:8275"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:124:2727" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:884" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:126:8275" }
           }
         },
         {
@@ -7285,18 +6187,9 @@
           "name": "OptionList/Cell/Cell_min-width",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:124:2727"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:884"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:8275"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:124:2727" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:884" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:126:8275" }
           }
         },
         {
@@ -7304,18 +6197,9 @@
           "name": "Switch/SwitchItem/SwitchItem_height",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:873"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:865"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:874"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:873" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:865" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:874" }
           }
         },
         {
@@ -7323,18 +6207,9 @@
           "name": "Switch/SwitchItem/SwitchItem_width",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:876"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:875"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:878"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:876" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:875" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:878" }
           }
         },
         {
@@ -7342,18 +6217,9 @@
           "name": "Switch/SwitchItem/SwitchItem_padding",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1277"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1278"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1277"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:126:1277" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:126:1278" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:126:1277" }
           }
         },
         {
@@ -7361,18 +6227,9 @@
           "name": "Switch/SwitchItem/SwitchItem_pointer_size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:865"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:863"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:873"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:865" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:863" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:873" }
           }
         },
         {
@@ -7380,18 +6237,9 @@
           "name": "Switch/Switch_gap_hor",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:490"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:531"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:532"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:126:490" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:531" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:532" }
           }
         },
         {
@@ -7399,18 +6247,9 @@
           "name": "Switch/Switch_label_font-size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3700"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3717"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:110:532"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:78:3700" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:78:3717" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:110:532" }
           }
         },
         {
@@ -7418,18 +6257,9 @@
           "name": "Switch/Switch_hint_font-size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3701"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:126:489"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:110:494"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:78:3701" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:126:489" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:110:494" }
           }
         },
         {
@@ -7437,18 +6267,9 @@
           "name": "Switch/Switch_gap_vert",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:530"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:536"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:530"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:530" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:536" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:530" }
           }
         },
         {
@@ -7456,18 +6277,9 @@
           "name": "SegmentedControl/Segment/Segment_label_font-size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3700"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3717"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:110:532"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:78:3700" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:78:3717" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:110:532" }
           }
         },
         {
@@ -7475,18 +6287,9 @@
           "name": "SegmentedControl/Segment/Segment_radius",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:518"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:518"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:517"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:518" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:518" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:517" }
           }
         },
         {
@@ -7494,18 +6297,9 @@
           "name": "SegmentedControl/Segment/Segment_padding_hor",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:527"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1293"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:527" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:526" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:126:1293" }
           }
         },
         {
@@ -7513,18 +6307,9 @@
           "name": "SegmentedControl/Segment/Segment_height",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:876"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:875"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:879"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:876" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:875" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:879" }
           }
         },
         {
@@ -7532,18 +6317,9 @@
           "name": "SegmentedControl/Segment/Segment_gap",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1292"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:524"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:531"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:126:1292" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:524" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:531" }
           }
         },
         {
@@ -7551,18 +6327,9 @@
           "name": "SegmentedControl/Segment/Segment_min-width",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:876"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:874"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:879"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:876" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:874" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:879" }
           }
         },
         {
@@ -7570,18 +6337,9 @@
           "name": "SegmentedControl/SegmentedControl/SegmentedControl_padding",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:524"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1277"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:524"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:524" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:126:1277" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:524" }
           }
         },
         {
@@ -7589,18 +6347,9 @@
           "name": "SegmentedControl/SegmentedControl/SegmentedControl_gap",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:530"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:536"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:530"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:530" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:536" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:530" }
           }
         },
         {
@@ -7608,18 +6357,9 @@
           "name": "SegmentedControl/SegmentedControl/SegmentedControl_radius",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:153:10445"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:517"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:514"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:153:10445" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:517" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:514" }
           }
         },
         {
@@ -7627,18 +6367,9 @@
           "name": "Input/CodeInput/CodeInput_gap",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:490"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:531"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:532"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:126:490" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:531" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:532" }
           }
         },
         {
@@ -7646,18 +6377,9 @@
           "name": "Input/CodeInput/CodeInputitem_height",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:878"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:876"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:880"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:878" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:876" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:880" }
           }
         },
         {
@@ -7665,18 +6387,9 @@
           "name": "Input/CodeInput/CodeInputitem_width",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:876"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:874"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:879"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:876" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:874" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:879" }
           }
         },
         {
@@ -7684,18 +6397,9 @@
           "name": "Input/CodeInput/CodeInputitem_radius",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:514"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:517"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:110:589"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:514" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:517" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:110:589" }
           }
         },
         {
@@ -7703,18 +6407,9 @@
           "name": "Input/CodeInput/CodeInputitem_cursor_height",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:873"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:865"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:874"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:873" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:865" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:874" }
           }
         },
         {
@@ -7722,18 +6417,9 @@
           "name": "Input/CodeInput/CodeInputitem_value_font-size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:873"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:865"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:874"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:873" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:865" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:874" }
           }
         },
         {
@@ -7741,18 +6427,9 @@
           "name": "Button/TextButton/TextButton_gap",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:535"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:530"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:531"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:535" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:530" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:531" }
           }
         },
         {
@@ -7760,18 +6437,9 @@
           "name": "Button/TextButton/TextButton_label_font-size 2",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3700"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3717"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:110:532"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:78:3700" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:78:3717" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:110:532" }
           }
         },
         {
@@ -7779,18 +6447,9 @@
           "name": "StatusBadge/StatusBadge_size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:873"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:865"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:874"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:873" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:865" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:874" }
           }
         },
         {
@@ -7798,18 +6457,9 @@
           "name": "StatusBadge/StatusBadge_padding",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1277"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1277"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1277"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:126:1277" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:126:1277" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:126:1277" }
           }
         },
         {
@@ -7817,18 +6467,9 @@
           "name": "Status/Status_height",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:876"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:874"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:878"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:876" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:874" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:878" }
           }
         },
         {
@@ -7836,18 +6477,9 @@
           "name": "Status/Status_gap",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:535"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:530"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:531"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:535" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:530" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:531" }
           }
         },
         {
@@ -7855,18 +6487,9 @@
           "name": "Status/Status_addon_size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:865"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:862"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:873"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:865" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:862" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:873" }
           }
         },
         {
@@ -7874,18 +6497,9 @@
           "name": "Status/Status_padding_hor",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:527"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:526" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:525" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:527" }
           }
         },
         {
@@ -7893,18 +6507,9 @@
           "name": "Status/Status_radius",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:514"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:517"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:110:589"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:514" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:517" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:110:589" }
           }
         },
         {
@@ -7912,18 +6517,9 @@
           "name": "Status/Status_label_font-size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3717"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:110:646"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3700"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:78:3717" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:110:646" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:78:3700" }
           }
         },
         {
@@ -7931,18 +6527,9 @@
           "name": "Status/Status_min-width",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:879"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:878"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:880"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:879" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:878" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:880" }
           }
         },
         {
@@ -7950,18 +6537,9 @@
           "name": "Indicator/Indicator_with-content_height",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:873"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:865"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:874"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:873" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:865" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:874" }
           }
         },
         {
@@ -7969,18 +6547,9 @@
           "name": "Indicator/Indicator_empty_size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:860"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:860"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:860"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:860" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:860" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:860" }
           }
         },
         {
@@ -7988,18 +6557,9 @@
           "name": "Indicator/Indicator_with-content_min-width",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:873"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:865"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:874"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:873" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:865" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:874" }
           }
         },
         {
@@ -8007,18 +6567,9 @@
           "name": "Indicator/Indicator_count_font-size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3717"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:110:646"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3700"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:78:3717" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:110:646" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:78:3700" }
           }
         },
         {
@@ -8026,18 +6577,9 @@
           "name": "Indicator/Indicator_padding_hor",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:524"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1277"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:524"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:524" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:126:1277" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:524" }
           }
         },
         {
@@ -8045,18 +6587,9 @@
           "name": "Indicator/Indicator_radius",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:512"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:512"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:512"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:512" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:512" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:512" }
           }
         },
         {
@@ -8064,18 +6597,9 @@
           "name": "FileUpload/LeftSlot/LeftSlot_radius_progress",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:514"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:517"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:110:589"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:514" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:517" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:110:589" }
           }
         },
         {
@@ -8083,18 +6607,9 @@
           "name": "FileUpload/LeftSlot/LeftSlot_radius_bg",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:517"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:515"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:514"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:517" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:515" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:514" }
           }
         },
         {
@@ -8102,18 +6617,9 @@
           "name": "FileUpload/LeftSlot/LeftSlot_size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:879"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:878"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:880"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:879" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:878" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:880" }
           }
         },
         {
@@ -8121,18 +6627,9 @@
           "name": "FileUpload/LeftSlot/LeftSlot_icon_size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:873"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:865"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:874"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:873" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:865" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:874" }
           }
         },
         {
@@ -8140,18 +6637,9 @@
           "name": "FileUpload/Content/Content_min-height",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:879"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:878"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:880"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:879" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:878" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:880" }
           }
         },
         {
@@ -8159,18 +6647,9 @@
           "name": "FileUpload/Content/Content_gap",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:531"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:535"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:490"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:531" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:535" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:126:490" }
           }
         },
         {
@@ -8178,18 +6657,9 @@
           "name": "FileUpload/LeftSlot/LeftSlot_border_progress",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:522"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:522"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:522"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:522" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:522" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:522" }
           }
         },
         {
@@ -8197,18 +6667,9 @@
           "name": "FileUpload/Content/Content_padding_left",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:527"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1293"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:527" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:526" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:126:1293" }
           }
         },
         {
@@ -8216,18 +6677,9 @@
           "name": "FileUpload/Content/Content_label_font-size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3700"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3717"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:110:532"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:78:3700" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:78:3717" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:110:532" }
           }
         },
         {
@@ -8235,18 +6687,9 @@
           "name": "FileUpload/Content/Content_hint_font-size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3701"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3701"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:110:494"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:78:3701" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:78:3701" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:110:494" }
           }
         },
         {
@@ -8254,18 +6697,9 @@
           "name": "FileUpload/Content/Content_padding_top",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1292"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:524"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:126:1292" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:524" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:525" }
           }
         },
         {
@@ -8273,18 +6707,9 @@
           "name": "FileUpload/Content/Content_padding_bottom",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1292"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:524"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:126:1292" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:524" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:525" }
           }
         },
         {
@@ -8292,18 +6717,9 @@
           "name": "FileUpload/Controlls/Controlls_height",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:879"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:878"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:880"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:879" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:878" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:880" }
           }
         },
         {
@@ -8311,18 +6727,9 @@
           "name": "FileUpload/Controlls/Controlls_padding_hor",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1292"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1291"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:525" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:126:1292" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:126:1291" }
           }
         },
         {
@@ -8330,18 +6737,9 @@
           "name": "FileUpload/Content/Content_padding_right",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1291"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:126:1291" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:525" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:526" }
           }
         },
         {
@@ -8349,18 +6747,9 @@
           "name": "FileUpload/Content/Content_sub-content_gap",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:490"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:531"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:532"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:126:490" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:531" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:532" }
           }
         },
         {
@@ -8368,18 +6757,9 @@
           "name": "FileUpload/Content/Content_error-content_gap",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:530"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:536"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:535"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:530" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:536" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:535" }
           }
         },
         {
@@ -8387,18 +6767,9 @@
           "name": "Tabs/Tab/Tab_gap",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:535"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:530"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:531"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:535" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:530" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:531" }
           }
         },
         {
@@ -8406,18 +6777,9 @@
           "name": "Tabs/Tab/Tab_padding_bottom",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:1291"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:126:1291" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:525" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:526" }
           }
         },
         {
@@ -8425,18 +6787,9 @@
           "name": "Tabs/Tab/Tab_label_font-size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:69:543"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:69:540"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:69:545"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:69:543" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:69:540" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:69:545" }
           }
         },
         {
@@ -8444,18 +6797,9 @@
           "name": "Tabs/Tab/Tab_label_line-height",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:873"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:865"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:874"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:873" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:865" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:874" }
           }
         },
         {
@@ -8463,18 +6807,9 @@
           "name": "Tabs/Tab/Tab_border",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:522"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:522"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:522"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:522" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:522" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:522" }
           }
         },
         {
@@ -8482,18 +6817,9 @@
           "name": "Tabs/Group/TabGroup_gap",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:873"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:865"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:874"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:873" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:865" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:874" }
           }
         },
         {
@@ -8501,18 +6827,9 @@
           "name": "Tabs/Group/TabGroup_border",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:522"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:522"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:522"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:522" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:522" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:522" }
           }
         },
         {
@@ -8520,18 +6837,9 @@
           "name": "Button/TextButton/TextButton_label_line-height",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:873"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:865"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:874"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:873" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:865" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:874" }
           }
         },
         {
@@ -8539,18 +6847,9 @@
           "name": "Attach/Attach_gap_hor",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:490"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:531"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:532"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:126:490" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:531" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:532" }
           }
         },
         {
@@ -8558,18 +6857,9 @@
           "name": "Attach/Attach_gap_vert",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:531"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:535"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:126:490"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:531" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:535" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:126:490" }
           }
         },
         {
@@ -8577,18 +6867,9 @@
           "name": "Attach/Attach_hint_font-size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3701"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:78:3701"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:110:494"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:78:3701" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:78:3701" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:110:494" }
           }
         },
         {
@@ -8596,18 +6877,9 @@
           "name": "Attach/Attach_hint_line-height",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:873"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:865"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:874"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:873" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:865" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:874" }
           }
         },
         {
@@ -8615,18 +6887,9 @@
           "name": "Attach/Attach_FileItem_gap_hor",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:530"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:530"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:530"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:530" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:530" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:530" }
           }
         },
         {
@@ -8634,18 +6897,9 @@
           "name": "OptionList/Slot/slot_padding_vert",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:527"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:526" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:525" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:527" }
           }
         },
         {
@@ -8653,18 +6907,9 @@
           "name": "OptionList/Slot/slot_padding_hor",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:527"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:526" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:525" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:527" }
           }
         },
         {
@@ -8672,18 +6917,9 @@
           "name": "Tooltip/tooltip_padding-hor",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:527"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:526" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:525" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:527" }
           }
         },
         {
@@ -8691,18 +6927,9 @@
           "name": "Tooltip/tooltip_padding-vert",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:526"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:525"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:527"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:526" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:525" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:527" }
           }
         },
         {
@@ -8710,18 +6937,9 @@
           "name": "Tooltip/tail/tooltip_tail-height",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:865"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:862"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:873"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:865" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:862" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:873" }
           }
         },
         {
@@ -8729,18 +6947,9 @@
           "name": "Tooltip/tail/tooltip_tail-width",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:860"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:59:860"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:59:861"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:860" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:860" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:861" }
           }
         },
         {
@@ -8748,18 +6957,9 @@
           "name": "Tooltip/tail/tooltip_tail-margin",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:532"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:531"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:533"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:532" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:531" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:61:533" }
           }
         },
         {
@@ -8767,18 +6967,9 @@
           "name": "Tooltip/tooltip_radius",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:514"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:517"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:110:589"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:514" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:517" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:110:589" }
           }
         },
         {
@@ -8786,18 +6977,9 @@
           "name": "Tooltip/text/tooltip_text-font-size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:69:543"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:69:540"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:69:545"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:69:543" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:69:540" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:69:545" }
           }
         },
         {
@@ -8805,18 +6987,9 @@
           "name": "Tag/Tag/Tag_radius_square",
           "resolvedType": "FLOAT",
           "valuesByMode": {
-            "78:0": {
-              "type": "ALIAS",
-              "id": "VariableID:61:517"
-            },
-            "78:1": {
-              "type": "ALIAS",
-              "id": "VariableID:61:518"
-            },
-            "79:0": {
-              "type": "ALIAS",
-              "id": "VariableID:153:10445"
-            }
+            "78:0": { "type": "ALIAS", "id": "VariableID:61:517" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:61:518" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:153:10445" }
           }
         }
       ]
@@ -9049,721 +7222,7 @@
       ]
     }
   ],
-  "textStyles": [
-    {
-      "id": "S:c30c179962580e83fa058d6ffeb4b832fc80f652,",
-      "name": "Heading/XL",
-      "fontName": {
-        "family": "Inter Tight",
-        "style": "Bold"
-      },
-      "fontSize": 48,
-      "lineHeight": {
-        "unit": "PERCENT",
-        "value": 120.00000476837158
-      },
-      "letterSpacing": {
-        "unit": "PERCENT",
-        "value": 0
-      },
-      "boundVariables": {
-        "fontSize": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:549"
-        },
-        "fontStyle": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:551"
-        },
-        "fontFamily": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:537"
-        }
-      }
-    },
-    {
-      "id": "S:fa866bc54e8ed613fad86daffbcd9d2b3993d6e7,",
-      "name": "Heading/L",
-      "fontName": {
-        "family": "Inter Tight",
-        "style": "Bold"
-      },
-      "fontSize": 36,
-      "lineHeight": {
-        "unit": "PERCENT",
-        "value": 120.00000476837158
-      },
-      "letterSpacing": {
-        "unit": "PERCENT",
-        "value": 0
-      },
-      "boundVariables": {
-        "fontSize": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:548"
-        },
-        "fontStyle": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:551"
-        },
-        "fontFamily": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:537"
-        }
-      }
-    },
-    {
-      "id": "S:efb3a1ebdacde61c6d505e77953ab6e52a68e37f,",
-      "name": "Heading/M",
-      "fontName": {
-        "family": "Inter Tight",
-        "style": "Bold"
-      },
-      "fontSize": 24,
-      "lineHeight": {
-        "unit": "PERCENT",
-        "value": 120.00000476837158
-      },
-      "letterSpacing": {
-        "unit": "PERCENT",
-        "value": 0
-      },
-      "boundVariables": {
-        "fontSize": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:546"
-        },
-        "fontStyle": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:551"
-        },
-        "fontFamily": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:537"
-        }
-      }
-    },
-    {
-      "id": "S:11d6b65d4c7144152534c20868400a9d7bf89700,",
-      "name": "Heading/S",
-      "fontName": {
-        "family": "Inter Tight",
-        "style": "Bold"
-      },
-      "fontSize": 20,
-      "lineHeight": {
-        "unit": "PERCENT",
-        "value": 120.00000476837158
-      },
-      "letterSpacing": {
-        "unit": "PERCENT",
-        "value": 0
-      },
-      "boundVariables": {
-        "fontSize": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:213:3809"
-        },
-        "fontStyle": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:551"
-        },
-        "fontFamily": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:537"
-        }
-      }
-    },
-    {
-      "id": "S:9641d38dfd16e927bf4e2a16917e9196192d120f,",
-      "name": "Heading/XS",
-      "fontName": {
-        "family": "Inter Tight",
-        "style": "Bold"
-      },
-      "fontSize": 16,
-      "lineHeight": {
-        "unit": "PERCENT",
-        "value": 120.00000476837158
-      },
-      "letterSpacing": {
-        "unit": "PERCENT",
-        "value": 0
-      },
-      "boundVariables": {
-        "fontSize": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:544"
-        },
-        "fontStyle": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:551"
-        },
-        "fontFamily": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:537"
-        }
-      }
-    },
-    {
-      "id": "S:d07ed0403b97149b1a3b1020f5e48f69c85ea815,",
-      "name": "Body L/Regular",
-      "fontName": {
-        "family": "Inter Tight",
-        "style": "Regular"
-      },
-      "fontSize": 20,
-      "lineHeight": {
-        "unit": "PERCENT",
-        "value": 139.9999976158142
-      },
-      "letterSpacing": {
-        "unit": "PERCENT",
-        "value": 0
-      },
-      "boundVariables": {
-        "fontSize": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:545"
-        },
-        "fontStyle": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:550"
-        },
-        "fontFamily": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:537"
-        }
-      }
-    },
-    {
-      "id": "S:a7d3d3d7c8f7d6afce7aec24cbb8dfcdb14e44a3,",
-      "name": "Body L/Bold",
-      "fontName": {
-        "family": "Inter Tight",
-        "style": "Bold"
-      },
-      "fontSize": 20,
-      "lineHeight": {
-        "unit": "PERCENT",
-        "value": 139.9999976158142
-      },
-      "letterSpacing": {
-        "unit": "PERCENT",
-        "value": 0
-      },
-      "boundVariables": {
-        "fontSize": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:545"
-        },
-        "fontStyle": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:551"
-        },
-        "fontFamily": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:537"
-        }
-      }
-    },
-    {
-      "id": "S:ece83ed3cd1c3ac8ddb40789767b5478d49a4bc0,",
-      "name": "Body L/Italic",
-      "fontName": {
-        "family": "Inter Tight",
-        "style": "Italic"
-      },
-      "fontSize": 20,
-      "lineHeight": {
-        "unit": "PERCENT",
-        "value": 139.9999976158142
-      },
-      "letterSpacing": {
-        "unit": "PERCENT",
-        "value": 0
-      },
-      "boundVariables": {
-        "fontSize": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:545"
-        },
-        "fontStyle": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:72:424"
-        },
-        "fontFamily": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:537"
-        }
-      }
-    },
-    {
-      "id": "S:66139be3ae0530734bbef7a1fa775536e5fed119,",
-      "name": "Body L/Underline",
-      "fontName": {
-        "family": "Inter Tight",
-        "style": "Regular"
-      },
-      "fontSize": 20,
-      "lineHeight": {
-        "unit": "PERCENT",
-        "value": 139.9999976158142
-      },
-      "letterSpacing": {
-        "unit": "PERCENT",
-        "value": 0
-      },
-      "boundVariables": {
-        "fontSize": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:545"
-        },
-        "fontStyle": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:550"
-        },
-        "fontFamily": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:537"
-        }
-      }
-    },
-    {
-      "id": "S:f1405ecd2f428c1eaaecf4e15946b5c5821ebc83,",
-      "name": "Body L/Deleted",
-      "fontName": {
-        "family": "Inter Tight",
-        "style": "Regular"
-      },
-      "fontSize": 20,
-      "lineHeight": {
-        "unit": "PERCENT",
-        "value": 139.9999976158142
-      },
-      "letterSpacing": {
-        "unit": "PERCENT",
-        "value": 0
-      },
-      "boundVariables": {
-        "fontSize": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:545"
-        },
-        "fontStyle": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:550"
-        },
-        "fontFamily": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:537"
-        }
-      }
-    },
-    {
-      "id": "S:68ab131471b09201cb2af1d5440ecc4a3b7f304d,",
-      "name": "Body L/Code",
-      "fontName": {
-        "family": "IBM Plex Mono",
-        "style": "Regular"
-      },
-      "fontSize": 20,
-      "lineHeight": {
-        "unit": "PERCENT",
-        "value": 120.00000476837158
-      },
-      "letterSpacing": {
-        "unit": "PERCENT",
-        "value": 0
-      },
-      "boundVariables": {
-        "fontSize": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:545"
-        },
-        "fontStyle": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:550"
-        },
-        "fontFamily": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:539"
-        }
-      }
-    },
-    {
-      "id": "S:386f7ed05ac34127ed5ff04ef794279ab2b47087,",
-      "name": "Body M/Regular",
-      "fontName": {
-        "family": "Inter Tight",
-        "style": "Regular"
-      },
-      "fontSize": 16,
-      "lineHeight": {
-        "unit": "PERCENT",
-        "value": 139.9999976158142
-      },
-      "letterSpacing": {
-        "unit": "PERCENT",
-        "value": 0
-      },
-      "boundVariables": {
-        "fontSize": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:543"
-        },
-        "fontStyle": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:550"
-        },
-        "fontFamily": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:537"
-        }
-      }
-    },
-    {
-      "id": "S:69d053cc169d486e31e6c1a27c7abcac6ca73083,",
-      "name": "Body M/Bold",
-      "fontName": {
-        "family": "Inter Tight",
-        "style": "Bold"
-      },
-      "fontSize": 16,
-      "lineHeight": {
-        "unit": "PERCENT",
-        "value": 139.9999976158142
-      },
-      "letterSpacing": {
-        "unit": "PERCENT",
-        "value": 0
-      },
-      "boundVariables": {
-        "fontSize": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:543"
-        },
-        "fontStyle": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:551"
-        },
-        "fontFamily": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:537"
-        }
-      }
-    },
-    {
-      "id": "S:f71466d9e285005bcdf952852b6b7beea1a76222,",
-      "name": "Body M/Italic",
-      "fontName": {
-        "family": "Inter Tight",
-        "style": "Italic"
-      },
-      "fontSize": 16,
-      "lineHeight": {
-        "unit": "PERCENT",
-        "value": 139.9999976158142
-      },
-      "letterSpacing": {
-        "unit": "PERCENT",
-        "value": 0
-      },
-      "boundVariables": {
-        "fontSize": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:543"
-        },
-        "fontStyle": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:72:424"
-        },
-        "fontFamily": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:537"
-        }
-      }
-    },
-    {
-      "id": "S:564dd242367cfeba5bf00a56bb1016f7f028fc6e,",
-      "name": "Body M/Underline",
-      "fontName": {
-        "family": "Inter Tight",
-        "style": "Regular"
-      },
-      "fontSize": 16,
-      "lineHeight": {
-        "unit": "PERCENT",
-        "value": 139.9999976158142
-      },
-      "letterSpacing": {
-        "unit": "PERCENT",
-        "value": 0
-      },
-      "boundVariables": {
-        "fontSize": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:543"
-        },
-        "fontStyle": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:550"
-        },
-        "fontFamily": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:537"
-        }
-      }
-    },
-    {
-      "id": "S:7de72f8c523ff37f654a98e7ac5eff99ec7962ef,",
-      "name": "Body M/Deleted",
-      "fontName": {
-        "family": "Inter Tight",
-        "style": "Regular"
-      },
-      "fontSize": 16,
-      "lineHeight": {
-        "unit": "PERCENT",
-        "value": 139.9999976158142
-      },
-      "letterSpacing": {
-        "unit": "PERCENT",
-        "value": 0
-      },
-      "boundVariables": {
-        "fontSize": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:543"
-        },
-        "fontStyle": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:550"
-        },
-        "fontFamily": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:537"
-        }
-      }
-    },
-    {
-      "id": "S:9ce4e418cb540f360c01c771fd820fa137e0d9a6,",
-      "name": "Body M/Code",
-      "fontName": {
-        "family": "IBM Plex Mono",
-        "style": "Regular"
-      },
-      "fontSize": 16,
-      "lineHeight": {
-        "unit": "PERCENT",
-        "value": 120.00000476837158
-      },
-      "letterSpacing": {
-        "unit": "PERCENT",
-        "value": 0
-      },
-      "boundVariables": {
-        "fontSize": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:543"
-        },
-        "fontStyle": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:550"
-        },
-        "fontFamily": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:539"
-        }
-      }
-    },
-    {
-      "id": "S:7a782026cb952897875e7813d9983ef39a420f8f,",
-      "name": "Body S/Regular",
-      "fontName": {
-        "family": "Inter Tight",
-        "style": "Regular"
-      },
-      "fontSize": 12,
-      "lineHeight": {
-        "unit": "PERCENT",
-        "value": 139.9999976158142
-      },
-      "letterSpacing": {
-        "unit": "PERCENT",
-        "value": 0
-      },
-      "boundVariables": {
-        "fontSize": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:540"
-        },
-        "fontStyle": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:550"
-        },
-        "fontFamily": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:537"
-        }
-      }
-    },
-    {
-      "id": "S:8f8de02920e45e79a96188fcbec31bc3833d1c51,",
-      "name": "Body S/Bold",
-      "fontName": {
-        "family": "Inter Tight",
-        "style": "Bold"
-      },
-      "fontSize": 12,
-      "lineHeight": {
-        "unit": "PERCENT",
-        "value": 139.9999976158142
-      },
-      "letterSpacing": {
-        "unit": "PERCENT",
-        "value": 0
-      },
-      "boundVariables": {
-        "fontSize": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:540"
-        },
-        "fontStyle": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:551"
-        },
-        "fontFamily": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:537"
-        }
-      }
-    },
-    {
-      "id": "S:8d4337e7bbe4ec61f62a5881739b2dd9ef1cb902,",
-      "name": "Body S/Italic",
-      "fontName": {
-        "family": "Inter Tight",
-        "style": "Italic"
-      },
-      "fontSize": 12,
-      "lineHeight": {
-        "unit": "PERCENT",
-        "value": 139.9999976158142
-      },
-      "letterSpacing": {
-        "unit": "PERCENT",
-        "value": 0
-      },
-      "boundVariables": {
-        "fontSize": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:540"
-        },
-        "fontStyle": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:72:424"
-        },
-        "fontFamily": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:537"
-        }
-      }
-    },
-    {
-      "id": "S:73ef8bcbe4fa8f3012b589f61369f8ba86d53da4,",
-      "name": "Body S/Underline",
-      "fontName": {
-        "family": "Inter Tight",
-        "style": "Regular"
-      },
-      "fontSize": 12,
-      "lineHeight": {
-        "unit": "PERCENT",
-        "value": 139.9999976158142
-      },
-      "letterSpacing": {
-        "unit": "PERCENT",
-        "value": 0
-      },
-      "boundVariables": {
-        "fontSize": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:540"
-        },
-        "fontStyle": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:550"
-        },
-        "fontFamily": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:537"
-        }
-      }
-    },
-    {
-      "id": "S:cb9727c525fee5a2b3a40ba9bd5733e2de4a0da4,",
-      "name": "Body S/Deleted",
-      "fontName": {
-        "family": "Inter Tight",
-        "style": "Regular"
-      },
-      "fontSize": 12,
-      "lineHeight": {
-        "unit": "PERCENT",
-        "value": 139.9999976158142
-      },
-      "letterSpacing": {
-        "unit": "PERCENT",
-        "value": 0
-      },
-      "boundVariables": {
-        "fontSize": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:540"
-        },
-        "fontStyle": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:550"
-        },
-        "fontFamily": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:537"
-        }
-      }
-    },
-    {
-      "id": "S:f17c01751f4707c01cbd2621e04ea169657af1e3,",
-      "name": "Body S/Code",
-      "fontName": {
-        "family": "IBM Plex Mono",
-        "style": "Regular"
-      },
-      "fontSize": 12,
-      "lineHeight": {
-        "unit": "PERCENT",
-        "value": 120.00000476837158
-      },
-      "letterSpacing": {
-        "unit": "PERCENT",
-        "value": 0
-      },
-      "boundVariables": {
-        "fontSize": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:540"
-        },
-        "fontStyle": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:550"
-        },
-        "fontFamily": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:69:539"
-        }
-      }
-    }
-  ],
+  "textStyles": [],
   "stats": {
     "variables": 552,
     "aliases": 1138,
