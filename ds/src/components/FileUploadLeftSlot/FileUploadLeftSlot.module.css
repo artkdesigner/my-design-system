@@ -31,14 +31,14 @@
   border-color: var(--element-border-primary);
 }
 
-/* Отступ — не ширина обводки, а разница радиусов (сверено в Фигме,
-   узел 197:762): так BG остаётся концентричным внешней рамке на любом
-   размере, не наезжая скруглением на кольцо в углах. */
+/* Радиус — не токен radius-bg, а внешний радиус минус ширина обводки:
+   так BG остаётся концентричным кольцу (флеш на прямых сторонах И на
+   скруглениях), не наезжая своим углом на кольцо и не оставляя зазор. */
 .bg {
   position: absolute;
-  inset: calc(var(--fileupload-leftslot-radius-progress) - var(--fileupload-leftslot-radius-bg));
+  inset: var(--fileupload-leftslot-border-progress);
   z-index: 2;
-  border-radius: var(--fileupload-leftslot-radius-bg);
+  border-radius: calc(var(--fileupload-leftslot-radius-progress) - var(--fileupload-leftslot-border-progress));
   background: var(--element-bg-lvl-2);
 }
 
