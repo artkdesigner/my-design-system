@@ -560,7 +560,7 @@
   --checkbox-gap-vert: var(--margin-2);
   --checkbox-item-size: var(--scales-16);
   --checkbox-item-radius: var(--radius-4);
-  --checkbox-label-padding-top-vert-2: var(--padding-0);
+  --checkbox-label-padding-top-vert-2: var(--padding-1);
   --optionlist-header-padding-vert: var(--padding-8);
   --optionlist-header-padding-hor: var(--padding-8);
   --checkbox-group-gap: var(--margin-8);
@@ -583,7 +583,7 @@
   --radio-hint-font-size: var(--font-size-hint-s);
   --radio-gap-hor: var(--margin-8);
   --radio-gap-vert: var(--margin-2);
-  --radio-label-padding-top-vert-2: var(--padding-0);
+  --radio-label-padding-top-vert-2: var(--padding-1);
   --tag-radius-round: var(--radius-max);
   --tag-padding-hor: var(--padding-12);
   --tag-height: var(--scales-32);
