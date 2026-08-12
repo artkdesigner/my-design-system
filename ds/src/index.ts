@@ -147,8 +147,8 @@ export type { ProgressBarProps } from './components/ProgressBar';
 export { AccordionControl } from './components/AccordionControl';
 export type { AccordionControlProps } from './components/AccordionControl';
 
-export { AccordionTitle } from './components/AccordionTitle';
-export type { AccordionTitleProps } from './components/AccordionTitle';
+export { AccordionHeader } from './components/AccordionHeader';
+export type { AccordionHeaderProps } from './components/AccordionHeader';
 
 export { AccordionBody } from './components/AccordionBody';
 export type { AccordionBodyProps } from './components/AccordionBody';

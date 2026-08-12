@@ -1,6 +1,6 @@
 import type { HTMLAttributes, ReactNode } from 'react';
 import { AccordionControl } from '../AccordionControl';
-import { AccordionTitle } from '../AccordionTitle';
+import { AccordionHeader } from '../AccordionHeader';
 import { AccordionBody } from '../AccordionBody';
 import styles from './Accordion.module.css';
 
@@ -22,11 +22,13 @@ export type AccordionProps = AccordionOwnProps &
 /**
  * Аккордеон. Узел 213:753 в Figma (варианты Opened=No/Yes, Control
  * side=Left/Right), сверен через MCP-мост: собран из AccordionControl +
- * AccordionTitle + AccordionBody — те же части экспортируются отдельно
+ * AccordionHeader + AccordionBody — те же части экспортируются отдельно
  * для случаев, когда нужен полностью свой заголовок (иконка, бейдж и
  * т.п.), собранный из примитивов напрямую, а не через готовый Accordion.
+ * AccordionHeader раньше назывался AccordionTitle — дизайнер переименовал
+ * компонент в Figma (узел 213:3769), preset-значения (custom/title) те же.
  *
- * Реальный образец в макете (узел 213:3796) использует у Title/Body не
+ * Реальный образец в макете (узел 213:3796) использует у Header/Body не
  * Preset=Custom, а Preset=Title/Text — встроенное начертание (Heading S /
  * Body M), а не произвольный неоформленный слот. Поэтому здесь title и
  * children прокидываются как titleText/text (оба типизированы как
@@ -58,7 +60,7 @@ export function Accordion({
         onClick={() => onOpenedChange?.(!opened)}
       >
         {controlSide === 'left' && control}
-        <AccordionTitle className={styles.title} preset="title" titleText={title} />
+        <AccordionHeader className={styles.title} preset="title" titleText={title} />
         {controlSide === 'right' && control}
       </button>
       <div className={styles.bodyWrapper} data-open={opened || undefined} aria-hidden={!opened} inert={!opened}>

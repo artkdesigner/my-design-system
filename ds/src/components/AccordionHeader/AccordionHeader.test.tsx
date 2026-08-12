@@ -1,25 +1,25 @@
 import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import { AccordionTitle } from './AccordionTitle';
+import { AccordionHeader } from './AccordionHeader';
 
-describe('AccordionTitle', () => {
+describe('AccordionHeader', () => {
   it('по умолчанию preset=custom рисует children', () => {
-    render(<AccordionTitle>Мой заголовок</AccordionTitle>);
+    render(<AccordionHeader>Мой заголовок</AccordionHeader>);
     expect(screen.getByText('Мой заголовок')).toBeInTheDocument();
   });
 
   it('preset=title рисует titleText вместо children', () => {
     render(
-      <AccordionTitle preset="title" titleText="Заголовок">
+      <AccordionHeader preset="title" titleText="Заголовок">
         Игнорируется
-      </AccordionTitle>
+      </AccordionHeader>
     );
     expect(screen.getByText('Заголовок')).toBeInTheDocument();
     expect(screen.queryByText('Игнорируется')).not.toBeInTheDocument();
   });
 
   it('переносит preset в data-атрибут', () => {
-    const { container } = render(<AccordionTitle preset="title" titleText="X" />);
+    const { container } = render(<AccordionHeader preset="title" titleText="X" />);
     expect((container.firstElementChild as HTMLElement).dataset.preset).toBe('title');
   });
 });

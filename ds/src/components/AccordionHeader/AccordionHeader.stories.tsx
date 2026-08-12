@@ -1,15 +1,15 @@
 import type { CSSProperties } from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { AccordionTitle } from './AccordionTitle';
+import { AccordionHeader } from './AccordionHeader';
 
-const meta: Meta<typeof AccordionTitle> = {
-  title: 'Components/Accordion/AccordionTitle',
-  component: AccordionTitle,
+const meta: Meta<typeof AccordionHeader> = {
+  title: 'Components/Accordion/AccordionHeader',
+  component: AccordionHeader,
   args: { preset: 'title', titleText: 'Title' }
 };
 
 export default meta;
-type Story = StoryObj<typeof AccordionTitle>;
+type Story = StoryObj<typeof AccordionHeader>;
 
 const page: CSSProperties = {
   padding: 'var(--padding-24)',
@@ -17,14 +17,14 @@ const page: CSSProperties = {
   width: 360
 };
 
-export const ВПокое: Story = { name: 'В покое', render: (args) => <div style={page}><AccordionTitle {...args} /></div> };
+export const ВПокое: Story = { name: 'В покое', render: (args) => <div style={page}><AccordionHeader {...args} /></div> };
 
 /** Узел 213:3769 в Figma — Preset=Custom/Title. */
 export const Пресеты: Story = {
   render: () => (
     <div style={{ ...page, display: 'flex', flexDirection: 'column', gap: 'var(--margin-16)' }}>
-      <AccordionTitle preset="title" titleText="Title" />
-      <AccordionTitle preset="custom">Свой заголовок с иконкой</AccordionTitle>
+      <AccordionHeader preset="title" titleText="Title" />
+      <AccordionHeader preset="custom">Свой заголовок с иконкой</AccordionHeader>
     </div>
   )
 };
