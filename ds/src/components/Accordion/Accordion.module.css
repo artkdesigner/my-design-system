@@ -27,15 +27,22 @@
    у грид-контейнера с одной строкой transition работает на
    grid-template-rows (0fr закрыто, 1fr открыто); overflow: hidden на
    единственном грид-элементе даёт ему auto-minimum-size 0, поэтому он
-   способен схлопнуться до 0 несмотря на высоту содержимого. */
+   способен схлопнуться до 0 несмотря на высоту содержимого.
+   Открытие и закрытие используют разные кривые (узел 440:1387 в Figma,
+   раздел «Анимация»): открытие — bounce с перелётом за 1 (крайняя
+   координата 1.25), закрытие — более плавная без перелёта. Кривая
+   берётся из transition-timing-function, действующего в момент старта
+   перехода, поэтому базовое правило задаёт кривую закрытия, а
+   [data-open] переопределяет её кривой открытия. */
 .bodyWrapper {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 400ms ease;
+  transition: grid-template-rows 400ms cubic-bezier(0, 0.1, 0.5, 1);
 }
 
 .bodyWrapper[data-open] {
   grid-template-rows: 1fr;
+  transition-timing-function: cubic-bezier(0.2, 0, 0.2, 1.25);
 }
 
 .bodyInner {
