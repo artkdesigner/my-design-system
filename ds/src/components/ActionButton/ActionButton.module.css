@@ -7,9 +7,8 @@
   align-items: center;
   box-sizing: border-box;
 
-  width: var(--button-actionbutton-size);
   gap: var(--button-actionbutton-gap);
-  padding: 0;
+  padding: var(--button-actionbutton-padding-vert) var(--button-actionbutton-padding-hor);
   background: transparent;
   border: none;
 
@@ -42,8 +41,8 @@
   box-sizing: border-box;
   flex-shrink: 0;
 
-  width: var(--button-actionbutton-size);
-  height: var(--button-actionbutton-size);
+  width: var(--button-actionbutton-circle-size);
+  height: var(--button-actionbutton-circle-size);
   border-radius: var(--button-actionbutton-radius);
   border: var(--stroke-1) solid transparent;
 

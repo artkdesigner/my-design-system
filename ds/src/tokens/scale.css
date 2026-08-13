@@ -71,6 +71,7 @@
   --radius-10: var(--scales-10);
   --padding-32: var(--scales-32);
   --padding-14: var(--scales-14);
+  --scales-80: 80px;
 }
 
 :root {
@@ -207,9 +208,11 @@
   --input-slider-line-height: var(--scales-2);
   --input-slider-padding-hor: var(--padding-16);
   --input-slider-pips-padding-vert: var(--padding-8);
-  --button-actionbutton-size: var(--scales-56);
+  --button-actionbutton-circle-size: var(--scales-56);
   --button-actionbutton-radius: var(--radius-max);
   --button-actionbutton-gap: var(--margin-8);
+  --button-actionbutton-padding-hor: var(--scales-16);
+  --button-actionbutton-padding-vert: var(--scales-4);
   --filtertag-size: var(--scales-48);
   --filtertag-gap: var(--margin-8);
   --filtertag-padding-hor: var(--padding-20);
@@ -413,9 +416,11 @@
   --input-slider-line-height: var(--scales-2);
   --input-slider-padding-hor: var(--padding-12);
   --input-slider-pips-padding-vert: var(--padding-6);
-  --button-actionbutton-size: var(--scales-40);
+  --button-actionbutton-circle-size: var(--scales-40);
   --button-actionbutton-radius: var(--radius-max);
   --button-actionbutton-gap: var(--margin-6);
+  --button-actionbutton-padding-hor: var(--scales-12);
+  --button-actionbutton-padding-vert: var(--scales-4);
   --filtertag-size: var(--scales-40);
   --filtertag-gap: var(--margin-6);
   --filtertag-padding-hor: var(--padding-16);
@@ -560,7 +565,7 @@
   --checkbox-gap-vert: var(--margin-2);
   --checkbox-item-size: var(--scales-16);
   --checkbox-item-radius: var(--radius-4);
-  --checkbox-label-padding-top-vert-2: var(--padding-1);
+  --checkbox-label-padding-top-vert-2: var(--padding-0);
   --optionlist-header-padding-vert: var(--padding-8);
   --optionlist-header-padding-hor: var(--padding-8);
   --checkbox-group-gap: var(--margin-8);
@@ -583,7 +588,7 @@
   --radio-hint-font-size: var(--font-size-hint-s);
   --radio-gap-hor: var(--margin-8);
   --radio-gap-vert: var(--margin-2);
-  --radio-label-padding-top-vert-2: var(--padding-1);
+  --radio-label-padding-top-vert-2: var(--padding-0);
   --tag-radius-round: var(--radius-max);
   --tag-padding-hor: var(--padding-12);
   --tag-height: var(--scales-32);
@@ -619,9 +624,11 @@
   --input-slider-line-height: var(--scales-1);
   --input-slider-padding-hor: var(--padding-8);
   --input-slider-pips-padding-vert: var(--padding-4);
-  --button-actionbutton-size: var(--scales-32);
+  --button-actionbutton-circle-size: var(--scales-32);
   --button-actionbutton-radius: var(--radius-max);
   --button-actionbutton-gap: var(--margin-4);
+  --button-actionbutton-padding-hor: var(--scales-8);
+  --button-actionbutton-padding-vert: var(--scales-2);
   --filtertag-size: var(--scales-32);
   --filtertag-gap: var(--margin-4);
   --filtertag-padding-hor: var(--padding-12);

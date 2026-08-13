@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-10T14:40:56.657Z",
+  "exportedAt": "2026-08-13T10:29:55.639Z",
   "fileName": "Design system",
   "collections": [
     {
@@ -4836,6 +4836,17 @@
               "id": "VariableID:59:863"
             }
           }
+        },
+        {
+          "id": "VariableID:451:2683",
+          "name": "Scales/80",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "59:0": {
+              "type": "VALUE",
+              "value": 80
+            }
+          }
         }
       ]
     },
@@ -6185,7 +6196,7 @@
         },
         {
           "id": "VariableID:155:6469",
-          "name": "Button/ActionButton/ActionButton_size",
+          "name": "Button/ActionButton/ActionButton_circle-size",
           "resolvedType": "FLOAT",
           "valuesByMode": {
             "78:0": { "type": "ALIAS", "id": "VariableID:59:878" },
@@ -6211,6 +6222,26 @@
             "78:0": { "type": "ALIAS", "id": "VariableID:61:535" },
             "78:1": { "type": "ALIAS", "id": "VariableID:61:530" },
             "79:0": { "type": "ALIAS", "id": "VariableID:61:531" }
+          }
+        },
+        {
+          "id": "VariableID:451:2684",
+          "name": "Button/ActionButton/ActionButton_padding-hor",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:862" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:860" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:865" }
+          }
+        },
+        {
+          "id": "VariableID:451:2685",
+          "name": "Button/ActionButton/ActionButton_padding-vert",
+          "resolvedType": "FLOAT",
+          "valuesByMode": {
+            "78:0": { "type": "ALIAS", "id": "VariableID:59:859" },
+            "78:1": { "type": "ALIAS", "id": "VariableID:59:858" },
+            "79:0": { "type": "ALIAS", "id": "VariableID:59:859" }
           }
         },
         {
@@ -7705,8 +7736,8 @@
     }
   ],
   "stats": {
-    "variables": 563,
-    "aliases": 1164,
+    "variables": 566,
+    "aliases": 1170,
     "danglingAliasIds": [],
     "textStyles": 23,
     "danglingTextStyleAliasIds": [],
