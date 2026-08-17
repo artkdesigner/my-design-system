@@ -13,8 +13,9 @@ export type ProgressBarProps = ProgressBarOwnProps &
 
 /**
  * Полоса прогресса. Узел 188:4631 в Figma (варианты Size=Big/Small),
- * сверен через MCP-мост: трек bg_element_bg_lvl_2 и заливка
- * bg_element_bg_action_primary, оба со скруглением radius_max — своих
+ * сверен через MCP-мост: трек bg_element_bg_lvl_3 (поднят с lvl_2 для
+ * контраста заливки) и заливка bg_element_bg_action_primary, оба со
+ * скруглением radius_max — своих
  * алиасов у узла нет, поэтому размеры и цвета берутся из общих
  * примитивов Scales/Radius, как и в самом макете (см. Scrollbar).
  *

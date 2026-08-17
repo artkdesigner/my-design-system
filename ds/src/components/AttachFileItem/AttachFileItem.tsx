@@ -39,7 +39,7 @@ export type AttachFileItemProps = AttachFileItemOwnProps &
  *
  * Прогресс — готовый ProgressBar size="s": в макете он всегда 4px вне
  * зависимости от size самого AttachFileItem (Radius/max и
- * BG/element_bg_lvl_2 общие, отдельного attach-progress-height токена
+ * BG/element_bg_lvl_3 общие, отдельного attach-progress-height токена
  * нет).
  *
  * Имя.расширение — один укороченный текстовый узел, а не три (имя, точка,
