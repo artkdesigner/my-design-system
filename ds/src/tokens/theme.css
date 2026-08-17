@@ -12,6 +12,7 @@
   --brand-accent-300: var(--palette-blue-300);
   --brand-accent-200: var(--palette-blue-200);
   --brand-accent-100: var(--palette-blue-100);
+  --brand-accent-450: var(--palette-blue-450);
 }
 
 [data-accent="sky"] {
@@ -24,6 +25,7 @@
   --brand-accent-300: var(--palette-sky-300);
   --brand-accent-200: var(--palette-sky-200);
   --brand-accent-100: var(--palette-sky-100);
+  --brand-accent-450: var(--palette-sky-default);
 }
 
 [data-accent="purple"] {
@@ -36,6 +38,7 @@
   --brand-accent-300: var(--palette-purple-300);
   --brand-accent-200: var(--palette-purple-200);
   --brand-accent-100: var(--palette-purple-100);
+  --brand-accent-450: var(--palette-purple-default);
 }
 
 [data-accent="ruby"] {
@@ -48,6 +51,7 @@
   --brand-accent-300: var(--palette-red-300);
   --brand-accent-200: var(--palette-red-200);
   --brand-accent-100: var(--palette-red-100);
+  --brand-accent-450: var(--palette-red-default);
 }
 
 :root,
@@ -368,7 +372,7 @@
   --theme-accent-800: var(--brand-accent-200);
   --theme-accent-700: var(--brand-accent-300);
   --theme-accent-600: var(--brand-accent-400);
-  --theme-accent-default: var(--brand-accent-default);
+  --theme-accent-default: var(--brand-accent-450);
   --theme-accent-400: var(--brand-accent-600);
   --theme-accent-300: var(--brand-accent-700);
   --theme-accent-200: var(--brand-accent-800);
@@ -443,7 +447,7 @@
   --theme-accent-800: var(--brand-accent-200);
   --theme-accent-700: var(--brand-accent-300);
   --theme-accent-600: var(--brand-accent-400);
-  --theme-accent-default: var(--brand-accent-default);
+  --theme-accent-default: var(--brand-accent-450);
   --theme-accent-400: var(--brand-accent-600);
   --theme-accent-300: var(--brand-accent-700);
   --theme-accent-200: var(--brand-accent-800);
@@ -518,7 +522,7 @@
   --theme-accent-800: var(--brand-accent-200);
   --theme-accent-700: var(--brand-accent-300);
   --theme-accent-600: var(--brand-accent-400);
-  --theme-accent-default: var(--brand-accent-default);
+  --theme-accent-default: var(--brand-accent-450);
   --theme-accent-400: var(--brand-accent-600);
   --theme-accent-300: var(--brand-accent-700);
   --theme-accent-200: var(--brand-accent-800);
@@ -593,7 +597,7 @@
   --theme-accent-800: var(--brand-accent-200);
   --theme-accent-700: var(--brand-accent-300);
   --theme-accent-600: var(--brand-accent-400);
-  --theme-accent-default: var(--brand-accent-default);
+  --theme-accent-default: var(--brand-accent-450);
   --theme-accent-400: var(--brand-accent-600);
   --theme-accent-300: var(--brand-accent-700);
   --theme-accent-200: var(--brand-accent-800);
