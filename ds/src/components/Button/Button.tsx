@@ -1,5 +1,6 @@
 import type { ButtonHTMLAttributes, ReactNode } from 'react';
 import { Addon } from '../Addon';
+import { Spinner } from '../Spinner';
 import styles from './Button.module.css';
 
 type ButtonOwnProps = {
@@ -15,6 +16,20 @@ type ButtonOwnProps = {
    * значение, потому что режим всё равно обязан стоять на самой кнопке.
    */
   message?: 'info' | 'success' | 'warning' | 'error';
+  /**
+   * Состояние загрузки. Соответствует Loading в Figma: подменяет содержимое
+   * на Spinner, заливка вида не меняется. Сверено по всем трём view (узлы
+   * 468:6501 accent, 478:12529 primary, 478:12621 secondary) — во всех трёх
+   * кольцо и точка спиннера совпадают с тем, что и так рисует сам Spinner
+   * в режиме onAccent (element_icon_primary уходит в белый), спец-токенов
+   * под Loading в макете нет.
+   *
+   * Не через HTML `disabled`: `:disabled` в state.css красит фон в серый
+   * (это уже занято состоянием Disabled), а Loading в макете остаётся тем
+   * же цветом вида. Клик блокируется без него — `onClick` не передаётся
+   * дальше, `pointer-events: none` в CSS глушит наведение и клик мышью.
+   */
+  loading?: boolean;
   /**
    * Содержимое левого слота Addon. Только декоративное: Icon, Checkmark,
    * Spinner, Indicator, StatusBadge — то, что можно спрятать от скринридера.
@@ -72,11 +87,13 @@ export function Button({
   size = 'l',
   ghost = false,
   message,
+  loading = false,
   iconLeft,
   iconRight,
   children,
   className,
   type = 'button',
+  onClick,
   ...rest
 }: ButtonProps) {
   const hasLabel = children !== undefined && children !== null && children !== false;
@@ -86,6 +103,7 @@ export function Button({
     <button
       {...rest}
       type={type}
+      onClick={loading ? undefined : onClick}
       className={[styles.button, 'ds-interactive', className].filter(Boolean).join(' ')}
       data-view={view}
       data-size={size}
@@ -93,17 +111,26 @@ export function Button({
       data-icon-only={isIconOnly || undefined}
       data-on-accent={!ghost || message ? 'true' : undefined}
       data-message={message}
+      data-loading={loading || undefined}
+      aria-busy={loading || undefined}
+      aria-disabled={loading || undefined}
     >
-      {iconLeft && (
-        <Addon size={size} className={styles.addon} aria-hidden="true">
-          {iconLeft}
-        </Addon>
-      )}
-      {hasLabel && <span className={styles.label}>{children}</span>}
-      {iconRight && (
-        <Addon size={size} className={styles.addon} aria-hidden="true">
-          {iconRight}
-        </Addon>
+      {loading ? (
+        <Spinner size={size} />
+      ) : (
+        <>
+          {iconLeft && (
+            <Addon size={size} className={styles.addon} aria-hidden="true">
+              {iconLeft}
+            </Addon>
+          )}
+          {hasLabel && <span className={styles.label}>{children}</span>}
+          {iconRight && (
+            <Addon size={size} className={styles.addon} aria-hidden="true">
+              {iconRight}
+            </Addon>
+          )}
+        </>
       )}
     </button>
   );

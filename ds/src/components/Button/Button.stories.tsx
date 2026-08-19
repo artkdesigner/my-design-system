@@ -145,6 +145,24 @@ export const Состояния: Story = {
 };
 
 /**
+ * Loading по всем трём видам — сверка с матрицей состояний из макета
+ * (узлы 468:6501 accent, 478:12529 primary, 478:12621 secondary): заливка
+ * та же, что в покое, меняется только содержимое на Spinner.
+ */
+export const Загрузка: Story = {
+  name: 'Loading',
+  render: () => (
+    <div style={{ ...page, display: 'flex', gap: 'var(--margin-16)' }}>
+      {VIEWS.map((view) => (
+        <Button key={view} view={view} loading>
+          Label
+        </Button>
+      ))}
+    </div>
+  )
+};
+
+/**
  * Четыре тона сообщения, залитые и прозрачные. Компонент про сами цвета не
  * знает: проп message выбирает режим коллекции ColorsMessage, значения
  * приходят из токенов.

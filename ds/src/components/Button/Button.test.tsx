@@ -103,4 +103,38 @@ describe('Button', () => {
     render(<Button message="error">Удалить</Button>);
     expect(screen.getByRole('button')).not.toHaveAttribute('data-danger');
   });
+
+  it('в состоянии загрузки не рисует лейбл и аддоны', () => {
+    render(
+      <Button loading iconLeft={<svg />}>
+        Отправить
+      </Button>
+    );
+    expect(screen.queryByText('Отправить')).not.toBeInTheDocument();
+  });
+
+  it('в состоянии загрузки не вызывает обработчик клика', async () => {
+    const onClick = vi.fn();
+    render(
+      <Button loading onClick={onClick}>
+        Отправить
+      </Button>
+    );
+    await userEvent.click(screen.getByRole('button'));
+    expect(onClick).not.toHaveBeenCalled();
+  });
+
+  it('в состоянии загрузки не ставит HTML disabled', () => {
+    // Иначе фон красится в серый через :disabled в state.css — а по макету
+    // (узлы 468:6501/478:12529/478:12621) заливка вида под Loading не меняется.
+    render(<Button loading>Отправить</Button>);
+    expect(screen.getByRole('button')).not.toBeDisabled();
+  });
+
+  it('помечает состояние загрузки для доступности', () => {
+    render(<Button loading>Отправить</Button>);
+    const button = screen.getByRole('button');
+    expect(button).toHaveAttribute('aria-busy', 'true');
+    expect(button).toHaveAttribute('aria-disabled', 'true');
+  });
 });
