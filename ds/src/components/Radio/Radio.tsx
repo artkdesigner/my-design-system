@@ -47,7 +47,7 @@ export function Radio({
     <div
       className={[styles.wrapper, className].filter(Boolean).join(' ')}
       data-size={size}
-      data-alert={alert || undefined}
+      data-alert={alert ? 'error' : undefined}
       data-state={disabled ? 'disabled' : undefined}
     >
       <RadioItem {...rest} id={radioId} size={size} disabled={disabled} className={styles.item} />
