@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-08-27T08:36:43.783Z",
+  "exportedAt": "2026-08-27T12:27:18.515Z",
   "fileName": "MyDesignSystem",
   "collections": [
     {
@@ -665,9 +665,7 @@
         { "id": "VariableID:251:478", "name": "Tooltip/text/tooltip_text-font-size", "resolvedType": "FLOAT", "valuesByMode": { "78:0": { "type": "ALIAS", "id": "VariableID:69:543" }, "78:1": { "type": "ALIAS", "id": "VariableID:69:540" }, "79:0": { "type": "ALIAS", "id": "VariableID:69:545" } } },
         { "id": "VariableID:260:651", "name": "Tag/Tag/Tag_radius_square", "resolvedType": "FLOAT", "valuesByMode": { "78:0": { "type": "ALIAS", "id": "VariableID:61:517" }, "78:1": { "type": "ALIAS", "id": "VariableID:61:518" }, "79:0": { "type": "ALIAS", "id": "VariableID:153:10445" } } },
         { "id": "VariableID:451:2684", "name": "Button/ActionButton/ActionButton_padding-hor", "resolvedType": "FLOAT", "valuesByMode": { "78:0": { "type": "ALIAS", "id": "VariableID:59:862" }, "78:1": { "type": "ALIAS", "id": "VariableID:59:860" }, "79:0": { "type": "ALIAS", "id": "VariableID:59:865" } } },
-        { "id": "VariableID:451:2685", "name": "Button/ActionButton/ActionButton_padding-vert", "resolvedType": "FLOAT", "valuesByMode": { "78:0": { "type": "ALIAS", "id": "VariableID:59:859" }, "78:1": { "type": "ALIAS", "id": "VariableID:59:858" }, "79:0": { "type": "ALIAS", "id": "VariableID:59:859" } } },
-        { "id": "VariableID:482:15848", "name": "Checkbox/Group/Group_Tag-items-gap_vert", "resolvedType": "FLOAT", "valuesByMode": { "78:0": { "type": "ALIAS", "id": "VariableID:61:531" }, "78:1": { "type": "ALIAS", "id": "VariableID:61:530" }, "79:0": { "type": "ALIAS", "id": "VariableID:61:532" } } },
-        { "id": "VariableID:482:15849", "name": "Checkbox/Group/Group_Tag-items-gap_hor", "resolvedType": "FLOAT", "valuesByMode": { "78:0": { "type": "ALIAS", "id": "VariableID:61:531" }, "78:1": { "type": "ALIAS", "id": "VariableID:61:530" }, "79:0": { "type": "ALIAS", "id": "VariableID:61:532" } } }
+        { "id": "VariableID:451:2685", "name": "Button/ActionButton/ActionButton_padding-vert", "resolvedType": "FLOAT", "valuesByMode": { "78:0": { "type": "ALIAS", "id": "VariableID:59:859" }, "78:1": { "type": "ALIAS", "id": "VariableID:59:858" }, "79:0": { "type": "ALIAS", "id": "VariableID:59:859" } } }
       ]
     }
     ,
@@ -725,8 +723,8 @@
     { "id": "S:f17c01751f4707c01cbd2621e04ea169657af1e3,", "name": "Body S/Code", "fontName": { "family": "IBM Plex Mono", "style": "Regular" }, "fontSize": 12, "lineHeight": { "unit": "PERCENT", "value": 120.00000476837158 }, "letterSpacing": { "unit": "PERCENT", "value": 0 }, "boundVariables": { "fontSize": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:540" }, "fontStyle": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:550" }, "fontFamily": { "type": "VARIABLE_ALIAS", "id": "VariableID:69:539" } } }
   ],
   "stats": {
-    "variables": 570,
-    "aliases": 1180,
+    "variables": 568,
+    "aliases": 1174,
     "danglingAliasIds": [],
     "textStyles": 23,
     "danglingTextStyleAliasIds": [],

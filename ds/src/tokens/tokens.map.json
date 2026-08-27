@@ -37,8 +37,6 @@
   "--checkbox-group-checkbox-items-gap-hor": "Checkbox/Group/Group_Checkbox-items-gap_hor",
   "--checkbox-group-checkbox-items-gap-vert": "Checkbox/Group/Group_Checkbox-items-gap_vert",
   "--checkbox-group-gap": "Checkbox/Group/Group_gap",
-  "--checkbox-group-tag-items-gap-hor": "Checkbox/Group/Group_Tag-items-gap_hor",
-  "--checkbox-group-tag-items-gap-vert": "Checkbox/Group/Group_Tag-items-gap_vert",
   "--checkbox-group-title-font-size": "Checkbox/Group/Group_title_font-size",
   "--checkbox-hint-font-size": "Checkbox/Checkbox/Checkbox_hint_font-size",
   "--checkbox-item-border": "Checkbox/Item/Item_border",

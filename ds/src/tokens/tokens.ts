@@ -39,8 +39,6 @@ export const tokenNames = [
   '--checkbox-group-checkbox-items-gap-hor',
   '--checkbox-group-checkbox-items-gap-vert',
   '--checkbox-group-gap',
-  '--checkbox-group-tag-items-gap-hor',
-  '--checkbox-group-tag-items-gap-vert',
   '--checkbox-group-title-font-size',
   '--checkbox-hint-font-size',
   '--checkbox-item-border',
