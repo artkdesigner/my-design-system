@@ -52,7 +52,7 @@ export function TagGroup({
       aria-labelledby={titleId}
       className={[styles.wrapper, className].filter(Boolean).join(' ')}
       data-size={size}
-      data-alert={alert || undefined}
+      data-alert={alert ? 'error' : undefined}
     >
       {title && (
         <div id={titleId} className={styles.title}>
