@@ -70,37 +70,37 @@ describe('Button', () => {
 
   it('включает onAccent и на прозрачном виде — режим у кнопки один на все виды', () => {
     render(
-      <Button ghost message="error">
+      <Button ghost alert="error">
         Удалить
       </Button>
     );
     expect(screen.getByRole('button').dataset.onAccent).toBe('true');
   });
 
-  it('ставит тон сообщения на саму кнопку', () => {
+  it('ставит тон уведомления на саму кнопку', () => {
     // Тон обязан быть на самом элементе, а не на контейнере. Проверено на
     // живом CSS: тон с контейнера переживает покой, но под наведением
     // сбрасывается в info — переизлучение слоя сообщений в .ds-interactive:hover
     // объявляет его умолчательный режим. Составные селекторы спасают только
     // когда режим стоит на том же элементе.
-    render(<Button message="error">Удалить</Button>);
-    expect(screen.getByRole('button').dataset.message).toBe('error');
+    render(<Button alert="error">Удалить</Button>);
+    expect(screen.getByRole('button').dataset.alert).toBe('error');
   });
 
   it('принимает любой из четырёх тонов', () => {
-    render(<Button message="success">Готово</Button>);
-    expect(screen.getByRole('button').dataset.message).toBe('success');
+    render(<Button alert="success">Готово</Button>);
+    expect(screen.getByRole('button').dataset.alert).toBe('success');
   });
 
-  it('без пропа message режима сообщения не включает', () => {
+  it('без пропа alert режима уведомления не включает', () => {
     render(<Button>Сохранить</Button>);
-    expect(screen.getByRole('button')).not.toHaveAttribute('data-message');
+    expect(screen.getByRole('button')).not.toHaveAttribute('data-alert');
   });
 
   it('не заводит второго атрибута под тот же признак', () => {
-    // Раньше эмитилось два: data-danger для стилей и data-message для слоя
+    // Раньше эмитилось два: data-danger для стилей и data-alert для слоя
     // токенов. Один признак в двух местах — лишний повод им разойтись.
-    render(<Button message="error">Удалить</Button>);
+    render(<Button alert="error">Удалить</Button>);
     expect(screen.getByRole('button')).not.toHaveAttribute('data-danger');
   });
 

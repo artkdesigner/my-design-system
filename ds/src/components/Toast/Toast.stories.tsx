@@ -31,9 +31,9 @@ export const Виды: Story = {
   render: () => (
     <div style={{ ...page, display: 'flex', flexDirection: 'column', gap: 'var(--margin-16)' }}>
       <Toast view="neutral" title="Title" caption="Caption" buttonLabel="Button" onButtonClick={() => {}} onClose={() => {}} />
-      <Toast view="message" title="Title" caption="Caption" buttonLabel="Button" onButtonClick={() => {}} onClose={() => {}} />
+      <Toast view="alert" title="Title" caption="Caption" buttonLabel="Button" onButtonClick={() => {}} onClose={() => {}} />
       <Toast view="neutral" title="Без кнопки и без крестика" />
-      <Toast view="message" title="Без caption" onClose={() => {}} />
+      <Toast view="alert" title="Без caption" onClose={() => {}} />
     </div>
   )
 };

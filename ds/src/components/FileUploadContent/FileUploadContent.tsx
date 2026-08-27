@@ -38,7 +38,7 @@ export function FileUploadContent({
     <div
       {...rest}
       data-size={size}
-      data-message={state === 'error' ? 'error' : undefined}
+      data-alert={state === 'error' ? 'error' : undefined}
       className={[styles.content, className].filter(Boolean).join(' ')}
     >
       <div className={styles.title}>

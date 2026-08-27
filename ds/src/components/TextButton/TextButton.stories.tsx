@@ -91,7 +91,7 @@ export const Матрица: Story = {
                   {view}
                 </th>
               ))}
-              <th style={label}>message</th>
+              <th style={label}>alert</th>
             </tr>
           </thead>
           <tbody>
@@ -103,7 +103,7 @@ export const Матрица: Story = {
                 </td>
               ))}
               <td>
-                <TextButton message="error">Label</TextButton>
+                <TextButton alert="error">Label</TextButton>
               </td>
             </tr>
             {tones.map((tone) => (
@@ -111,7 +111,7 @@ export const Матрица: Story = {
                 <td style={label}>{tone}</td>
                 <td colSpan={VIEWS.length} />
                 <td>
-                  <TextButton message={tone}>Label</TextButton>
+                  <TextButton alert={tone}>Label</TextButton>
                 </td>
               </tr>
             ))}
@@ -147,10 +147,10 @@ export const Тоны: Story = {
           </thead>
           <tbody>
             <tr>
-              <td style={label}>message</td>
+              <td style={label}>alert</td>
               {tones.map((tone) => (
                 <td key={tone}>
-                  <TextButton message={tone}>Label</TextButton>
+                  <TextButton alert={tone}>Label</TextButton>
                 </td>
               ))}
             </tr>

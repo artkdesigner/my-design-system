@@ -91,28 +91,28 @@
   color: var(--element-icon-accent);
 }
 
-/* :not([data-message]) обязателен: без него специфичность этих правил
-   (0,2,0) перебивала бы border-color из .button[data-message] (0,1,0) —
+/* :not([data-alert]) обязателен: без него специфичность этих правил
+   (0,2,0) перебивала бы border-color из .button[data-alert] (0,1,0) —
    опасная прозрачная кнопка вида primary/secondary получала бы обводку
    element_border_primary вместо element_border_message_secondary. Найдено
    той же сверкой с макетом: обводка становилась белой (element_border_primary
    уходит в вариант onAccent из-за combined-селектора
-   [data-message="error"][data-on-accent] в state.css). */
-.button[data-ghost][data-view='primary']:not([data-message]) {
+   [data-alert="error"][data-on-accent] в state.css). */
+.button[data-ghost][data-view='primary']:not([data-alert]) {
   border-color: var(--element-border-primary);
   color: var(--element-text-primary);
 }
 
-.button[data-ghost][data-view='primary']:not([data-message]) .addon {
+.button[data-ghost][data-view='primary']:not([data-alert]) .addon {
   color: var(--element-icon-primary);
 }
 
-.button[data-ghost][data-view='secondary']:not([data-message]) {
+.button[data-ghost][data-view='secondary']:not([data-alert]) {
   border-color: var(--element-border-secondary);
   color: var(--element-text-primary);
 }
 
-.button[data-ghost][data-view='secondary']:not([data-message]) .addon {
+.button[data-ghost][data-view='secondary']:not([data-alert]) .addon {
   color: var(--element-icon-primary);
 }
 
@@ -125,7 +125,7 @@
    дизайнером для error. Так же выходит и по токенам: в режиме onAccent
    element_bg_message даёт сплошной цвет, а содержимое остаётся светлым,
    как у остальных залитых видов. */
-.button[data-message] {
+.button[data-alert] {
   background: var(--element-bg-message);
   border-color: var(--element-border-message-secondary);
 }
@@ -133,12 +133,12 @@
 /* Прозрачная с тоном сверена по макету (узел 299:1844, тон error): подпись
    element_text_message, иконка element_icon_message, обводка
    element_border_message_secondary — в макете все три #cc2929. */
-.button[data-message][data-ghost] {
+.button[data-alert][data-ghost] {
   background: transparent;
   color: var(--element-text-message);
 }
 
-.button[data-message][data-ghost] .addon {
+.button[data-alert][data-ghost] .addon {
   color: var(--element-icon-message);
 }
 

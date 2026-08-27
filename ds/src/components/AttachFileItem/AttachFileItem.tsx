@@ -80,7 +80,7 @@ export function AttachFileItem({
       {...rest}
       data-state={state}
       data-size={size}
-      data-message={state === 'error' ? 'error' : undefined}
+      data-alert={state === 'error' ? 'error' : undefined}
       className={[styles.item, className].filter(Boolean).join(' ')}
     >
       {state === 'noFile' && (

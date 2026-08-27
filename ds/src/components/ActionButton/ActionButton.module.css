@@ -34,6 +34,14 @@
   cursor: not-allowed;
 }
 
+/* Loading не через :disabled — тот красит круг и подпись в серый (состояние
+   Disabled в токенах), а по спеке (узел 446:1323, State=Loading) заливка
+   вида под Loading не меняется. Клик и так не доходит до onClick (см.
+   ActionButton.tsx), pointer-events здесь глушит ещё и наведение мышью. */
+.button[data-loading] {
+  pointer-events: none;
+}
+
 .circle {
   display: inline-flex;
   align-items: center;
@@ -73,11 +81,11 @@
   background: var(--element-bg-action-primary);
 }
 
-.button[data-view='primary']:not([data-message]) {
+.button[data-view='primary']:not([data-alert]) {
   color: var(--element-text-primary);
 }
 
-.button[data-view='primary']:not([data-message]) .circle {
+.button[data-view='primary']:not([data-alert]) .circle {
   color: var(--element-icon-absolute);
 }
 
@@ -90,30 +98,33 @@
   color: var(--element-icon-accent);
 }
 
-.button[data-ghost][data-view='primary']:not([data-message]) .circle {
+.button[data-ghost][data-view='primary']:not([data-alert]) .circle {
   border-color: var(--element-border-primary);
   color: var(--element-icon-primary);
 }
 
-/* Тон сообщения — тот же message, что у Button. Подпись под кругом
-   остаётся в обычном режиме (сверено по узлу 155:6554) и берёт
-   element_text_message — красная/зелёная/жёлтая, лежит на фоне страницы.
-   Заливка круга — тоже message-тона (element_bg_message), а вот иконка
-   внутри, вопреки первому впечатлению, НЕ message-цвета: сверено по узлу
-   160:2860 (скриншот) — на залитом message-круге иконка сплошная белая,
-   тот же element_icon_primary, что и у обычного залитого круга, а не
-   какой-то отдельный «message-иконка» цвет. data-on-accent на .circle
-   (см. ActionButton.tsx) переводит element_icon_primary в белый как обычно. */
-.button[data-message] {
+/* Тон уведомления (проп alert) — тот же механизм, что у Button, только
+   имя проп/атрибута следует Figma-свойству ActionButton Alert, а не Message.
+   Подпись под кругом остаётся в обычном режиме (сверено по узлу 155:6554) и
+   берёт element_text_message — красная/зелёная/жёлтая, лежит на фоне
+   страницы. Заливка круга — тоже message-тона (element_bg_message), а вот
+   иконка внутри, вопреки первому впечатлению, НЕ message-цвета: сверено по
+   узлу 160:2860 (скриншот) — на залитом круге иконка сплошная белая, тот же
+   element_icon_primary, что и у обычного залитого круга, а не какой-то
+   отдельный «message-иконка» цвет. data-on-accent на .circle (см.
+   ActionButton.tsx) переводит element_icon_primary в белый как обычно.
+   Названия самих цветовых токенов (element_bg_message и т.п.) не менялись —
+   это имена переменных из Figma, отдельные от прописи alert/data-alert. */
+.button[data-alert] {
   color: var(--element-text-message);
 }
 
-.button[data-message] .circle {
+.button[data-alert] .circle {
   background: var(--element-bg-message);
   color: var(--element-icon-primary);
 }
 
-.button[data-message][data-ghost] .circle {
+.button[data-alert][data-ghost] .circle {
   background: transparent;
   border-color: var(--element-border-message-secondary);
   color: var(--element-icon-message);

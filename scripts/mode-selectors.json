@@ -40,10 +40,10 @@
     "layer": "state",
     "order": 5,
     "modes": {
-      "Info": [":root", "[data-message=\"info\"]"],
-      "Success": ["[data-message=\"success\"]"],
-      "Warning": ["[data-message=\"warning\"]"],
-      "Error": ["[data-message=\"error\"]"]
+      "Info": [":root", "[data-alert=\"info\"]"],
+      "Success": ["[data-alert=\"success\"]"],
+      "Warning": ["[data-alert=\"warning\"]"],
+      "Error": ["[data-alert=\"error\"]"]
     }
   },
 

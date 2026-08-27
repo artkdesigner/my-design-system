@@ -12,9 +12,11 @@ import styles from './Input.module.css';
 type InputOwnProps = {
   label?: string;
   hint?: ReactNode;
-  /** Тон ошибки. В макете это отдельное булево «Alert», а не проп message
-   * с выбором тона, как у Button — поле умеет быть только в порядке или
-   * в ошибке. */
+  /** Тон ошибки. В макете это отдельное булево «Alert» — простой флаг, а не
+   * многозначный проп alert с выбором тона, как у Button/ActionButton (то,
+   * что оба называются одинаково — совпадение имён, не общий тип: здесь
+   * boolean, там 'info' | 'success' | 'warning' | 'error'). Поле умеет быть
+   * только в порядке или в ошибке. */
   alert?: boolean;
   alertText?: ReactNode;
   leftAddon?: ReactNode;
@@ -97,8 +99,7 @@ export function Input({
     <div
       className={[styles.wrapper, className].filter(Boolean).join(' ')}
       data-size={size}
-      data-alert={alert || undefined}
-      data-message={alert ? 'error' : undefined}
+      data-alert={alert ? 'error' : undefined}
       data-state={disabled ? 'disabled' : undefined}
       data-label-floated={labelFloated || undefined}
     >

@@ -4,7 +4,7 @@ import styles from './IconButton.module.css';
 
 type IconButtonOwnProps = {
   /** Вид. Соответствует свойству View в Figma (узел 124:2304). */
-  view?: 'accent' | 'primary' | 'secondary' | 'message';
+  view?: 'accent' | 'primary' | 'secondary' | 'alert';
   /** Размер. Соответствует режимам коллекции ComponentSize. */
   size?: 'l' | 'm' | 's';
   /**
@@ -28,15 +28,16 @@ export type IconButtonProps = IconButtonOwnProps &
  * aria-label или aria-labelledby — так же, как у Button в режиме
  * «только иконка».
  *
- * Значение view «message» (переименовано из «danger» вслед за Figma) — не
- * то же самое, что проп message у Button: там это отдельный флаг с выбором
- * тона (info/success/warning/error), здесь — одно из четырёх значений view,
+ * Значение view «alert» (в Figma называется «message», переименовано в коде
+ * вслед за проп alert у Button/ActionButton для единообразия) — не то же
+ * самое, что проп alert у Button: там это отдельный флаг с выбором тона
+ * (info/success/warning/error), здесь — одно из четырёх значений view,
  * в Figma единственная опция, не выбор из четырёх тонов. Внутри оно всё
- * равно включает режим ColorsMessage (data-message ставится в error),
- * потому что element_icon_message — производный токен: без data-message он
+ * равно включает режим ColorsMessage (data-alert ставится в error),
+ * потому что element_icon_message — производный токен: без data-alert он
  * тихо остаётся синим (info по умолчанию), а под наведением/нажатием/
  * недоступностью нужны именно составные селекторы вида
- * .ds-interactive:hover[data-message="error"] — без атрибута на самом
+ * .ds-interactive:hover[data-alert="error"] — без атрибута на самом
  * элементе цвет на этих состояниях съезжает обратно в info, тот же эффект,
  * что разобран в Button.
  */
@@ -55,7 +56,7 @@ export function IconButton({
       className={[styles.button, 'ds-interactive', className].filter(Boolean).join(' ')}
       data-view={view}
       data-size={size}
-      data-message={view === 'message' ? 'error' : undefined}
+      data-alert={view === 'alert' ? 'error' : undefined}
     >
       <Addon size={size} aria-hidden="true">
         {icon}

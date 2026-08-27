@@ -16,7 +16,7 @@ describe('Notification', () => {
 
   it('showBadge=false скрывает StatusBadge', () => {
     const { container } = render(<Notification title="Title" showBadge={false} />);
-    expect(container.querySelector('[data-message], [data-tone]')).not.toBeInTheDocument();
+    expect(container.querySelector('[data-alert], [data-tone]')).not.toBeInTheDocument();
   });
 
   it('без onButtonClick кнопка не рисуется', () => {

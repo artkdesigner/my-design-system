@@ -26,9 +26,9 @@ export const Тоны: Story = {
   name: 'Тоны',
   render: () => (
     <div style={{ ...page, display: 'flex', flexWrap: 'wrap', gap: 'var(--margin-16)' }}>
-      <Status label="Message" tone="message" />
+      <Status label="Message" tone="alert" />
       <Status label="Custom" tone="custom" />
-      <Status label="Message" tone="message" accent />
+      <Status label="Message" tone="alert" accent />
       <Status label="Custom" tone="custom" accent />
     </div>
   )

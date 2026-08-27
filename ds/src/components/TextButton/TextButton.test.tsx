@@ -35,13 +35,13 @@ describe('TextButton', () => {
   });
 
   it('ставит тон сообщения на саму кнопку', () => {
-    render(<TextButton message="error">Удалить</TextButton>);
-    expect(screen.getByRole('button').dataset.message).toBe('error');
+    render(<TextButton alert="error">Удалить</TextButton>);
+    expect(screen.getByRole('button').dataset.alert).toBe('error');
   });
 
-  it('без пропа message режима сообщения не включает', () => {
+  it('без пропа alert режима уведомления не включает', () => {
     render(<TextButton>Сохранить</TextButton>);
-    expect(screen.getByRole('button')).not.toHaveAttribute('data-message');
+    expect(screen.getByRole('button')).not.toHaveAttribute('data-alert');
   });
 
   it('показывает левую и правую иконку', () => {

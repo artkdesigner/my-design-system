@@ -11,8 +11,9 @@ import styles from './TextArea.module.css';
 type TextAreaOwnProps = {
   label?: string;
   hint?: ReactNode;
-  /** Тон ошибки. Как у Input — отдельное булево, а не проп message
-   * с выбором тона. */
+  /** Тон ошибки. Как у Input — отдельное булево «Alert» из макета, а не
+   * многозначный проп alert с выбором тона, как у Button/ActionButton
+   * (совпадение имён, не общий тип). */
   alert?: boolean;
   alertText?: ReactNode;
   size?: 'l' | 'm' | 's';
@@ -81,8 +82,7 @@ export function TextArea({
     <div
       className={[styles.wrapper, className].filter(Boolean).join(' ')}
       data-size={size}
-      data-alert={alert || undefined}
-      data-message={alert ? 'error' : undefined}
+      data-alert={alert ? 'error' : undefined}
       data-state={disabled ? 'disabled' : undefined}
       data-label-floated={labelFloated || undefined}
     >

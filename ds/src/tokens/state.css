@@ -1240,7 +1240,7 @@
 }
 
 :root,
-[data-message="info"] {
+[data-alert="info"] {
   --message-text: var(--state-text-info);
   --message-icon: var(--state-icon-info);
   --message-bg-secondary: var(--state-bg-info-secondary);
@@ -1318,8 +1318,8 @@
   --message-border-primary: var(--state-border-info-primary);
 }
 
-.ds-interactive:active[data-message="error"],
-[data-state="pressed"][data-message="error"] {
+.ds-interactive:active[data-alert="error"],
+[data-state="pressed"][data-alert="error"] {
   --message-text: var(--state-text-error);
   --message-icon: var(--state-icon-error);
   --message-bg-secondary: var(--state-bg-error-secondary);
@@ -1328,8 +1328,8 @@
   --message-border-primary: var(--state-border-error-primary);
 }
 
-.ds-interactive:active[data-message="success"],
-[data-state="pressed"][data-message="success"] {
+.ds-interactive:active[data-alert="success"],
+[data-state="pressed"][data-alert="success"] {
   --message-text: var(--state-text-success);
   --message-icon: var(--state-icon-success);
   --message-bg-secondary: var(--state-bg-success-secondary);
@@ -1338,8 +1338,8 @@
   --message-border-primary: var(--state-border-success-primary);
 }
 
-.ds-interactive:active[data-message="warning"],
-[data-state="pressed"][data-message="warning"] {
+.ds-interactive:active[data-alert="warning"],
+[data-state="pressed"][data-alert="warning"] {
   --message-text: var(--state-text-warning);
   --message-icon: var(--state-icon-warning);
   --message-bg-secondary: var(--state-bg-warning-secondary);
@@ -1348,8 +1348,8 @@
   --message-border-primary: var(--state-border-warning-primary);
 }
 
-.ds-interactive:disabled[data-message="error"],
-[data-state="disabled"][data-message="error"] {
+.ds-interactive:disabled[data-alert="error"],
+[data-state="disabled"][data-alert="error"] {
   --message-text: var(--state-text-error);
   --message-icon: var(--state-icon-error);
   --message-bg-secondary: var(--state-bg-error-secondary);
@@ -1358,8 +1358,8 @@
   --message-border-primary: var(--state-border-error-primary);
 }
 
-.ds-interactive:disabled[data-message="success"],
-[data-state="disabled"][data-message="success"] {
+.ds-interactive:disabled[data-alert="success"],
+[data-state="disabled"][data-alert="success"] {
   --message-text: var(--state-text-success);
   --message-icon: var(--state-icon-success);
   --message-bg-secondary: var(--state-bg-success-secondary);
@@ -1368,8 +1368,8 @@
   --message-border-primary: var(--state-border-success-primary);
 }
 
-.ds-interactive:disabled[data-message="warning"],
-[data-state="disabled"][data-message="warning"] {
+.ds-interactive:disabled[data-alert="warning"],
+[data-state="disabled"][data-alert="warning"] {
   --message-text: var(--state-text-warning);
   --message-icon: var(--state-icon-warning);
   --message-bg-secondary: var(--state-bg-warning-secondary);
@@ -1378,8 +1378,8 @@
   --message-border-primary: var(--state-border-warning-primary);
 }
 
-.ds-interactive:hover[data-message="error"],
-[data-state="hover"][data-message="error"] {
+.ds-interactive:hover[data-alert="error"],
+[data-state="hover"][data-alert="error"] {
   --message-text: var(--state-text-error);
   --message-icon: var(--state-icon-error);
   --message-bg-secondary: var(--state-bg-error-secondary);
@@ -1388,8 +1388,8 @@
   --message-border-primary: var(--state-border-error-primary);
 }
 
-.ds-interactive:hover[data-message="success"],
-[data-state="hover"][data-message="success"] {
+.ds-interactive:hover[data-alert="success"],
+[data-state="hover"][data-alert="success"] {
   --message-text: var(--state-text-success);
   --message-icon: var(--state-icon-success);
   --message-bg-secondary: var(--state-bg-success-secondary);
@@ -1398,8 +1398,8 @@
   --message-border-primary: var(--state-border-success-primary);
 }
 
-.ds-interactive:hover[data-message="warning"],
-[data-state="hover"][data-message="warning"] {
+.ds-interactive:hover[data-alert="warning"],
+[data-state="hover"][data-alert="warning"] {
   --message-text: var(--state-text-warning);
   --message-icon: var(--state-icon-warning);
   --message-bg-secondary: var(--state-bg-warning-secondary);
@@ -1408,7 +1408,7 @@
   --message-border-primary: var(--state-border-warning-primary);
 }
 
-[data-accent="purple"][data-message="error"] {
+[data-accent="purple"][data-alert="error"] {
   --message-text: var(--state-text-error);
   --message-icon: var(--state-icon-error);
   --message-bg-secondary: var(--state-bg-error-secondary);
@@ -1417,7 +1417,7 @@
   --message-border-primary: var(--state-border-error-primary);
 }
 
-[data-accent="purple"][data-message="success"] {
+[data-accent="purple"][data-alert="success"] {
   --message-text: var(--state-text-success);
   --message-icon: var(--state-icon-success);
   --message-bg-secondary: var(--state-bg-success-secondary);
@@ -1426,7 +1426,7 @@
   --message-border-primary: var(--state-border-success-primary);
 }
 
-[data-accent="purple"][data-message="warning"] {
+[data-accent="purple"][data-alert="warning"] {
   --message-text: var(--state-text-warning);
   --message-icon: var(--state-icon-warning);
   --message-bg-secondary: var(--state-bg-warning-secondary);
@@ -1435,7 +1435,7 @@
   --message-border-primary: var(--state-border-warning-primary);
 }
 
-[data-accent="ruby"][data-message="error"] {
+[data-accent="ruby"][data-alert="error"] {
   --message-text: var(--state-text-error);
   --message-icon: var(--state-icon-error);
   --message-bg-secondary: var(--state-bg-error-secondary);
@@ -1444,7 +1444,7 @@
   --message-border-primary: var(--state-border-error-primary);
 }
 
-[data-accent="ruby"][data-message="success"] {
+[data-accent="ruby"][data-alert="success"] {
   --message-text: var(--state-text-success);
   --message-icon: var(--state-icon-success);
   --message-bg-secondary: var(--state-bg-success-secondary);
@@ -1453,7 +1453,7 @@
   --message-border-primary: var(--state-border-success-primary);
 }
 
-[data-accent="ruby"][data-message="warning"] {
+[data-accent="ruby"][data-alert="warning"] {
   --message-text: var(--state-text-warning);
   --message-icon: var(--state-icon-warning);
   --message-bg-secondary: var(--state-bg-warning-secondary);
@@ -1462,7 +1462,7 @@
   --message-border-primary: var(--state-border-warning-primary);
 }
 
-[data-accent="sky"][data-message="error"] {
+[data-accent="sky"][data-alert="error"] {
   --message-text: var(--state-text-error);
   --message-icon: var(--state-icon-error);
   --message-bg-secondary: var(--state-bg-error-secondary);
@@ -1471,7 +1471,7 @@
   --message-border-primary: var(--state-border-error-primary);
 }
 
-[data-accent="sky"][data-message="success"] {
+[data-accent="sky"][data-alert="success"] {
   --message-text: var(--state-text-success);
   --message-icon: var(--state-icon-success);
   --message-bg-secondary: var(--state-bg-success-secondary);
@@ -1480,7 +1480,7 @@
   --message-border-primary: var(--state-border-success-primary);
 }
 
-[data-accent="sky"][data-message="warning"] {
+[data-accent="sky"][data-alert="warning"] {
   --message-text: var(--state-text-warning);
   --message-icon: var(--state-icon-warning);
   --message-bg-secondary: var(--state-bg-warning-secondary);
@@ -1489,7 +1489,7 @@
   --message-border-primary: var(--state-border-warning-primary);
 }
 
-[data-theme="dark"][data-message="error"] {
+[data-theme="dark"][data-alert="error"] {
   --message-text: var(--state-text-error);
   --message-icon: var(--state-icon-error);
   --message-bg-secondary: var(--state-bg-error-secondary);
@@ -1498,7 +1498,7 @@
   --message-border-primary: var(--state-border-error-primary);
 }
 
-[data-theme="dark"][data-message="success"] {
+[data-theme="dark"][data-alert="success"] {
   --message-text: var(--state-text-success);
   --message-icon: var(--state-icon-success);
   --message-bg-secondary: var(--state-bg-success-secondary);
@@ -1507,7 +1507,7 @@
   --message-border-primary: var(--state-border-success-primary);
 }
 
-[data-theme="dark"][data-message="warning"] {
+[data-theme="dark"][data-alert="warning"] {
   --message-text: var(--state-text-warning);
   --message-icon: var(--state-icon-warning);
   --message-bg-secondary: var(--state-bg-warning-secondary);
@@ -1516,7 +1516,7 @@
   --message-border-primary: var(--state-border-warning-primary);
 }
 
-[data-message="success"] {
+[data-alert="success"] {
   --message-text: var(--state-text-success);
   --message-icon: var(--state-icon-success);
   --message-bg-secondary: var(--state-bg-success-secondary);
@@ -1525,7 +1525,7 @@
   --message-border-primary: var(--state-border-success-primary);
 }
 
-[data-message="warning"] {
+[data-alert="warning"] {
   --message-text: var(--state-text-warning);
   --message-icon: var(--state-icon-warning);
   --message-bg-secondary: var(--state-bg-warning-secondary);
@@ -1534,7 +1534,7 @@
   --message-border-primary: var(--state-border-warning-primary);
 }
 
-[data-message="error"] {
+[data-alert="error"] {
   --message-text: var(--state-text-error);
   --message-icon: var(--state-icon-error);
   --message-bg-secondary: var(--state-bg-error-secondary);
@@ -1682,7 +1682,7 @@
   --on-accent-icon-tetriary: var(--state-icon-tetriary);
 }
 
-[data-message="error"] {
+[data-alert="error"] {
   --on-accent-text-primary: var(--state-text-primary);
   --on-accent-text-secondary: var(--state-text-secondary);
   --on-accent-icon-primary: var(--state-icon-primary);
@@ -1701,7 +1701,7 @@
   --on-accent-icon-tetriary: var(--state-icon-tetriary);
 }
 
-[data-message="success"] {
+[data-alert="success"] {
   --on-accent-text-primary: var(--state-text-primary);
   --on-accent-text-secondary: var(--state-text-secondary);
   --on-accent-icon-primary: var(--state-icon-primary);
@@ -1720,7 +1720,7 @@
   --on-accent-icon-tetriary: var(--state-icon-tetriary);
 }
 
-[data-message="warning"] {
+[data-alert="warning"] {
   --on-accent-text-primary: var(--state-text-primary);
   --on-accent-text-secondary: var(--state-text-secondary);
   --on-accent-icon-primary: var(--state-icon-primary);
@@ -1875,7 +1875,7 @@
   --on-accent-icon-tetriary: var(--state-text-on-accent-tetruiary);
 }
 
-[data-message="error"][data-on-accent] {
+[data-alert="error"][data-on-accent] {
   --on-accent-text-primary: var(--state-text-on-accent-primary);
   --on-accent-text-secondary: var(--state-text-on-accent-secondary);
   --on-accent-icon-primary: var(--state-icon-on-accent-primary);
@@ -1894,7 +1894,7 @@
   --on-accent-icon-tetriary: var(--state-text-on-accent-tetruiary);
 }
 
-[data-message="success"][data-on-accent] {
+[data-alert="success"][data-on-accent] {
   --on-accent-text-primary: var(--state-text-on-accent-primary);
   --on-accent-text-secondary: var(--state-text-on-accent-secondary);
   --on-accent-icon-primary: var(--state-icon-on-accent-primary);
@@ -1913,7 +1913,7 @@
   --on-accent-icon-tetriary: var(--state-text-on-accent-tetruiary);
 }
 
-[data-message="warning"][data-on-accent] {
+[data-alert="warning"][data-on-accent] {
   --on-accent-text-primary: var(--state-text-on-accent-primary);
   --on-accent-text-secondary: var(--state-text-on-accent-secondary);
   --on-accent-icon-primary: var(--state-icon-on-accent-primary);

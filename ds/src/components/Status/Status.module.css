@@ -16,7 +16,7 @@
   font-family: var(--font-family-main);
 }
 
-.pill[data-tone='message'] {
+.pill[data-tone='alert'] {
   background: var(--element-bg-message);
   color: var(--element-text-message);
 }

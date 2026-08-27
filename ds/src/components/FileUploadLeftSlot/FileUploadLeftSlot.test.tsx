@@ -14,11 +14,11 @@ describe('FileUploadLeftSlot', () => {
     expect(ring.style.background).toContain('40%');
   });
 
-  it('success/error переносят data-message', () => {
+  it('success/error переносят data-alert', () => {
     const { container: success } = render(<FileUploadLeftSlot state="success" />);
     const { container: error } = render(<FileUploadLeftSlot state="error" />);
-    expect((success.firstElementChild as HTMLElement).dataset.message).toBe('success');
-    expect((error.firstElementChild as HTMLElement).dataset.message).toBe('error');
+    expect((success.firstElementChild as HTMLElement).dataset.alert).toBe('success');
+    expect((error.firstElementChild as HTMLElement).dataset.alert).toBe('error');
   });
 
   it('deleted: рисует крестик поверх иконки', () => {

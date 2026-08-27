@@ -6,8 +6,10 @@ import { Icon } from '../Icon';
 import styles from './Toast.module.css';
 
 type ToastOwnProps = {
-  /** Вид. Соответствует свойству Type в Figma: Neutral → 'neutral', Message → 'message'. */
-  view?: 'neutral' | 'message';
+  /** Вид. Соответствует свойству Type в Figma: Neutral → 'neutral', Message →
+   * 'alert' (переименовано в коде вслед за проп alert у Button/ActionButton
+   * для единообразия — в Figma это значение называется Message). */
+  view?: 'neutral' | 'alert';
   title: ReactNode;
   caption?: ReactNode;
   buttonLabel?: ReactNode;
@@ -30,7 +32,7 @@ export type ToastProps = ToastOwnProps &
  * с check/alert, в отличие от Notification, поэтому badgeType не вынесен
  * в проп, а следует за view напрямую.
  *
- * Крестик закрытия в виде message синий (element_icon_message), хотя
+ * Крестик закрытия в виде alert синий (element_icon_message), хотя
  * IconButton здесь стоит с view="secondary" — у самого IconButton нет вида
  * под тон info, только error. Цвет переопределён каскадом переменной
  * --element-icon-secondary внутри .closerSlot в CSS (см. Toast.module.css),
@@ -52,7 +54,7 @@ export function Toast({
   return (
     <div {...rest} data-view={view} role="status" className={[styles.toast, className].filter(Boolean).join(' ')}>
       <div className={styles.badgeSlot}>
-        <StatusBadge type={view === 'message' ? 'infoAccent' : 'infoNeutral'} />
+        <StatusBadge type={view === 'alert' ? 'infoAccent' : 'infoNeutral'} />
       </div>
 
       <div className={styles.text}>

@@ -67,8 +67,8 @@ export const Матрица: Story = {
             [
               ['обычная', {}],
               ['ghost', { ghost: true }],
-              ['message=error', { message: 'error' }],
-              ['ghost + message', { ghost: true, message: 'error' }]
+              ['alert=error', { alert: 'error' }],
+              ['ghost + alert', { ghost: true, alert: 'error' }]
             ] as const
           ).map(([name, props]) => (
             <tr key={name}>
@@ -122,7 +122,7 @@ export const Состояния: Story = {
           <tbody>
             {[
               ...VIEWS.map((view) => [view, { view }] as const),
-              ['message=error', { message: 'error' }] as const
+              ['alert=error', { alert: 'error' }] as const
             ].map(
               ([name, props]) => (
                 <tr key={name}>
@@ -164,7 +164,7 @@ export const Загрузка: Story = {
 
 /**
  * Четыре тона сообщения, залитые и прозрачные. Компонент про сами цвета не
- * знает: проп message выбирает режим коллекции ColorsMessage, значения
+ * знает: проп alert выбирает режим коллекции ColorsMessage, значения
  * приходят из токенов.
  *
  * Тон стоит на самой кнопке, а не на контейнере вокруг неё, и это не
@@ -201,7 +201,7 @@ export const Тоны: Story = {
                 <td style={label}>{name}</td>
                 {tones.map((tone) => (
                   <td key={tone}>
-                    <Button {...props} message={tone}>
+                    <Button {...props} alert={tone}>
                       Label
                     </Button>
                   </td>

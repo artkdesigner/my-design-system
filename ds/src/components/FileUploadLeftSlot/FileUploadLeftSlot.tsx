@@ -45,7 +45,7 @@ export function FileUploadLeftSlot({
       {...rest}
       data-status={state}
       data-size={size}
-      data-message={state === 'success' ? 'success' : state === 'error' ? 'error' : undefined}
+      data-alert={state === 'success' ? 'success' : state === 'error' ? 'error' : undefined}
       className={[styles.slot, className].filter(Boolean).join(' ')}
     >
       <div

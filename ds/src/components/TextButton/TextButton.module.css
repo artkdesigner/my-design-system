@@ -37,21 +37,21 @@
 /* Вид различается только цветом подписи и иконок — сверено с макетом
    (узлы 179:2682 accent, 179:2680 primary): у accent element_text_accent,
    у primary element_text_primary. */
-.button[data-view='primary']:not([data-message]) {
+.button[data-view='primary']:not([data-alert]) {
   color: var(--element-text-primary);
 }
 
-.button[data-view='primary']:not([data-message]) .addon {
+.button[data-view='primary']:not([data-alert]) .addon {
   color: var(--element-icon-primary);
 }
 
 /* Тон сообщения перебивает цвет вида — сверено с макетом (узел 179:2690,
    тон error): подпись и иконка element_text_message/element_icon_message. */
-.button[data-message] {
+.button[data-alert] {
   color: var(--element-text-message);
 }
 
-.button[data-message] .addon {
+.button[data-alert] .addon {
   color: var(--element-icon-message);
 }
 

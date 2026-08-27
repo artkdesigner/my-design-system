@@ -15,7 +15,7 @@
   border-color: var(--element-border-secondary);
 }
 
-.toast[data-view='message'] {
+.toast[data-view='alert'] {
   background: var(--element-bg-message);
   border-color: var(--element-border-message-secondary);
 }
@@ -46,7 +46,7 @@
   color: var(--element-text-primary);
 }
 
-.toast[data-view='message'] .text {
+.toast[data-view='alert'] .text {
   color: var(--element-text-message);
 }
 
@@ -94,10 +94,10 @@
   background: var(--element-border-secondary);
 }
 
-.toast[data-view='message'] .divider {
+.toast[data-view='alert'] .divider {
   background: var(--element-border-message-secondary);
 }
 
-.toast[data-view='message'] .closerSlot {
+.toast[data-view='alert'] .closerSlot {
   --element-icon-secondary: var(--element-icon-message);
 }

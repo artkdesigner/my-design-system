@@ -7,8 +7,8 @@ type TextButtonOwnProps = {
   view?: 'accent' | 'primary';
   /** Размер. Соответствует режимам коллекции ComponentSize. */
   size?: 'l' | 'm' | 's';
-  /** Тон сообщения — как у Button: одно значение вместо флага плюс режим. */
-  message?: 'info' | 'success' | 'warning' | 'error';
+  /** Тон уведомления — как у Button: одно значение вместо флага плюс режим. */
+  alert?: 'info' | 'success' | 'warning' | 'error';
   addonLeft?: ReactNode;
   addonRight?: ReactNode;
   children: ReactNode;
@@ -24,16 +24,16 @@ export type TextButtonProps = TextButtonOwnProps &
  * В отличие от Button, здесь нет заливки ни в одном состоянии — компонент
  * всегда «прозрачный». Поэтому режим onAccent (он у Button отвечает за то,
  * что подпись становится светлой на цветном фоне) включается только тогда,
- * когда есть тон сообщения: в макете (узел 179:2690, тон error) цвет подписи
- * element_text_message равен #cc2929 — то же значение, что и без onAccent,
- * так что различие тут не в цвете, а в следовании общей формуле Button
- * (`data-on-accent = !ghost || message`, где для TextButton ghost всегда
- * истинен, значит формула сводится к `message`).
+ * когда есть тон уведомления: в макете (узел 179:2690, тон error) цвет
+ * подписи element_text_message равен #cc2929 — то же значение, что и без
+ * onAccent, так что различие тут не в цвете, а в следовании общей формуле
+ * Button (`data-on-accent = !ghost || alert`, где для TextButton ghost
+ * всегда истинен, значит формула сводится к `alert`).
  */
 export function TextButton({
   view = 'accent',
   size = 'l',
-  message,
+  alert,
   addonLeft,
   addonRight,
   children,
@@ -48,8 +48,8 @@ export function TextButton({
       className={[styles.button, 'ds-interactive', className].filter(Boolean).join(' ')}
       data-view={view}
       data-size={size}
-      data-on-accent={message ? 'true' : undefined}
-      data-message={message}
+      data-on-accent={alert ? 'true' : undefined}
+      data-alert={alert}
     >
       {addonLeft && (
         <Addon size={size} className={styles.addon} aria-hidden="true">

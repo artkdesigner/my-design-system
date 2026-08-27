@@ -16,7 +16,7 @@
   color: var(--element-icon-primary);
 }
 
-.badge[data-tone='message'] {
+.badge[data-tone='alert'] {
   background: var(--element-bg-message);
 }
 

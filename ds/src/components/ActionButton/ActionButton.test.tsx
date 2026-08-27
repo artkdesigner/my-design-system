@@ -35,13 +35,13 @@ describe('ActionButton', () => {
     expect(screen.getByRole('button')).not.toHaveAttribute('data-ghost');
   });
 
-  it('ставит тон сообщения на саму кнопку', () => {
+  it('ставит тон уведомления на саму кнопку', () => {
     render(
-      <ActionButton icon={<svg />} message="error">
+      <ActionButton icon={<svg />} alert="error">
         Удалить
       </ActionButton>
     );
-    expect(screen.getByRole('button').dataset.message).toBe('error');
+    expect(screen.getByRole('button').dataset.alert).toBe('error');
   });
 
   it('показывает иконку и подпись', () => {
@@ -81,5 +81,48 @@ describe('ActionButton', () => {
       </ActionButton>
     );
     expect(screen.getByRole('button')).toHaveAttribute('type', 'submit');
+  });
+
+  it('в состоянии загрузки рисует Spinner вместо иконки, но подпись оставляет', () => {
+    render(
+      <ActionButton icon={<svg data-testid="icon" />} loading>
+        Метка
+      </ActionButton>
+    );
+    expect(screen.queryByTestId('icon')).not.toBeInTheDocument();
+    expect(screen.getByText('Метка')).toBeInTheDocument();
+  });
+
+  it('в состоянии загрузки не зовёт onClick', async () => {
+    const onClick = vi.fn();
+    render(
+      <ActionButton icon={<svg />} onClick={onClick} loading>
+        Метка
+      </ActionButton>
+    );
+    await userEvent.click(screen.getByRole('button'));
+    expect(onClick).not.toHaveBeenCalled();
+  });
+
+  it('состояние загрузки не через HTML disabled', () => {
+    // Иначе круг и подпись красятся в серый через :disabled в state.css —
+    // а по спеке (узел 446:1323, State=Loading) заливка вида не меняется.
+    render(
+      <ActionButton icon={<svg />} loading>
+        Метка
+      </ActionButton>
+    );
+    expect(screen.getByRole('button')).not.toBeDisabled();
+  });
+
+  it('помечает состояние загрузки для доступности', () => {
+    render(
+      <ActionButton icon={<svg />} loading>
+        Метка
+      </ActionButton>
+    );
+    const button = screen.getByRole('button');
+    expect(button).toHaveAttribute('aria-busy', 'true');
+    expect(button).toHaveAttribute('aria-disabled', 'true');
   });
 });

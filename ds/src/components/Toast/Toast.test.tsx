@@ -19,9 +19,9 @@ describe('Toast', () => {
     expect(container.firstElementChild).toHaveAttribute('data-view', 'neutral');
   });
 
-  it('view=message переносится на корень', () => {
-    const { container } = render(<Toast title="Title" view="message" />);
-    expect(container.firstElementChild).toHaveAttribute('data-view', 'message');
+  it('view=alert переносится на корень', () => {
+    const { container } = render(<Toast title="Title" view="alert" />);
+    expect(container.firstElementChild).toHaveAttribute('data-view', 'alert');
   });
 
   it('без onButtonClick кнопка не рисуется', () => {

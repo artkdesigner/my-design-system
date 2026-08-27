@@ -8,10 +8,10 @@ describe('Status', () => {
     expect(screen.getByText('Активен')).toBeInTheDocument();
   });
 
-  it('по умолчанию message-тон без заливки', () => {
+  it('по умолчанию alert-тон без заливки', () => {
     render(<Status label="Активен" />);
     const el = screen.getByText('Активен').closest('span[data-tone]') as HTMLElement;
-    expect(el.dataset.tone).toBe('message');
+    expect(el.dataset.tone).toBe('alert');
     expect(el).not.toHaveAttribute('data-on-accent');
   });
 

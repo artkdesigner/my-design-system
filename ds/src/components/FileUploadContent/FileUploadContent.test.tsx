@@ -23,8 +23,8 @@ describe('FileUploadContent', () => {
     expect(screen.queryByText('Игнор')).not.toBeInTheDocument();
   });
 
-  it('error: переносит data-message', () => {
+  it('error: переносит data-alert', () => {
     const { container } = render(<FileUploadContent name="Файл" state="error" errorText1="X" />);
-    expect((container.firstElementChild as HTMLElement).dataset.message).toBe('error');
+    expect((container.firstElementChild as HTMLElement).dataset.alert).toBe('error');
   });
 });

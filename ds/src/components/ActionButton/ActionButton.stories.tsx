@@ -61,8 +61,8 @@ export const Матрица: Story = {
             [
               ['обычная', {}],
               ['ghost', { ghost: true }],
-              ['message=error', { message: 'error' }],
-              ['ghost + message', { ghost: true, message: 'error' }]
+              ['alert=error', { alert: 'error' }],
+              ['ghost + alert', { ghost: true, alert: 'error' }]
             ] as const
           ).map(([name, props]) => (
             <tr key={name}>
@@ -78,6 +78,24 @@ export const Матрица: Story = {
           ))}
         </tbody>
       </table>
+    </div>
+  )
+};
+
+/**
+ * Loading по обоим видам — сверка со спекой (узел 446:1323, State=Loading):
+ * заливка круга та же, что в покое, меняется только его содержимое на
+ * Spinner. В отличие от Button подпись под кругом остаётся на месте.
+ */
+export const Загрузка: Story = {
+  name: 'Loading',
+  render: () => (
+    <div style={{ ...page, display: 'flex', gap: 'var(--margin-16)' }}>
+      {VIEWS.map((view) => (
+        <ActionButton key={view} view={view} icon={<PlusIcon />} loading>
+          Label
+        </ActionButton>
+      ))}
     </div>
   )
 };

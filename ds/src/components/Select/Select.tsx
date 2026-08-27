@@ -149,8 +149,7 @@ export function Select({
     <div
       className={[styles.wrapper, className].filter(Boolean).join(' ')}
       data-size={size}
-      data-alert={alert || undefined}
-      data-message={alert ? 'error' : undefined}
+      data-alert={alert ? 'error' : undefined}
       data-state={disabled ? 'disabled' : undefined}
       data-label-floated={labelFloated || undefined}
       data-active={open || undefined}

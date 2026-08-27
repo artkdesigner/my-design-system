@@ -4,18 +4,18 @@ import { StatusBadge } from './StatusBadge';
 import { ICONS } from '../Icon/icons.generated';
 
 describe('StatusBadge', () => {
-  it('по умолчанию рисует positiveCheck: иконка check, тон message', () => {
+  it('по умолчанию рисует positiveCheck: иконка check, тон alert', () => {
     const { container } = render(<StatusBadge />);
     const badge = container.firstElementChild as HTMLElement;
-    expect(badge.dataset.tone).toBe('message');
-    expect(badge.dataset.message).toBe('success');
+    expect(badge.dataset.tone).toBe('alert');
+    expect(badge.dataset.alert).toBe('success');
     expect(container.querySelector('path')).toHaveAttribute('d', ICONS.check.d);
   });
 
   it('negativeCross: иконка x-03, статус error', () => {
     const { container } = render(<StatusBadge type="negativeCross" />);
     const badge = container.firstElementChild as HTMLElement;
-    expect(badge.dataset.message).toBe('error');
+    expect(badge.dataset.alert).toBe('error');
     expect(container.querySelector('path')).toHaveAttribute('d', ICONS['x-03'].d);
   });
 
@@ -23,15 +23,15 @@ describe('StatusBadge', () => {
     const { container } = render(<StatusBadge type="neutralCross" />);
     const badge = container.firstElementChild as HTMLElement;
     expect(badge.dataset.tone).toBe('neutral');
-    expect(badge.dataset.message).toBeUndefined();
+    expect(badge.dataset.alert).toBeUndefined();
     expect(container.querySelector('path')).toHaveAttribute('d', ICONS['x-03'].d);
   });
 
   it('warningAlert и negativeAlert используют одну иконку exclamation-mark, разные статусы', () => {
     const { container: warning } = render(<StatusBadge type="warningAlert" />);
     const { container: negative } = render(<StatusBadge type="negativeAlert" />);
-    expect((warning.firstElementChild as HTMLElement).dataset.message).toBe('warning');
-    expect((negative.firstElementChild as HTMLElement).dataset.message).toBe('error');
+    expect((warning.firstElementChild as HTMLElement).dataset.alert).toBe('warning');
+    expect((negative.firstElementChild as HTMLElement).dataset.alert).toBe('error');
     expect(warning.querySelector('path')).toHaveAttribute('d', ICONS['exclamation-mark'].d);
     expect(negative.querySelector('path')).toHaveAttribute('d', ICONS['exclamation-mark'].d);
   });
@@ -40,7 +40,7 @@ describe('StatusBadge', () => {
     const { container: neutral } = render(<StatusBadge type="infoNeutral" />);
     const { container: accent } = render(<StatusBadge type="infoAccent" />);
     expect((neutral.firstElementChild as HTMLElement).dataset.tone).toBe('neutral');
-    expect((accent.firstElementChild as HTMLElement).dataset.message).toBe('info');
+    expect((accent.firstElementChild as HTMLElement).dataset.alert).toBe('info');
     expect(neutral.querySelector('path')).toHaveAttribute('d', ICONS.information.d);
     expect(accent.querySelector('path')).toHaveAttribute('d', ICONS.information.d);
   });
@@ -55,7 +55,7 @@ describe('StatusBadge', () => {
   it('stop: иконка stop, статус error', () => {
     const { container } = render(<StatusBadge type="stop" />);
     const badge = container.firstElementChild as HTMLElement;
-    expect(badge.dataset.message).toBe('error');
+    expect(badge.dataset.alert).toBe('error');
     expect(container.querySelector('path')).toHaveAttribute('d', ICONS.stop.d);
   });
 

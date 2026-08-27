@@ -11,11 +11,14 @@ type ButtonOwnProps = {
   /** Прозрачная кнопка без заливки. */
   ghost?: boolean;
   /**
-   * Тон сообщения. Соответствует свойству Message в Figma вместе с режимом
+   * Тон уведомления. Соответствует свойству Message в Figma вместе с режимом
    * коллекции ColorsMessage: в Figma это флаг плюс режим, в коде — одно
    * значение, потому что режим всё равно обязан стоять на самой кнопке.
+   * Проп называется alert, а не message, вслед за именем этого свойства
+   * у ActionButton (Alert/AlertType) — для единообразия по всей системе,
+   * хотя у самой Button в Figma оно называется Message.
    */
-  message?: 'info' | 'success' | 'warning' | 'error';
+  alert?: 'info' | 'success' | 'warning' | 'error';
   /**
    * Состояние загрузки. Соответствует Loading в Figma: подменяет содержимое
    * на Spinner, заливка вида не меняется. Сверено по всем трём view (узлы
@@ -69,7 +72,7 @@ export type ButtonProps = ButtonOwnProps &
  *     Сверено по узлам 80:2324 (primary) и 245:3773 (secondary): там
  *     element_text_primary и element_border_primary/secondary даны в
  *     умолчательном режиме, не в onAccent.
- *   — `data-message` с тоном, когда передан проп message. Тон обязан стоять
+ *   — `data-alert` с тоном, когда передан проп alert. Тон обязан стоять
  *     на самой кнопке, а не на контейнере вокруг неё: с контейнера он
  *     переживает покой, но под наведением сбрасывается в info, потому что
  *     переизлучение слоя сообщений в .ds-interactive:hover объявляет его
@@ -78,7 +81,7 @@ export type ButtonProps = ButtonOwnProps &
  *
  * Пометка режима на самом интерактивном элементе работает только потому, что
  * генератор выдаёт составные селекторы вида
- * .ds-interactive:hover[data-message="error"]. Без них переизлучение слоя
+ * .ds-interactive:hover[data-alert="error"]. Без них переизлучение слоя
  * в .ds-interactive:hover перебивало пометку по специфичности: опасная кнопка
  * под наведением синела, а подпись недоступной пропадала.
  */
@@ -86,7 +89,7 @@ export function Button({
   view = 'accent',
   size = 'l',
   ghost = false,
-  message,
+  alert,
   loading = false,
   iconLeft,
   iconRight,
@@ -109,8 +112,8 @@ export function Button({
       data-size={size}
       data-ghost={ghost || undefined}
       data-icon-only={isIconOnly || undefined}
-      data-on-accent={!ghost || message ? 'true' : undefined}
-      data-message={message}
+      data-on-accent={!ghost || alert ? 'true' : undefined}
+      data-alert={alert}
       data-loading={loading || undefined}
       aria-busy={loading || undefined}
       aria-disabled={loading || undefined}

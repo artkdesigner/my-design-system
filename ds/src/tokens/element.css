@@ -273,7 +273,7 @@
   --element-icon-tetriary: var(--on-accent-icon-tetriary);
 }
 
-[data-message="error"] {
+[data-alert="error"] {
   --element-text-primary: var(--on-accent-text-primary);
   --element-text-secondary: var(--on-accent-text-secondary);
   --element-text-accent: var(--state-text-accent);
@@ -311,7 +311,7 @@
   --element-icon-tetriary: var(--on-accent-icon-tetriary);
 }
 
-[data-message="success"] {
+[data-alert="success"] {
   --element-text-primary: var(--on-accent-text-primary);
   --element-text-secondary: var(--on-accent-text-secondary);
   --element-text-accent: var(--state-text-accent);
@@ -349,7 +349,7 @@
   --element-icon-tetriary: var(--on-accent-icon-tetriary);
 }
 
-[data-message="warning"] {
+[data-alert="warning"] {
   --element-text-primary: var(--on-accent-text-primary);
   --element-text-secondary: var(--on-accent-text-secondary);
   --element-text-accent: var(--state-text-accent);

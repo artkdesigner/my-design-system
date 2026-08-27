@@ -36,6 +36,6 @@
   color: var(--element-icon-secondary);
 }
 
-.button[data-message] {
+.button[data-alert] {
   color: var(--element-icon-message);
 }

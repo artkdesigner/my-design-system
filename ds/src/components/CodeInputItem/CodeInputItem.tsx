@@ -29,11 +29,11 @@ export type CodeInputItemProps = CodeInputItemOwnProps & Omit<HTMLAttributes<HTM
  * коду: в обоих случаях набор в ячейке не идёт, поэтому подсказывать
  * место ввода незачем.
  *
- * data-message="error" обязателен рядом с data-error: без него
+ * data-alert="error" обязателен рядом с data-error: без него
  * --element-bg-message/--element-text-message берут дефолтный info-тон
  * (синий) — на красный их переключает только этот атрибут (см.
- * [data-message="error"] в tokens/element.css), тот же приём, что и у
- * Input с его data-message на обёртке.
+ * [data-alert="error"] в tokens/element.css), тот же приём, что и у
+ * Input с его data-alert на обёртке.
  */
 export function CodeInputItem({
   value,
@@ -54,7 +54,7 @@ export function CodeInputItem({
       className={[styles.cell, className].filter(Boolean).join(' ')}
       data-size={size}
       data-error={(error && !disabled) || undefined}
-      data-message={error && !disabled ? 'error' : undefined}
+      data-alert={error && !disabled ? 'error' : undefined}
       data-state={disabled ? 'disabled' : undefined}
     >
       {filled && <span className={styles.value}>{value}</span>}

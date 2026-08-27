@@ -17,7 +17,7 @@ const meta: Meta<typeof IconButton> = {
 export default meta;
 type Story = StoryObj<typeof IconButton>;
 
-const VIEWS = ['accent', 'primary', 'secondary', 'message'] as const;
+const VIEWS = ['accent', 'primary', 'secondary', 'alert'] as const;
 
 const page: CSSProperties = {
   padding: 'var(--padding-24)',

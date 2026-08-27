@@ -52,7 +52,7 @@ describe('TextArea', () => {
 
   it('включает тон ошибки на обёртке, когда передан alert', () => {
     const { container } = render(<TextArea label="Комментарий" alert alertText="Заполните поле" />);
-    expect(container.firstChild).toHaveProperty('dataset.message', 'error');
+    expect(container.firstChild).toHaveProperty('dataset.alert', 'error');
     expect(screen.getByText('Заполните поле')).toBeInTheDocument();
   });
 

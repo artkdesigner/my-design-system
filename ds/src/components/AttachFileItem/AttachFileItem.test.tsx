@@ -37,10 +37,10 @@ describe('AttachFileItem', () => {
     expect(screen.getByText('2 файла')).toBeInTheDocument();
   });
 
-  it('error: рисует errorText и переносит data-message', () => {
+  it('error: рисует errorText и переносит data-alert', () => {
     const { container } = render(<AttachFileItem state="error" errorText="Не получилось загрузить" />);
     expect(screen.getByText('Не получилось загрузить')).toBeInTheDocument();
-    expect((container.firstElementChild as HTMLElement).dataset.message).toBe('error');
+    expect((container.firstElementChild as HTMLElement).dataset.alert).toBe('error');
   });
 
   it('переносит state и size в data-атрибуты', () => {

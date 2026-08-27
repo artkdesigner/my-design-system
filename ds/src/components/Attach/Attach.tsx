@@ -26,8 +26,8 @@ export type AttachProps = AttachOwnProps &
  * под AttachFileItem, статус файла отдельным компонентом, не встроен
  * сюда напрямую, чтобы Attach не знал про все пять состояний файла.
  *
- * maxLimitText получает data-message="warning" тем же приёмом, что и
- * message-тон у Button/Input: цвет берёт готовый element-text-message,
+ * maxLimitText получает data-alert="warning" тем же приёмом, что и
+ * тон alert у Button/Input: цвет берёт готовый element-text-message,
  * а не захардкоженный жёлтый, как в сгенерированном по макету коде.
  */
 export function Attach({
@@ -44,7 +44,7 @@ export function Attach({
   return (
     <div data-size={size} data-max-limit={maxLimit || undefined} className={[styles.attach, className].filter(Boolean).join(' ')}>
       {maxLimit ? (
-        <p data-message="warning" className={styles.maxLimitText}>
+        <p data-alert="warning" className={styles.maxLimitText}>
           {maxLimitText}
         </p>
       ) : (

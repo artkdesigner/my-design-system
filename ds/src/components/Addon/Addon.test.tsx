@@ -116,7 +116,7 @@ describe('Addon', () => {
 
   it('проп statusBadge сам подставляет StatusBadge нужного размера', () => {
     const { container } = render(<Addon statusBadge={{ type: 'warningAlert' }} size="m" />);
-    expect(container.querySelector('[data-message="warning"]')).toBeInTheDocument();
+    expect(container.querySelector('[data-alert="warning"]')).toBeInTheDocument();
   });
 
   it('проп spinner сам подставляет Spinner нужного размера', () => {
