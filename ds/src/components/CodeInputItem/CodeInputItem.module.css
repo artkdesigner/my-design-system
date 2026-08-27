@@ -15,7 +15,7 @@
 }
 
 .cell[data-error] {
-  background: var(--element-bg-message);
+  background: var(--element-bg-alert);
 }
 
 .value {
@@ -27,7 +27,7 @@
 }
 
 .cell[data-error] .value {
-  color: var(--element-text-message);
+  color: var(--element-text-alert);
 }
 
 .cursor {

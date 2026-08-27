@@ -47,7 +47,7 @@
   flex-direction: column;
   gap: var(--fileupload-content-error-content-gap);
   width: 100%;
-  color: var(--element-text-message);
+  color: var(--element-text-alert);
   font-size: var(--fileupload-content-hint-font-size);
   line-height: 1.2;
 }

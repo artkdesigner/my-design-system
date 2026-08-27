@@ -48,7 +48,7 @@
 .hint {
   padding-top: var(--field-input-hint-padding-vert);
   text-align: center;
-  color: var(--element-text-message);
+  color: var(--element-text-alert);
   font-size: var(--field-input-hint-font-size);
   line-height: 1.2;
 }

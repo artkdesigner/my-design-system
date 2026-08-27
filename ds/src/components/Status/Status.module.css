@@ -17,8 +17,8 @@
 }
 
 .pill[data-tone='alert'] {
-  background: var(--element-bg-message);
-  color: var(--element-text-message);
+  background: var(--element-bg-alert);
+  color: var(--element-text-alert);
 }
 
 .pill[data-tone='custom'] {
@@ -32,7 +32,7 @@
 
 /* Общее для обеих тонов: в accent-режиме текст и addon всегда белые
    (element_text_primary), а не производный цвет своего тона — фон message
-   при этом сам переключается в сплошной через --element-bg-message,
+   при этом сам переключается в сплошной через --element-bg-alert,
    держащий тот же on-accent слой, что и StatusBadge. */
 .pill[data-on-accent] {
   color: var(--element-text-primary);

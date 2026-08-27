@@ -46,13 +46,13 @@
 }
 
 /* Тон сообщения перебивает цвет вида — сверено с макетом (узел 179:2690,
-   тон error): подпись и иконка element_text_message/element_icon_message. */
+   тон error): подпись и иконка element_text_alert/element_icon_alert. */
 .button[data-alert] {
-  color: var(--element-text-message);
+  color: var(--element-text-alert);
 }
 
 .button[data-alert] .addon {
-  color: var(--element-icon-message);
+  color: var(--element-icon-alert);
 }
 
 .addon {

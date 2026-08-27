@@ -27,7 +27,7 @@
 .maxLimitText {
   margin: 0;
   width: 100%;
-  color: var(--element-text-message);
+  color: var(--element-text-alert);
   font-weight: var(--font-weight-regular);
   font-size: var(--font-size-body-m);
   line-height: 1.4;

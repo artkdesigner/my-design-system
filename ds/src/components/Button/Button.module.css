@@ -94,7 +94,7 @@
 /* :not([data-alert]) обязателен: без него специфичность этих правил
    (0,2,0) перебивала бы border-color из .button[data-alert] (0,1,0) —
    опасная прозрачная кнопка вида primary/secondary получала бы обводку
-   element_border_primary вместо element_border_message_secondary. Найдено
+   element_border_primary вместо element_border_alert_secondary. Найдено
    той же сверкой с макетом: обводка становилась белой (element_border_primary
    уходит в вариант onAccent из-за combined-селектора
    [data-alert="error"][data-on-accent] в state.css). */
@@ -117,29 +117,29 @@
 }
 
 /* Тон сообщения: info, success, warning, error. Значение атрибута выбирает
-   режим коллекции ColorsMessage, а сами селекторы ниже смотрят только на
+   режим коллекции AlertType, а сами селекторы ниже смотрят только на
    наличие атрибута — цвет каждого тона приходит из токенов, компонент про
    тона ничего не знает.
 
    Залитая кнопка с тоном — цветной фон и светлая подпись: подтверждено
    дизайнером для error. Так же выходит и по токенам: в режиме onAccent
-   element_bg_message даёт сплошной цвет, а содержимое остаётся светлым,
+   element_bg_alert даёт сплошной цвет, а содержимое остаётся светлым,
    как у остальных залитых видов. */
 .button[data-alert] {
-  background: var(--element-bg-message);
-  border-color: var(--element-border-message-secondary);
+  background: var(--element-bg-alert);
+  border-color: var(--element-border-alert-secondary);
 }
 
 /* Прозрачная с тоном сверена по макету (узел 299:1844, тон error): подпись
-   element_text_message, иконка element_icon_message, обводка
-   element_border_message_secondary — в макете все три #cc2929. */
+   element_text_alert, иконка element_icon_alert, обводка
+   element_border_alert_secondary — в макете все три #cc2929. */
 .button[data-alert][data-ghost] {
   background: transparent;
-  color: var(--element-text-message);
+  color: var(--element-text-alert);
 }
 
 .button[data-alert][data-ghost] .addon {
-  color: var(--element-icon-message);
+  color: var(--element-icon-alert);
 }
 
 /* Иконка берёт свой токен того же оттенка, что подпись: в макете это отдельные

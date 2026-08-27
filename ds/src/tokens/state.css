@@ -1,4 +1,4 @@
-/* Слой: state. Источник: 3 коллекции (ColorsState, ColorsMessage, ColorsOnAccent) в Figma.
+/* Слой: state. Источник: 3 коллекции (State, AlertType, ColorsOnAccent) в Figma.
    Файл генерируется скриптом sync-tokens — правки руками будут стёрты. */
 
 :root {
@@ -1241,12 +1241,12 @@
 
 :root,
 [data-alert="info"] {
-  --message-text: var(--state-text-info);
-  --message-icon: var(--state-icon-info);
-  --message-bg-secondary: var(--state-bg-info-secondary);
-  --message-border-secondary: var(--state-border-info-secondary);
-  --message-bg-primary: var(--state-bg-info-primary);
-  --message-border-primary: var(--state-border-info-primary);
+  --message-alert-text: var(--state-text-info);
+  --message-alert-icon: var(--state-icon-info);
+  --message-alert-bg-secondary: var(--state-bg-info-secondary);
+  --message-alert-border-secondary: var(--state-border-info-secondary);
+  --message-alert-bg-primary: var(--state-bg-info-primary);
+  --message-alert-border-primary: var(--state-border-info-primary);
 }
 
 /* Переменные CSS наследуют вычисленное значение, а не текст объявления —
@@ -1254,293 +1254,293 @@
 
 .ds-interactive:active,
 [data-state="pressed"] {
-  --message-text: var(--state-text-info);
-  --message-icon: var(--state-icon-info);
-  --message-bg-secondary: var(--state-bg-info-secondary);
-  --message-border-secondary: var(--state-border-info-secondary);
-  --message-bg-primary: var(--state-bg-info-primary);
-  --message-border-primary: var(--state-border-info-primary);
+  --message-alert-text: var(--state-text-info);
+  --message-alert-icon: var(--state-icon-info);
+  --message-alert-bg-secondary: var(--state-bg-info-secondary);
+  --message-alert-border-secondary: var(--state-border-info-secondary);
+  --message-alert-bg-primary: var(--state-bg-info-primary);
+  --message-alert-border-primary: var(--state-border-info-primary);
 }
 
 .ds-interactive:disabled,
 [data-state="disabled"] {
-  --message-text: var(--state-text-info);
-  --message-icon: var(--state-icon-info);
-  --message-bg-secondary: var(--state-bg-info-secondary);
-  --message-border-secondary: var(--state-border-info-secondary);
-  --message-bg-primary: var(--state-bg-info-primary);
-  --message-border-primary: var(--state-border-info-primary);
+  --message-alert-text: var(--state-text-info);
+  --message-alert-icon: var(--state-icon-info);
+  --message-alert-bg-secondary: var(--state-bg-info-secondary);
+  --message-alert-border-secondary: var(--state-border-info-secondary);
+  --message-alert-bg-primary: var(--state-bg-info-primary);
+  --message-alert-border-primary: var(--state-border-info-primary);
 }
 
 .ds-interactive:hover,
 [data-state="hover"] {
-  --message-text: var(--state-text-info);
-  --message-icon: var(--state-icon-info);
-  --message-bg-secondary: var(--state-bg-info-secondary);
-  --message-border-secondary: var(--state-border-info-secondary);
-  --message-bg-primary: var(--state-bg-info-primary);
-  --message-border-primary: var(--state-border-info-primary);
+  --message-alert-text: var(--state-text-info);
+  --message-alert-icon: var(--state-icon-info);
+  --message-alert-bg-secondary: var(--state-bg-info-secondary);
+  --message-alert-border-secondary: var(--state-border-info-secondary);
+  --message-alert-bg-primary: var(--state-bg-info-primary);
+  --message-alert-border-primary: var(--state-border-info-primary);
 }
 
 [data-accent="purple"] {
-  --message-text: var(--state-text-info);
-  --message-icon: var(--state-icon-info);
-  --message-bg-secondary: var(--state-bg-info-secondary);
-  --message-border-secondary: var(--state-border-info-secondary);
-  --message-bg-primary: var(--state-bg-info-primary);
-  --message-border-primary: var(--state-border-info-primary);
+  --message-alert-text: var(--state-text-info);
+  --message-alert-icon: var(--state-icon-info);
+  --message-alert-bg-secondary: var(--state-bg-info-secondary);
+  --message-alert-border-secondary: var(--state-border-info-secondary);
+  --message-alert-bg-primary: var(--state-bg-info-primary);
+  --message-alert-border-primary: var(--state-border-info-primary);
 }
 
 [data-accent="ruby"] {
-  --message-text: var(--state-text-info);
-  --message-icon: var(--state-icon-info);
-  --message-bg-secondary: var(--state-bg-info-secondary);
-  --message-border-secondary: var(--state-border-info-secondary);
-  --message-bg-primary: var(--state-bg-info-primary);
-  --message-border-primary: var(--state-border-info-primary);
+  --message-alert-text: var(--state-text-info);
+  --message-alert-icon: var(--state-icon-info);
+  --message-alert-bg-secondary: var(--state-bg-info-secondary);
+  --message-alert-border-secondary: var(--state-border-info-secondary);
+  --message-alert-bg-primary: var(--state-bg-info-primary);
+  --message-alert-border-primary: var(--state-border-info-primary);
 }
 
 [data-accent="sky"] {
-  --message-text: var(--state-text-info);
-  --message-icon: var(--state-icon-info);
-  --message-bg-secondary: var(--state-bg-info-secondary);
-  --message-border-secondary: var(--state-border-info-secondary);
-  --message-bg-primary: var(--state-bg-info-primary);
-  --message-border-primary: var(--state-border-info-primary);
+  --message-alert-text: var(--state-text-info);
+  --message-alert-icon: var(--state-icon-info);
+  --message-alert-bg-secondary: var(--state-bg-info-secondary);
+  --message-alert-border-secondary: var(--state-border-info-secondary);
+  --message-alert-bg-primary: var(--state-bg-info-primary);
+  --message-alert-border-primary: var(--state-border-info-primary);
 }
 
 [data-theme="dark"] {
-  --message-text: var(--state-text-info);
-  --message-icon: var(--state-icon-info);
-  --message-bg-secondary: var(--state-bg-info-secondary);
-  --message-border-secondary: var(--state-border-info-secondary);
-  --message-bg-primary: var(--state-bg-info-primary);
-  --message-border-primary: var(--state-border-info-primary);
+  --message-alert-text: var(--state-text-info);
+  --message-alert-icon: var(--state-icon-info);
+  --message-alert-bg-secondary: var(--state-bg-info-secondary);
+  --message-alert-border-secondary: var(--state-border-info-secondary);
+  --message-alert-bg-primary: var(--state-bg-info-primary);
+  --message-alert-border-primary: var(--state-border-info-primary);
 }
 
 .ds-interactive:active[data-alert="error"],
 [data-state="pressed"][data-alert="error"] {
-  --message-text: var(--state-text-error);
-  --message-icon: var(--state-icon-error);
-  --message-bg-secondary: var(--state-bg-error-secondary);
-  --message-border-secondary: var(--state-border-error-secondary);
-  --message-bg-primary: var(--state-bg-error-primary);
-  --message-border-primary: var(--state-border-error-primary);
+  --message-alert-text: var(--state-text-error);
+  --message-alert-icon: var(--state-icon-error);
+  --message-alert-bg-secondary: var(--state-bg-error-secondary);
+  --message-alert-border-secondary: var(--state-border-error-secondary);
+  --message-alert-bg-primary: var(--state-bg-error-primary);
+  --message-alert-border-primary: var(--state-border-error-primary);
 }
 
 .ds-interactive:active[data-alert="success"],
 [data-state="pressed"][data-alert="success"] {
-  --message-text: var(--state-text-success);
-  --message-icon: var(--state-icon-success);
-  --message-bg-secondary: var(--state-bg-success-secondary);
-  --message-border-secondary: var(--state-border-success-secondary);
-  --message-bg-primary: var(--state-bg-success-primary);
-  --message-border-primary: var(--state-border-success-primary);
+  --message-alert-text: var(--state-text-success);
+  --message-alert-icon: var(--state-icon-success);
+  --message-alert-bg-secondary: var(--state-bg-success-secondary);
+  --message-alert-border-secondary: var(--state-border-success-secondary);
+  --message-alert-bg-primary: var(--state-bg-success-primary);
+  --message-alert-border-primary: var(--state-border-success-primary);
 }
 
 .ds-interactive:active[data-alert="warning"],
 [data-state="pressed"][data-alert="warning"] {
-  --message-text: var(--state-text-warning);
-  --message-icon: var(--state-icon-warning);
-  --message-bg-secondary: var(--state-bg-warning-secondary);
-  --message-border-secondary: var(--state-border-warning-secondary);
-  --message-bg-primary: var(--state-bg-warning-primary);
-  --message-border-primary: var(--state-border-warning-primary);
+  --message-alert-text: var(--state-text-warning);
+  --message-alert-icon: var(--state-icon-warning);
+  --message-alert-bg-secondary: var(--state-bg-warning-secondary);
+  --message-alert-border-secondary: var(--state-border-warning-secondary);
+  --message-alert-bg-primary: var(--state-bg-warning-primary);
+  --message-alert-border-primary: var(--state-border-warning-primary);
 }
 
 .ds-interactive:disabled[data-alert="error"],
 [data-state="disabled"][data-alert="error"] {
-  --message-text: var(--state-text-error);
-  --message-icon: var(--state-icon-error);
-  --message-bg-secondary: var(--state-bg-error-secondary);
-  --message-border-secondary: var(--state-border-error-secondary);
-  --message-bg-primary: var(--state-bg-error-primary);
-  --message-border-primary: var(--state-border-error-primary);
+  --message-alert-text: var(--state-text-error);
+  --message-alert-icon: var(--state-icon-error);
+  --message-alert-bg-secondary: var(--state-bg-error-secondary);
+  --message-alert-border-secondary: var(--state-border-error-secondary);
+  --message-alert-bg-primary: var(--state-bg-error-primary);
+  --message-alert-border-primary: var(--state-border-error-primary);
 }
 
 .ds-interactive:disabled[data-alert="success"],
 [data-state="disabled"][data-alert="success"] {
-  --message-text: var(--state-text-success);
-  --message-icon: var(--state-icon-success);
-  --message-bg-secondary: var(--state-bg-success-secondary);
-  --message-border-secondary: var(--state-border-success-secondary);
-  --message-bg-primary: var(--state-bg-success-primary);
-  --message-border-primary: var(--state-border-success-primary);
+  --message-alert-text: var(--state-text-success);
+  --message-alert-icon: var(--state-icon-success);
+  --message-alert-bg-secondary: var(--state-bg-success-secondary);
+  --message-alert-border-secondary: var(--state-border-success-secondary);
+  --message-alert-bg-primary: var(--state-bg-success-primary);
+  --message-alert-border-primary: var(--state-border-success-primary);
 }
 
 .ds-interactive:disabled[data-alert="warning"],
 [data-state="disabled"][data-alert="warning"] {
-  --message-text: var(--state-text-warning);
-  --message-icon: var(--state-icon-warning);
-  --message-bg-secondary: var(--state-bg-warning-secondary);
-  --message-border-secondary: var(--state-border-warning-secondary);
-  --message-bg-primary: var(--state-bg-warning-primary);
-  --message-border-primary: var(--state-border-warning-primary);
+  --message-alert-text: var(--state-text-warning);
+  --message-alert-icon: var(--state-icon-warning);
+  --message-alert-bg-secondary: var(--state-bg-warning-secondary);
+  --message-alert-border-secondary: var(--state-border-warning-secondary);
+  --message-alert-bg-primary: var(--state-bg-warning-primary);
+  --message-alert-border-primary: var(--state-border-warning-primary);
 }
 
 .ds-interactive:hover[data-alert="error"],
 [data-state="hover"][data-alert="error"] {
-  --message-text: var(--state-text-error);
-  --message-icon: var(--state-icon-error);
-  --message-bg-secondary: var(--state-bg-error-secondary);
-  --message-border-secondary: var(--state-border-error-secondary);
-  --message-bg-primary: var(--state-bg-error-primary);
-  --message-border-primary: var(--state-border-error-primary);
+  --message-alert-text: var(--state-text-error);
+  --message-alert-icon: var(--state-icon-error);
+  --message-alert-bg-secondary: var(--state-bg-error-secondary);
+  --message-alert-border-secondary: var(--state-border-error-secondary);
+  --message-alert-bg-primary: var(--state-bg-error-primary);
+  --message-alert-border-primary: var(--state-border-error-primary);
 }
 
 .ds-interactive:hover[data-alert="success"],
 [data-state="hover"][data-alert="success"] {
-  --message-text: var(--state-text-success);
-  --message-icon: var(--state-icon-success);
-  --message-bg-secondary: var(--state-bg-success-secondary);
-  --message-border-secondary: var(--state-border-success-secondary);
-  --message-bg-primary: var(--state-bg-success-primary);
-  --message-border-primary: var(--state-border-success-primary);
+  --message-alert-text: var(--state-text-success);
+  --message-alert-icon: var(--state-icon-success);
+  --message-alert-bg-secondary: var(--state-bg-success-secondary);
+  --message-alert-border-secondary: var(--state-border-success-secondary);
+  --message-alert-bg-primary: var(--state-bg-success-primary);
+  --message-alert-border-primary: var(--state-border-success-primary);
 }
 
 .ds-interactive:hover[data-alert="warning"],
 [data-state="hover"][data-alert="warning"] {
-  --message-text: var(--state-text-warning);
-  --message-icon: var(--state-icon-warning);
-  --message-bg-secondary: var(--state-bg-warning-secondary);
-  --message-border-secondary: var(--state-border-warning-secondary);
-  --message-bg-primary: var(--state-bg-warning-primary);
-  --message-border-primary: var(--state-border-warning-primary);
+  --message-alert-text: var(--state-text-warning);
+  --message-alert-icon: var(--state-icon-warning);
+  --message-alert-bg-secondary: var(--state-bg-warning-secondary);
+  --message-alert-border-secondary: var(--state-border-warning-secondary);
+  --message-alert-bg-primary: var(--state-bg-warning-primary);
+  --message-alert-border-primary: var(--state-border-warning-primary);
 }
 
 [data-accent="purple"][data-alert="error"] {
-  --message-text: var(--state-text-error);
-  --message-icon: var(--state-icon-error);
-  --message-bg-secondary: var(--state-bg-error-secondary);
-  --message-border-secondary: var(--state-border-error-secondary);
-  --message-bg-primary: var(--state-bg-error-primary);
-  --message-border-primary: var(--state-border-error-primary);
+  --message-alert-text: var(--state-text-error);
+  --message-alert-icon: var(--state-icon-error);
+  --message-alert-bg-secondary: var(--state-bg-error-secondary);
+  --message-alert-border-secondary: var(--state-border-error-secondary);
+  --message-alert-bg-primary: var(--state-bg-error-primary);
+  --message-alert-border-primary: var(--state-border-error-primary);
 }
 
 [data-accent="purple"][data-alert="success"] {
-  --message-text: var(--state-text-success);
-  --message-icon: var(--state-icon-success);
-  --message-bg-secondary: var(--state-bg-success-secondary);
-  --message-border-secondary: var(--state-border-success-secondary);
-  --message-bg-primary: var(--state-bg-success-primary);
-  --message-border-primary: var(--state-border-success-primary);
+  --message-alert-text: var(--state-text-success);
+  --message-alert-icon: var(--state-icon-success);
+  --message-alert-bg-secondary: var(--state-bg-success-secondary);
+  --message-alert-border-secondary: var(--state-border-success-secondary);
+  --message-alert-bg-primary: var(--state-bg-success-primary);
+  --message-alert-border-primary: var(--state-border-success-primary);
 }
 
 [data-accent="purple"][data-alert="warning"] {
-  --message-text: var(--state-text-warning);
-  --message-icon: var(--state-icon-warning);
-  --message-bg-secondary: var(--state-bg-warning-secondary);
-  --message-border-secondary: var(--state-border-warning-secondary);
-  --message-bg-primary: var(--state-bg-warning-primary);
-  --message-border-primary: var(--state-border-warning-primary);
+  --message-alert-text: var(--state-text-warning);
+  --message-alert-icon: var(--state-icon-warning);
+  --message-alert-bg-secondary: var(--state-bg-warning-secondary);
+  --message-alert-border-secondary: var(--state-border-warning-secondary);
+  --message-alert-bg-primary: var(--state-bg-warning-primary);
+  --message-alert-border-primary: var(--state-border-warning-primary);
 }
 
 [data-accent="ruby"][data-alert="error"] {
-  --message-text: var(--state-text-error);
-  --message-icon: var(--state-icon-error);
-  --message-bg-secondary: var(--state-bg-error-secondary);
-  --message-border-secondary: var(--state-border-error-secondary);
-  --message-bg-primary: var(--state-bg-error-primary);
-  --message-border-primary: var(--state-border-error-primary);
+  --message-alert-text: var(--state-text-error);
+  --message-alert-icon: var(--state-icon-error);
+  --message-alert-bg-secondary: var(--state-bg-error-secondary);
+  --message-alert-border-secondary: var(--state-border-error-secondary);
+  --message-alert-bg-primary: var(--state-bg-error-primary);
+  --message-alert-border-primary: var(--state-border-error-primary);
 }
 
 [data-accent="ruby"][data-alert="success"] {
-  --message-text: var(--state-text-success);
-  --message-icon: var(--state-icon-success);
-  --message-bg-secondary: var(--state-bg-success-secondary);
-  --message-border-secondary: var(--state-border-success-secondary);
-  --message-bg-primary: var(--state-bg-success-primary);
-  --message-border-primary: var(--state-border-success-primary);
+  --message-alert-text: var(--state-text-success);
+  --message-alert-icon: var(--state-icon-success);
+  --message-alert-bg-secondary: var(--state-bg-success-secondary);
+  --message-alert-border-secondary: var(--state-border-success-secondary);
+  --message-alert-bg-primary: var(--state-bg-success-primary);
+  --message-alert-border-primary: var(--state-border-success-primary);
 }
 
 [data-accent="ruby"][data-alert="warning"] {
-  --message-text: var(--state-text-warning);
-  --message-icon: var(--state-icon-warning);
-  --message-bg-secondary: var(--state-bg-warning-secondary);
-  --message-border-secondary: var(--state-border-warning-secondary);
-  --message-bg-primary: var(--state-bg-warning-primary);
-  --message-border-primary: var(--state-border-warning-primary);
+  --message-alert-text: var(--state-text-warning);
+  --message-alert-icon: var(--state-icon-warning);
+  --message-alert-bg-secondary: var(--state-bg-warning-secondary);
+  --message-alert-border-secondary: var(--state-border-warning-secondary);
+  --message-alert-bg-primary: var(--state-bg-warning-primary);
+  --message-alert-border-primary: var(--state-border-warning-primary);
 }
 
 [data-accent="sky"][data-alert="error"] {
-  --message-text: var(--state-text-error);
-  --message-icon: var(--state-icon-error);
-  --message-bg-secondary: var(--state-bg-error-secondary);
-  --message-border-secondary: var(--state-border-error-secondary);
-  --message-bg-primary: var(--state-bg-error-primary);
-  --message-border-primary: var(--state-border-error-primary);
+  --message-alert-text: var(--state-text-error);
+  --message-alert-icon: var(--state-icon-error);
+  --message-alert-bg-secondary: var(--state-bg-error-secondary);
+  --message-alert-border-secondary: var(--state-border-error-secondary);
+  --message-alert-bg-primary: var(--state-bg-error-primary);
+  --message-alert-border-primary: var(--state-border-error-primary);
 }
 
 [data-accent="sky"][data-alert="success"] {
-  --message-text: var(--state-text-success);
-  --message-icon: var(--state-icon-success);
-  --message-bg-secondary: var(--state-bg-success-secondary);
-  --message-border-secondary: var(--state-border-success-secondary);
-  --message-bg-primary: var(--state-bg-success-primary);
-  --message-border-primary: var(--state-border-success-primary);
+  --message-alert-text: var(--state-text-success);
+  --message-alert-icon: var(--state-icon-success);
+  --message-alert-bg-secondary: var(--state-bg-success-secondary);
+  --message-alert-border-secondary: var(--state-border-success-secondary);
+  --message-alert-bg-primary: var(--state-bg-success-primary);
+  --message-alert-border-primary: var(--state-border-success-primary);
 }
 
 [data-accent="sky"][data-alert="warning"] {
-  --message-text: var(--state-text-warning);
-  --message-icon: var(--state-icon-warning);
-  --message-bg-secondary: var(--state-bg-warning-secondary);
-  --message-border-secondary: var(--state-border-warning-secondary);
-  --message-bg-primary: var(--state-bg-warning-primary);
-  --message-border-primary: var(--state-border-warning-primary);
+  --message-alert-text: var(--state-text-warning);
+  --message-alert-icon: var(--state-icon-warning);
+  --message-alert-bg-secondary: var(--state-bg-warning-secondary);
+  --message-alert-border-secondary: var(--state-border-warning-secondary);
+  --message-alert-bg-primary: var(--state-bg-warning-primary);
+  --message-alert-border-primary: var(--state-border-warning-primary);
 }
 
 [data-theme="dark"][data-alert="error"] {
-  --message-text: var(--state-text-error);
-  --message-icon: var(--state-icon-error);
-  --message-bg-secondary: var(--state-bg-error-secondary);
-  --message-border-secondary: var(--state-border-error-secondary);
-  --message-bg-primary: var(--state-bg-error-primary);
-  --message-border-primary: var(--state-border-error-primary);
+  --message-alert-text: var(--state-text-error);
+  --message-alert-icon: var(--state-icon-error);
+  --message-alert-bg-secondary: var(--state-bg-error-secondary);
+  --message-alert-border-secondary: var(--state-border-error-secondary);
+  --message-alert-bg-primary: var(--state-bg-error-primary);
+  --message-alert-border-primary: var(--state-border-error-primary);
 }
 
 [data-theme="dark"][data-alert="success"] {
-  --message-text: var(--state-text-success);
-  --message-icon: var(--state-icon-success);
-  --message-bg-secondary: var(--state-bg-success-secondary);
-  --message-border-secondary: var(--state-border-success-secondary);
-  --message-bg-primary: var(--state-bg-success-primary);
-  --message-border-primary: var(--state-border-success-primary);
+  --message-alert-text: var(--state-text-success);
+  --message-alert-icon: var(--state-icon-success);
+  --message-alert-bg-secondary: var(--state-bg-success-secondary);
+  --message-alert-border-secondary: var(--state-border-success-secondary);
+  --message-alert-bg-primary: var(--state-bg-success-primary);
+  --message-alert-border-primary: var(--state-border-success-primary);
 }
 
 [data-theme="dark"][data-alert="warning"] {
-  --message-text: var(--state-text-warning);
-  --message-icon: var(--state-icon-warning);
-  --message-bg-secondary: var(--state-bg-warning-secondary);
-  --message-border-secondary: var(--state-border-warning-secondary);
-  --message-bg-primary: var(--state-bg-warning-primary);
-  --message-border-primary: var(--state-border-warning-primary);
+  --message-alert-text: var(--state-text-warning);
+  --message-alert-icon: var(--state-icon-warning);
+  --message-alert-bg-secondary: var(--state-bg-warning-secondary);
+  --message-alert-border-secondary: var(--state-border-warning-secondary);
+  --message-alert-bg-primary: var(--state-bg-warning-primary);
+  --message-alert-border-primary: var(--state-border-warning-primary);
 }
 
 [data-alert="success"] {
-  --message-text: var(--state-text-success);
-  --message-icon: var(--state-icon-success);
-  --message-bg-secondary: var(--state-bg-success-secondary);
-  --message-border-secondary: var(--state-border-success-secondary);
-  --message-bg-primary: var(--state-bg-success-primary);
-  --message-border-primary: var(--state-border-success-primary);
+  --message-alert-text: var(--state-text-success);
+  --message-alert-icon: var(--state-icon-success);
+  --message-alert-bg-secondary: var(--state-bg-success-secondary);
+  --message-alert-border-secondary: var(--state-border-success-secondary);
+  --message-alert-bg-primary: var(--state-bg-success-primary);
+  --message-alert-border-primary: var(--state-border-success-primary);
 }
 
 [data-alert="warning"] {
-  --message-text: var(--state-text-warning);
-  --message-icon: var(--state-icon-warning);
-  --message-bg-secondary: var(--state-bg-warning-secondary);
-  --message-border-secondary: var(--state-border-warning-secondary);
-  --message-bg-primary: var(--state-bg-warning-primary);
-  --message-border-primary: var(--state-border-warning-primary);
+  --message-alert-text: var(--state-text-warning);
+  --message-alert-icon: var(--state-icon-warning);
+  --message-alert-bg-secondary: var(--state-bg-warning-secondary);
+  --message-alert-border-secondary: var(--state-border-warning-secondary);
+  --message-alert-bg-primary: var(--state-bg-warning-primary);
+  --message-alert-border-primary: var(--state-border-warning-primary);
 }
 
 [data-alert="error"] {
-  --message-text: var(--state-text-error);
-  --message-icon: var(--state-icon-error);
-  --message-bg-secondary: var(--state-bg-error-secondary);
-  --message-border-secondary: var(--state-border-error-secondary);
-  --message-bg-primary: var(--state-bg-error-primary);
-  --message-border-primary: var(--state-border-error-primary);
+  --message-alert-text: var(--state-text-error);
+  --message-alert-icon: var(--state-icon-error);
+  --message-alert-bg-secondary: var(--state-bg-error-secondary);
+  --message-alert-border-secondary: var(--state-border-error-secondary);
+  --message-alert-bg-primary: var(--state-bg-error-primary);
+  --message-alert-border-primary: var(--state-border-error-primary);
 }
 
 :root {
@@ -1553,10 +1553,10 @@
   --on-accent-text-custom: var(--state-text-custom);
   --on-accent-icon-custom: var(--state-icon-custom);
   --on-accent-border-custom: var(--state-border-custom-secondary);
-  --on-accent-text-message: var(--message-text);
-  --on-accent-icon-message: var(--message-icon);
-  --on-accent-border-message: var(--message-border-secondary);
-  --on-accent-bg-message: var(--message-bg-secondary);
+  --on-accent-text-message: var(--message-alert-text);
+  --on-accent-icon-message: var(--message-alert-icon);
+  --on-accent-border-message: var(--message-alert-border-secondary);
+  --on-accent-bg-message: var(--message-alert-bg-secondary);
   --on-accent-border-tetriary: var(--state-border-tetriary);
   --on-accent-text-tetriary: var(--state-text-tetriary);
   --on-accent-icon-tetriary: var(--state-icon-tetriary);
@@ -1576,10 +1576,10 @@
   --on-accent-text-custom: var(--state-text-custom);
   --on-accent-icon-custom: var(--state-icon-custom);
   --on-accent-border-custom: var(--state-border-custom-secondary);
-  --on-accent-text-message: var(--message-text);
-  --on-accent-icon-message: var(--message-icon);
-  --on-accent-border-message: var(--message-border-secondary);
-  --on-accent-bg-message: var(--message-bg-secondary);
+  --on-accent-text-message: var(--message-alert-text);
+  --on-accent-icon-message: var(--message-alert-icon);
+  --on-accent-border-message: var(--message-alert-border-secondary);
+  --on-accent-bg-message: var(--message-alert-bg-secondary);
   --on-accent-border-tetriary: var(--state-border-tetriary);
   --on-accent-text-tetriary: var(--state-text-tetriary);
   --on-accent-icon-tetriary: var(--state-icon-tetriary);
@@ -1596,10 +1596,10 @@
   --on-accent-text-custom: var(--state-text-custom);
   --on-accent-icon-custom: var(--state-icon-custom);
   --on-accent-border-custom: var(--state-border-custom-secondary);
-  --on-accent-text-message: var(--message-text);
-  --on-accent-icon-message: var(--message-icon);
-  --on-accent-border-message: var(--message-border-secondary);
-  --on-accent-bg-message: var(--message-bg-secondary);
+  --on-accent-text-message: var(--message-alert-text);
+  --on-accent-icon-message: var(--message-alert-icon);
+  --on-accent-border-message: var(--message-alert-border-secondary);
+  --on-accent-bg-message: var(--message-alert-bg-secondary);
   --on-accent-border-tetriary: var(--state-border-tetriary);
   --on-accent-text-tetriary: var(--state-text-tetriary);
   --on-accent-icon-tetriary: var(--state-icon-tetriary);
@@ -1616,10 +1616,10 @@
   --on-accent-text-custom: var(--state-text-custom);
   --on-accent-icon-custom: var(--state-icon-custom);
   --on-accent-border-custom: var(--state-border-custom-secondary);
-  --on-accent-text-message: var(--message-text);
-  --on-accent-icon-message: var(--message-icon);
-  --on-accent-border-message: var(--message-border-secondary);
-  --on-accent-bg-message: var(--message-bg-secondary);
+  --on-accent-text-message: var(--message-alert-text);
+  --on-accent-icon-message: var(--message-alert-icon);
+  --on-accent-border-message: var(--message-alert-border-secondary);
+  --on-accent-bg-message: var(--message-alert-bg-secondary);
   --on-accent-border-tetriary: var(--state-border-tetriary);
   --on-accent-text-tetriary: var(--state-text-tetriary);
   --on-accent-icon-tetriary: var(--state-icon-tetriary);
@@ -1635,10 +1635,10 @@
   --on-accent-text-custom: var(--state-text-custom);
   --on-accent-icon-custom: var(--state-icon-custom);
   --on-accent-border-custom: var(--state-border-custom-secondary);
-  --on-accent-text-message: var(--message-text);
-  --on-accent-icon-message: var(--message-icon);
-  --on-accent-border-message: var(--message-border-secondary);
-  --on-accent-bg-message: var(--message-bg-secondary);
+  --on-accent-text-message: var(--message-alert-text);
+  --on-accent-icon-message: var(--message-alert-icon);
+  --on-accent-border-message: var(--message-alert-border-secondary);
+  --on-accent-bg-message: var(--message-alert-bg-secondary);
   --on-accent-border-tetriary: var(--state-border-tetriary);
   --on-accent-text-tetriary: var(--state-text-tetriary);
   --on-accent-icon-tetriary: var(--state-icon-tetriary);
@@ -1654,10 +1654,10 @@
   --on-accent-text-custom: var(--state-text-custom);
   --on-accent-icon-custom: var(--state-icon-custom);
   --on-accent-border-custom: var(--state-border-custom-secondary);
-  --on-accent-text-message: var(--message-text);
-  --on-accent-icon-message: var(--message-icon);
-  --on-accent-border-message: var(--message-border-secondary);
-  --on-accent-bg-message: var(--message-bg-secondary);
+  --on-accent-text-message: var(--message-alert-text);
+  --on-accent-icon-message: var(--message-alert-icon);
+  --on-accent-border-message: var(--message-alert-border-secondary);
+  --on-accent-bg-message: var(--message-alert-bg-secondary);
   --on-accent-border-tetriary: var(--state-border-tetriary);
   --on-accent-text-tetriary: var(--state-text-tetriary);
   --on-accent-icon-tetriary: var(--state-icon-tetriary);
@@ -1673,10 +1673,10 @@
   --on-accent-text-custom: var(--state-text-custom);
   --on-accent-icon-custom: var(--state-icon-custom);
   --on-accent-border-custom: var(--state-border-custom-secondary);
-  --on-accent-text-message: var(--message-text);
-  --on-accent-icon-message: var(--message-icon);
-  --on-accent-border-message: var(--message-border-secondary);
-  --on-accent-bg-message: var(--message-bg-secondary);
+  --on-accent-text-message: var(--message-alert-text);
+  --on-accent-icon-message: var(--message-alert-icon);
+  --on-accent-border-message: var(--message-alert-border-secondary);
+  --on-accent-bg-message: var(--message-alert-bg-secondary);
   --on-accent-border-tetriary: var(--state-border-tetriary);
   --on-accent-text-tetriary: var(--state-text-tetriary);
   --on-accent-icon-tetriary: var(--state-icon-tetriary);
@@ -1692,10 +1692,10 @@
   --on-accent-text-custom: var(--state-text-custom);
   --on-accent-icon-custom: var(--state-icon-custom);
   --on-accent-border-custom: var(--state-border-custom-secondary);
-  --on-accent-text-message: var(--message-text);
-  --on-accent-icon-message: var(--message-icon);
-  --on-accent-border-message: var(--message-border-secondary);
-  --on-accent-bg-message: var(--message-bg-secondary);
+  --on-accent-text-message: var(--message-alert-text);
+  --on-accent-icon-message: var(--message-alert-icon);
+  --on-accent-border-message: var(--message-alert-border-secondary);
+  --on-accent-bg-message: var(--message-alert-bg-secondary);
   --on-accent-border-tetriary: var(--state-border-tetriary);
   --on-accent-text-tetriary: var(--state-text-tetriary);
   --on-accent-icon-tetriary: var(--state-icon-tetriary);
@@ -1711,10 +1711,10 @@
   --on-accent-text-custom: var(--state-text-custom);
   --on-accent-icon-custom: var(--state-icon-custom);
   --on-accent-border-custom: var(--state-border-custom-secondary);
-  --on-accent-text-message: var(--message-text);
-  --on-accent-icon-message: var(--message-icon);
-  --on-accent-border-message: var(--message-border-secondary);
-  --on-accent-bg-message: var(--message-bg-secondary);
+  --on-accent-text-message: var(--message-alert-text);
+  --on-accent-icon-message: var(--message-alert-icon);
+  --on-accent-border-message: var(--message-alert-border-secondary);
+  --on-accent-bg-message: var(--message-alert-bg-secondary);
   --on-accent-border-tetriary: var(--state-border-tetriary);
   --on-accent-text-tetriary: var(--state-text-tetriary);
   --on-accent-icon-tetriary: var(--state-icon-tetriary);
@@ -1730,10 +1730,10 @@
   --on-accent-text-custom: var(--state-text-custom);
   --on-accent-icon-custom: var(--state-icon-custom);
   --on-accent-border-custom: var(--state-border-custom-secondary);
-  --on-accent-text-message: var(--message-text);
-  --on-accent-icon-message: var(--message-icon);
-  --on-accent-border-message: var(--message-border-secondary);
-  --on-accent-bg-message: var(--message-bg-secondary);
+  --on-accent-text-message: var(--message-alert-text);
+  --on-accent-icon-message: var(--message-alert-icon);
+  --on-accent-border-message: var(--message-alert-border-secondary);
+  --on-accent-bg-message: var(--message-alert-bg-secondary);
   --on-accent-border-tetriary: var(--state-border-tetriary);
   --on-accent-text-tetriary: var(--state-text-tetriary);
   --on-accent-icon-tetriary: var(--state-icon-tetriary);
@@ -1749,10 +1749,10 @@
   --on-accent-text-custom: var(--state-text-custom);
   --on-accent-icon-custom: var(--state-icon-custom);
   --on-accent-border-custom: var(--state-border-custom-secondary);
-  --on-accent-text-message: var(--message-text);
-  --on-accent-icon-message: var(--message-icon);
-  --on-accent-border-message: var(--message-border-secondary);
-  --on-accent-bg-message: var(--message-bg-secondary);
+  --on-accent-text-message: var(--message-alert-text);
+  --on-accent-icon-message: var(--message-alert-icon);
+  --on-accent-border-message: var(--message-alert-border-secondary);
+  --on-accent-bg-message: var(--message-alert-bg-secondary);
   --on-accent-border-tetriary: var(--state-border-tetriary);
   --on-accent-text-tetriary: var(--state-text-tetriary);
   --on-accent-icon-tetriary: var(--state-icon-tetriary);
@@ -1771,8 +1771,8 @@
   --on-accent-border-custom: var(--state-border-on-accent-secondary);
   --on-accent-text-message: var(--state-text-on-accent-secondary);
   --on-accent-icon-message: var(--state-text-on-accent-secondary);
-  --on-accent-border-message: var(--message-border-primary);
-  --on-accent-bg-message: var(--message-bg-primary);
+  --on-accent-border-message: var(--message-alert-border-primary);
+  --on-accent-bg-message: var(--message-alert-bg-primary);
   --on-accent-border-tetriary: var(--state-border-on-accent-tetriary);
   --on-accent-text-tetriary: var(--state-text-on-accent-tetruiary);
   --on-accent-icon-tetriary: var(--state-text-on-accent-tetruiary);
@@ -1791,8 +1791,8 @@
   --on-accent-border-custom: var(--state-border-on-accent-secondary);
   --on-accent-text-message: var(--state-text-on-accent-secondary);
   --on-accent-icon-message: var(--state-text-on-accent-secondary);
-  --on-accent-border-message: var(--message-border-primary);
-  --on-accent-bg-message: var(--message-bg-primary);
+  --on-accent-border-message: var(--message-alert-border-primary);
+  --on-accent-bg-message: var(--message-alert-bg-primary);
   --on-accent-border-tetriary: var(--state-border-on-accent-tetriary);
   --on-accent-text-tetriary: var(--state-text-on-accent-tetruiary);
   --on-accent-icon-tetriary: var(--state-text-on-accent-tetruiary);
@@ -1811,8 +1811,8 @@
   --on-accent-border-custom: var(--state-border-on-accent-secondary);
   --on-accent-text-message: var(--state-text-on-accent-secondary);
   --on-accent-icon-message: var(--state-text-on-accent-secondary);
-  --on-accent-border-message: var(--message-border-primary);
-  --on-accent-bg-message: var(--message-bg-primary);
+  --on-accent-border-message: var(--message-alert-border-primary);
+  --on-accent-bg-message: var(--message-alert-bg-primary);
   --on-accent-border-tetriary: var(--state-border-on-accent-tetriary);
   --on-accent-text-tetriary: var(--state-text-on-accent-tetruiary);
   --on-accent-icon-tetriary: var(--state-text-on-accent-tetruiary);
@@ -1830,8 +1830,8 @@
   --on-accent-border-custom: var(--state-border-on-accent-secondary);
   --on-accent-text-message: var(--state-text-on-accent-secondary);
   --on-accent-icon-message: var(--state-text-on-accent-secondary);
-  --on-accent-border-message: var(--message-border-primary);
-  --on-accent-bg-message: var(--message-bg-primary);
+  --on-accent-border-message: var(--message-alert-border-primary);
+  --on-accent-bg-message: var(--message-alert-bg-primary);
   --on-accent-border-tetriary: var(--state-border-on-accent-tetriary);
   --on-accent-text-tetriary: var(--state-text-on-accent-tetruiary);
   --on-accent-icon-tetriary: var(--state-text-on-accent-tetruiary);
@@ -1849,8 +1849,8 @@
   --on-accent-border-custom: var(--state-border-on-accent-secondary);
   --on-accent-text-message: var(--state-text-on-accent-secondary);
   --on-accent-icon-message: var(--state-text-on-accent-secondary);
-  --on-accent-border-message: var(--message-border-primary);
-  --on-accent-bg-message: var(--message-bg-primary);
+  --on-accent-border-message: var(--message-alert-border-primary);
+  --on-accent-bg-message: var(--message-alert-bg-primary);
   --on-accent-border-tetriary: var(--state-border-on-accent-tetriary);
   --on-accent-text-tetriary: var(--state-text-on-accent-tetruiary);
   --on-accent-icon-tetriary: var(--state-text-on-accent-tetruiary);
@@ -1868,8 +1868,8 @@
   --on-accent-border-custom: var(--state-border-on-accent-secondary);
   --on-accent-text-message: var(--state-text-on-accent-secondary);
   --on-accent-icon-message: var(--state-text-on-accent-secondary);
-  --on-accent-border-message: var(--message-border-primary);
-  --on-accent-bg-message: var(--message-bg-primary);
+  --on-accent-border-message: var(--message-alert-border-primary);
+  --on-accent-bg-message: var(--message-alert-bg-primary);
   --on-accent-border-tetriary: var(--state-border-on-accent-tetriary);
   --on-accent-text-tetriary: var(--state-text-on-accent-tetruiary);
   --on-accent-icon-tetriary: var(--state-text-on-accent-tetruiary);
@@ -1887,8 +1887,8 @@
   --on-accent-border-custom: var(--state-border-on-accent-secondary);
   --on-accent-text-message: var(--state-text-on-accent-secondary);
   --on-accent-icon-message: var(--state-text-on-accent-secondary);
-  --on-accent-border-message: var(--message-border-primary);
-  --on-accent-bg-message: var(--message-bg-primary);
+  --on-accent-border-message: var(--message-alert-border-primary);
+  --on-accent-bg-message: var(--message-alert-bg-primary);
   --on-accent-border-tetriary: var(--state-border-on-accent-tetriary);
   --on-accent-text-tetriary: var(--state-text-on-accent-tetruiary);
   --on-accent-icon-tetriary: var(--state-text-on-accent-tetruiary);
@@ -1906,8 +1906,8 @@
   --on-accent-border-custom: var(--state-border-on-accent-secondary);
   --on-accent-text-message: var(--state-text-on-accent-secondary);
   --on-accent-icon-message: var(--state-text-on-accent-secondary);
-  --on-accent-border-message: var(--message-border-primary);
-  --on-accent-bg-message: var(--message-bg-primary);
+  --on-accent-border-message: var(--message-alert-border-primary);
+  --on-accent-bg-message: var(--message-alert-bg-primary);
   --on-accent-border-tetriary: var(--state-border-on-accent-tetriary);
   --on-accent-text-tetriary: var(--state-text-on-accent-tetruiary);
   --on-accent-icon-tetriary: var(--state-text-on-accent-tetruiary);
@@ -1925,8 +1925,8 @@
   --on-accent-border-custom: var(--state-border-on-accent-secondary);
   --on-accent-text-message: var(--state-text-on-accent-secondary);
   --on-accent-icon-message: var(--state-text-on-accent-secondary);
-  --on-accent-border-message: var(--message-border-primary);
-  --on-accent-bg-message: var(--message-bg-primary);
+  --on-accent-border-message: var(--message-alert-border-primary);
+  --on-accent-bg-message: var(--message-alert-bg-primary);
   --on-accent-border-tetriary: var(--state-border-on-accent-tetriary);
   --on-accent-text-tetriary: var(--state-text-on-accent-tetruiary);
   --on-accent-icon-tetriary: var(--state-text-on-accent-tetruiary);
@@ -1944,8 +1944,8 @@
   --on-accent-border-custom: var(--state-border-on-accent-secondary);
   --on-accent-text-message: var(--state-text-on-accent-secondary);
   --on-accent-icon-message: var(--state-text-on-accent-secondary);
-  --on-accent-border-message: var(--message-border-primary);
-  --on-accent-bg-message: var(--message-bg-primary);
+  --on-accent-border-message: var(--message-alert-border-primary);
+  --on-accent-bg-message: var(--message-alert-bg-primary);
   --on-accent-border-tetriary: var(--state-border-on-accent-tetriary);
   --on-accent-text-tetriary: var(--state-text-on-accent-tetruiary);
   --on-accent-icon-tetriary: var(--state-text-on-accent-tetruiary);
@@ -1963,8 +1963,8 @@
   --on-accent-border-custom: var(--state-border-on-accent-secondary);
   --on-accent-text-message: var(--state-text-on-accent-secondary);
   --on-accent-icon-message: var(--state-text-on-accent-secondary);
-  --on-accent-border-message: var(--message-border-primary);
-  --on-accent-bg-message: var(--message-bg-primary);
+  --on-accent-border-message: var(--message-alert-border-primary);
+  --on-accent-bg-message: var(--message-alert-bg-primary);
   --on-accent-border-tetriary: var(--state-border-on-accent-tetriary);
   --on-accent-text-tetriary: var(--state-text-on-accent-tetruiary);
   --on-accent-icon-tetriary: var(--state-text-on-accent-tetruiary);

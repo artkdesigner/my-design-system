@@ -62,7 +62,7 @@ describe('Button', () => {
   it('включает на себе режим onAccent — так же, как компонент в Figma', () => {
     // Сверено по двум образцам из макета: и у залитой кнопки, и у прозрачной
     // опасной значения токенов совпадают с макетом только в режиме onAccent
-    // (element_text_primary = #ffffff, element_border_message_secondary =
+    // (element_text_primary = #ffffff, element_border_alert_secondary =
     // #cc2929). Без него получаются другие значения тех же токенов.
     render(<Button view="accent">Метка</Button>);
     expect(screen.getByRole('button').dataset.onAccent).toBe('true');

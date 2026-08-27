@@ -27,7 +27,7 @@ describe('IconButton', () => {
   });
 
   it('включает режим уведомления error у вида alert', () => {
-    // element_icon_message без data-alert остаётся info (см. состав токенов
+    // element_icon_alert без data-alert остаётся info (см. состав токенов
     // в state.css): без атрибута alert был бы синим, а не красным.
     render(<IconButton icon={<svg />} aria-label="Удалить" view="alert" />);
     expect(screen.getByRole('button').dataset.alert).toBe('error');

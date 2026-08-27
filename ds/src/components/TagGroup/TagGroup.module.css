@@ -12,7 +12,7 @@
    её ширину, не рамка по контуру — тот же приём, что у Radio/CheckboxGroup. */
 .wrapper[data-alert] {
   padding-left: var(--tag-group-taggroup-alert-padding);
-  border-left: var(--tag-group-taggroup-alert-border) solid var(--element-border-message-primary);
+  border-left: var(--tag-group-taggroup-alert-border) solid var(--element-border-alert-primary);
 }
 
 .title {
@@ -42,5 +42,5 @@
 }
 
 .wrapper[data-alert] .hint {
-  color: var(--element-text-message);
+  color: var(--element-text-alert);
 }

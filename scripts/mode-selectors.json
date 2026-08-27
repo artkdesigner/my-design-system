@@ -1,5 +1,5 @@
 {
-  "ColorsPalette": {
+  "Palette": {
     "layer": "palette",
     "order": 1,
     "modes": { "Mode 1": [":root"] }
@@ -16,7 +16,7 @@
     }
   },
 
-  "ColorsTheme": {
+  "Theme": {
     "layer": "theme",
     "order": 3,
     "modes": {
@@ -25,7 +25,7 @@
     }
   },
 
-  "ColorsState": {
+  "State": {
     "layer": "state",
     "order": 4,
     "modes": {
@@ -36,7 +36,7 @@
     }
   },
 
-  "ColorsMessage": {
+  "AlertType": {
     "layer": "state",
     "order": 5,
     "modes": {

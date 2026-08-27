@@ -30,7 +30,7 @@ export type CodeInputItemProps = CodeInputItemOwnProps & Omit<HTMLAttributes<HTM
  * место ввода незачем.
  *
  * data-alert="error" обязателен рядом с data-error: без него
- * --element-bg-message/--element-text-message берут дефолтный info-тон
+ * --element-bg-alert/--element-text-alert берут дефолтный info-тон
  * (синий) — на красный их переключает только этот атрибут (см.
  * [data-alert="error"] в tokens/element.css), тот же приём, что и у
  * Input с его data-alert на обёртке.

@@ -16,8 +16,8 @@
 }
 
 .toast[data-view='alert'] {
-  background: var(--element-bg-message);
-  border-color: var(--element-border-message-secondary);
+  background: var(--element-bg-alert);
+  border-color: var(--element-border-alert-secondary);
 }
 
 .badgeSlot {
@@ -47,7 +47,7 @@
 }
 
 .toast[data-view='alert'] .text {
-  color: var(--element-text-message);
+  color: var(--element-text-alert);
 }
 
 .title {
@@ -95,9 +95,9 @@
 }
 
 .toast[data-view='alert'] .divider {
-  background: var(--element-border-message-secondary);
+  background: var(--element-border-alert-secondary);
 }
 
 .toast[data-view='alert'] .closerSlot {
-  --element-icon-secondary: var(--element-icon-message);
+  --element-icon-secondary: var(--element-icon-alert);
 }

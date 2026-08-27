@@ -26,7 +26,7 @@ export type StatusProps = StatusOwnProps &
  * той же логике.
  *
  * В режиме accent фон и текст alert-тона берутся через тот же механизм
- * on-accent, что уже держит StatusBadge (--element-bg-message сам
+ * on-accent, что уже держит StatusBadge (--element-bg-alert сам
  * переключается на сплошной цвет под data-on-accent, без отдельного
  * правила). У custom-тона своего on-accent слоя в токенах нет — Figma
  * отдал два отдельных цвета (custom-primary/custom-secondary), поэтому фон

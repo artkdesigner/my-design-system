@@ -24,7 +24,7 @@
 
 .slot[data-status='error'] .ring,
 .slot[data-status='success'] .ring {
-  border-color: var(--element-border-message-primary);
+  border-color: var(--element-border-alert-primary);
 }
 
 .slot[data-status='deleted'] .ring {

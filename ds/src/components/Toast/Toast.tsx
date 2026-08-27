@@ -32,7 +32,7 @@ export type ToastProps = ToastOwnProps &
  * с check/alert, в отличие от Notification, поэтому badgeType не вынесен
  * в проп, а следует за view напрямую.
  *
- * Крестик закрытия в виде alert синий (element_icon_message), хотя
+ * Крестик закрытия в виде alert синий (element_icon_alert), хотя
  * IconButton здесь стоит с view="secondary" — у самого IconButton нет вида
  * под тон info, только error. Цвет переопределён каскадом переменной
  * --element-icon-secondary внутри .closerSlot в CSS (см. Toast.module.css),

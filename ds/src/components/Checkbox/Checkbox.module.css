@@ -44,5 +44,5 @@
 /* В макете нет варианта Alert + Disabled — как и у Input, приоритет у
    недоступности. */
 .wrapper[data-alert]:not([data-state='disabled']) .hint {
-  color: var(--element-text-message);
+  color: var(--element-text-alert);
 }

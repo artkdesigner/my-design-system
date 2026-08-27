@@ -34,7 +34,7 @@
    в макете нет варианта «Alert + Disabled», поэтому недоступность имеет
    приоритет и полностью отключает вид ошибки. */
 .wrapper[data-alert]:not([data-state='disabled']) .field {
-  border-color: var(--element-border-message-primary);
+  border-color: var(--element-border-alert-primary);
 }
 
 .wrapper[data-state='disabled'] .field {
@@ -131,5 +131,5 @@
 }
 
 .wrapper[data-alert]:not([data-state='disabled']) .hint {
-  color: var(--element-text-message);
+  color: var(--element-text-alert);
 }

@@ -9,14 +9,14 @@ describe('groupTokens', () => {
       '--theme-accent-default',
       '--brand-accent-default',
       '--state-bg-accent',
-      '--message-icon',
+      '--message-alert-icon',
       '--on-accent-text-primary',
       '--element-bg-action-accent'
     ]);
 
     expect(groups.palette).toEqual(['--palette-blue-default']);
     expect(groups.state).toEqual(['--state-bg-accent']);
-    expect(groups.message).toEqual(['--message-icon']);
+    expect(groups.message).toEqual(['--message-alert-icon']);
     expect(groups.onAccent).toEqual(['--on-accent-text-primary']);
     expect(groups.element).toEqual(['--element-bg-action-accent']);
   });

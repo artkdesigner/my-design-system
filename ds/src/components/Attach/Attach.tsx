@@ -27,7 +27,7 @@ export type AttachProps = AttachOwnProps &
  * сюда напрямую, чтобы Attach не знал про все пять состояний файла.
  *
  * maxLimitText получает data-alert="warning" тем же приёмом, что и
- * тон alert у Button/Input: цвет берёт готовый element-text-message,
+ * тон alert у Button/Input: цвет берёт готовый element-text-alert,
  * а не захардкоженный жёлтый, как в сгенерированном по макету коде.
  */
 export function Attach({

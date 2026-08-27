@@ -153,8 +153,8 @@
   --optionlist-header-padding-vert: var(--padding-16);
   --optionlist-header-padding-hor: var(--padding-16);
   --checkbox-group-gap: var(--margin-16);
-  --checkbox-group-items-gap-vert: var(--margin-16);
-  --checkbox-group-items-gap-hor: var(--margin-24);
+  --checkbox-group-checkbox-items-gap-vert: var(--margin-16);
+  --checkbox-group-checkbox-items-gap-hor: var(--margin-24);
   --checkbox-group-alert-padding: var(--padding-12);
   --checkbox-group-alert-border: var(--stroke-2);
   --checkbox-group-title-font-size: var(--font-size-body-l);
@@ -211,8 +211,6 @@
   --button-actionbutton-circle-size: var(--scales-56);
   --button-actionbutton-radius: var(--radius-max);
   --button-actionbutton-gap: var(--margin-8);
-  --button-actionbutton-padding-hor: var(--scales-16);
-  --button-actionbutton-padding-vert: var(--scales-4);
   --filtertag-size: var(--scales-48);
   --filtertag-gap: var(--margin-8);
   --filtertag-padding-hor: var(--padding-20);
@@ -306,6 +304,10 @@
   --tooltip-radius: var(--radius-16);
   --text-tooltip-text-font-size: var(--font-size-body-l);
   --tag-radius-square: var(--radius-10);
+  --button-actionbutton-padding-hor: var(--scales-16);
+  --button-actionbutton-padding-vert: var(--scales-4);
+  --checkbox-group-tag-items-gap-vert: var(--margin-12);
+  --checkbox-group-tag-items-gap-hor: var(--margin-12);
 }
 
 [data-size="m"] {
@@ -361,8 +363,8 @@
   --optionlist-header-padding-vert: var(--padding-12);
   --optionlist-header-padding-hor: var(--padding-12);
   --checkbox-group-gap: var(--margin-12);
-  --checkbox-group-items-gap-vert: var(--margin-12);
-  --checkbox-group-items-gap-hor: var(--margin-20);
+  --checkbox-group-checkbox-items-gap-vert: var(--margin-12);
+  --checkbox-group-checkbox-items-gap-hor: var(--margin-20);
   --checkbox-group-alert-padding: var(--padding-10);
   --checkbox-group-alert-border: var(--stroke-2);
   --checkbox-group-title-font-size: var(--font-size-body-m);
@@ -419,8 +421,6 @@
   --button-actionbutton-circle-size: var(--scales-40);
   --button-actionbutton-radius: var(--radius-max);
   --button-actionbutton-gap: var(--margin-6);
-  --button-actionbutton-padding-hor: var(--scales-12);
-  --button-actionbutton-padding-vert: var(--scales-4);
   --filtertag-size: var(--scales-40);
   --filtertag-gap: var(--margin-6);
   --filtertag-padding-hor: var(--padding-16);
@@ -514,6 +514,10 @@
   --tooltip-radius: var(--radius-12);
   --text-tooltip-text-font-size: var(--font-size-body-m);
   --tag-radius-square: var(--radius-8);
+  --button-actionbutton-padding-hor: var(--scales-12);
+  --button-actionbutton-padding-vert: var(--scales-4);
+  --checkbox-group-tag-items-gap-vert: var(--margin-8);
+  --checkbox-group-tag-items-gap-hor: var(--margin-8);
 }
 
 [data-size="s"] {
@@ -569,8 +573,8 @@
   --optionlist-header-padding-vert: var(--padding-8);
   --optionlist-header-padding-hor: var(--padding-8);
   --checkbox-group-gap: var(--margin-8);
-  --checkbox-group-items-gap-vert: var(--margin-8);
-  --checkbox-group-items-gap-hor: var(--margin-16);
+  --checkbox-group-checkbox-items-gap-vert: var(--margin-8);
+  --checkbox-group-checkbox-items-gap-hor: var(--margin-16);
   --checkbox-group-alert-padding: var(--padding-8);
   --checkbox-group-alert-border: var(--stroke-1);
   --checkbox-group-title-font-size: var(--font-size-body-s);
@@ -627,8 +631,6 @@
   --button-actionbutton-circle-size: var(--scales-32);
   --button-actionbutton-radius: var(--radius-max);
   --button-actionbutton-gap: var(--margin-4);
-  --button-actionbutton-padding-hor: var(--scales-8);
-  --button-actionbutton-padding-vert: var(--scales-2);
   --filtertag-size: var(--scales-32);
   --filtertag-gap: var(--margin-4);
   --filtertag-padding-hor: var(--padding-12);
@@ -722,4 +724,8 @@
   --tooltip-radius: var(--radius-8);
   --text-tooltip-text-font-size: var(--font-size-body-s);
   --tag-radius-square: var(--radius-6);
+  --button-actionbutton-padding-hor: var(--scales-8);
+  --button-actionbutton-padding-vert: var(--scales-2);
+  --checkbox-group-tag-items-gap-vert: var(--margin-4);
+  --checkbox-group-tag-items-gap-hor: var(--margin-4);
 }

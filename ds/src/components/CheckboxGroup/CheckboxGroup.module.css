@@ -13,7 +13,7 @@
    как и у Input, приоритет у недоступности. */
 .wrapper[data-alert]:not([data-state='disabled']) {
   padding-left: var(--checkbox-group-alert-padding);
-  border-left: var(--checkbox-group-alert-border) solid var(--element-border-message-primary);
+  border-left: var(--checkbox-group-alert-border) solid var(--element-border-alert-primary);
 }
 
 .title {
@@ -52,5 +52,5 @@
 }
 
 .wrapper[data-alert] .hint {
-  color: var(--element-text-message);
+  color: var(--element-text-alert);
 }

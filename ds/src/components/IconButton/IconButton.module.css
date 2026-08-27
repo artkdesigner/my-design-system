@@ -37,5 +37,5 @@
 }
 
 .button[data-alert] {
-  color: var(--element-icon-message);
+  color: var(--element-icon-alert);
 }

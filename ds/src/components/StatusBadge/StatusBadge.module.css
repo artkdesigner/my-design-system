@@ -17,7 +17,7 @@
 }
 
 .badge[data-tone='alert'] {
-  background: var(--element-bg-message);
+  background: var(--element-bg-alert);
 }
 
 .badge[data-tone='neutral'] {

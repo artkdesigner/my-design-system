@@ -39,7 +39,7 @@
 }
 
 .error {
-  color: var(--element-text-message);
+  color: var(--element-text-alert);
 }
 
 .remove {

@@ -33,8 +33,8 @@ export type IconButtonProps = IconButtonOwnProps &
  * самое, что проп alert у Button: там это отдельный флаг с выбором тона
  * (info/success/warning/error), здесь — одно из четырёх значений view,
  * в Figma единственная опция, не выбор из четырёх тонов. Внутри оно всё
- * равно включает режим ColorsMessage (data-alert ставится в error),
- * потому что element_icon_message — производный токен: без data-alert он
+ * равно включает режим AlertType (data-alert ставится в error),
+ * потому что element_icon_alert — производный токен: без data-alert он
  * тихо остаётся синим (info по умолчанию), а под наведением/нажатием/
  * недоступностью нужны именно составные селекторы вида
  * .ds-interactive:hover[data-alert="error"] — без атрибута на самом
