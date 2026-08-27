@@ -50,13 +50,13 @@ describe('Checkbox', () => {
   });
 
   it('в состоянии alert показывает alertText вместо hint', () => {
-    render(<Checkbox label="Согласие" hint="Обычная подсказка" alert alertText="Нужно отметить чекбокс" />);
+    render(<Checkbox label="Согласие" hint="Обычная подсказка" alert="error" alertText="Нужно отметить чекбокс" />);
     expect(screen.getByText('Нужно отметить чекбокс')).toBeInTheDocument();
     expect(screen.queryByText('Обычная подсказка')).not.toBeInTheDocument();
   });
 
   it('без hint в состоянии alert всё равно показывает alertText', () => {
-    render(<Checkbox label="Согласие" alert alertText="Нужно отметить чекбокс" />);
+    render(<Checkbox label="Согласие" alert="error" alertText="Нужно отметить чекбокс" />);
     expect(screen.getByText('Нужно отметить чекбокс')).toBeInTheDocument();
   });
 });

@@ -37,7 +37,7 @@ export const ВПокое: Story = {
 };
 
 export const Ошибка: Story = {
-  args: { alert: true, alertText: 'Введите количество от 0 до 10' },
+  args: { alert: 'error', alertText: 'Введите количество от 0 до 10' },
   render: (args) => {
     const [value, setValue] = useState(0);
     return (

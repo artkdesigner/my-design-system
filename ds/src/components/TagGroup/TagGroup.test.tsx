@@ -45,7 +45,7 @@ describe('TagGroup', () => {
 
   it('в состоянии alert показывает alertText вместо hint', () => {
     render(
-      <TagGroup title="Категории" hint="Обычная подсказка" alert alertText="Выберите хотя бы одну категорию">
+      <TagGroup title="Категории" hint="Обычная подсказка" alert="error" alertText="Выберите хотя бы одну категорию">
         <Tag label="Первая" />
       </TagGroup>
     );

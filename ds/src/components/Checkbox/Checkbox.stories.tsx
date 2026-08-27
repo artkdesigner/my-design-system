@@ -59,5 +59,18 @@ export const Недоступен: Story = {
 /** Узел 125:2409 в Figma — вариант Alert=True: alertText вместо hint. */
 export const Ошибка: Story = {
   name: 'Ошибка',
-  args: { alert: true, alertText: 'Нужно отметить чекбокс, чтобы продолжить' }
+  args: { alert: 'error', alertText: 'Нужно отметить чекбокс, чтобы продолжить' }
+};
+
+/** Спека 482:3957 — режим AlertType: тон уведомления info/success/warning/error. */
+export const ТонУведомления: Story = {
+  name: 'Тон уведомления',
+  render: () => (
+    <div style={{ ...page, display: 'flex', flexDirection: 'column', gap: 'var(--margin-16)' }}>
+      <Checkbox label="Info" state="checked" alert="info" alertText="Информационное сообщение" />
+      <Checkbox label="Success" state="checked" alert="success" alertText="Всё в порядке" />
+      <Checkbox label="Warning" state="checked" alert="warning" alertText="Обратите внимание" />
+      <Checkbox label="Error" state="checked" alert="error" alertText="Нужно отметить чекбокс" />
+    </div>
+  )
 };

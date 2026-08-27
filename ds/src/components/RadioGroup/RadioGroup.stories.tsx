@@ -50,7 +50,7 @@ export const Ошибка: Story = {
   name: 'Ошибка',
   render: (args) => (
     <div style={page}>
-      <RadioGroup {...args} alert alertText="Выберите способ оплаты">
+      <RadioGroup {...args} alert="error" alertText="Выберите способ оплаты">
         <Radio label="Картой" />
         <Radio label="Наличными" />
       </RadioGroup>

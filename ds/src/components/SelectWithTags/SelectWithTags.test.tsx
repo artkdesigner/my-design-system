@@ -97,7 +97,7 @@ describe('SelectWithTags', () => {
   });
 
   it('alert показывает alertText', () => {
-    render(<SelectWithTags label="Страны" options={options} alert alertText="Выберите страну" />);
+    render(<SelectWithTags label="Страны" options={options} alert="error" alertText="Выберите страну" />);
     expect(screen.getByText('Выберите страну')).toBeInTheDocument();
   });
 

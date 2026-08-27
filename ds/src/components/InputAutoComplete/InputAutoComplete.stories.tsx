@@ -57,7 +57,7 @@ export const Заполнено: Story = {
 };
 
 export const Ошибка: Story = {
-  args: { alert: true, alertText: 'Выберите страну из списка' },
+  args: { alert: 'error', alertText: 'Выберите страну из списка' },
   render: (args) => {
     const [value, setValue] = useState('');
     return (

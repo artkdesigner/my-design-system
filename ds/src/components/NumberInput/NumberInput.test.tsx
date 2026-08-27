@@ -55,7 +55,7 @@ describe('NumberInput', () => {
   });
 
   it('alert показывает alertText, как у Input', () => {
-    render(<NumberInput label="Количество" value={5} alert alertText="Введите корректное количество" />);
+    render(<NumberInput label="Количество" value={5} alert="error" alertText="Введите корректное количество" />);
     expect(screen.getByText('Введите корректное количество')).toBeInTheDocument();
   });
 

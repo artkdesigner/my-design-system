@@ -57,5 +57,5 @@ export const Недоступен: Story = {
 /** Узел 134:556 в Figma — вариант Alert=True: alertText вместо hint. */
 export const Ошибка: Story = {
   name: 'Ошибка',
-  args: { alert: true, alertText: 'Нужно выбрать способ оплаты' }
+  args: { alert: 'error', alertText: 'Нужно выбрать способ оплаты' }
 };

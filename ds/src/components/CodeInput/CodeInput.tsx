@@ -11,7 +11,12 @@ type CodeInputOwnProps = {
   /** Количество ячеек. В демо-варианте макета (176:1414) их 8, но это
    * не зашитое число — реальный код может быть короче. */
   length?: number;
-  alert?: boolean;
+  /** Тон уведомления под ячейками. Одно значение, как у Input/Button (не
+   * булев флаг): режим AlertType в Figma стоит на самом компоненте.
+   * undefined — уведомления нет. Сами ячейки при любом тоне рисуются
+   * error-тоном (красным) — код бывает либо верным, либо нет; тон влияет
+   * только на текст alertText под ними. */
+  alert?: 'info' | 'success' | 'warning' | 'error';
   alertText?: ReactNode;
   disabled?: boolean;
   size?: 'l' | 'm' | 's';
@@ -51,7 +56,7 @@ export function CodeInput({
   value,
   onChange,
   length = 8,
-  alert = false,
+  alert,
   alertText,
   disabled = false,
   size = 'l',
@@ -79,7 +84,7 @@ export function CodeInput({
     <div
       className={[styles.wrapper, className].filter(Boolean).join(' ')}
       data-size={size}
-      data-alert={alert ? 'error' : undefined}
+      data-alert={alert}
       data-state={disabled ? 'disabled' : undefined}
     >
       <div className={styles.fields} data-focused={focused || undefined} onClick={focusInput}>
@@ -90,7 +95,7 @@ export function CodeInput({
             value={digits[index]}
             filled={index < digits.length}
             active={index === cursorIndex}
-            error={alert}
+            error={alert != null}
             disabled={disabled}
           />
         ))}

@@ -39,7 +39,7 @@ export const СПлейсхолдером: Story = {
 };
 
 export const Ошибка: Story = {
-  args: { alert: true, alertText: 'Alert text' }
+  args: { alert: 'error', alertText: 'Alert text' }
 };
 
 export const Недоступно: Story = {
@@ -83,10 +83,10 @@ export const Матрица: Story = {
           <tr>
             <td style={caption}>ошибка</td>
             <td>
-              <TextArea label="Label" alert alertText="Alert text" />
+              <TextArea label="Label" alert="error" alertText="Alert text" />
             </td>
             <td>
-              <TextArea label="Label" alert alertText="Alert text" defaultValue="Value" />
+              <TextArea label="Label" alert="error" alertText="Alert text" defaultValue="Value" />
             </td>
           </tr>
           <tr>

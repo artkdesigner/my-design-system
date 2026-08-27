@@ -11,10 +11,11 @@ import styles from './TextArea.module.css';
 type TextAreaOwnProps = {
   label?: string;
   hint?: ReactNode;
-  /** Тон ошибки. Как у Input — отдельное булево «Alert» из макета, а не
-   * многозначный проп alert с выбором тона, как у Button/ActionButton
-   * (совпадение имён, не общий тип). */
-  alert?: boolean;
+  /** Тон уведомления под полем. Одно значение, как у Input/Button (не булев
+   * флаг): режим AlertType в Figma стоит на самом компоненте. undefined —
+   * уведомления нет; значение — вместо hint показывается alertText в этом
+   * тоне, туда же уходит рамка поля. */
+  alert?: 'info' | 'success' | 'warning' | 'error';
   alertText?: ReactNode;
   size?: 'l' | 'm' | 's';
 };
@@ -38,7 +39,7 @@ export type TextAreaProps = TextAreaOwnProps &
 export function TextArea({
   label,
   hint,
-  alert = false,
+  alert,
   alertText,
   size = 'l',
   id,
@@ -82,7 +83,7 @@ export function TextArea({
     <div
       className={[styles.wrapper, className].filter(Boolean).join(' ')}
       data-size={size}
-      data-alert={alert ? 'error' : undefined}
+      data-alert={alert}
       data-state={disabled ? 'disabled' : undefined}
       data-label-floated={labelFloated || undefined}
     >

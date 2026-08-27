@@ -50,10 +50,25 @@ export const Ошибка: Story = {
   name: 'Ошибка',
   render: (args) => (
     <div style={page}>
-      <CheckboxGroup {...args} alert alertText="Нужно выбрать хотя бы один канал">
+      <CheckboxGroup {...args} alert="error" alertText="Нужно выбрать хотя бы один канал">
         <Checkbox label="Почта" />
         <Checkbox label="SMS" />
       </CheckboxGroup>
+    </div>
+  )
+};
+
+/** Спека 482:14612 — режим AlertType: тон уведомления и цвет левой рамки. */
+export const ТонУведомления: Story = {
+  name: 'Тон уведомления',
+  render: () => (
+    <div style={{ ...page, display: 'flex', flexDirection: 'column', gap: 'var(--margin-24)' }}>
+      {(['info', 'success', 'warning', 'error'] as const).map((tone) => (
+        <CheckboxGroup key={tone} title={tone} alert={tone} alertText={`Сообщение тона ${tone}`}>
+          <Checkbox label="Почта" state="checked" />
+          <Checkbox label="SMS" />
+        </CheckboxGroup>
+      ))}
     </div>
   )
 };

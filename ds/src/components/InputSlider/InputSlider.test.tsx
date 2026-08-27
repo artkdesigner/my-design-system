@@ -48,7 +48,7 @@ describe('InputSlider', () => {
   });
 
   it('alert показывает alertText под слайдером, а не над ним', () => {
-    render(<InputSlider label="Количество" value={5} min={0} max={10} alert alertText="Введите корректное количество" />);
+    render(<InputSlider label="Количество" value={5} min={0} max={10} alert="error" alertText="Введите корректное количество" />);
     expect(screen.getByText('Введите корректное количество')).toBeInTheDocument();
   });
 

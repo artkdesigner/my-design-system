@@ -45,7 +45,7 @@ describe('RadioGroup', () => {
 
   it('в состоянии alert показывает alertText вместо hint', () => {
     render(
-      <RadioGroup title="Способ оплаты" hint="Обычная подсказка" alert alertText="Выберите способ оплаты">
+      <RadioGroup title="Способ оплаты" hint="Обычная подсказка" alert="error" alertText="Выберите способ оплаты">
         <Radio label="Картой" />
       </RadioGroup>
     );

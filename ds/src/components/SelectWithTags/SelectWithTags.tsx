@@ -29,7 +29,10 @@ type SelectWithTagsOwnProps = {
    * состоянии остаётся только всплывшая мелкая подпись. */
   placeholder?: string;
   hint?: ReactNode;
-  alert?: boolean;
+  /** Тон уведомления под полем. Одно значение, как у Input/Button (не булев
+   * флаг): режим AlertType в Figma стоит на самом компоненте. undefined —
+   * уведомления нет. */
+  alert?: 'info' | 'success' | 'warning' | 'error';
   alertText?: ReactNode;
   leftAddon?: ReactNode;
   disabled?: boolean;
@@ -84,7 +87,7 @@ export function SelectWithTags({
   label,
   placeholder,
   hint,
-  alert = false,
+  alert,
   alertText,
   leftAddon,
   disabled = false,
@@ -177,7 +180,7 @@ export function SelectWithTags({
     <div
       className={[styles.wrapper, className].filter(Boolean).join(' ')}
       data-size={size}
-      data-alert={alert ? 'error' : undefined}
+      data-alert={alert}
       data-state={disabled ? 'disabled' : undefined}
       data-active={open || undefined}
     >

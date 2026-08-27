@@ -45,7 +45,7 @@ describe('CheckboxGroup', () => {
 
   it('в состоянии alert показывает alertText вместо hint', () => {
     render(
-      <CheckboxGroup title="Уведомления" hint="Обычная подсказка" alert alertText="Выберите хотя бы один канал">
+      <CheckboxGroup title="Уведомления" hint="Обычная подсказка" alert="error" alertText="Выберите хотя бы один канал">
         <Checkbox label="Почта" />
       </CheckboxGroup>
     );

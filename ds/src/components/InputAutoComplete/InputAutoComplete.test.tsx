@@ -82,7 +82,7 @@ describe('InputAutoComplete', () => {
   });
 
   it('alert показывает alertText, как у Input', () => {
-    render(<InputAutoComplete label="Страна" options={options} alert alertText="Введите страну из списка" />);
+    render(<InputAutoComplete label="Страна" options={options} alert="error" alertText="Введите страну из списка" />);
     expect(screen.getByText('Введите страну из списка')).toBeInTheDocument();
   });
 

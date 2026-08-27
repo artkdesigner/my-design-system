@@ -50,7 +50,7 @@ export const Ошибка: Story = {
     const [value, setValue] = useState('00000000');
     return (
       <div style={page}>
-        <CodeInput {...args} value={value} onChange={setValue} alert alertText="Alert text" />
+        <CodeInput {...args} value={value} onChange={setValue} alert="error" alertText="Alert text" />
       </div>
     );
   }

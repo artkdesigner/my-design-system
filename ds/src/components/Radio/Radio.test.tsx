@@ -50,13 +50,13 @@ describe('Radio', () => {
   });
 
   it('в состоянии alert показывает alertText вместо hint', () => {
-    render(<Radio label="Оплата картой" hint="Обычная подсказка" alert alertText="Выберите способ оплаты" />);
+    render(<Radio label="Оплата картой" hint="Обычная подсказка" alert="error" alertText="Выберите способ оплаты" />);
     expect(screen.getByText('Выберите способ оплаты')).toBeInTheDocument();
     expect(screen.queryByText('Обычная подсказка')).not.toBeInTheDocument();
   });
 
   it('без hint в состоянии alert всё равно показывает alertText', () => {
-    render(<Radio label="Оплата картой" alert alertText="Выберите способ оплаты" />);
+    render(<Radio label="Оплата картой" alert="error" alertText="Выберите способ оплаты" />);
     expect(screen.getByText('Выберите способ оплаты')).toBeInTheDocument();
   });
 });

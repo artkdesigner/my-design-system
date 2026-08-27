@@ -5,9 +5,12 @@ import styles from './Radio.module.css';
 type RadioOwnProps = {
   label?: ReactNode;
   hint?: ReactNode;
-  /** Тон ошибки — как у Checkbox/Input: отдельное булево, а не выбор тона
-   * у hint. Сверено узлом 134:556 (варианты Alert=False/Alert=True). */
-  alert?: boolean;
+  /** Тон уведомления. Одно значение, как у Checkbox/Button (не булев флаг):
+   * режим AlertType в Figma стоит на самом компоненте (узел 134:556 —
+   * вариант Alert плюс режим AlertType). undefined — уведомления нет,
+   * показывается hint; значение — вместо hint показывается alertText в этом
+   * тоне. */
+  alert?: 'info' | 'success' | 'warning' | 'error';
   alertText?: ReactNode;
   size?: 'l' | 'm' | 's';
 };
@@ -31,7 +34,7 @@ export type RadioProps = RadioOwnProps & Omit<RadioItemProps, keyof RadioOwnProp
 export function Radio({
   label,
   hint,
-  alert = false,
+  alert,
   alertText,
   size = 'l',
   id,
@@ -47,7 +50,7 @@ export function Radio({
     <div
       className={[styles.wrapper, className].filter(Boolean).join(' ')}
       data-size={size}
-      data-alert={alert ? 'error' : undefined}
+      data-alert={alert}
       data-state={disabled ? 'disabled' : undefined}
     >
       <RadioItem {...rest} id={radioId} size={size} disabled={disabled} className={styles.item} />

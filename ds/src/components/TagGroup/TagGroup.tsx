@@ -4,7 +4,10 @@ import styles from './TagGroup.module.css';
 type TagGroupOwnProps = {
   title?: ReactNode;
   hint?: ReactNode;
-  alert?: boolean;
+  /** Тон уведомления. Одно значение, как у Button (не булев флаг): режим
+   * AlertType в Figma стоит на самом компоненте. undefined — уведомления
+   * нет. Узел 134:4243. */
+  alert?: 'info' | 'success' | 'warning' | 'error';
   alertText?: ReactNode;
   size?: 'l' | 'm' | 's';
 };
@@ -31,7 +34,7 @@ export type TagGroupProps = TagGroupOwnProps & Omit<HTMLAttributes<HTMLDivElemen
 export function TagGroup({
   title,
   hint,
-  alert = false,
+  alert,
   alertText,
   size = 'l',
   id,
@@ -52,7 +55,7 @@ export function TagGroup({
       aria-labelledby={titleId}
       className={[styles.wrapper, className].filter(Boolean).join(' ')}
       data-size={size}
-      data-alert={alert ? 'error' : undefined}
+      data-alert={alert}
     >
       {title && (
         <div id={titleId} className={styles.title}>

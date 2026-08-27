@@ -39,7 +39,7 @@ describe('CodeInput', () => {
   });
 
   it('в состоянии alert показывает alertText', () => {
-    render(<CodeInput value="00000000" alert alertText="Неверный код" aria-label="Код" />);
+    render(<CodeInput value="00000000" alert="error" alertText="Неверный код" aria-label="Код" />);
     expect(screen.getByText('Неверный код')).toBeInTheDocument();
   });
 

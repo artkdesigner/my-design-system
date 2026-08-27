@@ -5,9 +5,12 @@ import styles from './Checkbox.module.css';
 type CheckboxOwnProps = {
   label?: ReactNode;
   hint?: ReactNode;
-  /** Тон ошибки — как у Input: отдельное булево, а не выбор тона у hint.
-   * Сверено узлом 125:2409 (варианты Alert=False/Alert=True). */
-  alert?: boolean;
+  /** Тон уведомления. Как у Button/ActionButton — одно значение, а не булев
+   * флаг: режим коллекции AlertType в Figma всё равно стоит на самом
+   * компоненте (узел 125:2409 — вариант Alert плюс режим AlertType).
+   * undefined — уведомления нет, показывается hint; значение — вместо hint
+   * показывается alertText в этом тоне. */
+  alert?: 'info' | 'success' | 'warning' | 'error';
   alertText?: ReactNode;
   size?: 'l' | 'm' | 's';
 };
@@ -31,7 +34,7 @@ export type CheckboxProps = CheckboxOwnProps & Omit<CheckboxItemProps, keyof Che
 export function Checkbox({
   label,
   hint,
-  alert = false,
+  alert,
   alertText,
   size = 'l',
   id,
@@ -47,7 +50,7 @@ export function Checkbox({
     <div
       className={[styles.wrapper, className].filter(Boolean).join(' ')}
       data-size={size}
-      data-alert={alert ? 'error' : undefined}
+      data-alert={alert}
       data-state={disabled ? 'disabled' : undefined}
     >
       <CheckboxItem {...rest} id={checkboxId} size={size} disabled={disabled} className={styles.item} />

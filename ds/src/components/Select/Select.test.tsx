@@ -97,7 +97,7 @@ describe('Select', () => {
   });
 
   it('alert показывает alertText, как у Input', () => {
-    render(<Select label="Страна" options={options} alert alertText="Выберите страну" />);
+    render(<Select label="Страна" options={options} alert="error" alertText="Выберите страну" />);
     expect(screen.getByText('Выберите страну')).toBeInTheDocument();
   });
 

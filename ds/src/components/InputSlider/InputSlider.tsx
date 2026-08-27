@@ -39,7 +39,7 @@ export function InputSlider({
   pips = true,
   size = 'l',
   disabled,
-  alert = false,
+  alert,
   alertText,
   hint,
   className,
@@ -60,7 +60,7 @@ export function InputSlider({
   return (
     <div
       className={[styles.wrapper, className].filter(Boolean).join(' ')}
-      data-alert={alert ? 'error' : undefined}
+      data-alert={alert}
       data-state={disabled ? 'disabled' : undefined}
     >
       <Input {...rest} size={size} disabled={disabled} alert={alert} value={String(value)} onChange={handleTextChange} />

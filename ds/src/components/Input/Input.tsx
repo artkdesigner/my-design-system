@@ -12,12 +12,12 @@ import styles from './Input.module.css';
 type InputOwnProps = {
   label?: string;
   hint?: ReactNode;
-  /** Тон ошибки. В макете это отдельное булево «Alert» — простой флаг, а не
-   * многозначный проп alert с выбором тона, как у Button/ActionButton (то,
-   * что оба называются одинаково — совпадение имён, не общий тип: здесь
-   * boolean, там 'info' | 'success' | 'warning' | 'error'). Поле умеет быть
-   * только в порядке или в ошибке. */
-  alert?: boolean;
+  /** Тон уведомления под полем. Как у Button/ActionButton — одно значение, а
+   * не булев флаг: режим коллекции AlertType в Figma всё равно стоит на
+   * самом компоненте. undefined — уведомления нет, показывается hint;
+   * значение — вместо hint показывается alertText в этом тоне, и в тот же
+   * тон уходит рамка поля. */
+  alert?: 'info' | 'success' | 'warning' | 'error';
   alertText?: ReactNode;
   leftAddon?: ReactNode;
   rightAddon?: ReactNode;
@@ -52,7 +52,7 @@ export type InputProps = InputOwnProps &
 export function Input({
   label,
   hint,
-  alert = false,
+  alert,
   alertText,
   leftAddon,
   rightAddon,
@@ -99,7 +99,7 @@ export function Input({
     <div
       className={[styles.wrapper, className].filter(Boolean).join(' ')}
       data-size={size}
-      data-alert={alert ? 'error' : undefined}
+      data-alert={alert}
       data-state={disabled ? 'disabled' : undefined}
       data-label-floated={labelFloated || undefined}
     >

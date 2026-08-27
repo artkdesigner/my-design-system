@@ -73,7 +73,7 @@ export const БезЗаголовкаИПодсказки: Story = {
 /** Узел 134:4254 в Figma — рамка только слева, не по контуру. */
 export const Ошибка: Story = {
   name: 'Ошибка',
-  args: { alert: true, alertText: 'Выберите хотя бы одну категорию' },
+  args: { alert: 'error', alertText: 'Выберите хотя бы одну категорию' },
   render: (args) => (
     <div style={page}>
       <TagGroup {...args}>

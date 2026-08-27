@@ -24,7 +24,10 @@ type SelectOwnProps = {
   onChange?: (value: string) => void;
   label?: string;
   hint?: ReactNode;
-  alert?: boolean;
+  /** Тон уведомления под полем. Одно значение, как у Input/Button (не булев
+   * флаг): режим AlertType в Figma стоит на самом компоненте. undefined —
+   * уведомления нет. */
+  alert?: 'info' | 'success' | 'warning' | 'error';
   alertText?: ReactNode;
   leftAddon?: ReactNode;
   size?: 'l' | 'm' | 's';
@@ -68,7 +71,7 @@ export function Select({
   onChange,
   label,
   hint,
-  alert = false,
+  alert,
   alertText,
   leftAddon,
   size = 'l',
@@ -149,7 +152,7 @@ export function Select({
     <div
       className={[styles.wrapper, className].filter(Boolean).join(' ')}
       data-size={size}
-      data-alert={alert ? 'error' : undefined}
+      data-alert={alert}
       data-state={disabled ? 'disabled' : undefined}
       data-label-floated={labelFloated || undefined}
       data-active={open || undefined}

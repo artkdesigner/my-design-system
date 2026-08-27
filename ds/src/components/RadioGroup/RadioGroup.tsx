@@ -4,7 +4,10 @@ import styles from './RadioGroup.module.css';
 type RadioGroupOwnProps = {
   title?: ReactNode;
   hint?: ReactNode;
-  alert?: boolean;
+  /** Тон уведомления. Одно значение, как у Radio/Button (не булев флаг):
+   * режим AlertType в Figma стоит на самом компоненте. undefined —
+   * уведомления нет. Узел 134:567. */
+  alert?: 'info' | 'success' | 'warning' | 'error';
   alertText?: ReactNode;
   /** Соответствует Direction в Figma. По умолчанию Horizontal — так же,
    * как в узле 134:567. */
@@ -35,7 +38,7 @@ export type RadioGroupProps = RadioGroupOwnProps &
 export function RadioGroup({
   title,
   hint,
-  alert = false,
+  alert,
   alertText,
   direction = 'horizontal',
   size = 'l',
@@ -57,7 +60,7 @@ export function RadioGroup({
       aria-labelledby={titleId}
       className={[styles.wrapper, className].filter(Boolean).join(' ')}
       data-size={size}
-      data-alert={alert ? 'error' : undefined}
+      data-alert={alert}
     >
       {title && (
         <div id={titleId} className={styles.title}>

@@ -71,7 +71,7 @@ export const СворачиваниеТегов: Story = {
 };
 
 export const Ошибка: Story = {
-  args: { alert: true, alertText: 'Выберите хотя бы один элемент' },
+  args: { alert: 'error', alertText: 'Выберите хотя бы один элемент' },
   render: (args) => {
     const [value, setValue] = useState<string[]>([]);
     return (

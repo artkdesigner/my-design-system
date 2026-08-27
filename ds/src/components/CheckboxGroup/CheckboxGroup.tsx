@@ -4,7 +4,10 @@ import styles from './CheckboxGroup.module.css';
 type CheckboxGroupOwnProps = {
   title?: ReactNode;
   hint?: ReactNode;
-  alert?: boolean;
+  /** Тон уведомления. Одно значение, как у Checkbox/Button (не булев флаг):
+   * режим AlertType в Figma стоит на самом компоненте. undefined —
+   * уведомления нет. Узел 133:537. */
+  alert?: 'info' | 'success' | 'warning' | 'error';
   alertText?: ReactNode;
   /** Соответствует Direction в Figma. По умолчанию Horizontal — так же,
    * как в узле 133:537. */
@@ -31,7 +34,7 @@ export type CheckboxGroupProps = CheckboxGroupOwnProps &
 export function CheckboxGroup({
   title,
   hint,
-  alert = false,
+  alert,
   alertText,
   direction = 'horizontal',
   size = 'l',
@@ -53,7 +56,7 @@ export function CheckboxGroup({
       aria-labelledby={titleId}
       className={[styles.wrapper, className].filter(Boolean).join(' ')}
       data-size={size}
-      data-alert={alert ? 'error' : undefined}
+      data-alert={alert}
     >
       {title && (
         <div id={titleId} className={styles.title}>
